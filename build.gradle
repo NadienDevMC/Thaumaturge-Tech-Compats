@@ -169,6 +169,13 @@ repositories {
 }
 
 
+configurations {
+    fractalJarJar {
+        canBeConsumed = false
+        canBeResolved = true
+    }
+}
+
 dependencies {
     // NeoForge
     implementation "net.neoforged:neoforge:${neo_version}"
@@ -263,6 +270,7 @@ dependencies {
 
     // Fractal
     implementation("de.dafuqs:Fractal:${fractal_version}")
+    fractalJarJar("de.dafuqs:Fractal:${fractal_version}") { transitive = false }
 
     // Thaumaturge
     compileOnly "curse.maven:thaumaturge-${thaumaturge_project_id}:${thaumaturge_version_id}"
@@ -324,7 +332,28 @@ tasks.withType(ProcessResources).configureEach {
     }
 }
 
+tasks.register('fractalMetadata') {
+    def out = layout.buildDirectory.file('fractal/jarjar/metadata.json')
+    def fractalVersion = fractal_version
+    inputs.property('fractalVersion', fractalVersion)
+    outputs.file(out)
+    doLast {
+        def target = out.get().asFile
+        target.parentFile.mkdirs()
+        def fractalEntry = "{\"identifier\":{\"group\":\"de.dafuqs\",\"artifact\":\"Fractal\"},\"version\":{\"range\":\"[${fractalVersion},)\",\"artifactVersion\":\"${fractalVersion}\"},\"path\":\"META-INF/jarjar/Fractal-${fractalVersion}.jar\",\"isObfuscated\":false}"
+        target.text = "{\"jars\":[${fractalEntry}]}"
+    }
+}
+
 tasks.named('jar', Jar).configure {
+    dependsOn tasks.named('fractalMetadata')
+    from(configurations.fractalJarJar) {
+        into 'META-INF/jarjar'
+        rename { "Fractal-${fractal_version}.jar" }
+    }
+    from(layout.buildDirectory.file('fractal/jarjar/metadata.json')) {
+        into 'META-INF/jarjar'
+    }
     manifest {
         attributes([
             "Specification-Title"   : mod_name,
