@@ -10,11 +10,11 @@
 
 ### Changes
 - Ponder is now optional. Create: Adapted already includes it, so it no longer has to be installed separately.
-- The Ponder requirement is lowered to 1.0.50 or newer.
+- The Ponder scenes only load when both Create and Ponder are installed.
 - The creative tab icon is now the Creative Planetary Endest Pearl.
 
 ### Lineas de codigo cambiadas
-+227 −113
++248 −103
 
 ## 🚀 [1.0.1-26.1.2] 15/11/2026 14:46
 

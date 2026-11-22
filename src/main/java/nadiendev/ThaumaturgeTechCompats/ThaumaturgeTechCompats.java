@@ -60,7 +60,7 @@ public class ThaumaturgeTechCompats {
         container.registerConfig(ModConfig.Type.COMMON, CompatToggles.SPEC, CompatToggles.FILE_NAME);
         container.registerConfig(ModConfig.Type.CLIENT, RiftJarClientConfig.SPEC, RiftJarClientConfig.FILE_NAME);
         ModConditions.CONDITIONS.register(modBus);
-        if (net.neoforged.fml.ModList.get().isLoaded("ponder") && net.neoforged.fml.loading.FMLEnvironment.getDist().isClient()) {
+        if (net.neoforged.fml.ModList.get().isLoaded("create") && net.neoforged.fml.ModList.get().isLoaded("ponder") && net.neoforged.fml.loading.FMLEnvironment.getDist().isClient()) {
             registerPonder(modBus);
         }
 

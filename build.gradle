@@ -117,6 +117,24 @@ repositories {
     }
 
     maven {
+        name = 'CreateMod'
+        url = 'https://maven.createmod.net'
+        content {
+            includeGroup 'net.createmod.ponder'
+            includeGroup 'net.createmod.catnip'
+            includeGroup 'dev.engine-room.flywheel'
+        }
+    }
+
+    maven {
+        name = 'IThundxR'
+        url = 'https://maven.ithundxr.dev/snapshots'
+        content {
+            includeGroup 'com.tterrag.registrate'
+        }
+    }
+
+    maven {
         name = 'CurseMaven'
         url = 'https://cursemaven.com'
         content {
@@ -179,8 +197,17 @@ dependencies {
     compileOnly "curse.maven:create-adapted-${create_project_id}:${create_version_id}"
     runtimeOnly "curse.maven:create-adapted-${create_project_id}:${create_version_id}"
 
-    // create adapted: librerias embebidas, solo para compilar (en ejecucion salen del propio Create Adapted)
-    compileOnly fileTree(dir: "libs/create-adapted-embedded", include: "*.jar")
+    // registrate (solo para compilar; en ejecucion sale embebido en Create Adapted)
+    compileOnly("com.tterrag.registrate:Registrate:${registrate_version}") { transitive = false }
+
+    // flywheel (solo para compilar; en ejecucion sale embebido en Create Adapted)
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge:${flywheel_version}") { transitive = false }
+
+    // catnip (solo para compilar; en ejecucion sale embebido en Create Adapted)
+    compileOnly("net.createmod.catnip:catnip-neoforge:${catnip_version}+mc${minecraft_version}") { transitive = false }
+
+    // ponder (solo para compilar; en ejecucion sale embebido en Create Adapted)
+    compileOnly("net.createmod.ponder:ponder-neoforge:${ponder_maven_version}+mc${minecraft_version}") { transitive = false }
 
     compileOnly "curse.maven:equivox-${equivox_project_id}:${equivox_version_id}"
     runtimeOnly "curse.maven:equivox-${equivox_project_id}:${equivox_version_id}"
