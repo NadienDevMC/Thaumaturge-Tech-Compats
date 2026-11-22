@@ -1,19 +1,22 @@
 package nadiendev.ThaumaturgeTechCompats.ponder.client;
 
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.createmod.ponder.foundation.PonderIndex;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
-@EventBusSubscriber(modid = ThaumaturgeTechCompats.MOD_ID, value = Dist.CLIENT)
+/**
+ * Ponder is optional (it ships with Create). Not an {@code @EventBusSubscriber}, so this class is only loaded
+ * when {@link #register} is called, which the main class does only if Ponder is installed.
+ */
 public final class PonderClient {
     private PonderClient() {
     }
 
-    @SubscribeEvent
-    public static void onClientSetup(FMLClientSetupEvent event) {
+    public static void register(IEventBus modBus) {
+        modBus.addListener(PonderClient::onClientSetup);
+    }
+
+    private static void onClientSetup(FMLClientSetupEvent event) {
         PonderIndex.addPlugin(new TuuPonderPlugin());
     }
 }

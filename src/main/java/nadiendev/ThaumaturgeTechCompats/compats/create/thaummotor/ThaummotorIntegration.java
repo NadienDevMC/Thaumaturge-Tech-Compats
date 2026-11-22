@@ -13,6 +13,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.List;
@@ -29,8 +30,15 @@ public final class ThaummotorIntegration {
             ThaummotorRegistry.ITEMS.register(modBus);
             ThaummotorRegistry.BLOCK_ENTITIES.register(modBus);
             modBus.addListener(ThaummotorIntegration::setup);
+            if (FMLEnvironment.dist.isClient()) {
+                registerClient(modBus);
+            }
         }
         ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.COMMON, ThaummotorConfig.SPEC, ThaummotorConfig.FILE_NAME);
+    }
+
+    private static void registerClient(IEventBus modBus) {
+        nadiendev.ThaumaturgeTechCompats.compats.create.thaummotor.client.ThaummotorClient.register(modBus);
     }
 
     public static List<Block> blocks() {

@@ -70,6 +70,9 @@ public class ThaumaturgeTechCompats {
         container.registerConfig(ModConfig.Type.COMMON, CompatToggles.SPEC, CompatToggles.FILE_NAME);
         container.registerConfig(ModConfig.Type.CLIENT, RiftJarClientConfig.SPEC, RiftJarClientConfig.FILE_NAME);
         ModConditions.CONDITIONS.register(modBus);
+        if (net.neoforged.fml.ModList.get().isLoaded("ponder") && net.neoforged.fml.loading.FMLEnvironment.dist.isClient()) {
+            registerPonder(modBus);
+        }
 
         ModItems.ITEMS.register(modBus);
         ModCreativeTabs.TABS.register(modBus);
@@ -128,5 +131,9 @@ public class ThaumaturgeTechCompats {
 
     public static ResourceLocation id(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    }
+
+    private static void registerPonder(IEventBus modBus) {
+        nadiendev.ThaumaturgeTechCompats.ponder.client.PonderClient.register(modBus);
     }
 }
