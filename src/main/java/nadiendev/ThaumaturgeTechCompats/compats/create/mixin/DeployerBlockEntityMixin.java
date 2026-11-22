@@ -16,7 +16,7 @@ public abstract class DeployerBlockEntityMixin {
     private void thaumaturgetechcompats$variantVector(CallbackInfoReturnable<Vec3> cir) {
         BlockState state = ((BlockEntity) (Object) this).getBlockState();
         if (state.getBlock() instanceof CasingVariant && state.hasProperty(BlockStateProperties.FACING)) {
-            cir.setReturnValue(Vec3.atLowerCornerOf(state.getValue(BlockStateProperties.FACING).getNormal()));
+            cir.setReturnValue(Vec3.atLowerCornerOf(state.getValue(BlockStateProperties.FACING).getUnitVec3i()));
         }
     }
 }

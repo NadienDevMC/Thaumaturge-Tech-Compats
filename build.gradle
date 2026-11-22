@@ -63,7 +63,6 @@ runs {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 def absentCompats = [
-    'compats/create',
     'compats/mekanism',
     'compats/industrialforegoing',
     'compats/ftbunearthed',
@@ -118,16 +117,6 @@ repositories {
     }
 
     maven {
-        name = 'CreateMod'
-        url = 'https://maven.createmod.net'
-        content {
-            includeGroup 'net.createmod.ponder'
-            includeGroup 'net.createmod.catnip'
-            includeGroup 'dev.engine-room.flywheel'
-        }
-    }
-
-    maven {
         name = 'CurseMaven'
         url = 'https://cursemaven.com'
         content {
@@ -165,11 +154,7 @@ dependencies {
 
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}") { transitive = false }
 
-    compileOnly("net.createmod.catnip:catnip-neoforge:${catnip_version}") { transitive = false }
-    runtimeOnly("net.createmod.catnip:catnip-neoforge:${catnip_version}") { transitive = false }
 
-    compileOnly("net.createmod.ponder:ponder-neoforge:${ponder_version}") { transitive = false }
-    runtimeOnly("net.createmod.ponder:ponder-neoforge:${ponder_version}") { transitive = false }
 
     compileOnly("maven.modrinth:oritech:${oritech_version_id}") { transitive = false }
     runtimeOnly("maven.modrinth:oritech:${oritech_version_id}") { transitive = false }
@@ -189,6 +174,13 @@ dependencies {
     runtimeOnly "maven.modrinth:athena-ctm:${athena_version_id}"
 
     runtimeOnly "maven.modrinth:geckolib:${geckolib_version_id}"
+
+    // create adapted (Create para 26.1.2; lleva Ponder, Catnip, Flywheel y Registrate embebidos)
+    compileOnly "curse.maven:create-adapted-${create_project_id}:${create_version_id}"
+    runtimeOnly "curse.maven:create-adapted-${create_project_id}:${create_version_id}"
+
+    // create adapted: librerias embebidas, solo para compilar (en ejecucion salen del propio Create Adapted)
+    compileOnly fileTree(dir: "libs/create-adapted-embedded", include: "*.jar")
 
     compileOnly "curse.maven:equivox-${equivox_project_id}:${equivox_version_id}"
     runtimeOnly "curse.maven:equivox-${equivox_project_id}:${equivox_version_id}"
@@ -217,6 +209,7 @@ tasks.withType(ProcessResources).configureEach {
         lithostitched_version    : lithostitched_version,
         jei_version              : jei_version,
         ponder_version           : ponder_version,
+        create_version           : create_version,
         oritech_version          : oritech_version,
         enderio_version          : enderio_version,
         forcecraft_version       : forcecraft_version,

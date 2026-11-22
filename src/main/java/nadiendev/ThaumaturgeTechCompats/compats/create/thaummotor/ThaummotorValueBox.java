@@ -3,8 +3,8 @@ package nadiendev.ThaumaturgeTechCompats.compats.create.thaummotor;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.foundation.blockEntity.behaviour.ValueBoxTransform;
 import dev.engine_room.flywheel.lib.transform.TransformStack;
-import net.createmod.catnip.math.AngleHelper;
-import net.createmod.catnip.math.VecHelper;
+import net.createmod.catnip.api.math.AngleHelper;
+import net.createmod.catnip.api.math.VecHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelAccessor;
@@ -20,7 +20,7 @@ public class ThaummotorValueBox extends ValueBoxTransform.Sided {
     @Override
     public Vec3 getLocalOffset(LevelAccessor level, BlockPos pos, BlockState state) {
         Direction facing = state.getValue(ThaummotorBlock.FACING);
-        return super.getLocalOffset(level, pos, state).add(Vec3.atLowerCornerOf(facing.getNormal()).scale(-0.0625D));
+        return super.getLocalOffset(level, pos, state).add(Vec3.atLowerCornerOf(facing.getUnitVec3i()).scale(-0.0625D));
     }
 
     @Override

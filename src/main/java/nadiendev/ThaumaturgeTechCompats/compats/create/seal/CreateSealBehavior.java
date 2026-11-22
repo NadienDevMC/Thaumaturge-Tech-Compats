@@ -1,6 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.compats.create.seal;
 
-import com.leclowndu93150.thaumaturge.api.golems.GolemDispatch;
+import com.leclowndu93150.thaumaturge.api.golems.GolemHelper;
 import com.leclowndu93150.thaumaturge.api.golems.IGolemAPI;
 import com.leclowndu93150.thaumaturge.api.golems.seals.ISealBehavior;
 import com.leclowndu93150.thaumaturge.api.golems.seals.ISealEntity;
@@ -9,8 +9,6 @@ import com.leclowndu93150.thaumaturge.api.golems.seals.SealPos;
 import com.leclowndu93150.thaumaturge.api.golems.seals.SealSetting;
 import com.leclowndu93150.thaumaturge.api.golems.tasks.Task;
 import com.leclowndu93150.thaumaturge.api.items.InvHelper;
-import com.leclowndu93150.thaumaturge.api.items.ItemMatch;
-import com.leclowndu93150.thaumaturge.api.items.StackFilter;
 import com.leclowndu93150.thaumaturge.content.golem.GolemInteractionHelper;
 import com.leclowndu93150.thaumaturge.content.golem.seals.behavior.ItemMatchSettings;
 import com.leclowndu93150.thaumaturge.content.golem.tasks.TaskBoard;
@@ -21,7 +19,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.ResourceHandler;
+import net.neoforged.neoforge.transfer.item.ItemResource;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -78,7 +77,7 @@ public final class CreateSealBehavior implements ISealBehavior {
         if (kind == KIND_EXTRACT) {
             task.setLife(EXTRACT_LIFESPAN);
         }
-        GolemDispatch.postTask(level, task);
+        GolemHelper.addGolemTask(level, task);
         pending[kind] = task.id();
         if (wanted != null) {
             takings.put(task.id(), wanted);
@@ -87,12 +86,12 @@ public final class CreateSealBehavior implements ISealBehavior {
 
     private void offerExtraction(ServerLevel level, ISealEntity seal) {
         SealPos at = seal.pos();
-        IItemHandler source = InvHelper.handlerAt(level, at.pos(), at.face());
+        ResourceHandler<ItemResource> source = InvHelper.getItemHandlerAt(level, at.pos(), at.face());
         if (source == null) {
             return;
         }
         ISealFilter filter = seal.filter().orElseThrow();
-        ItemStack found = StackFilter.of(filter.stacks(), filter.isBlacklist(), ItemMatchSettings.of(seal)).firstAccepted(source, false);
+        ItemStack found = InvHelper.findFirstMatchFromFilter(filter.stacks(), filter.isBlacklist(), source, ItemMatchSettings.of(seal), false);
         if (!found.isEmpty()) {
             post(level, seal, KIND_EXTRACT, found);
         }
@@ -119,19 +118,19 @@ public final class CreateSealBehavior implements ISealBehavior {
     }
 
     private void insert(ServerLevel level, ISealEntity seal, IGolemAPI golem) {
-        ItemMatch matching = ItemMatchSettings.of(seal);
+        InvHelper.InvFilter matching = ItemMatchSettings.of(seal);
         InvHelper.FilterMatch carried = carried(seal, golem, matching);
         if (carried.stack().isEmpty()) {
             return;
         }
         SealPos at = seal.pos();
-        IItemHandler inventory = InvHelper.handlerAt(level, at.pos(), at.face());
+        ResourceHandler<ItemResource> inventory = InvHelper.getItemHandlerAt(level, at.pos(), at.face());
         if (inventory == null) {
             return;
         }
         int amount = carried.stack().getCount();
         if (limited(seal, carried)) {
-            amount = Math.max(0, carried.sizeLimit() - InvHelper.count(inventory, carried.stack(), matching));
+            amount = Math.max(0, carried.sizeLimit() - InvHelper.countTotalItemsIn(inventory, carried.stack(), matching));
         }
         if (amount <= 0) {
             return;
@@ -141,8 +140,8 @@ public final class CreateSealBehavior implements ISealBehavior {
         golem.hands().hold(refused);
         if (refused.getCount() < load.getCount()) {
             handlingSound(golem, 1.0F);
-            golem.grantRankExperience(1);
-            golem.animateSwing();
+            golem.addRankXp(1);
+            golem.swingArm();
         }
     }
 
@@ -156,13 +155,13 @@ public final class CreateSealBehavior implements ISealBehavior {
             return;
         }
         SealPos at = seal.pos();
-        ItemStack taken = InvHelper.extractAt(level, at.pos(), at.face(), InvHelper.capped(wanted, room), ItemMatchSettings.of(seal), false);
+        ItemStack taken = InvHelper.removeStackFrom(level, at.pos(), at.face(), InvHelper.copyLimitedStack(wanted, room), ItemMatchSettings.of(seal), false);
         ItemStack spill = golem.hands().hold(taken);
         if (!spill.isEmpty()) {
-            InvHelper.eject(level, at.pos().relative(at.face()), at.face().getOpposite(), spill);
+            InvHelper.ejectStackAt(level, at.pos().relative(at.face()), at.face().getOpposite(), spill);
         }
         handlingSound(golem, 2.0F);
-        golem.animateSwing();
+        golem.swingArm();
     }
 
     private void operate(ServerLevel level, ISealEntity seal, IGolemAPI golem, Task task) {
@@ -174,9 +173,9 @@ public final class CreateSealBehavior implements ISealBehavior {
         GolemInteractionHelper.golemClick(level, golem, task.pos(), seal.pos().face(), used, seal.setting(SNEAKING), true);
     }
 
-    private static InvHelper.FilterMatch carried(ISealEntity seal, IGolemAPI golem, ItemMatch matching) {
+    private static InvHelper.FilterMatch carried(ISealEntity seal, IGolemAPI golem, InvHelper.InvFilter matching) {
         ISealFilter filter = seal.filter().orElseThrow();
-        return new StackFilter(filter.stacks(), filter.limits(), filter.isBlacklist(), matching).firstAcceptedWithLimit(golem.hands().contents());
+        return InvHelper.findFirstMatchFromFilterWithSize(filter.stacks(), filter.limits(), filter.isBlacklist(), golem.hands().contents(), matching);
     }
 
     private static boolean limited(ISealEntity seal, InvHelper.FilterMatch match) {
@@ -204,16 +203,16 @@ public final class CreateSealBehavior implements ISealBehavior {
     }
 
     private boolean canInsert(Level level, ISealEntity seal, IGolemAPI golem, SealPos at) {
-        ItemMatch matching = ItemMatchSettings.of(seal);
+        InvHelper.InvFilter matching = ItemMatchSettings.of(seal);
         InvHelper.FilterMatch carried = carried(seal, golem, matching);
         if (carried.stack().isEmpty()) {
             return false;
         }
-        IItemHandler inventory = InvHelper.handlerAt(level, at.pos(), at.face());
-        if (inventory == null || !InvHelper.acceptsAny(level, at.pos(), at.face(), carried.stack())) {
+        ResourceHandler<ItemResource> inventory = InvHelper.getItemHandlerAt(level, at.pos(), at.face());
+        if (inventory == null || !InvHelper.hasRoomForSome(level, at.pos(), at.face(), carried.stack())) {
             return false;
         }
-        return !limited(seal, carried) || InvHelper.count(inventory, carried.stack(), matching) < carried.sizeLimit();
+        return !limited(seal, carried) || InvHelper.countTotalItemsIn(inventory, carried.stack(), matching) < carried.sizeLimit();
     }
 
     @Override

@@ -64,7 +64,7 @@ public final class CreateVariants {
     }
 
     public static Block baseBlock(VariantKind kind) {
-        return BuiltInRegistries.BLOCK.get(baseId(kind));
+        return BuiltInRegistries.BLOCK.getValue(baseId(kind));
     }
 
     public static DeferredBlock<Block> block(VariantKind kind, CasingTier tier) {

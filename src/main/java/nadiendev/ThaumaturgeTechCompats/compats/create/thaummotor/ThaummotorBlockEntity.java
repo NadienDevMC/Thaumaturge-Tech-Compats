@@ -160,9 +160,9 @@ public class ThaummotorBlockEntity extends GeneratingKineticBlockEntity {
     @Override
     protected void read(CompoundTag tag, HolderLookup.Provider registries, boolean clientPacket) {
         super.read(tag, registries, clientPacket);
-        active = tag.getBoolean(ACTIVE_KEY);
-        source = NodeSourceKind.byId(tag.getString(SOURCE_KEY));
-        capacityPerRpm = tag.getFloat(CAPACITY_KEY);
-        generatedSpeed = tag.getFloat(SPEED_KEY);
+        active = tag.getBooleanOr(ACTIVE_KEY, false);
+        source = NodeSourceKind.byId(tag.getStringOr(SOURCE_KEY, ""));
+        capacityPerRpm = tag.getFloatOr(CAPACITY_KEY, 0.0F);
+        generatedSpeed = tag.getFloatOr(SPEED_KEY, 0.0F);
     }
 }

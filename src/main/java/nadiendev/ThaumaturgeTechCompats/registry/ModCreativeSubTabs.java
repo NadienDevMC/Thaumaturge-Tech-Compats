@@ -9,6 +9,8 @@ import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterIntegration;
 import nadiendev.ThaumaturgeTechCompats.braincharger.BrainChargerIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachinesIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.botania.BotaniaIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.create.CreateIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.create.thaummotor.ThaummotorIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechFeatures;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechIntegration;
@@ -67,6 +69,7 @@ public final class ModCreativeSubTabs {
 
     private static boolean present(CreativeSection section) {
         return switch (section) {
+            case CREATE -> loaded(CreateIntegration.MOD_ID);
             case ORITECH -> loaded(OritechFeatures.MOD_ID);
             case BOTANIA -> loaded(BotaniaIntegration.MOD_ID);
             case VOID -> loaded(VoidMinersMagicalIntegration.MOD_ID);
@@ -82,6 +85,7 @@ public final class ModCreativeSubTabs {
             case JARS -> jars(output);
             case MATRICES -> matrices(output);
             case PEARLS -> pearls(output);
+            case CREATE -> create(output);
             case ORITECH -> oritech(output);
             case BOTANIA -> BotaniaIntegration.fillCreativeTab(output);
             case VOID -> VoidMinersMagicalIntegration.fillCreativeTab(output);
@@ -92,6 +96,11 @@ public final class ModCreativeSubTabs {
             case PURITY -> PurityIntegration.fillCreativeTab(output);
             case EXTRAS -> extras(output);
         }
+    }
+
+    private static void create(CreativeModeTab.Output output) {
+        CreateIntegration.fillCreativeTab(output);
+        ThaummotorIntegration.fillCreativeTab(output);
     }
 
     private static boolean fluxJar(String path) {

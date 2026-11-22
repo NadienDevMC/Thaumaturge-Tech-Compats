@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.device;
 
+import nadiendev.ThaumaturgeTechCompats.compats.create.data.CreateLoot;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterLoot;
 import nadiendev.ThaumaturgeTechCompats.furnace.FurnaceLoot;
 import nadiendev.ThaumaturgeTechCompats.smelter.SmelterLoot;
@@ -18,6 +19,6 @@ public final class DeviceLoot {
     }
 
     public static LootTableProvider provider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        return new LootTableProvider(output, Set.of(), List.of(SmelterLoot.entry(), StabilizerLoot.entry(), TransducerLoot.entry(), FurnaceLoot.entry(), AuraConverterLoot.entry()), registries);
+        return new LootTableProvider(output, Set.of(), List.of(SmelterLoot.entry(), StabilizerLoot.entry(), TransducerLoot.entry(), FurnaceLoot.entry(), CreateLoot.entry(), AuraConverterLoot.entry()), registries);
     }
 }

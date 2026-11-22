@@ -22,6 +22,8 @@ import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechIntegration;
 import nadiendev.ThaumaturgeTechCompats.purity.PurityIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.tags.TagAspectsIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.create.CreateIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.create.thaummotor.ThaummotorIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterIntegration;
 import nadiendev.ThaumaturgeTechCompats.emc.EmcIntegration;
@@ -58,6 +60,9 @@ public class ThaumaturgeTechCompats {
         container.registerConfig(ModConfig.Type.COMMON, CompatToggles.SPEC, CompatToggles.FILE_NAME);
         container.registerConfig(ModConfig.Type.CLIENT, RiftJarClientConfig.SPEC, RiftJarClientConfig.FILE_NAME);
         ModConditions.CONDITIONS.register(modBus);
+        if (net.neoforged.fml.ModList.get().isLoaded("ponder") && net.neoforged.fml.loading.FMLEnvironment.getDist().isClient()) {
+            registerPonder(modBus);
+        }
 
         ModItems.ITEMS.register(modBus);
         ModCreativeTabs.TABS.register(modBus);
@@ -97,6 +102,8 @@ public class ThaumaturgeTechCompats {
         PurityIntegration.register(modBus);
         ForceCraftIntegration.register(modBus, container);
         TagAspectsIntegration.register(modBus);
+        ThaummotorIntegration.register(modBus);
+        CreateIntegration.register(modBus);
         EnderIOIntegration.register(modBus);
         AuraConverterIntegration.register(modBus, container);
         JadeIntegration.register();
@@ -104,5 +111,9 @@ public class ThaumaturgeTechCompats {
 
     public static Identifier id(String path) {
         return Identifier.fromNamespaceAndPath(MOD_ID, path);
+    }
+
+    private static void registerPonder(IEventBus modBus) {
+        nadiendev.ThaumaturgeTechCompats.ponder.client.PonderClient.register(modBus);
     }
 }

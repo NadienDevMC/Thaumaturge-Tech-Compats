@@ -2,6 +2,8 @@ package nadiendev.ThaumaturgeTechCompats.device;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.create.CreateIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.create.thaummotor.ThaummotorIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.charger.ChargerIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.core.CoreIntegration;
@@ -46,6 +48,8 @@ public class DeviceBlockTags extends BlockTagsProvider {
         LinkIntegration.blocks().forEach(pickaxe::add);
         ChargerIntegration.blocks().forEach(pickaxe::add);
         FieldIntegration.blocks().forEach(pickaxe::add);
+        CreateIntegration.blocks().forEach(pickaxe::add);
+        ThaummotorIntegration.blocks().forEach(pickaxe::add);
         EnderIOIntegration.blockIds().forEach(id -> getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_PICKAXE).addOptionalElement(id));
         OritechIntegration.blockIds().forEach(id -> getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_PICKAXE).addOptionalElement(id));
     }

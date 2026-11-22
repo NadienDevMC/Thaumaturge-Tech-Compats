@@ -14,9 +14,9 @@ import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
-import net.minecraft.server.packs.PackType;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UncheckedIOException;
@@ -36,11 +36,9 @@ public class CreateVariantModels implements DataProvider {
     private static final Set<VariantKind> CUTOUT = EnumSet.of(VariantKind.MIXER, VariantKind.SAW, VariantKind.SPOUT, VariantKind.ITEM_DRAIN, VariantKind.BASIN);
 
     private final PackOutput output;
-    private final ExistingFileHelper helper;
 
-    public CreateVariantModels(PackOutput output, ExistingFileHelper helper) {
+    public CreateVariantModels(PackOutput output) {
         this.output = output;
-        this.helper = helper;
     }
 
     @Override
@@ -71,15 +69,30 @@ public class CreateVariantModels implements DataProvider {
         remap(state, name, models);
         tasks.add(CompatJson.save(output, cache, "assets/" + MOD + "/blockstates/" + name + ".json", state));
 
-        JsonObject item = read(Identifier.fromNamespaceAndPath(CREATE, "item/" + kind.id()), "models").getAsJsonObject();
-        Identifier itemParent = Identifier.parse(item.get("parent").getAsString());
+        Identifier itemParent = itemModelOf(kind);
         models.add(itemParent);
         JsonObject itemModel = new JsonObject();
         itemModel.addProperty("parent", target(itemParent, name).toString());
         tasks.add(CompatJson.save(output, cache, "assets/" + MOD + "/models/item/" + name + ".json", itemModel));
+        JsonObject itemInner = new JsonObject();
+        itemInner.addProperty("type", "minecraft:model");
+        itemInner.addProperty("model", MOD + ":item/" + name);
+        JsonObject itemDefinition = new JsonObject();
+        itemDefinition.add("model", itemInner);
+        tasks.add(CompatJson.save(output, cache, "assets/" + MOD + "/items/" + name + ".json", itemDefinition));
 
         for (Identifier model : models) {
             tasks.add(CompatJson.save(output, cache, "assets/" + MOD + "/models/" + target(model, name).getPath() + ".json", retextured(model, kind, tier)));
+        }
+    }
+
+    private Identifier itemModelOf(VariantKind kind) throws IOException {
+        try {
+            JsonObject item = read(Identifier.fromNamespaceAndPath(CREATE, "item/" + kind.id()), "models").getAsJsonObject();
+            return Identifier.parse(item.get("parent").getAsString());
+        } catch (IOException missing) {
+            JsonObject definition = read(Identifier.fromNamespaceAndPath(CREATE, kind.id()), "items").getAsJsonObject();
+            return Identifier.parse(definition.getAsJsonObject("model").get("model").getAsString());
         }
     }
 
@@ -99,7 +112,7 @@ public class CreateVariantModels implements DataProvider {
                 continue;
             }
             Identifier mapped = texture(texture, tier);
-            if (!helper.exists(mapped, PackType.CLIENT_RESOURCES, ".png", "textures")) {
+            if (CreateVariantModels.class.getClassLoader().getResource("assets/" + mapped.getNamespace() + "/textures/" + mapped.getPath() + ".png") == null) {
                 throw new IllegalStateException("Missing recolored texture " + mapped);
             }
             textures.addProperty(entry.getKey(), mapped.toString());
@@ -160,7 +173,12 @@ public class CreateVariantModels implements DataProvider {
     }
 
     private JsonElement read(Identifier location, String prefix) throws IOException {
-        try (Reader reader = new InputStreamReader(helper.getResource(location, PackType.CLIENT_RESOURCES, ".json", prefix).open(), StandardCharsets.UTF_8)) {
+        String resource = "assets/" + location.getNamespace() + "/" + prefix + "/" + location.getPath() + ".json";
+        InputStream stream = CreateVariantModels.class.getClassLoader().getResourceAsStream(resource);
+        if (stream == null) {
+            throw new IOException("Missing resource " + resource);
+        }
+        try (Reader reader = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
             return JsonParser.parseReader(reader);
         }
     }

@@ -35,7 +35,7 @@ public final class ThaummotorRegistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ThaummotorBlockEntity>> THAUMMOTOR_ENTITY = BLOCK_ENTITIES.register(
             NAME,
-            (Supplier<BlockEntityType<ThaummotorBlockEntity>>) () -> BlockEntityType.Builder.of(ThaummotorBlockEntity::new, THAUMMOTOR.get()).build(null));
+            (Supplier<BlockEntityType<ThaummotorBlockEntity>>) () -> new BlockEntityType<>(ThaummotorBlockEntity::new, THAUMMOTOR.get()));
 
     private ThaummotorRegistry() {
     }

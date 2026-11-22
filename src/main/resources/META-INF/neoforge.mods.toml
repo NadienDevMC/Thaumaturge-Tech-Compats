@@ -18,6 +18,9 @@ config = "thaumaturgetechcompats.mixins.json"
 config = "thaumaturgetechcompats.devices.mixins.json"
 
 [[mixins]]
+config = "thaumaturgetechcompats.create.mixins.json"
+
+[[mixins]]
 config = "thaumaturgetechcompats.infusion.mixins.json"
 
 [[mixins]]
@@ -66,7 +69,7 @@ side = "BOTH"
 
 [[dependencies.${mod_id}]]
 modId = "ponder"
-type = "required"
+type = "optional"
 versionRange = "[${ponder_version},)"
 ordering = "AFTER"
 side = "BOTH"
@@ -127,3 +130,10 @@ versionRange = "[${equivox_version},)"
 ordering = "AFTER"
 side = "BOTH"
 
+
+[[dependencies.${mod_id}]]
+modId = "create"
+type = "optional"
+versionRange = "[${create_version},)"
+ordering = "AFTER"
+side = "BOTH"

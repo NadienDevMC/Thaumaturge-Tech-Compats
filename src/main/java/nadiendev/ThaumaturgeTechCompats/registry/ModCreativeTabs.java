@@ -2,6 +2,8 @@ package nadiendev.ThaumaturgeTechCompats.registry;
 
 import de.dafuqs.fractal.api.CreativeSubTab;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
+import nadiendev.ThaumaturgeTechCompats.planetary.pearl.PearlRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,7 +22,7 @@ public final class ModCreativeTabs {
 
     private static final Map<CreativeParent, List<CreativeSubTab>> CHILDREN = new EnumMap<>(CreativeParent.class);
 
-    public static final CreativeModeTab MAIN_TAB = create(CreativeParent.MAIN, () -> ModItems.AKASHIC_RECORD.get());
+    public static final CreativeModeTab MAIN_TAB = create(CreativeParent.MAIN, () -> PearlRegistry.pearl(PlanetaryTier.CREATIVE).get());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN = register(CreativeParent.MAIN, MAIN_TAB);
 

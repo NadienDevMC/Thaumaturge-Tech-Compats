@@ -14,6 +14,7 @@ import nadiendev.ThaumaturgeTechCompats.flux.core.CoreIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.gear.GearIntegration;
 import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
 import nadiendev.ThaumaturgeTechCompats.planetary.salis.SalisIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.create.CreateToggles;
 import nadiendev.ThaumaturgeTechCompats.purity.PurityToggles;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.common.ModConfigSpec;
@@ -27,6 +28,7 @@ public final class CompatToggles {
     public static final String FILE_NAME = "thaumaturgetechcompats-compats.toml";
     public static final ModConfigSpec SPEC;
 
+    public static final String CREATE = "create";
     public static final String NODE_POWER = "node_power";
     public static final String MEKANISM_CLUSTERS = "mekanism_clusters";
     public static final String JEI_CATALYSTS = "jei_catalysts";
@@ -68,6 +70,7 @@ public final class CompatToggles {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
         builder.push("compats");
+        define(builder, CREATE, "Recipes for the Thaumaturge clusters in Create.");
         define(builder, NODE_POWER, "The node power base: machines of other mods that use nodes, node jars, flux jars and flux rifts as a power source, the Flux Jar and its research. Needs a game restart.");
         for (FluxTier tier : FluxTier.values()) {
             define(builder, tier.toggle(), "The devices of the Dimensional Flux network of this tier. Needs a game restart.");
@@ -167,6 +170,9 @@ public final class CompatToggles {
     }
 
     public static boolean enabled(String id) {
+        if (CreateToggles.owns(id)) {
+            return CreateToggles.enabled(id);
+        }
         ModConfigSpec.BooleanValue value = VALUES.get(id);
         if (value == null) {
             return true;

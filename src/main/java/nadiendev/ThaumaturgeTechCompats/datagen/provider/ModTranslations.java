@@ -19,6 +19,8 @@ import nadiendev.ThaumaturgeTechCompats.compats.oritech.intelligence.UnholyIntel
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechTranslations;
 import nadiendev.ThaumaturgeTechCompats.purity.PurityTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftTranslations;
+import nadiendev.ThaumaturgeTechCompats.compats.create.CreateTranslations;
+import nadiendev.ThaumaturgeTechCompats.compats.create.thaummotor.ThaummotorTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOTranslations;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterTranslations;
 import nadiendev.ThaumaturgeTechCompats.emc.EmcTranslations;
@@ -70,6 +72,8 @@ public final class ModTranslations {
         OritechTranslations.english(lang);
         PurityTranslations.english(lang);
         ForceCraftTranslations.english(lang);
+        ThaummotorTranslations.english(lang);
+        CreateTranslations.english(lang);
         EnderIOTranslations.english(lang);
         AuraConverterTranslations.english(lang);
         CoreTranslations.english(lang);
@@ -144,6 +148,8 @@ public final class ModTranslations {
         OritechTranslations.spanish(lang);
         PurityTranslations.spanish(lang);
         ForceCraftTranslations.spanish(lang);
+        ThaummotorTranslations.spanish(lang);
+        CreateTranslations.spanish(lang);
         EnderIOTranslations.spanish(lang);
         AuraConverterTranslations.spanish(lang);
         CoreTranslations.spanish(lang);
