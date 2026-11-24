@@ -13,6 +13,8 @@ import nadiendev.ThaumaturgeTechCompats.compats.botania.BotaniaIntegration;
 import nadiendev.ThaumaturgeTechCompats.infusion.InfusionIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachinesIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryIntegration;
+import nadiendev.ThaumaturgeTechCompats.edible.EdibleIntegration;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.intelligence.UnholyIntelligenceIntegration;
 import nadiendev.ThaumaturgeTechCompats.scribing.ScribingIntegration;
@@ -85,7 +87,9 @@ public final class DataGenerators {
         InfusionIntegration.addProviders(event);
         VoidMinersMagicalIntegration.addProviders(event);
         AvaritiaMachinesIntegration.addProviders(event);
+        HephaestusSmelteryIntegration.addProviders(event);
         TaintedFoodIntegration.addProviders(event);
+        EdibleIntegration.addProviders(event);
         UnholyIntelligenceIntegration.addProviders(event);
         ScribingIntegration.addProviders(event);
         SmelterIntegration.addProviders(event);

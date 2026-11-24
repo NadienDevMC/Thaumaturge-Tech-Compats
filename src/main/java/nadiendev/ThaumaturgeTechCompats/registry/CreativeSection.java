@@ -17,6 +17,7 @@ public enum CreativeSection {
     FLUX_NETWORK(CreativeParent.MAIN, "flux_network", "Flux Network", "Red de flujo"),
     FLUX_GEAR(CreativeParent.MAIN, "flux_gear", "Flux Gear", "Equipo flujo"),
     FOOD_TAINTED(CreativeParent.MAIN, "food_tainted", "Tainted Food", "Comida corrupta"),
+    FOOD_EDIBLE(CreativeParent.MAIN, "food_edible", "Edible Items", "Comestibles"),
     PURITY(CreativeParent.MAIN, "purity", "Purity", "Pureza"),
     EXTRAS(CreativeParent.MAIN, "extras", "Extras", "Extras");
 

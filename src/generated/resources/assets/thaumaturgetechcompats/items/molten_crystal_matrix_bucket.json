@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "thaumaturgetechcompats:item/molten_crystal_matrix_bucket",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 8188904
+      }
+    ]
+  }
+}

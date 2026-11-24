@@ -16,6 +16,8 @@ import nadiendev.ThaumaturgeTechCompats.compats.botania.BotaniaIntegration;
 import nadiendev.ThaumaturgeTechCompats.infusion.InfusionIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachinesIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryIntegration;
+import nadiendev.ThaumaturgeTechCompats.edible.EdibleIntegration;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.intelligence.UnholyIntelligenceIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechIntegration;
@@ -59,6 +61,8 @@ public class ThaumaturgeTechCompats {
         container.registerConfig(ModConfig.Type.COMMON, ThaumaturgeTechCompatsConfig.SPEC);
         container.registerConfig(ModConfig.Type.COMMON, CompatToggles.SPEC, CompatToggles.FILE_NAME);
         container.registerConfig(ModConfig.Type.CLIENT, RiftJarClientConfig.SPEC, RiftJarClientConfig.FILE_NAME);
+        container.registerConfig(ModConfig.Type.CLIENT, nadiendev.ThaumaturgeTechCompats.tooltip.ItemPreviewConfig.SPEC,
+                nadiendev.ThaumaturgeTechCompats.tooltip.ItemPreviewConfig.FILE_NAME);
         ModConditions.CONDITIONS.register(modBus);
         if (net.neoforged.fml.ModList.get().isLoaded("create") && net.neoforged.fml.ModList.get().isLoaded("ponder") && net.neoforged.fml.loading.FMLEnvironment.getDist().isClient()) {
             registerPonder(modBus);
@@ -87,7 +91,9 @@ public class ThaumaturgeTechCompats {
         InfusionIntegration.register(modBus);
         VoidMinersMagicalIntegration.register(modBus);
         AvaritiaMachinesIntegration.register(modBus);
+        HephaestusSmelteryIntegration.register(modBus);
         TaintedFoodIntegration.register(modBus);
+        EdibleIntegration.register(modBus);
         UnholyIntelligenceIntegration.register(modBus);
         ScribingIntegration.register(modBus);
         SmelterIntegration.register(modBus);

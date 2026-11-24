@@ -45,6 +45,9 @@ public class AvaritiaMachinesContent implements DataProvider {
         }
         tasks.add(ContentJson.save(output, cache, "data/" + MOD + "/thaumaturge/aspect/nuclear.json", aspect(0x8BE02A, "nuclear", "thaumaturge:potentia", "thaumaturge:perditio")));
         tasks.add(ContentJson.save(output, cache, "data/" + MOD + "/thaumaturge/aspect/cosmic.json", aspect(0x5B3FD9, "cosmic", "thaumaturge:alienis", "thaumaturge:auram")));
+        // Sol is used by the tag aspects and the essences research, so it is always generated here
+        // (the Solar Flux compat that used to generate it is not part of this version).
+        tasks.add(ContentJson.save(output, cache, "data/" + MOD + "/thaumaturge/aspect/sol.json", aspect(0xFFB600, "sol", "thaumaturge:lux", "thaumaturge:victus")));
         tasks.add(ContentJson.save(output, cache, "data/" + MOD + "/thaumaturge/research_entry/" + ENTRY + ".json", entry()));
         return CompletableFuture.allOf(tasks.toArray(CompletableFuture[]::new));
     }

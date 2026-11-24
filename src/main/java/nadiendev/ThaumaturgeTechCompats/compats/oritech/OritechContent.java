@@ -237,16 +237,19 @@ public class OritechContent implements DataProvider {
         return json;
     }
 
+    private static JsonObject weightedBlock(String block, int weight) {
+        JsonObject json = new JsonObject();
+        json.addProperty("block", block);
+        json.addProperty("weight", weight);
+        return json;
+    }
+
     private static JsonObject configuredFeature(OritechNode node) {
         JsonArray nodeOres = new JsonArray();
-        nodeOres.add(MOD + ":" + node.blockName());
+        nodeOres.add(weightedBlock(MOD + ":" + node.blockName(), 1));
         JsonArray boulderOres = new JsonArray();
-        for (int i = 0; i < BOULDER_ORES; i++) {
-            boulderOres.add(node.boulderOre());
-        }
-        for (int i = 0; i < BOULDER_FILLER; i++) {
-            boulderOres.add("minecraft:deepslate");
-        }
+        boulderOres.add(weightedBlock(node.boulderOre(), BOULDER_ORES));
+        boulderOres.add(weightedBlock("minecraft:deepslate", BOULDER_FILLER));
         JsonObject config = new JsonObject();
         config.addProperty("nodeSize", 6);
         config.addProperty("nodeOreChance", 0.3);

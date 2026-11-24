@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "edible_items"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:copper_spear",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:edible_copper_spear"
+  }
+}

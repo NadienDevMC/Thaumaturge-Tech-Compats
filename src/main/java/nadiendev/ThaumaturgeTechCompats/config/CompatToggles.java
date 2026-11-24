@@ -5,8 +5,10 @@ import nadiendev.ThaumaturgeTechCompats.compats.botania.BotaniaIntegration;
 import nadiendev.ThaumaturgeTechCompats.infusion.InfusionIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachinesIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechFeatures;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
+import nadiendev.ThaumaturgeTechCompats.edible.EdibleIntegration;
 import nadiendev.ThaumaturgeTechCompats.emc.EmcIntegration;
 import nadiendev.ThaumaturgeTechCompats.essences.EssencesIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.FluxTier;
@@ -34,6 +36,7 @@ public final class CompatToggles {
     public static final String JEI_CATALYSTS = "jei_catalysts";
     public static final String JEI_INFO = "jei_info";
     public static final String TAINTED_FOOD = "tainted_food";
+    public static final String EDIBLE_ITEMS = EdibleIntegration.TOGGLE;
     public static final String PURIFICATION_POTION = "purification_potion";
     public static final String ORITECH = OritechFeatures.MOD_ID;
     public static final String FORCECRAFT = "forcecraft";
@@ -59,6 +62,7 @@ public final class CompatToggles {
     public static final String ORITECH_PULVERIZER = "oritech_processing_pulverizer";
     public static final String ORITECH_GRINDER = "oritech_processing_grinder";
     public static final String ORITECH_BONUS = "oritech_processing_bonus";
+    public static final String HEPHAESTUS_SMELTERY = HephaestusSmelteryIntegration.TOGGLE;
     public static final String AURA_CONVERTER = "aura_converter";
     public static final String AURA_CONVERTER_BRASS = "aura_converter_brass";
     public static final String AURA_CONVERTER_THAUMIUM = "aura_converter_thaumium";
@@ -102,6 +106,7 @@ public final class CompatToggles {
         }
         define(builder, AvaritiaMachinesIntegration.TOGGLE, "Higher tiers of the Avaritia Neutron Collector and Neutronium Compressor, with their infusion recipes and research. Needs a game restart.");
         define(builder, TAINTED_FOOD, "Tainted versions of vanilla and Avaritia foods, brewed in the crucible, with their research. Needs a game restart.");
+        define(builder, EDIBLE_ITEMS, "Edible copies of tools, weapons, ingots, gems, doors and the Goggles of Revealing, crafted with sugar; eating them gives status effects by item class and tier. Needs a game restart.");
         define(builder, FORCECRAFT, "Everything the addon adds for ForceCraft: the Repair infusion, the aspects of its items and mobs and the Force Flask rules. Needs a game restart.");
         define(builder, TAG_ASPECTS, "Aspects for every item of a common c: tag (ingots, ores, gems, dusts and so on), so any mod gets them by material. Applies when data packs reload.");
         define(builder, TAG_ASPECTS_INGOTS, "Tag aspects for c:ingots/*.");
@@ -127,6 +132,7 @@ public final class CompatToggles {
         define(builder, ORITECH_GRINDER, "The Oritech Grinder recipes for the Thaumaturge clusters and ores.");
         define(builder, ORITECH_BONUS, "One extra raw material from every Thaumaturge cluster or ore in the Oritech Pulverizer and Grinder. Off gives the same yield as Oritech ores.");
         define(builder, ORITECH, "Everything the addon adds for Oritech: tiered ores, machine addons, their recipes and research. Needs a game restart.");
+        define(builder, HEPHAESTUS_SMELTERY, "Molten Crystal Matrix, Neutronium and Infinity for the Hephaestus Forge smeltery, with melting and casting recipes. Needs a game restart.");
         builder.pop();
 
         builder.push("oritech");

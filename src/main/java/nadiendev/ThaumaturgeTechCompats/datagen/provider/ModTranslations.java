@@ -14,6 +14,8 @@ import nadiendev.ThaumaturgeTechCompats.compats.botania.BotaniaTranslations;
 import nadiendev.ThaumaturgeTechCompats.infusion.InfusionTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachinesTranslations;
+import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryTranslations;
+import nadiendev.ThaumaturgeTechCompats.edible.EdibleTranslations;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.intelligence.UnholyIntelligenceTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechTranslations;
@@ -56,7 +58,9 @@ public final class ModTranslations {
         InfusionTranslations.english(lang);
         VoidMinersMagicalTranslations.english(lang);
         AvaritiaMachinesTranslations.english(lang);
+        HephaestusSmelteryTranslations.english(lang);
         TaintedFoodTranslations.english(lang);
+        EdibleTranslations.english(lang);
         UnholyIntelligenceTranslations.english(lang);
         ScribingTranslations.english(lang);
         SmelterTranslations.english(lang);
@@ -132,7 +136,9 @@ public final class ModTranslations {
         InfusionTranslations.spanish(lang);
         VoidMinersMagicalTranslations.spanish(lang);
         AvaritiaMachinesTranslations.spanish(lang);
+        HephaestusSmelteryTranslations.spanish(lang);
         TaintedFoodTranslations.spanish(lang);
+        EdibleTranslations.spanish(lang);
         UnholyIntelligenceTranslations.spanish(lang);
         ScribingTranslations.spanish(lang);
         SmelterTranslations.spanish(lang);

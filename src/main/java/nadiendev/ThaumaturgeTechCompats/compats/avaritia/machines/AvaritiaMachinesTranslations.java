@@ -14,6 +14,9 @@ public final class AvaritiaMachinesTranslations {
             lang.add(BLOCK + tier.collectorName(), tier.shortEnglish() + " Neutron Collector");
             lang.add(BLOCK + tier.compressorName(), tier.shortEnglish() + " Neutron Compressor");
         }
+        lang.add("aspect.thaumaturgetechcompats.sol", "Sol");
+        lang.add("aspect.thaumaturgetechcompats.sol.desc", "Sun, Solar Energy");
+        lang.add("aspect.thaumaturgetechcompats.sol.help", "the power of the sun");
         lang.add("aspect.thaumaturgetechcompats.nuclear", "Nuclear");
         lang.add("aspect.thaumaturgetechcompats.nuclear.desc", "Radiation, Atomic Power, Fission");
         lang.add("aspect.thaumaturgetechcompats.nuclear.help", "the power locked in the heart of matter");
@@ -32,6 +35,9 @@ public final class AvaritiaMachinesTranslations {
             lang.add(BLOCK + tier.collectorName(), "Colector neutrónico " + tier.shortSpanish());
             lang.add(BLOCK + tier.compressorName(), "Compresor neutrónico " + tier.shortSpanish());
         }
+        lang.add("aspect.thaumaturgetechcompats.sol", "Sol");
+        lang.add("aspect.thaumaturgetechcompats.sol.desc", "Sol, energía solar");
+        lang.add("aspect.thaumaturgetechcompats.sol.help", "el poder del sol");
         lang.add("aspect.thaumaturgetechcompats.nuclear", "Nuclear");
         lang.add("aspect.thaumaturgetechcompats.nuclear.desc", "Radiación, energía atómica, fisión");
         lang.add("aspect.thaumaturgetechcompats.nuclear.help", "el poder encerrado en el corazón de la materia");

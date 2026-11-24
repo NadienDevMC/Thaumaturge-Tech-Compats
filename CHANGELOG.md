@@ -1,5 +1,25 @@
 # ⚡ Thaumaturge Tech Compats — Changelog
 
+## 🚀 [1.0.3-26.1.2] 24/11/2026 21:10
+
+### Additions
+- Hephaestus Forge smeltery support: Crystal Matrix, Neutronium and Infinity can be melted and cast (ingots, nuggets, plates and blocks), with their own molten fluids and buckets. A new research entry explains it.
+- Edible Goggles of Revealing: a version of the Goggles of Revealing you can eat, made with sugar.
+- Tooltip with an enlarged picture of the item on every item, vanilla and modded. It can be turned off or resized in the client config.
+- A Flux Jar next to a crucible now absorbs the flux the crucible leaks or overflows, instead of polluting the aura.
+
+### Fixes
+- Fixed the data pack loading error when creating or opening a world without Void Miners (or other optional compat mods). The pickaxe mining tag no longer breaks, which also fixes the Aether II pickaxe reinforcements crash.
+- Fixed the Oritech resource node world generation failing to load (amber, cinnabar and quartz nodes).
+- Fixed the missing Sol aspect that broke the Essences research entry.
+- Fixed a startup crash ("Block id not set") when Re-Avaritia is installed. The Neutron Collectors and Compressors of higher tiers no longer break the registry.
+
+### Changes
+- The Star Crucifix can now bind any creature, not only hostile ones.
+
+### Lineas de codigo cambiadas
++5379 −190
+
 ## 🚀 [1.0.2-26.1.2] 22/11/2026 16:50
 
 ### Additions

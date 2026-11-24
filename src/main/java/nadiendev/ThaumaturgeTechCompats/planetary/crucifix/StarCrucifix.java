@@ -27,7 +27,6 @@ import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.ItemStack;
@@ -179,7 +178,7 @@ public final class StarCrucifix {
         if (entity instanceof PartEntity<?> part) {
             entity = part.getParent();
         }
-        return entity instanceof LivingEntity living && living instanceof Enemy && !(living instanceof Player) && living.isAlive()
+        return entity instanceof LivingEntity living && !(living instanceof Player) && living.isAlive()
                 ? living : null;
     }
 

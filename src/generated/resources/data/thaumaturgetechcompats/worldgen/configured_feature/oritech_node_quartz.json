@@ -20,31 +20,22 @@
   "type": "oritech:resource_node",
   "config": {
     "boulderOres": [
-      "thaumaturge:deepslate_ore_quartz",
-      "thaumaturge:deepslate_ore_quartz",
-      "thaumaturge:deepslate_ore_quartz",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate",
-      "minecraft:deepslate"
+      {
+        "block": "thaumaturge:deepslate_ore_quartz",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:deepslate",
+        "weight": 17
+      }
     ],
     "boulderRadius": 3,
     "nodeOreChance": 0.3,
     "nodeOres": [
-      "thaumaturgetechcompats:resource_node_quartz"
+      {
+        "block": "thaumaturgetechcompats:resource_node_quartz",
+        "weight": 1
+      }
     ],
     "nodeSize": 6,
     "overlayBlock": "oritech:still_oil_block",

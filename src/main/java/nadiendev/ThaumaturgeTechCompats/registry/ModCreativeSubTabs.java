@@ -24,6 +24,7 @@ import nadiendev.ThaumaturgeTechCompats.flux.link.LinkIntegration;
 import nadiendev.ThaumaturgeTechCompats.focus.FocusIntegration;
 import nadiendev.ThaumaturgeTechCompats.furnace.FurnaceIntegration;
 import nadiendev.ThaumaturgeTechCompats.golem.GolemIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryIntegration;
 import nadiendev.ThaumaturgeTechCompats.infusion.InfusionIntegration;
 import nadiendev.ThaumaturgeTechCompats.jar.JarIntegration;
 import nadiendev.ThaumaturgeTechCompats.nodepower.NodePowerIntegration;
@@ -35,6 +36,7 @@ import nadiendev.ThaumaturgeTechCompats.scribing.ScribingIntegration;
 import nadiendev.ThaumaturgeTechCompats.singularity.SingularityIntegration;
 import nadiendev.ThaumaturgeTechCompats.smelter.SmelterIntegration;
 import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerIntegration;
+import nadiendev.ThaumaturgeTechCompats.edible.EdibleIntegration;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodIntegration;
 import nadiendev.ThaumaturgeTechCompats.transducer.TransducerIntegration;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierIntegration;
@@ -93,6 +95,7 @@ public final class ModCreativeSubTabs {
             case FLUX_NETWORK -> fluxNetwork(output);
             case FLUX_GEAR -> fluxGear(output);
             case FOOD_TAINTED -> TaintedFoodIntegration.fillCreativeTab(output);
+            case FOOD_EDIBLE -> EdibleIntegration.fillCreativeTab(output);
             case PURITY -> PurityIntegration.fillCreativeTab(output);
             case EXTRAS -> extras(output);
         }
@@ -129,6 +132,7 @@ public final class ModCreativeSubTabs {
         FurnaceIntegration.fillCreativeTab(output);
         BrainChargerIntegration.fillCreativeTab(output);
         GolemIntegration.fillCreativeTab(output);
+        HephaestusSmelteryIntegration.fillCreativeTab(output);
         WandTierIntegration.fillCreativeTab(output);
         FocusIntegration.fillCreativeTab(output);
     }
