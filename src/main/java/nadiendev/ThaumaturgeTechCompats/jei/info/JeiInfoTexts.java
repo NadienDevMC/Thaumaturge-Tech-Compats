@@ -1,6 +1,8 @@
 package nadiendev.ThaumaturgeTechCompats.jei.info;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import nadiendev.ThaumaturgeTechCompats.edible.EdibleCatalog;
+import nadiendev.ThaumaturgeTechCompats.edible.EdibleEntry;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodType;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.FarmersDelightFood;
 import net.minecraft.Util;
@@ -32,6 +34,7 @@ public final class JeiInfoTexts {
 
     private static final Map<String, Text> EXACT = new HashMap<>();
     private static final Map<String, ResourceLocation> TAINTED = new LinkedHashMap<>();
+    private static final Map<String, ResourceLocation> EDIBLE = new LinkedHashMap<>();
 
     private static final Text GENERIC_BLOCK = new Text(
             "A block added by Thaumaturge Tech Compats. Its recipe and what it does are written in the research of the Thaumonomicon.",
@@ -41,6 +44,9 @@ public final class JeiInfoTexts {
             "Un objeto añadido por Thaumaturge Tech Compats. Su receta y lo que hace están escritos en la investigación del Thaumonomicon.");
 
     static {
+        for (EdibleEntry entry : EdibleCatalog.entries()) {
+            EDIBLE.put(entry.id(), entry.original());
+        }
         for (TaintedFoodType type : TaintedFoodType.values()) {
             TAINTED.put(type.id(), type.original());
         }
@@ -57,12 +63,19 @@ public final class JeiInfoTexts {
         return KEY_PREFIX + path;
     }
 
+    public static Map<String, ResourceLocation> edibleItems() {
+        return EDIBLE;
+    }
+
     public static Map<String, ResourceLocation> taintedFoods() {
         return TAINTED;
     }
 
     public static Component[] components(String path, boolean block) {
         ResourceLocation original = TAINTED.get(path);
+        if (original == null) {
+            original = EDIBLE.get(path);
+        }
         if (original != null) {
             return new Component[]{Component.translatable(key(path), Component.translatable(Util.makeDescriptionId("item", original)))};
         }
@@ -90,6 +103,9 @@ public final class JeiInfoTexts {
     }
 
     private static Text family(String path) {
+        if (path.startsWith("edible_")) {
+            return edible();
+        }
         if (path.startsWith("tainted_")) {
             return tainted();
         }
@@ -879,6 +895,12 @@ public final class JeiInfoTexts {
         return t(
                 "A Native " + capitalize(metal) + " Cluster, a chunk of raw " + metal + " in the style of the Thaumaturge ore clusters. It is smelted for " + metal + " or dissolved in the crucible, and it is the result of the ore-processing routes of Mekanism and of the ores of the Industrial Foregoing Laser Drill that this mod adds.",
                 "Un Cúmulo Nativo de " + metalEs + ", un trozo de " + metalEs + " en bruto al estilo de los cúmulos de mineral de Thaumaturge. Se funde para sacar " + metalEs + " o se disuelve en el crisol, y es el resultado de las rutas de procesado de minerales de Mekanism y de los minerales del Taladro láser de Industrial Foregoing que añade este mod.");
+    }
+
+    private static Text edible() {
+        return t(
+                "The edible version of %s, made by crafting the original with sugar. Eating it gives a status effect that depends on the kind of item and its tier: haste for pickaxes, health boost and regeneration for weapons, speed for axes, luck for hoes, jump boost for shovels, night vision for goggles and gems, absorption for ingots and resistance for doors.",
+                "La versión comestible de «%s», que se fabrica combinando el original con azúcar. Al comerla da un efecto que depende del tipo de objeto y de su nivel: prisa para los picos, impulso de salud y regeneración para las armas, velocidad para las hachas, suerte para las azadas, salto mejorado para las palas, visión nocturna para las gafas y las gemas, absorción para los lingotes y resistencia para las puertas.");
     }
 
     private static Text tainted() {

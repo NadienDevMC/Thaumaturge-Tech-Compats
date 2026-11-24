@@ -21,6 +21,7 @@ public final class SolarFluxIntegration {
     public static void register() {
         if (isLoaded() && CompatToggles.enabled(CompatToggles.SOLAR_FLUX)) {
             SolarFluxPanels.register();
+            SolarFluxIdMigration.register();
         }
     }
 

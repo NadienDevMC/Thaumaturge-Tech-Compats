@@ -33,7 +33,7 @@
     }
   ],
   "catalyst": {
-    "item": "solarflux:sp_alchemical_brass"
+    "item": "solarflux:sp_brass_solar_panel"
   },
   "components": [
     {

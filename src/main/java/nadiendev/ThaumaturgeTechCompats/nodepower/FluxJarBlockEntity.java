@@ -61,6 +61,16 @@ public class FluxJarBlockEntity extends BlockEntity {
         return capacity <= 0.0F ? 0.0F : Math.min(1.0F, flux / capacity);
     }
 
+    /** Stores up to the given amount of flux and returns how much fitted. */
+    public float absorb(float amount) {
+        float taken = Math.min(Math.max(amount, 0.0F), capacity() - flux);
+        if (taken > 0.0F) {
+            flux += taken;
+            update();
+        }
+        return Math.max(taken, 0.0F);
+    }
+
     public void consume(float amount) {
         flux = Math.max(0.0F, flux - amount);
         update();

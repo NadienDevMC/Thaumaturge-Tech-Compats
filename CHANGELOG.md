@@ -1,5 +1,25 @@
 # ⚡ Thaumaturge Tech Compats — Changelog
 
+## 🚀 [1.0.3-1.21.1] 24/11/2026 20:15
+
+### Additions
+- Hephaestus Forge smeltery support: Crystal Matrix, Neutronium and Infinity can be melted and cast (ingots, nuggets, plates and blocks), with their own molten fluids and buckets.
+- Edible items: edible copies of vanilla and Thaumaturge tools, weapons, ingots, gems, doors and the Goggles of Revealing, made with sugar. Eating them gives effects by item class and tier, listed in their tooltip.
+- Tooltip with an enlarged picture of the item on every item, vanilla and modded. It can be turned off or resized in the client config.
+- New Solar Flux Reborn panels: Alchemical Cobalt (needs Hephaestus Forge), Brass Andesite (needs Create), Thaumium Zinc (needs Create or AllTheOres) and Void Uranium (needs AllTheOres or Mekanism, and irradiates whoever carries it when Mekanism is installed).
+- A Flux Jar next to a crucible now absorbs the flux the crucible leaks or overflows, instead of polluting the aura.
+
+### Fixes
+-
+
+### Changes
+- The Alchemical, Thaumium and Void Metal solar panels have new stats. If you already played with the mod, delete their entries in config/solarflux/panels.cfg to get the new values.
+- The Alchemical Brass Solar Panel is now the Brass Solar Panel; panels already in a world are converted automatically.
+- The Star Crucifix can now bind any creature, not only hostile ones.
+
+### Lineas de codigo cambiadas
++5239 −58
+
 ## 🚀 [1.0.2-1.21.1] 22/11/2026 16:50
 
 ### Additions

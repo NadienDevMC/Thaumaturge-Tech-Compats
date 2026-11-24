@@ -1,8 +1,10 @@
 package nadiendev.ThaumaturgeTechCompats.config;
 
 import com.electronwill.nightconfig.core.file.FileConfig;
+import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.industrialforegoing.addons.IndustrialForegoingAddonsIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.create.CreateToggles;
+import nadiendev.ThaumaturgeTechCompats.edible.EdibleIntegration;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.FarmersDelightTaintedIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.botania.BotaniaIntegration;
 import nadiendev.ThaumaturgeTechCompats.infusion.InfusionIntegration;
@@ -39,11 +41,13 @@ public final class CompatToggles {
     public static final String JEI_CATALYSTS = "jei_catalysts";
     public static final String JEI_INFO = "jei_info";
     public static final String TAINTED_FOOD = "tainted_food";
+    public static final String EDIBLE_ITEMS = EdibleIntegration.TOGGLE;
     public static final String MEKANISM = "mekanism";
     public static final String INDUSTRIAL_FOREGOING = "industrialforegoing";
     public static final String SOLAR_FLUX = "solarflux";
     public static final String PURIFICATION_POTION = "purification_potion";
     public static final String ORITECH = OritechFeatures.MOD_ID;
+    public static final String HEPHAESTUS_SMELTERY = HephaestusSmelteryIntegration.TOGGLE;
     public static final String MEKANISM_X2 = "mekanism_x2";
     public static final String MEKANISM_X3 = "mekanism_x3";
     public static final String MEKANISM_X4 = "mekanism_x4";
@@ -91,6 +95,10 @@ public final class CompatToggles {
     public static final String SOLAR_ALCHEMICAL_BRASS = "solar_alchemical_brass";
     public static final String SOLAR_THAUMIUM = "solar_thaumium";
     public static final String SOLAR_VOID_METAL = "solar_void_metal";
+    public static final String SOLAR_BRASS_ANDESITE = "solar_brass_andesite";
+    public static final String SOLAR_THAUMIUM_ZINC = "solar_thaumium_zinc";
+    public static final String SOLAR_ALCHEMICAL_COBALT = "solar_alchemical_cobalt";
+    public static final String SOLAR_VOID_URANIUM = "solar_void_uranium";
 
     private static final Map<String, ModConfigSpec.BooleanValue> VALUES = new LinkedHashMap<>();
 
@@ -137,6 +145,7 @@ public final class CompatToggles {
         }
         define(builder, AvaritiaMachinesIntegration.TOGGLE, "Higher tiers of the Avaritia Neutron Collector and Neutronium Compressor, with their infusion recipes and research. Needs a game restart.");
         define(builder, TAINTED_FOOD, "Tainted versions of vanilla and Avaritia foods, brewed in the crucible, with their research. Needs a game restart.");
+        define(builder, EDIBLE_ITEMS, "Edible copies of tools, weapons, ingots, gems, doors and the Goggles of Revealing, crafted with sugar; eating them gives status effects by item class and tier. Needs a game restart.");
         for (String id : FarmersDelightTaintedIntegration.toggleIds()) {
             define(builder, id, "Tainted Farmers Delight foods or knives, with their crucible and infusion recipes and research. Needs a game restart.");
         }
@@ -186,6 +195,7 @@ public final class CompatToggles {
         define(builder, MAGIC_LASER_DRILL, "The Magical Laser Drill, Ore Laser Base and Fluid Laser Base of Industrial Foregoing, their research and their recipes.");
         define(builder, MAGIC_INFINITY_DRILL, "The Magical Infinity Drill of Industrial Foregoing, its research and its recipe. Needs a game restart.");
         define(builder, ORITECH, "Everything the addon adds for Oritech: tiered ores, machine addons, their recipes and research. Needs a game restart.");
+        define(builder, HEPHAESTUS_SMELTERY, "Molten Crystal Matrix, Neutronium and Infinity for the Hephaestus Forge smeltery, with melting and casting recipes. Needs a game restart.");
         define(builder, SOLAR_FLUX, "The Thaumcraft solar panels for Solar Flux Reborn. Needs a game restart.");
         builder.pop();
 
@@ -224,9 +234,13 @@ public final class CompatToggles {
 
         builder.push("solar_panels");
         define(builder, SOLAR_ALCHEMICAL, "The alchemical solar panel. Needs a game restart.");
-        define(builder, SOLAR_ALCHEMICAL_BRASS, "The alchemical brass solar panel. Needs a game restart.");
+        define(builder, SOLAR_ALCHEMICAL_BRASS, "The brass solar panel, which replaced the alchemical brass solar panel, and its recipe and research. Needs a game restart.");
         define(builder, SOLAR_THAUMIUM, "The thaumium solar panel. Needs a game restart.");
         define(builder, SOLAR_VOID_METAL, "The void metal solar panel. Needs a game restart.");
+        define(builder, SOLAR_BRASS_ANDESITE, "The brass andesite solar panel. Needs Create. Needs a game restart.");
+        define(builder, SOLAR_THAUMIUM_ZINC, "The thaumium zinc solar panel. Needs Create or All The Ores. Needs a game restart.");
+        define(builder, SOLAR_ALCHEMICAL_COBALT, "The alchemical cobalt solar panel. Needs Hephaestus Forge. Needs a game restart.");
+        define(builder, SOLAR_VOID_URANIUM, "The void uranium solar panel. Needs All The Ores, and irradiates players that carry it when Mekanism is installed. Needs a game restart.");
         builder.pop();
 
         SPEC = builder.build();

@@ -35,6 +35,9 @@ public final class JeiInfoTranslations {
                 paths.put(id.getPath(), entry.getValue() instanceof BlockItem);
             }
         }
+        for (String path : JeiInfoTexts.edibleItems().keySet()) {
+            paths.putIfAbsent(path, false);
+        }
         for (String path : JeiInfoTexts.taintedFoods().keySet()) {
             paths.putIfAbsent(path, false);
         }

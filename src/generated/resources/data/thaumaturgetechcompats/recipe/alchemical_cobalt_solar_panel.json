@@ -1,0 +1,50 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_cobalt"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "hephaestus"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "c": {
+      "tag": "c:ingots/cobalt"
+    },
+    "p": {
+      "item": "solarflux:photovoltaic_cell_1"
+    },
+    "s": {
+      "item": "solarflux:sp_alchemical"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "csc",
+    "ccc"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:solarflux_alchemical_cobalt"
+  },
+  "result": {
+    "count": 1,
+    "id": "solarflux:sp_alchemical_cobalt_solar_panel"
+  },
+  "vis": 20
+}

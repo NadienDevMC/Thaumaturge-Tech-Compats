@@ -6,6 +6,7 @@
   "mixins": [
     "AdvancedAlchemicalFurnaceStructureMixin",
     "BlockEntityAdvancedAlchemicalFurnaceMixin",
+    "BlockEntityCrucibleMixin",
     "BlockEntityNodeMixin",
     "BlockEntityNodeTransducerMixin"
   ],

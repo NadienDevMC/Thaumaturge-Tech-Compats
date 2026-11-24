@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "hephaestus"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "avaritia"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "hephaestus_smeltery"
+    }
+  ],
+  "type": "hephaestus:melting",
+  "fuel": {
+    "amount": 50,
+    "id": "minecraft:lava"
+  },
+  "ingredient": {
+    "item": "avaritia:infinity_ingot"
+  },
+  "result": {
+    "amount": 90,
+    "id": "thaumaturgetechcompats:molten_infinity"
+  },
+  "temperature": 2000,
+  "time": 100
+}

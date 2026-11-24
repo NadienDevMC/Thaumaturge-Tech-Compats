@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:molten_crystal_matrix",
+      "required": false
+    }
+  ]
+}

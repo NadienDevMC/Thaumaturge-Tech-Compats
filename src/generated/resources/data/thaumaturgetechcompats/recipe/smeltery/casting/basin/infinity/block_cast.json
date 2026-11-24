@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "hephaestus"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "avaritia"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "hephaestus_smeltery"
+    }
+  ],
+  "type": "hephaestus:casting_basin",
+  "input": {
+    "amount": 810,
+    "id": "thaumaturgetechcompats:molten_infinity"
+  },
+  "result": "avaritia:infinity",
+  "time": 200
+}

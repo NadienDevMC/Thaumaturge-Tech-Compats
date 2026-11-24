@@ -1,0 +1,97 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_void_uranium"
+    },
+    {
+      "type": "neoforge:or",
+      "values": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "alltheores"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        }
+      ]
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 14,
+  "complexity": 3,
+  "icons": [
+    "solarflux:sp_void_uranium_solar_panel"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.solarflux_void_uranium.title",
+  "note_aspects": [
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:sol"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:solarflux_void"
+  ],
+  "row": 8,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.solarflux_void_uranium.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/void_uranium_solar_panel"
+      ],
+      "text": "research.thaumaturgetechcompats.solarflux_void_uranium.stage_1"
+    }
+  ]
+}

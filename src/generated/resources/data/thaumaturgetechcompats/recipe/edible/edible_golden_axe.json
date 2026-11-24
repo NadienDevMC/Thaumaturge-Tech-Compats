@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "edible_items"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_axe"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:edible_golden_axe"
+  }
+}

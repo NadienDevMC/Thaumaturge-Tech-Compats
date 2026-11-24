@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_thaumium_zinc"
+    },
+    {
+      "type": "neoforge:or",
+      "values": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "alltheores"
+        }
+      ]
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "p": {
+      "item": "solarflux:photovoltaic_cell_2"
+    },
+    "s": {
+      "item": "solarflux:sp_alchemical"
+    },
+    "t": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "z": {
+      "tag": "c:ingots/zinc"
+    }
+  },
+  "pattern": [
+    "ptp",
+    "zsz",
+    "ttt"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:solarflux_thaumium_zinc"
+  },
+  "result": {
+    "count": 1,
+    "id": "solarflux:sp_thaumium_zinc_solar_panel"
+  },
+  "vis": 30
+}
