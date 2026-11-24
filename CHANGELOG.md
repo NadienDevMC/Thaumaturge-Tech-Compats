@@ -4,7 +4,7 @@
 
 ### Additions
 - Hephaestus Forge smeltery support: Crystal Matrix, Neutronium and Infinity can be melted and cast (ingots, nuggets, plates and blocks), with their own molten fluids and buckets.
-- Edible items: edible copies of vanilla and Thaumaturge tools, weapons, ingots, gems, doors and the Goggles of Revealing, made with sugar. Eating them gives effects by item class and tier, listed in their tooltip.
+- Edible Goggles of Revealing: a version of the Goggles of Revealing you can eat, made with sugar.
 - Tooltip with an enlarged picture of the item on every item, vanilla and modded. It can be turned off or resized in the client config.
 - New Solar Flux Reborn panels: Alchemical Cobalt (needs Hephaestus Forge), Brass Andesite (needs Create), Thaumium Zinc (needs Create or AllTheOres) and Void Uranium (needs AllTheOres or Mekanism, and irradiates whoever carries it when Mekanism is installed).
 - A Flux Jar next to a crucible now absorbs the flux the crucible leaks or overflows, instead of polluting the aura.
