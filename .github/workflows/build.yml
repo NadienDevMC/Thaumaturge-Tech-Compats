@@ -33,6 +33,7 @@ jobs:
         run: |
           VERSION=$(grep '^mod_version=' gradle.properties | cut -d'=' -f2)
           echo "mod_version=$VERSION" >> $GITHUB_OUTPUT
+          echo "release_version=${VERSION}-build.${{ github.run_number }}" >> $GITHUB_OUTPUT
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
@@ -43,11 +44,29 @@ jobs:
       - name: Build
         run: ./gradlew build
 
+      - name: Create Tag
+        run: |
+          tag=1.21.1-${{ steps.gradle_props.outputs.mod_version }}
+          if ! git rev-parse -q --verify "refs/tags/$tag" > /dev/null; then
+            git tag "$tag"
+            git push origin "$tag"
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: 1.21.1-${{ steps.gradle_props.outputs.mod_version }}
+          name: Thaumaturge Tech Compats ${{ steps.gradle_props.outputs.release_version }}
+          generate_release_notes: true
+          files: |
+            build/libs/*.jar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # Publishes the jar to CurseForge only when the pushed commit message contains [curseforge], optionally with a
       # release type: [curseforge], [curseforge beta] or [curseforge alpha]. Needs the CURSEFORGE_TOKEN secret and the
       # CURSEFORGE_PROJECT_ID variable of the repository.
       - name: Publish to CurseForge
-        id: curseforge
         if: ${{ contains(github.event.head_commit.message, '[curseforge') }}
         env:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
@@ -71,10 +90,10 @@ jobs:
           CHANGELOG=$(awk -v v="$MOD_VERSION" '/^## /{ if (found) exit; if (index($0, "## " v " ") == 1 || index($0, "## [" v "]") == 1 || index($0, "## 🚀 [" v "-") == 1) found=1 } found' CHANGELOG.md)
           [ -n "$CHANGELOG" ] || CHANGELOG="Thaumaturge Tech Compats $MOD_VERSION for Minecraft $MC."
 
-          # A jar that is already on CurseForge (marked with a tag once it was uploaded) is not uploaded again
-          tag="$MC-$MOD_VERSION"
-          if git rev-parse -q --verify "refs/tags/$tag" > /dev/null; then
-            echo "NeoForge $MC $MOD_VERSION is already on CurseForge (tag $tag), not uploading it again"
+          # A jar that is already on CurseForge (marked with a ref once it was uploaded, not a tag) is not uploaded again
+          marker="refs/curseforge/$MC-$MOD_VERSION"
+          if [ -n "$(git ls-remote origin "$marker")" ]; then
+            echo "NeoForge $MC $MOD_VERSION is already on CurseForge ($marker), not uploading it again"
             exit 0
           fi
 
@@ -96,21 +115,4 @@ jobs:
             -H "X-Api-Token: $CURSEFORGE_TOKEN" \
             --form-string "metadata=$metadata" -F "file=@$jar"
           echo
-          git tag "$tag"
-          git push origin "$tag"
-          echo "uploaded=true" >> "$GITHUB_OUTPUT"
-          echo "tag=$tag" >> "$GITHUB_OUTPUT"
-
-      # One tag per version, <mcversion>-<modversion>, created only when the jar was uploaded to CurseForge.
-      # The GitHub release hangs off that tag, which is also the version JitPack serves.
-      - name: Create GitHub Release
-        if: ${{ steps.curseforge.outputs.uploaded == 'true' }}
-        uses: softprops/action-gh-release@v3
-        with:
-          tag_name: ${{ steps.curseforge.outputs.tag }}
-          name: Thaumaturge Tech Compats ${{ steps.curseforge.outputs.tag }}
-          generate_release_notes: true
-          files: |
-            build/libs/*.jar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push origin "HEAD:$marker"
