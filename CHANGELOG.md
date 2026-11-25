@@ -1,5 +1,19 @@
 # ⚡ Thaumaturge Tech Compats — Changelog
 
+## 🚀 [1.0.4-1.21.1] 25/11/2026 14:50
+
+### Additions
+- The mod can now be used as a dependency by other mods through JitPack.
+
+### Fixes
+-
+
+### Changes
+- The README has a new section for developers that explains how to depend on the mod.
+
+### Lineas de codigo cambiadas
++1 −1
+
 ## 🚀 [1.0.3-1.21.1] 24/11/2026 20:15
 
 ### Additions
