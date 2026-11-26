@@ -9,6 +9,11 @@ on:
       - "gradle.properties"
       - ".github/workflows/build.yml"
   workflow_dispatch:
+    inputs:
+      notify_test:
+        description: "Send the Discord notification even if the version tag already exists (test)"
+        type: boolean
+        default: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -45,11 +50,13 @@ jobs:
         run: ./gradlew build
 
       - name: Create Tag
+        id: tag
         run: |
           tag=1.21.1-${{ steps.gradle_props.outputs.mod_version }}
           if ! git rev-parse -q --verify "refs/tags/$tag" > /dev/null; then
             git tag "$tag"
             git push origin "$tag"
+            echo "new=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Create GitHub Release
@@ -62,6 +69,23 @@ jobs:
             build/libs/*.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Posts the new release to Discord. Only when this run created the version tag (so rebuilds of the same version stay
+      # silent) and the repository has the DISCORD_WEBHOOK secret (Settings > Secrets and variables > Actions).
+      - name: Notify Discord
+        if: ${{ steps.tag.outputs.new == 'true' || github.event.inputs.notify_test == 'true' }}
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          MOD_VERSION: ${{ steps.gradle_props.outputs.mod_version }}
+          MC: "1.21.1"
+        run: |
+          if [ -z "$DISCORD_WEBHOOK" ]; then echo "No DISCORD_WEBHOOK secret, skipping"; exit 0; fi
+          tag="$MC-$MOD_VERSION"
+          url="https://github.com/${{ github.repository }}/releases/tag/$tag"
+          payload=$(jq -nc --arg title "Thaumaturge Tech Compats $tag" --arg url "$url" \
+            --arg desc "New release for Minecraft $MC: version $MOD_VERSION." \
+            '{embeds: [{title: $title, url: $url, description: $desc, color: 5814783}]}')
+          curl -sS --fail-with-body -H "Content-Type: application/json" -d "$payload" "$DISCORD_WEBHOOK"
 
       # Publishes the jar to CurseForge only when the pushed commit message contains [curseforge], optionally with a
       # release type: [curseforge], [curseforge beta] or [curseforge alpha]. Needs the CURSEFORGE_TOKEN secret and the
