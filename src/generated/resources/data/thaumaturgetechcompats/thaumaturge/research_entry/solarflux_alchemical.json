@@ -13,8 +13,8 @@
       "feature": "solar_alchemical"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 12,
+  "category": "thaumaturgetechcompats:solarflux",
+  "column": 0,
   "complexity": 1,
   "icons": [
     "solarflux:sp_alchemical"
@@ -41,7 +41,7 @@
   "parents": [
     "thaumaturgetechcompats:tech"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

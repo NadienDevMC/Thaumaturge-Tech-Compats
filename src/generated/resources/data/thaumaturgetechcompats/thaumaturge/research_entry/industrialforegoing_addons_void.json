@@ -30,8 +30,8 @@
       ]
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 3,
+  "category": "thaumaturgetechcompats:foregoing",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_speed_addon"
@@ -60,7 +60,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:base_eldritch"
   ],
-  "row": 6,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

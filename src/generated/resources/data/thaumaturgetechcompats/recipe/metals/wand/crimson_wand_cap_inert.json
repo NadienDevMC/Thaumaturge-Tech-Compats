@@ -1,0 +1,21 @@
+{
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "N": {
+      "tag": "c:nuggets/crimson"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "N N"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:extra_metals"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:crimson_wand_cap_inert"
+  },
+  "vis": 90
+}

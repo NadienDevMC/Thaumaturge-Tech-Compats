@@ -17,8 +17,8 @@
       "feature": "ftbunearthed_magical_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 30,
+  "category": "thaumaturgetechcompats:ftb",
+  "column": 2,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:thaumium_unearther"
@@ -47,7 +47,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

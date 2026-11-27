@@ -53,6 +53,7 @@ import nadiendev.ThaumaturgeTechCompats.compats.solarflux.SolarFluxIntegration;
 import nadiendev.ThaumaturgeTechCompats.smelter.SmelterIntegration;
 import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerIntegration;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierIntegration;
+import nadiendev.ThaumaturgeTechCompats.metals.ExtraMetalIntegration;
 import nadiendev.ThaumaturgeTechCompats.datagen.provider.HaloItemModelProvider;
 import nadiendev.ThaumaturgeTechCompats.ponder.PonderSchematicProvider;
 import nadiendev.ThaumaturgeTechCompats.datagen.provider.ModLanguageProvider;
@@ -105,6 +106,7 @@ public final class DataGenerators {
         FurnaceIntegration.addProviders(event);
         GolemIntegration.addProviders(event);
         WandTierIntegration.addProviders(event);
+        ExtraMetalIntegration.addProviders(event);
         FocusIntegration.addProviders(event);
         BrainChargerIntegration.addProviders(event);
         CreativeIntegration.addProviders(event);

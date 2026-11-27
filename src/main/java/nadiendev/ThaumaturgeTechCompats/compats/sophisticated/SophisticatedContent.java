@@ -138,6 +138,8 @@ public class SophisticatedContent implements DataProvider {
         for (SophisticatedTier tier : SophisticatedTier.values()) {
             blocks.add(MOD + ":" + tier.shulkerBoxName());
         }
+        // Storage blocks of the extra metals are mined with a pickaxe too
+        blocks.addAll(nadiendev.ThaumaturgeTechCompats.metals.ExtraMetalContent.blockIds());
         return blocks;
     }
 

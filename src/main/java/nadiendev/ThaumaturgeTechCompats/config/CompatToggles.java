@@ -38,6 +38,9 @@ public final class CompatToggles {
 
     public static final String CREATE = "create";
     public static final String NODE_POWER = "node_power";
+    public static final String RIFT_COLLAPSER_SAFE = "rift_death_no_block_damage";
+    public static final String CRUCIBLE_CAPACITY = "crucible_aspect_capacity";
+    public static final String RIFT_APPEAR_SAFE = "rift_appear_no_block_damage";
     public static final String JEI_CATALYSTS = "jei_catalysts";
     public static final String JEI_INFO = "jei_info";
     public static final String TAINTED_FOOD = "tainted_food";
@@ -77,6 +80,7 @@ public final class CompatToggles {
     public static final String TAG_ASPECTS_PARTS = "tag_aspects_parts";
     public static final String TAG_ASPECTS_INTERMEDIATES = "tag_aspects_intermediates";
     public static final String TAG_ASPECTS_FOODS = "tag_aspects_foods";
+    public static final String OWN_ITEM_ASPECTS = "own_item_aspects";
     public static final String ORITECH_ASPECTS = "oritech_aspects";
     public static final String ORITECH_PROCESSING = "oritech_processing";
     public static final String ENDERIO = "enderio";
@@ -108,6 +112,9 @@ public final class CompatToggles {
         builder.push("compats");
         define(builder, CREATE, "Recipes for the Thaumaturge clusters in Create.");
         define(builder, NODE_POWER, "The node power base: machines of other mods that use nodes, node jars, flux jars and flux rifts as a power source, the Flux Jar and its research. Needs a game restart.");
+        define(builder, RIFT_COLLAPSER_SAFE, "Flux rifts do not break blocks when they die: the blast of the Causality Collapser keeps its force and still pushes and hurts, but the terrain stays intact. Turn it off for the original behaviour.");
+        define(builder, CRUCIBLE_CAPACITY, "The crucible overfills (and leaks flux) only when a single aspect passes the capacity of the node power config (1024 by default) instead of at 100 points in total. Turn it off for the original behaviour.");
+        define(builder, RIFT_APPEAR_SAFE, "Flux rifts do not eat the blocks around them while they appear and grow. Turn it off for the original behaviour.");
         for (FluxTier tier : FluxTier.values()) {
             define(builder, tier.toggle(), "The devices of the Dimensional Flux network of this tier. Needs a game restart.");
         }
@@ -180,6 +187,7 @@ public final class CompatToggles {
         define(builder, TAG_ASPECTS_PARTS, "Tag aspects for c:plates/*, c:rods/*, c:gears/* and c:wires/*.");
         define(builder, TAG_ASPECTS_INTERMEDIATES, "Tag aspects for c:clumps/*, c:dirty_dusts/*, c:shards/* and c:crystals/*.");
         define(builder, TAG_ASPECTS_FOODS, "Tag aspects for crops, seeds, mushrooms, fruits, vegetables, meats and fish.");
+        define(builder, OWN_ITEM_ASPECTS, "Aspects for the items of this addon that have no recipe Thaumaturge can read: the Avaritia flux jars, furnaces and pillars, the Extremely Primordial Pearl, the Akashic Record, the Thaummotor and the Mekanism clusters and energy tools. Applies when data packs reload.");
         define(builder, ORITECH_ASPECTS, "Aspects for the items and blocks of Oritech. Applies when data packs reload.");
         define(builder, ORITECH_PROCESSING, "Oritech Pulverizer and Grinder recipes for the Thaumaturge clusters and ores. Applies when data packs reload.");
         define(builder, ENDERIO, "Everything the addon adds for Ender IO. Turning it off turns every Ender IO feature off. Needs a game restart.");

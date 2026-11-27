@@ -28441,6 +28441,634 @@
           "aspect": "thaumaturge:praecantatio"
         }
       ]
-    }
+    },
+    "thaumaturgetechcompats:crimson_block": [
+      {
+        "amount": 135,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 72,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 72,
+        "aspect": "thaumaturge:humanus"
+      }
+    ],
+    "thaumaturgetechcompats:crimson_ingot": [
+      {
+        "amount": 15,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 8,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 8,
+        "aspect": "thaumaturge:humanus"
+      }
+    ],
+    "thaumaturgetechcompats:crimson_native_cluster": [
+      {
+        "amount": 30,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 16,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 16,
+        "aspect": "thaumaturge:humanus"
+      }
+    ],
+    "thaumaturgetechcompats:crimson_nugget": [
+      {
+        "amount": 2,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 1,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 1,
+        "aspect": "thaumaturge:humanus"
+      }
+    ],
+    "thaumaturgetechcompats:crimson_wand_cap": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:humanus"
+      },
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:praecantatio"
+      }
+    ],
+    "thaumaturgetechcompats:crimson_wand_cap_inert": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:humanus"
+      }
+    ],
+    "thaumaturgetechcompats:crimson_wand_rod": [
+      {
+        "amount": 75,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 40,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 40,
+        "aspect": "thaumaturge:humanus"
+      },
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:praecantatio"
+      }
+    ],
+    "thaumaturgetechcompats:crimson_wand_rod_inert": [
+      {
+        "amount": 45,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:humanus"
+      }
+    ],
+    "thaumaturgetechcompats:fibric_block": [
+      {
+        "amount": 135,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 72,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 72,
+        "aspect": "thaumaturge:vitium"
+      }
+    ],
+    "thaumaturgetechcompats:fibric_ingot": [
+      {
+        "amount": 15,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 8,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 8,
+        "aspect": "thaumaturge:vitium"
+      }
+    ],
+    "thaumaturgetechcompats:fibric_native_cluster": [
+      {
+        "amount": 30,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 16,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 16,
+        "aspect": "thaumaturge:vitium"
+      }
+    ],
+    "thaumaturgetechcompats:fibric_nugget": [
+      {
+        "amount": 2,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 1,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 1,
+        "aspect": "thaumaturge:vitium"
+      }
+    ],
+    "thaumaturgetechcompats:fibric_wand_cap": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:vitium"
+      },
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:praecantatio"
+      }
+    ],
+    "thaumaturgetechcompats:fibric_wand_cap_inert": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:vitium"
+      }
+    ],
+    "thaumaturgetechcompats:fibric_wand_rod": [
+      {
+        "amount": 75,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 40,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 40,
+        "aspect": "thaumaturge:vitium"
+      },
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:praecantatio"
+      }
+    ],
+    "thaumaturgetechcompats:fibric_wand_rod_inert": [
+      {
+        "amount": 45,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:vitium"
+      }
+    ],
+    "thaumaturgetechcompats:infinity_jar": [
+      {
+        "amount": 57,
+        "aspect": "thaumaturgetechcompats:terminus"
+      },
+      {
+        "amount": 36,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 60,
+        "aspect": "thaumaturge:potentia"
+      },
+      {
+        "amount": 96,
+        "aspect": "thaumaturge:vitreus"
+      },
+      {
+        "amount": 192,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:matrix_jar": [
+      {
+        "amount": 3,
+        "aspect": "thaumaturgetechcompats:terminus"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:potentia"
+      },
+      {
+        "amount": 96,
+        "aspect": "thaumaturge:vitreus"
+      }
+    ],
+    "thaumaturgetechcompats:molten_crimson_bucket": [
+      {
+        "amount": 150,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:perditio"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:humanus"
+      }
+    ],
+    "thaumaturgetechcompats:molten_crystal_matrix_bucket": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturgetechcompats:terminus"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:potentia"
+      },
+      {
+        "amount": 320,
+        "aspect": "thaumaturge:vitreus"
+      }
+    ],
+    "thaumaturgetechcompats:molten_fibric_bucket": [
+      {
+        "amount": 150,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:fabrico"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:vitium"
+      }
+    ],
+    "thaumaturgetechcompats:molten_infinity_bucket": [
+      {
+        "amount": 160,
+        "aspect": "thaumaturgetechcompats:terminus"
+      },
+      {
+        "amount": 640,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:molten_neutronium_bucket": [
+      {
+        "amount": 20,
+        "aspect": "thaumaturgetechcompats:terminus"
+      },
+      {
+        "amount": 120,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 120,
+        "aspect": "thaumaturge:potentia"
+      }
+    ],
+    "thaumaturgetechcompats:molten_rifting_bucket": [
+      {
+        "amount": 150,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:molten_salis_bucket": [
+      {
+        "amount": 150,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 80,
+        "aspect": "thaumaturge:potentia"
+      }
+    ],
+    "thaumaturgetechcompats:neutronium_jar": [
+      {
+        "amount": 9,
+        "aspect": "thaumaturgetechcompats:terminus"
+      },
+      {
+        "amount": 36,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 60,
+        "aspect": "thaumaturge:potentia"
+      },
+      {
+        "amount": 96,
+        "aspect": "thaumaturge:vitreus"
+      }
+    ],
+    "thaumaturgetechcompats:rifting_block": [
+      {
+        "amount": 135,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 72,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 72,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:rifting_ingot": [
+      {
+        "amount": 15,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 8,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 8,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:rifting_native_cluster": [
+      {
+        "amount": 30,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 16,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 16,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:rifting_nugget": [
+      {
+        "amount": 2,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 1,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 1,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:rifting_wand_cap": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:alienis"
+      },
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:praecantatio"
+      }
+    ],
+    "thaumaturgetechcompats:rifting_wand_cap_inert": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:rifting_wand_rod": [
+      {
+        "amount": 75,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 40,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 40,
+        "aspect": "thaumaturge:alienis"
+      },
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:praecantatio"
+      }
+    ],
+    "thaumaturgetechcompats:rifting_wand_rod_inert": [
+      {
+        "amount": 45,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:vacuos"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:alienis"
+      }
+    ],
+    "thaumaturgetechcompats:salis_block": [
+      {
+        "amount": 135,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 72,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 72,
+        "aspect": "thaumaturge:potentia"
+      }
+    ],
+    "thaumaturgetechcompats:salis_ingot": [
+      {
+        "amount": 15,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 8,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 8,
+        "aspect": "thaumaturge:potentia"
+      }
+    ],
+    "thaumaturgetechcompats:salis_native_cluster": [
+      {
+        "amount": 30,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 16,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 16,
+        "aspect": "thaumaturge:potentia"
+      }
+    ],
+    "thaumaturgetechcompats:salis_nugget": [
+      {
+        "amount": 2,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 1,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 1,
+        "aspect": "thaumaturge:potentia"
+      }
+    ],
+    "thaumaturgetechcompats:salis_wand_cap": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:potentia"
+      },
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:praecantatio"
+      }
+    ],
+    "thaumaturgetechcompats:salis_wand_cap_inert": [
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 5,
+        "aspect": "thaumaturge:potentia"
+      }
+    ],
+    "thaumaturgetechcompats:salis_wand_rod": [
+      {
+        "amount": 75,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 40,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 40,
+        "aspect": "thaumaturge:potentia"
+      },
+      {
+        "amount": 10,
+        "aspect": "thaumaturge:praecantatio"
+      }
+    ],
+    "thaumaturgetechcompats:salis_wand_rod_inert": [
+      {
+        "amount": 45,
+        "aspect": "thaumaturge:metallum"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:praecantatio"
+      },
+      {
+        "amount": 24,
+        "aspect": "thaumaturge:potentia"
+      }
+    ]
   }
 }

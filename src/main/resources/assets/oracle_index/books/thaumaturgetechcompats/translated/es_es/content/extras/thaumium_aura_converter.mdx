@@ -1,0 +1,61 @@
+---
+title: Convertidor de aura de taumio
+icon: thaumaturgetechcompats:thaumium_aura_converter
+id: thaumaturgetechcompats:thaumium_aura_converter
+---
+
+<Callout variant="info">
+    **Requiere:** Thaumaturge (cualquier mod de energía para usar el FE)
+</Callout>
+
+![](@thaumaturgetechcompats:thaumium_aura_converter){item}
+
+## Qué es
+
+El Convertidor de aura de taumio saca vis del aura de su chunk y lo convierte en FE, que entrega a todos los bloques vecinos que lo acepten. Nunca recibe energía.
+
+**Se usa para fabricar (misma familia):** [Convertidor de aura de latón alquímico](@thaumaturgetechcompats:alchemical_brass_aura_converter)
+
+## Cómo conseguirlo
+
+El resonador se ha sintonizado con el aura del chunk y el taumio se lleva la corriente.
+
+Se fabrica en la mesa de trabajo arcana con placas de taumio, cobre, redstone, un resonador de vis y un mecanismo simple. Drena vis del aura de su chunk y convierte cada vis en 250.000 FE. Entrega hasta 250.000 FE por tick y almacena 10.000.000 FE. Da la energía a todos los bloques vecinos que la acepten y nunca recibe ninguna.
+
+Haz clic derecho para ver la energía almacenada, el aura del chunk, su estado y su ritmo. Cada vis que convierte deja un poco de flujo, nunca drena el aura por debajo de una cuarta parte de su base, y todos los convertidores de un chunk comparten un límite de lo que pueden drenar. Una señal de redstone lo detiene. Las cifras se pueden cambiar en la configuración.
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_thaumium', 'minecraft:redstone', 'thaumaturge:plate_thaumium', 'minecraft:copper_ingot', 'thaumaturge:vis_resonator', 'minecraft:copper_ingot', 'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium']}
+    result="thaumaturgetechcompats:thaumium_aura_converter"
+    count={1}
+/>
+
+| Ingrediente | Cantidad |
+|---|---|
+| Placa de taumio | 4 |
+| Polvo de redstone (o equivalente) | 1 |
+| Lingote de cobre (o equivalente) | 2 |
+| Resonador de Vis | 1 |
+| Mecanismo arcano simple | 1 |
+
+| Coste | Valor |
+|---|---|
+| Vis | 50 |
+| Cristales | Ignis ×2, Ordo ×1 |
+| Investigación | Convertidor de aura |
+
+## Paso a paso
+
+1. Completa la entrada de investigación correspondiente en el Thaumonomicon (pestaña Avaritia, Tech o Pureza); sin ella la receta queda bloqueada.
+2. Taumio: Abre una mesa de trabajo arcana, coloca los ingredientes con la forma de la receta y cárgala con vis (una varita o un cargador de mesa) y con los cristales que pide la receta. Usa placas de taumio, cobre, redstone, un resonador de vis y un mecanismo simple. Latón alquímico y Metal del vacío: Construye un altar de infusión: una Matriz rúnica, un pedestal central y las ocho piedras de pilar alrededor. Pon el objeto de partida en el pedestal central y los demás ingredientes en los pedestales de alrededor. Parte del convertidor anterior, con placas del metal nuevo, un mecanismo y resonadores de vis.
+3. Coloca el convertidor junto a un bloque que acepte FE (un cable, una máquina, una batería). Da energía a cada bloque vecino que la acepte y nunca recibe.
+4. Saca vis del aura de su chunk: cada vis se convierte en 250.000 FE (Taumio), 1.000.000 FE (Latón alquímico) o 560.000.000 FE (Metal del vacío), con hasta 250.000, 1.000.000 o 500.000.000 FE por tick. Clic derecho para ver la energía guardada, el aura del chunk, su estado y su ritmo.
+5. Una señal de redstone lo detiene.
+
+## Consejos y errores comunes
+
+- Cada vis convertido deja un poco de flujo, el convertidor nunca vacía el aura por debajo de un cuarto de su base, y todos los convertidores de un chunk comparten un límite de lo que pueden drenar.
+
+Guía de la familia: [Convertidores de aura](+aura_converters)

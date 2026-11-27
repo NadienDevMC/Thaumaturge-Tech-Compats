@@ -1,5 +1,30 @@
 # ⚡ Thaumaturge Tech Compats — Changelog
 
+## 🚀 [1.0.5-1.21.1] 26/11/2026 23:40
+
+### Additions
+- New metals: Salis, Fibric, Crimson and Rifting, each with ingot, nugget, block and native cluster. Rifting ingots are made by dropping a Void Metal ingot in a crucible next to a jar with a captured rift.
+- Wand caps and rods (normal and inert) for the four new metals.
+- Hephaestus Tools support: tool parts and molten fluids for the new metals and for Thaumium, Brass and Void Metal, each part shows its material, with new modifiers (repair, vision, teleport up to level 12, unbreakable and more).
+- In-game guide with Oracle Index: a chapter for every block, machine and item of the mod, with their recipes, plus a chapter about Thaumaturge itself.
+- The Thaumonomicon now splits the research into the same categories as the creative tabs, with tabs in the left column showing the real items.
+- The crucible holds 1024 essentia per aspect by default, configurable up to 62500.
+- A Flux Jar next to a crucible catches the flux it releases; with no jar around, the flux vanishes and gives nearby players 4 seconds of temporary warp. Flux can be taken out of the Flux Jar with a bucket and put back in.
+- New configs, on by default: rifts don't break blocks when they appear, and don't break blocks when they die from the Causality Collapser.
+
+### Fixes
+- The Essentia Smelter can now dissolve modded items with very high aspect values (this mod, Avaritia, Void Miners and other compat mods).
+- Essentia tubes connect to the jars of this mod, and the jars no longer crash the game.
+- Fixed missing translations that showed raw keys.
+- Fixed broken « » characters in some texts.
+
+### Changes
+- Thaumaturge updated to 1.1.1.
+- Everything from Avaritia is now in a single creative tab and Thaumonomicon category.
+
+### Lineas de codigo cambiadas
++239599 −768
+
 ## 🚀 [1.0.4-1.21.1] 25/11/2026 14:50
 
 ### Additions

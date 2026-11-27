@@ -21,8 +21,8 @@
       "feature": "ftbunearthed_brush_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 24,
+  "category": "thaumaturgetechcompats:ftb",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_brush"
@@ -51,7 +51,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:base_eldritch"
   ],
-  "row": 6,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

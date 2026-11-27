@@ -7,8 +7,15 @@
     "AdvancedAlchemicalFurnaceStructureMixin",
     "BlockEntityAdvancedAlchemicalFurnaceMixin",
     "BlockEntityCrucibleMixin",
+    "BlockEntityCrucibleCapacityMixin",
+    "BlockEntityTypeJarMixin",
+    "BlockEntityCrucibleRiftingMixin",
+    "EntityCausalityCollapserMixin",
+    "RiftSegmentSweepMixin",
     "BlockEntityNodeMixin",
-    "BlockEntityNodeTransducerMixin"
+    "BlockEntityNodeTransducerMixin",
+    "AspectIndexAccessor",
+    "AspectIndexHolderMixin"
   ],
   "injectors": {
     "defaultRequire": 0

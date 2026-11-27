@@ -9,8 +9,8 @@
       "feature": "sophisticated_stack_upgrades"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 75,
+  "category": "thaumaturgetechcompats:sophisticated",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:void_metal_stack_upgrade"
@@ -38,7 +38,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:infusion"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

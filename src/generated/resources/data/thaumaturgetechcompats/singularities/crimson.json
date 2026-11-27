@@ -1,0 +1,9 @@
+{
+  "displayName": "singularity.thaumaturgetechcompats.crimson",
+  "ingredient": {
+    "item": "thaumaturgetechcompats:crimson_ingot"
+  },
+  "name": "thaumaturgetechcompats:crimson",
+  "overlayColor": 14694478,
+  "underlayColor": 4002352
+}

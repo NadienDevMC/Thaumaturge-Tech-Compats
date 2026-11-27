@@ -60,6 +60,19 @@ dependencies {
 
 The versions available, and the build log of each one, are listed on the JitPack page. This applies to the NeoForge 1.21.1 branch.
 
+Releases are also published to [Maven Central](https://central.sonatype.com/search?q=thaumaturgetechcompats):
+
+```groovy
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // <minecraft version>-<mod version>-NeoForge, for example 1.21.1-1.0.4-NeoForge
+    implementation 'fun.nadiendev:thaumaturgetechcompats:<version>'
+}
+```
+
 ### Credits
 Thanks to [**Spiteful_Fox**](https://www.curseforge.com/members/spiteful_fox/projects) for [Avaritia](https://www.curseforge.com/minecraft/mc-mods/avaritia) and its Thaumcraft integration, the starting point of this mod.
 

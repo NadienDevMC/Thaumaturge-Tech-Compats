@@ -1,6 +1,6 @@
 {
   "category": "thaumaturgetechcompats:avaritia",
-  "column": 6,
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:infinity_workbench_charger"
@@ -28,7 +28,7 @@
     "thaumaturge:workbench_charger",
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 2,
+  "row": 8,
   "stages": [
     {
       "required_knowledge": [

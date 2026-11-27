@@ -9,8 +9,8 @@
       "feature": "sophisticated_storage_tiers"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 78,
+  "category": "thaumaturgetechcompats:sophisticated",
+  "column": 6,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:void_metal_chest"
@@ -37,7 +37,7 @@
   "parents": [
     "thaumaturgetechcompats:tech"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

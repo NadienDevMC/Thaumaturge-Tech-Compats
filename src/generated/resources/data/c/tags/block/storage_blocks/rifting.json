@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:rifting_block",
+      "required": false
+    }
+  ]
+}

@@ -5,8 +5,8 @@
       "feature": "star_crucifix_copper"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 65,
+  "category": "thaumaturgetechcompats:avaritia_pearls",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:infinity_star_crucifix"
@@ -33,7 +33,7 @@
   "parents": [
     "thaumaturgetechcompats:tech"
   ],
-  "row": 3,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

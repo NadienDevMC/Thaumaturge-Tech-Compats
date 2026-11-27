@@ -5,8 +5,8 @@
       "feature": "salis_mundus_variants"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 67,
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 6,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:infinity_salis_mundus"
@@ -33,7 +33,7 @@
   "parents": [
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 0,
+  "row": 16,
   "stages": [
     {
       "required_knowledge": [

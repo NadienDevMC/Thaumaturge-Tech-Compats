@@ -1,0 +1,9 @@
+{
+  "displayName": "singularity.thaumaturgetechcompats.rifting",
+  "ingredient": {
+    "item": "thaumaturgetechcompats:rifting_ingot"
+  },
+  "name": "thaumaturgetechcompats:rifting",
+  "overlayColor": 4183748,
+  "underlayColor": 722968
+}

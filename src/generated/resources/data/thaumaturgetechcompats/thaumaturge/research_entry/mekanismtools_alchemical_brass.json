@@ -17,8 +17,8 @@
       "feature": "mekanism_energy_tools_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 33,
+  "category": "thaumaturgetechcompats:mekanism",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:energized_alchemical_brass_pickaxe",
@@ -50,7 +50,7 @@
     "thaumaturgetechcompats:mekanismtools_thaumium",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

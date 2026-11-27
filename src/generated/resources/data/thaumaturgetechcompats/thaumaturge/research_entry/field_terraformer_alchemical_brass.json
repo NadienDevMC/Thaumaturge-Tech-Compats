@@ -9,8 +9,8 @@
       "feature": "flux_network_alchemical_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 60,
+  "category": "thaumaturgetechcompats:flux_gear",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:alchemical_brass_arcane_terraformer"
@@ -39,7 +39,7 @@
     "thaumaturge:infusion",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

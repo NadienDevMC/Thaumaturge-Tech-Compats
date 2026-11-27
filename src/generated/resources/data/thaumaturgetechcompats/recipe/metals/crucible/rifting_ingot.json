@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturgetechcompats:sol"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:ingot_void"
+  },
+  "research": {
+    "entry": "thaumaturgetechcompats:extra_metals"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:rifting_ingot"
+  }
+}

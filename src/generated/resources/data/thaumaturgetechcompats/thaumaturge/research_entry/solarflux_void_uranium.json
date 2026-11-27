@@ -42,8 +42,8 @@
       ]
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 14,
+  "category": "thaumaturgetechcompats:solarflux",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "solarflux:sp_void_uranium_solar_panel"
@@ -74,7 +74,7 @@
   "parents": [
     "thaumaturgetechcompats:solarflux_void"
   ],
-  "row": 8,
+  "row": 6,
   "stages": [
     {
       "required_knowledge": [

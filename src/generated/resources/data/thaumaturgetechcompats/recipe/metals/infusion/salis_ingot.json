@@ -1,0 +1,38 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:ingot_void"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:salis_mundus"
+    },
+    {
+      "item": "thaumaturge:salis_mundus"
+    },
+    {
+      "item": "thaumaturge:salis_mundus"
+    },
+    {
+      "item": "thaumaturge:salis_mundus"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:extra_metals"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:salis_ingot"
+  }
+}

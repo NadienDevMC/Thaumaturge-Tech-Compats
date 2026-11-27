@@ -27,7 +27,7 @@
   "parents": [
     "thaumaturge:advanced_alchemical_furnace"
   ],
-  "row": 4,
+  "row": 6,
   "stages": [
     {
       "required_knowledge": [

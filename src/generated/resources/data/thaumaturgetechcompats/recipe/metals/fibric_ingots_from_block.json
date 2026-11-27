@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thaumaturgetechcompats:fibric_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "thaumaturgetechcompats:fibric_ingot"
+  }
+}

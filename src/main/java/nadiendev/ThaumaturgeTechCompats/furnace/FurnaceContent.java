@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.furnace;
 
+import nadiendev.ThaumaturgeTechCompats.research.ResearchLayout;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -42,7 +43,7 @@ public class FurnaceContent implements DataProvider {
 
     private CompletableFuture<?> save(CachedOutput cache, String relativePath, JsonElement json) {
         Path path = output.getOutputFolder().resolve(relativePath);
-        return DataProvider.saveStable(cache, json, path);
+        return DataProvider.saveStable(cache, ResearchLayout.apply(path, json), path);
     }
 
     private static JsonObject research() {

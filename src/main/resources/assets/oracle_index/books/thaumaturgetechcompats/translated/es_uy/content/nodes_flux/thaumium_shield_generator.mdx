@@ -1,0 +1,55 @@
+---
+title: Generador de escudo de taumio
+icon: thaumaturgetechcompats:thaumium_shield_generator
+id: thaumaturgetechcompats:thaumium_shield_generator
+---
+
+<Callout variant="info">
+    **Requiere:** Thaumaturge (función Flujo Dimensional)
+</Callout>
+
+![](@thaumaturgetechcompats:thaumium_shield_generator){item}
+
+## Qué es
+
+Herramientas y dispositivos de campo movidos por Flujo Dimensional: el Sifón del vacío portátil, el Cañón de descarga, el Propulsor de vuelo, el Generador de escudo y el Terraformador arcano.
+
+**Se usa para fabricar (misma familia):** [Generador de escudo de latón alquímico](@thaumaturgetechcompats:alchemical_brass_shield_generator)
+
+## Cómo conseguirlo
+
+El Generador de escudo de taumio se fabrica en una mesa arcana con cuatro placas de taumio, dos vidrios espejados, dos mecanismos simples y un resonador de vis.
+
+Mientras tenga Flujo Dimensional levanta una burbuja a su alrededor que destruye los proyectiles de los monstruos hostiles, empuja a los monstruos hostiles fuera y anula el daño de las explosiones en su interior. Cada tick de la burbuja cuesta flujo, y también cada proyectil y cada explosión que absorbe. Cuando se acaba el flujo se apaga, y vuelve a encenderse cuando se ha recuperado lo suficiente. Haz clic derecho para leer su estado.
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_thaumium', 'thaumaturge:mirrored_glass', 'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:vis_resonator', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium', 'thaumaturge:mirrored_glass', 'thaumaturge:plate_thaumium']}
+    result="thaumaturgetechcompats:thaumium_shield_generator"
+    count={1}
+/>
+
+| Ingrediente | Cantidad |
+|---|---|
+| Placa de taumio | 4 |
+| Cristal de espejo | 2 |
+| Mecanismo arcano simple | 2 |
+| Resonador de Vis | 1 |
+
+| Coste | Valor |
+|---|---|
+| Vis | 60 |
+| Cristales | Ordo ×2, Terra ×1 |
+| Investigación | Generador de escudo de taumio |
+
+## Paso a paso
+
+1. Carga cada objeto con Flujo Dimensional (DF): mantén un Cargador ambiental funcionando cerca de ti, o usa enlaces y almacenes (consulta la Red de Flujo Dimensional).
+2. Generador de escudo: colócalo y dale DF. Mientras guarda flujo levanta una burbuja que destruye proyectiles hostiles, empuja a los mobs hostiles fuera y quita el daño de las explosiones dentro; se apaga cuando se acaba el flujo y se reinicia al recuperarse.
+
+## Consejos y errores comunes
+
+- Los biomas y dimensiones de la lista de la configuración quedan intactos para el terraformador. Sin DF, ninguno de estos dispositivos funciona. Los niveles superiores (Latón alquímico, Metal del vacío) guardan más flujo y llegan más lejos, con mayor coste de flujo por tick.
+
+Guía de la familia: [Equipo de flujo y dispositivos de campo](+flux_gear)

@@ -4,10 +4,6 @@ import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 
 public enum CreativeSection {
     CORE(CreativeParent.MAIN, "avaritia", "Avaritia", "Avaritia"),
-    MACHINES(CreativeParent.MAIN, "avaritia_machines", "Avar. Machines", "Avar. Máquinas"),
-    DEVICES(CreativeParent.MAIN, "avaritia_devices", "Avar. Devices", "Avar. Equipos"),
-    JARS(CreativeParent.MAIN, "avaritia_jars", "Avar. Jars", "Avar. Tarros"),
-    MATRICES(CreativeParent.MAIN, "avaritia_matrices", "Avar. Matrices", "Avar. Matrices"),
     PEARLS(CreativeParent.MAIN, "avaritia_pearls", "Pearls & Cruc.", "Perlas y Cruc."),
     CREATE(CreativeParent.MAIN, "create", "Create", "Create"),
     ORITECH(CreativeParent.MAIN, "oritech", "Oritech", "Oritech"),
@@ -25,6 +21,8 @@ public enum CreativeSection {
     FOOD_FARMERS(CreativeParent.MAIN, "food_farmers", "Farmers Delight", "Farmers Delight"),
     FOOD_EDIBLE(CreativeParent.MAIN, "food_edible", "Edible Items", "Comestibles"),
     PURITY(CreativeParent.MAIN, "purity", "Purity", "Pureza"),
+    ENDERIO(CreativeParent.MAIN, "enderio", "Ender IO", "Ender IO"),
+    METALS(CreativeParent.MAIN, "metals", "Hephaestus Tools", "Hephaestus Tools"),
     EXTRAS(CreativeParent.MAIN, "extras", "Extras", "Extras");
 
     private final CreativeParent parent;

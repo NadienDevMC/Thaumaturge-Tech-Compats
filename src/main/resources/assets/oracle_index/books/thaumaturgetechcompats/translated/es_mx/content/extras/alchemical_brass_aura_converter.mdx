@@ -1,0 +1,59 @@
+---
+title: Convertidor de aura de latón alquímico
+icon: thaumaturgetechcompats:alchemical_brass_aura_converter
+id: thaumaturgetechcompats:alchemical_brass_aura_converter
+---
+
+<Callout variant="info">
+    **Requiere:** Thaumaturge (cualquier mod de energía para usar el FE)
+</Callout>
+
+![](@thaumaturgetechcompats:alchemical_brass_aura_converter){item}
+
+## Qué es
+
+El Convertidor de aura de latón alquímico convierte el vis del aura de su chunk en FE como el de taumio, pero guarda mucho más y lo entrega en un chorro más constante y mayor.
+
+**Se fabrica con (misma familia):** [Convertidor de aura de taumio](@thaumaturgetechcompats:thaumium_aura_converter)
+
+**Se usa para fabricar (misma familia):** [Convertidor de aura de metal del vacío](@thaumaturgetechcompats:void_metal_aura_converter)
+
+## Cómo conseguirlo
+
+Se infunde sobre un convertidor de aura de taumio con placas de latón alquímico, un mecanismo simple y un resonador de vis. Cada vis se convierte en 1.000.000 FE. Entrega hasta 1.000.000 FE por tick y almacena 100.000.000 FE.
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_brass', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', '', 'thaumaturgetechcompats:thaumium_aura_converter', 'thaumaturge:plate_brass', '', 'thaumaturge:vis_resonator', 'thaumaturge:mechanism_simple']}
+    result="thaumaturgetechcompats:alchemical_brass_aura_converter"
+    count={1}
+/>
+
+Visto desde arriba: la casilla del medio es el pedestal central y las de alrededor son los pedestales exteriores.
+
+| Ingrediente | Dónde | Cantidad |
+|---|---|---|
+| Convertidor de aura de taumio | Pedestal central | 1 |
+| Placa de latón alquímico | Pedestales exteriores | 4 |
+| Mecanismo arcano simple | Pedestales exteriores | 1 |
+| Resonador de Vis | Pedestales exteriores | 1 |
+
+| Coste | Valor |
+|---|---|
+| Esencia | Potentia ×40, Machina ×30, Auram ×20 |
+| Inestabilidad | 3 |
+| Investigación | Convertidor de aura de latón alquímico |
+
+## Paso a paso
+
+1. Completa la entrada de investigación correspondiente en el Thaumonomicon (pestaña Avaritia, Tech o Pureza); sin ella la receta queda bloqueada.
+2. Coloca el convertidor junto a un bloque que acepte FE (un cable, una máquina, una batería). Da energía a cada bloque vecino que la acepte y nunca recibe.
+3. Saca vis del aura de su chunk: cada vis se convierte en 250.000 FE (Taumio), 1.000.000 FE (Latón alquímico) o 560.000.000 FE (Metal del vacío), con hasta 250.000, 1.000.000 o 500.000.000 FE por tick. Clic derecho para ver la energía guardada, el aura del chunk, su estado y su ritmo.
+4. Una señal de redstone lo detiene.
+
+## Consejos y errores comunes
+
+- Cada vis convertido deja un poco de flujo, el convertidor nunca vacía el aura por debajo de un cuarto de su base, y todos los convertidores de un chunk comparten un límite de lo que pueden drenar.
+
+Guía de la familia: [Convertidores de aura](+aura_converters)

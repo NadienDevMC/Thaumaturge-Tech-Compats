@@ -1,0 +1,59 @@
+---
+title: Transductor de nodos de neutronio
+icon: thaumaturgetechcompats:neutronium_node_transducer
+id: thaumaturgetechcompats:neutronium_node_transducer
+---
+
+<Callout variant="info">
+    **Requiere:** Avaritia (Re:Avaritia)
+</Callout>
+
+![](@thaumaturgetechcompats:neutronium_node_transducer){item}
+
+## Qué es
+
+Un Transductor de nodos de Neutronio. Colocado sobre un nodo estabilizado y alimentado con redstone, activa el nodo como el Transductor de nodos, pero lo carga muchas veces más rápido y su carga se desvanece más despacio, por el mismo único punto de aspecto por tick.
+
+**Se fabrica con (misma familia):** [Transductor de nodos de matriz de cristal](@thaumaturgetechcompats:matrix_node_transducer)
+
+**Se usa para fabricar (misma familia):** [Transductor de nodos de infinito](@thaumaturgetechcompats:infinity_node_transducer)
+
+## Cómo conseguirlo
+
+Cada transductor se construye alrededor del anterior, con cuatro placas y dos lingotes de su propio material, un comparador y un nitor:
+
+- Neutronio: 4 veces más rápido, con una carga que se desvanece 4 veces más despacio.
+
+Se colocan sobre un nodo estabilizado y se activan con redstone igual que el Transductor de nodos, y drenan el mismo punto de aspecto por tick, así que el nodo se energiza con una fracción de los aspectos.
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={['thaumaturgetechcompats:neutronium_plate', 'minecraft:comparator', 'thaumaturgetechcompats:neutronium_plate', 'avaritia:neutron_ingot', 'thaumaturgetechcompats:matrix_node_transducer', 'avaritia:neutron_ingot', 'thaumaturgetechcompats:neutronium_plate', 'thaumaturge:nitor_white', 'thaumaturgetechcompats:neutronium_plate']}
+    result="thaumaturgetechcompats:neutronium_node_transducer"
+    count={1}
+/>
+
+| Ingrediente | Cantidad |
+|---|---|
+| Placa de Neutronio | 4 |
+| Comparador de redstone | 1 |
+| Neutronium Ingot | 2 |
+| Transductor de nodos de matriz de cristal | 1 |
+| Nítor blanco (o equivalente) | 1 |
+
+| Coste | Valor |
+|---|---|
+| Vis | 800 |
+| Cristales | Ordo ×3 |
+| Investigación | Transductores de Nodos de Avaritia |
+
+## Paso a paso
+
+1. Completa la entrada de investigación correspondiente en el Thaumonomicon (pestaña Avaritia, Tech o Pureza); sin ella la receta queda bloqueada.
+2. Abre una mesa de trabajo arcana, coloca los ingredientes con la forma de la receta y cárgala con vis (una varita o un cargador de mesa) y con los cristales que pide la receta. Usa cuatro placas y dos lingotes del material nuevo, un comparador, un nitor y el transductor anterior.
+3. Asegúrate de que un estabilizador sujeta un nodo.
+4. Coloca el transductor justo encima del nodo estabilizado y aliméntalo con redstone.
+5. Activa el nodo 2, 4 o 10 veces más rápido que el Transductor de nodos normal (Matriz de Cristal, Neutronio, Infinito) y su carga se desvanece 2, 4 o 10 veces más despacio, por el mismo punto de aspecto por tick.
+
+Guía de la familia: [Transductores de nodos de Avaritia](+node_transducers)

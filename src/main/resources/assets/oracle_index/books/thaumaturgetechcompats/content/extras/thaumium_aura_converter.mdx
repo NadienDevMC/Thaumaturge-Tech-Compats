@@ -1,0 +1,61 @@
+---
+title: Thaumium Aura Converter
+icon: thaumaturgetechcompats:thaumium_aura_converter
+id: thaumaturgetechcompats:thaumium_aura_converter
+---
+
+<Callout variant="info">
+    **Requires:** Thaumaturge (any energy mod to use the FE)
+</Callout>
+
+![](@thaumaturgetechcompats:thaumium_aura_converter){item}
+
+## What it is
+
+The Thaumium Aura Converter drains vis from the aura of its chunk and turns it into FE, which it gives to every neighbouring block that accepts it. It never takes energy in.
+
+**Used to make (same family):** [Alchemical Brass Aura Converter](@thaumaturgetechcompats:alchemical_brass_aura_converter)
+
+## How to get it
+
+The resonator has been tuned to the aura of the chunk and the thaumium carries the current away.
+
+It is crafted at the arcane workbench from thaumium plates, copper, redstone, a vis resonator and a simple mechanism. It drains vis from the aura of its chunk and turns every vis into 250,000 FE. It gives out up to 250,000 FE per tick and stores 10,000,000 FE. It gives the energy to every neighbouring block that accepts it and never takes any in.
+
+Right-click it to see the stored energy, the aura of the chunk, its state and its rate. Every vis it converts leaves a little flux behind, it never drains the aura under a quarter of its base, and all the converters of a chunk share a limit on what they can drain. A redstone signal stops it. The figures can be changed in the configuration.
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_thaumium', 'minecraft:redstone', 'thaumaturge:plate_thaumium', 'minecraft:copper_ingot', 'thaumaturge:vis_resonator', 'minecraft:copper_ingot', 'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium']}
+    result="thaumaturgetechcompats:thaumium_aura_converter"
+    count={1}
+/>
+
+| Ingredient | Amount |
+|---|---|
+| Thaumium Plate | 4 |
+| Redstone Dust (or equivalent) | 1 |
+| Copper Ingot (or equivalent) | 2 |
+| Vis Resonator | 1 |
+| Simple Arcane Mechanism | 1 |
+
+| Cost | Value |
+|---|---|
+| Vis | 50 |
+| Crystals | Ignis ×2, Ordo ×1 |
+| Research | Aura Converter |
+
+## Step by step
+
+1. Complete the matching research entry in the Thaumonomicon (Avaritia, Tech or Purity tab); without it the recipe stays locked.
+2. Thaumium: Open an arcane workbench, place the ingredients in the pattern of the recipe, and charge it with vis (a wand, or a workbench charger) and with the crystals the recipe asks for. Use thaumium plates, copper, redstone, a vis resonator and a simple mechanism. Alchemical Brass and Void Metal: Build an infusion altar: a Runic Matrix, a central pedestal and the eight pillar stones around it. Put the starting item on the central pedestal and the other ingredients on the pedestals around it. Start from the previous converter, with plates of the new metal, a mechanism and vis resonators.
+3. Place the converter against a block that accepts FE (a cable, a machine, a battery). It gives energy to every neighbouring block that accepts it and never takes any in.
+4. It drains vis from the aura of its chunk: every vis becomes 250,000 FE (Thaumium), 1,000,000 FE (Alchemical Brass) or 560,000,000 FE (Void Metal), at up to 250,000, 1,000,000 or 500,000,000 FE per tick. Right-click it to see the stored energy, the aura of the chunk, its state and its rate.
+5. Redstone signal stops it.
+
+## Tips and common mistakes
+
+- Every vis converted leaves a little flux behind, the converter never drains the aura under a quarter of its base, and all the converters of a chunk share a limit on what they can drain.
+
+Family guide: [Aura Converters](+aura_converters)

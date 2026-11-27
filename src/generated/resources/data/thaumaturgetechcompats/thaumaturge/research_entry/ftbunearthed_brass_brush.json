@@ -13,8 +13,8 @@
       "feature": "ftbunearthed_brush_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 24,
+  "category": "thaumaturgetechcompats:ftb",
+  "column": 0,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:brass_brush"
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

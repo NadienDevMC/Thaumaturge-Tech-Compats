@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:item/generated",
   "halo": {
-    "color": -16777216,
-    "pulse": true,
-    "size": 10,
+    "color": -872415232,
+    "pulse": false,
+    "size": 6,
     "texture": "#halo"
   },
   "loader": "avaritia:halo",

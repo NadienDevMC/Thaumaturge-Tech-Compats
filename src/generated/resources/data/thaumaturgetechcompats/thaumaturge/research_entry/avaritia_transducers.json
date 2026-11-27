@@ -27,7 +27,7 @@
   "parents": [
     "thaumaturge:node_transducer"
   ],
-  "row": 4,
+  "row": 6,
   "stages": [
     {
       "required_knowledge": [

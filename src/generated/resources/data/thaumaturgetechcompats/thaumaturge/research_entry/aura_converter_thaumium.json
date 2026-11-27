@@ -9,8 +9,8 @@
       "feature": "aura_converter_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 27,
+  "category": "thaumaturgetechcompats:extras",
+  "column": 0,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:thaumium_aura_converter"

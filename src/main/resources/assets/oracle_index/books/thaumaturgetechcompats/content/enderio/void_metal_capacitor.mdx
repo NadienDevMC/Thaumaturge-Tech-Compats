@@ -1,0 +1,56 @@
+---
+title: Void Metal Capacitor
+icon: thaumaturgetechcompats:void_metal_capacitor
+id: thaumaturgetechcompats:void_metal_capacitor
+---
+
+<Callout variant="info">
+    **Requires:** Ender IO
+</Callout>
+
+![](@thaumaturgetechcompats:void_metal_capacitor){item}
+
+## What it is
+
+Conduits, capacitors and capacitor banks for Ender IO forged from Thaumium, Alchemical Brass and Void Metal: each tier beats the one before it.
+
+**Made from (same family):** [Alchemical Brass Capacitor](@thaumaturgetechcompats:alchemical_brass_capacitor)
+
+## How to get it
+
+Every capacitor is infused from the one below it, with four plates of the new metal, two Vibrant Alloy Ingots and a Vibrant Crystal. The Thaumium Capacitor is infused from an Octadic Capacitor, the Alchemical Brass Capacitor from the Thaumium one, and the Void Metal Capacitor from the Alchemical Brass one. Alchemical Brass adds a simple mechanism and Void Metal a void seed.
+
+They go in the capacitor slot of any Ender IO machine and work like an octadic capacitor with a higher level, so the machine stores more energy and works faster. The exact levels are set in the configuration.
+
+### Infusion Altar
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_void', 'thaumaturge:plate_void', 'thaumaturge:plate_void', 'thaumaturge:void_seed', 'thaumaturgetechcompats:alchemical_brass_capacitor', 'thaumaturge:plate_void', 'enderio:vibrant_crystal', 'enderio:vibrant_alloy_ingot', 'enderio:vibrant_alloy_ingot']}
+    result="thaumaturgetechcompats:void_metal_capacitor"
+    count={1}
+/>
+
+Seen from above: the middle cell is the central pedestal and the cells around it are the outer pedestals.
+
+| Ingredient | Where | Amount |
+|---|---|---|
+| Alchemical Brass Capacitor | Central pedestal | 1 |
+| Void Metal Plate | Outer pedestals | 4 |
+| Vibrant Alloy Ingot | Outer pedestals | 2 |
+| Vibrant Crystal | Outer pedestals | 1 |
+| Void Seed | Outer pedestals | 1 |
+
+| Cost | Value |
+|---|---|
+| Essentia | Potentia ×72, Metallum ×36, Machina ×36 |
+| Instability | 9 |
+| Research | Magical Capacitors |
+
+## Step by step
+
+1. Complete the matching research entry in the Thaumonomicon (Avaritia, Tech or Purity tab); without it the recipe stays locked.
+2. Conduits: Open an arcane workbench, place the ingredients in the pattern of the recipe, and charge it with vis (a wand, or a workbench charger) and with the crystals the recipe asks for. One conduit makes eight. Thaumium comes from the Ender IO vibrant conduits, Alchemical Brass from the Thaumium ones and Void Metal from the Alchemical Brass ones. The workbench also needs ignis (energy), aer (items) or aqua (fluids) vis and crystals.
+3. Capacitors and banks: Build an infusion altar: a Runic Matrix, a central pedestal and the eight pillar stones around it. Put the starting item on the central pedestal and the other ingredients on the pedestals around it. The capacitor starts from an Octadic Capacitor (Thaumium) or the previous tier; the bank from a Vibrant Capacitor Bank or the previous tier.
+4. Place the conduits like Ender IO conduits (energy moves more RF per tick, items more items, fluids more mB). Put a capacitor in the capacitor slot of any Ender IO machine; place banks touching: only banks of the same kind join into one pool.
+
+Family guide: [Magical Conduits, Capacitors and Banks](+conduits_capacitors)

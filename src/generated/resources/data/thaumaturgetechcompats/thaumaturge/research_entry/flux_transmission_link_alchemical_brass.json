@@ -13,8 +13,8 @@
       "feature": "flux_network_alchemical_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 56,
+  "category": "thaumaturgetechcompats:flux_network",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:alchemical_brass_transmission_link"
@@ -41,7 +41,7 @@
   "parents": [
     "thaumaturgetechcompats:flux_transmission_link"
   ],
-  "row": 3,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

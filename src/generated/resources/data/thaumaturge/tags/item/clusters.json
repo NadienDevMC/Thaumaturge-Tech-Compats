@@ -8,6 +8,22 @@
     {
       "id": "thaumaturgetechcompats:uranium_cluster",
       "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:rifting_native_cluster",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:fibric_native_cluster",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:salis_native_cluster",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:crimson_native_cluster",
+      "required": false
     }
   ]
 }

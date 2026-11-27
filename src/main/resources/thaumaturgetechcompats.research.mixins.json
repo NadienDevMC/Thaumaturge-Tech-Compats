@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.research.mixin",
+  "plugin": "nadiendev.ThaumaturgeTechCompats.research.mixin.ResearchTabsMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ThaumonomiconTabsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

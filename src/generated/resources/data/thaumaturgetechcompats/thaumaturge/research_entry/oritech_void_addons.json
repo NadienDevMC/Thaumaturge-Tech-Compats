@@ -13,8 +13,8 @@
       "feature": "oritech_addons"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 9,
+  "category": "thaumaturgetechcompats:oritech",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:oritech_void_speed_addon"
@@ -43,7 +43,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:base_eldritch"
   ],
-  "row": 8,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

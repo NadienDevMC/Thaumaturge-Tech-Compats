@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:rifting_nugget",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:fibric_nugget",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:salis_nugget",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:crimson_nugget",
+      "required": false
+    }
+  ]
+}

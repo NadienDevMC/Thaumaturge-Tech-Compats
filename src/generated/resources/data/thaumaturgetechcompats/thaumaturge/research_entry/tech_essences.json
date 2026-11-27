@@ -5,8 +5,8 @@
       "feature": "own_essences"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 69,
+  "category": "thaumaturgetechcompats:extras",
+  "column": 6,
   "complexity": 1,
   "icons": [
     "minecraft:nether_star"
@@ -41,7 +41,7 @@
   "parents": [
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 0,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

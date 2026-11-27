@@ -17,8 +17,8 @@
       "item": "thaumaturgetechcompats:void_metal_knife"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 45,
+  "category": "thaumaturgetechcompats:food_farmers",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:flux_knife"
@@ -51,7 +51,7 @@
     "thaumaturge:base_infusion",
     "thaumaturge:flux_rift"
   ],
-  "row": 7,
+  "row": 6,
   "stages": [
     {
       "required_knowledge": [

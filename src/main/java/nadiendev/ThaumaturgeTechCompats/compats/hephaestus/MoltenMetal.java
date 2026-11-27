@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.compats.hephaestus;
 
+import nadiendev.ThaumaturgeTechCompats.metals.ExtraMetal;
 import nadiendev.ThaumaturgeTechCompats.tiercontent.Tier;
 
 public enum MoltenMetal {
@@ -8,7 +9,11 @@ public enum MoltenMetal {
     NEUTRONIUM("neutronium", "Neutronium", "Neutronio", 0xFF5A6070, 1500,
             "avaritia:neutron_ingot", "avaritia:neutron_nugget", "avaritia:neutron", Tier.NEUTRONIUM),
     INFINITY("infinity", "Infinity", "Infinito", 0xFFFF5FA8, 2000,
-            "avaritia:infinity_ingot", "avaritia:infinity_nugget", "avaritia:infinity", Tier.INFINITY);
+            "avaritia:infinity_ingot", "avaritia:infinity_nugget", "avaritia:infinity", Tier.INFINITY),
+    RIFTING(ExtraMetal.RIFTING),
+    FIBRIC(ExtraMetal.FIBRIC),
+    SALIS(ExtraMetal.SALIS),
+    CRIMSON(ExtraMetal.CRIMSON);
 
     private final String id;
     private final String english;
@@ -19,6 +24,13 @@ public enum MoltenMetal {
     private final String nugget;
     private final String block;
     private final Tier tier;
+
+    /** One of this mod's own metals (no Avaritia needed, no plate). */
+    MoltenMetal(ExtraMetal metal) {
+        this(metal.id(), metal.english(), metal.spanish(), metal.color(), metal.temperature(),
+                "thaumaturgetechcompats:" + metal.ingotName(), "thaumaturgetechcompats:" + metal.nuggetName(),
+                "thaumaturgetechcompats:" + metal.blockName(), null);
+    }
 
     MoltenMetal(String id, String english, String spanish, int color, int temperature,
                 String ingot, String nugget, String block, Tier tier) {
@@ -80,7 +92,13 @@ public enum MoltenMetal {
         return block;
     }
 
+    /** Null for the metals of this mod, which have no plate. */
     public String plate() {
-        return "thaumaturgetechcompats:" + tier.plateName();
+        return tier == null ? null : "thaumaturgetechcompats:" + tier.plateName();
+    }
+
+    /** True for the Avaritia metals, whose recipes also need Avaritia. */
+    public boolean needsAvaritia() {
+        return tier != null;
     }
 }

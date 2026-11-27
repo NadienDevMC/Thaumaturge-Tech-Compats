@@ -9,8 +9,8 @@
       "feature": "projecte_emc"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 70,
+  "category": "thaumaturgetechcompats:extras",
+  "column": 4,
   "complexity": 1,
   "icons": [
     "thaumaturge:ingot_thaumium"
@@ -33,7 +33,7 @@
   "parents": [
     "thaumaturgetechcompats:tech"
   ],
-  "row": 0,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

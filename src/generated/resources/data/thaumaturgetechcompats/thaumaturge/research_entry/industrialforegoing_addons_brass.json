@@ -30,8 +30,8 @@
       ]
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 3,
+  "category": "thaumaturgetechcompats:foregoing",
+  "column": 0,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:brass_speed_addon"
@@ -60,7 +60,7 @@
     "thaumaturge:liquid_death",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

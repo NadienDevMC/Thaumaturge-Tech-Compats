@@ -13,8 +13,8 @@
       "feature": "enderio_conduits"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 71,
+  "category": "thaumaturgetechcompats:enderio",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "enderio:conduit_binder"
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:infusion"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

@@ -1,0 +1,14 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.metals.upgrades.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "nadiendev.ThaumaturgeTechCompats.metals.upgrades.mixin.ToolUpgradeMixinPlugin",
+  "mixins": [
+    "ModifiableItemNameMixin",
+    "ToolUpgradeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

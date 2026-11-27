@@ -1,0 +1,63 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "hephaestus"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "avaritia"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "hephaestus_smeltery"
+    }
+  ],
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 2,
+  "complexity": 2,
+  "icons": [
+    "avaritia:infinity_ingot"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.hephaestus_smeltery.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:infusion"
+  ],
+  "row": 10,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.hephaestus_smeltery.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [],
+      "text": "research.thaumaturgetechcompats.hephaestus_smeltery.stage_1"
+    }
+  ]
+}

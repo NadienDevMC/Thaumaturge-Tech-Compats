@@ -17,8 +17,8 @@
       "feature": "aura_converter_void"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 27,
+  "category": "thaumaturgetechcompats:extras",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_metal_aura_converter"

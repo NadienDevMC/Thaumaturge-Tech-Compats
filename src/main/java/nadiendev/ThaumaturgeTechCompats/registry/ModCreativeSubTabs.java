@@ -50,6 +50,7 @@ import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodIntegration;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.FarmersDelightTaintedIntegration;
 import nadiendev.ThaumaturgeTechCompats.transducer.TransducerIntegration;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierIntegration;
+import nadiendev.ThaumaturgeTechCompats.metals.ExtraMetalIntegration;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -68,7 +69,7 @@ public final class ModCreativeSubTabs {
             if (section.parent() == parent && present(section)) {
                 tabs.add(new CreativeSubTab.Builder(parentTab, ThaumaturgeTechCompats.id(section.id()), Component.translatable(section.key()))
                         .hideParentTitle()
-                        .entries((parameters, output) -> fill(section, output))
+                        .entries((parameters, output) -> fillOrdered(section, output))
                         .build());
             }
         }
@@ -81,6 +82,7 @@ public final class ModCreativeSubTabs {
 
     private static boolean present(CreativeSection section) {
         return switch (section) {
+            case ENDERIO -> loaded(EnderIOIntegration.MOD_ID);
             case CREATE -> loaded(CreateIntegration.MOD_ID);
             case ORITECH -> loaded(OritechFeatures.MOD_ID);
             case MEKANISM -> loaded(MekanismToolIntegration.MOD_ID);
@@ -95,13 +97,45 @@ public final class ModCreativeSubTabs {
         };
     }
 
+    /** Solar panels keep their own exact order; every other section lists Brass, Thaumium, Void, Salis, Fibric, Crimson, Rifting. */
+    private static void fillOrdered(CreativeSection section, CreativeModeTab.Output output) {
+        // Compat sections follow the tier order of the other mod (stats), so they are left as registered
+        boolean compat = switch (section) {
+            case ENDERIO, CREATE, ORITECH, MEKANISM, FOREGOING, FTB, SOLAR_FLUX, SOPHISTICATED, BOTANIA, VOID, FOOD_FARMERS -> true;
+            default -> false;
+        };
+        if (compat) {
+            fill(section, output);
+            return;
+        }
+        if (section == CreativeSection.CORE) {
+            avaritia(output);
+            return;
+        }
+        MaterialOrder.Buffer buffer = new MaterialOrder.Buffer();
+        fill(section, buffer);
+        buffer.flushTo(output);
+    }
+
+    /** One Avaritia tab: core, machines, devices, jars and matrices, each part in material order, without repeats. */
+    private static void avaritia(CreativeModeTab.Output output) {
+        CreativeModeTab.Output distinct = new DistinctOutput(output);
+        List<java.util.function.Consumer<CreativeModeTab.Output>> parts = List.of(
+                ModCreativeSubTabs::core,
+                AvaritiaMachinesIntegration::fillCreativeTab,
+                ModCreativeSubTabs::devices,
+                ModCreativeSubTabs::jars,
+                ModCreativeSubTabs::matrices);
+        for (java.util.function.Consumer<CreativeModeTab.Output> part : parts) {
+            MaterialOrder.Buffer buffer = new MaterialOrder.Buffer();
+            part.accept(buffer);
+            buffer.flushTo(distinct);
+        }
+    }
+
     private static void fill(CreativeSection section, CreativeModeTab.Output output) {
         switch (section) {
-            case CORE -> core(output);
-            case MACHINES -> AvaritiaMachinesIntegration.fillCreativeTab(output);
-            case DEVICES -> devices(output);
-            case JARS -> jars(output);
-            case MATRICES -> matrices(output);
+            case CORE -> avaritia(output);
             case PEARLS -> pearls(output);
             case CREATE -> create(output);
             case ORITECH -> oritech(output);
@@ -119,6 +153,8 @@ public final class ModCreativeSubTabs {
             case FOOD_FARMERS -> FarmersDelightTaintedIntegration.fillCreativeTab(output);
             case FOOD_EDIBLE -> EdibleIntegration.fillCreativeTab(output);
             case PURITY -> PurityIntegration.fillCreativeTab(output);
+            case ENDERIO -> EnderIOIntegration.fillCreativeTab(output);
+            case METALS -> ExtraMetalIntegration.fillCreativeTab(output);
             case EXTRAS -> extras(output);
         }
     }
@@ -191,7 +227,6 @@ public final class ModCreativeSubTabs {
     }
 
     private static void extras(CreativeModeTab.Output output) {
-        EnderIOIntegration.fillCreativeTab(output);
         AuraConverterIntegration.fillCreativeTab(output);
     }
 

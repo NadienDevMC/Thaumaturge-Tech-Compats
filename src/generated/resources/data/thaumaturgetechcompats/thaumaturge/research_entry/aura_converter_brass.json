@@ -13,8 +13,8 @@
       "feature": "aura_converter_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 27,
+  "category": "thaumaturgetechcompats:extras",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:alchemical_brass_aura_converter"

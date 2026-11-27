@@ -1,0 +1,22 @@
+{
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "I": {
+      "tag": "c:ingots/rifting"
+    }
+  },
+  "pattern": [
+    "  I",
+    " I ",
+    "I  "
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:extra_metals"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:rifting_wand_rod_inert"
+  },
+  "vis": 40
+}

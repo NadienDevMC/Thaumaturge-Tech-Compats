@@ -21,8 +21,8 @@
       "feature": "create_casing_void"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 6,
+  "category": "thaumaturgetechcompats:create",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_metal_casing"
@@ -51,7 +51,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:base_eldritch"
   ],
-  "row": 8,
+  "row": 6,
   "stages": [
     {
       "required_knowledge": [

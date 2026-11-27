@@ -21,8 +21,8 @@
       "modid": "hephaestus"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 14,
+  "category": "thaumaturgetechcompats:solarflux",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "solarflux:sp_alchemical_cobalt_solar_panel"
@@ -50,7 +50,7 @@
     "thaumaturgetechcompats:solarflux_alchemical",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

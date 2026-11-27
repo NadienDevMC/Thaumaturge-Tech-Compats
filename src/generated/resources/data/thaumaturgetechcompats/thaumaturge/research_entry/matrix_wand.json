@@ -1,6 +1,6 @@
 {
   "category": "thaumaturgetechcompats:avaritia",
-  "column": 4,
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:matrix_wand_cap"
@@ -32,7 +32,7 @@
     "thaumaturge:rod_quartz",
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 6,
+  "row": 10,
   "stages": [
     {
       "required_knowledge": [

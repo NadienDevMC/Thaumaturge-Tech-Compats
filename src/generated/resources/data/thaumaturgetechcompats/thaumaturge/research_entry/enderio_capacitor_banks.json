@@ -17,8 +17,8 @@
       "feature": "enderio_capacitor_banks"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 74,
+  "category": "thaumaturgetechcompats:enderio",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "enderio:void_metal_capacitor_bank"

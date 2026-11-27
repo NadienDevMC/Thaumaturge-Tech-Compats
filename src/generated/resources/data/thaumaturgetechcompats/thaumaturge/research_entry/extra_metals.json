@@ -1,0 +1,74 @@
+{
+  "category": "thaumaturgetechcompats:metals",
+  "column": 0,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:rifting_ingot"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.extra_metals.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:alienis"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:cap_void"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:auromancy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.extra_metals.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:metals/crucible/rifting_ingot",
+        "thaumaturgetechcompats:metals/infusion/fibric_ingot",
+        "thaumaturgetechcompats:metals/infusion/salis_ingot",
+        "thaumaturgetechcompats:metals/infusion/crimson_ingot",
+        "thaumaturgetechcompats:metals/wand/rifting_wand_rod_inert",
+        "thaumaturgetechcompats:metals/wand/rifting_wand_cap_inert",
+        "thaumaturgetechcompats:metals/wand/rifting_wand_rod",
+        "thaumaturgetechcompats:metals/wand/rifting_wand_cap",
+        "thaumaturgetechcompats:metals/wand/fibric_wand_rod_inert",
+        "thaumaturgetechcompats:metals/wand/fibric_wand_cap_inert",
+        "thaumaturgetechcompats:metals/wand/fibric_wand_rod",
+        "thaumaturgetechcompats:metals/wand/fibric_wand_cap",
+        "thaumaturgetechcompats:metals/wand/salis_wand_rod_inert",
+        "thaumaturgetechcompats:metals/wand/salis_wand_cap_inert",
+        "thaumaturgetechcompats:metals/wand/salis_wand_rod",
+        "thaumaturgetechcompats:metals/wand/salis_wand_cap",
+        "thaumaturgetechcompats:metals/wand/crimson_wand_rod_inert",
+        "thaumaturgetechcompats:metals/wand/crimson_wand_cap_inert",
+        "thaumaturgetechcompats:metals/wand/crimson_wand_rod",
+        "thaumaturgetechcompats:metals/wand/crimson_wand_cap",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_rifting_thaumaturgetechcompats_rifting",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_fibric_thaumaturgetechcompats_fibric",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_salis_thaumaturgetechcompats_salis",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_crimson_thaumaturgetechcompats_crimson"
+      ],
+      "text": "research.thaumaturgetechcompats.extra_metals.stage_1"
+    }
+  ]
+}

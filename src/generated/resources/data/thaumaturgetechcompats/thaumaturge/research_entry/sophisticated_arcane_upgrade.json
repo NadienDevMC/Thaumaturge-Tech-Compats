@@ -9,8 +9,8 @@
       "feature": "sophisticated_arcane_upgrade"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 76,
+  "category": "thaumaturgetechcompats:sophisticated",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:arcane_workbench_upgrade"
@@ -37,7 +37,7 @@
   "parents": [
     "thaumaturgetechcompats:tech"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

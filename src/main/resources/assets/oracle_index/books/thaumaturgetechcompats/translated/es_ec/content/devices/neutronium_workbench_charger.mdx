@@ -1,0 +1,63 @@
+---
+title: Cargador de Mesa de Neutronio
+icon: thaumaturgetechcompats:neutronium_workbench_charger
+id: thaumaturgetechcompats:neutronium_workbench_charger
+---
+
+<Callout variant="info">
+    **Requiere:** Avaritia (Re:Avaritia)
+</Callout>
+
+![](@thaumaturgetechcompats:neutronium_workbench_charger){item}
+
+## Qué es
+
+Un Cargador de Mesa de Neutronio. Se coloca sobre una mesa de trabajo arcana y saca vis del aura de los chunks de alrededor, llegando más lejos y cobrando menos vis por cada crafteo que el cargador anterior.
+
+**Se fabrica con (misma familia):** [Cargador de Mesa de Matriz de Cristal](@thaumaturgetechcompats:matrix_workbench_charger)
+
+**Se usa para fabricar (misma familia):** [Cargador de Mesa del Infinito](@thaumaturgetechcompats:infinity_workbench_charger)
+
+## Cómo conseguirlo
+
+Cada cargador se fabrica en un altar de infusión, partiendo del anterior:
+
+- El de Matriz de Cristal parte de un cargador de mesa normal.
+
+- El de Neutronio parte del de Matriz de Cristal.
+
+- El del Infinito parte del de Neutronio.
+
+Se colocan sobre la mesa igual que el normal. Por defecto extraen de 2, 3 y 4 chunks a su alrededor y cobran solo el 70%, el 40% y el 10% del vis de cada fabricación.
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={['thaumaturgetechcompats:neutronium_plate', 'thaumaturgetechcompats:neutronium_plate', 'thaumaturgetechcompats:neutronium_plate', '', 'thaumaturgetechcompats:matrix_workbench_charger', 'thaumaturgetechcompats:neutronium_plate', 'avaritia:neutron_ingot', 'avaritia:neutron_ingot', 'thaumaturge:vis_resonator']}
+    result="thaumaturgetechcompats:neutronium_workbench_charger"
+    count={1}
+/>
+
+Visto desde arriba: la casilla del medio es el pedestal central y las de alrededor son los pedestales exteriores.
+
+| Ingrediente | Dónde | Cantidad |
+|---|---|---|
+| Cargador de Mesa de Matriz de Cristal | Pedestal central | 1 |
+| Placa de Neutronio | Pedestales exteriores | 4 |
+| Resonador de Vis | Pedestales exteriores | 1 |
+| Neutronium Ingot | Pedestales exteriores | 2 |
+
+| Coste | Valor |
+|---|---|
+| Esencia | Auram ×40, Potentia ×40, Metallum ×24, Terminus ×8 |
+| Inestabilidad | 7 |
+| Investigación | Cargadores de Mesa de Avaritia |
+
+## Paso a paso
+
+1. Completa la entrada de investigación correspondiente en el Thaumonomicon (pestaña Avaritia, Tech o Pureza); sin ella la receta queda bloqueada.
+2. Construye un altar de infusión: una Matriz rúnica, un pedestal central y las ocho piedras de pilar alrededor. Pon el objeto de partida en el pedestal central y los demás ingredientes en los pedestales de alrededor. El objeto de partida es el cargador anterior (un Cargador de mesa normal para Matriz de Cristal).
+3. Aporta la esencia que pide la receta (la pantalla de la receta en JEI o el Thaumonomicon lista cada aspecto), empieza la infusión y espera a que termine el ciclo; el resultado sustituye al objeto de partida.
+4. Coloca el cargador encima de una mesa de trabajo arcana. Por defecto los tres niveles sacan vis de 2, 3 y 4 chunks alrededor y cobran solo el 70%, 40% y 10% del vis de cada crafteo.
+
+Guía de la familia: [Cargadores de mesa de Avaritia](+workbench_chargers)

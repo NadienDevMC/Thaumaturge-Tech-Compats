@@ -6,7 +6,7 @@
     }
   ],
   "category": "thaumaturgetechcompats:avaritia",
-  "column": 10,
+  "column": 4,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:infinity_infusion_pedestal"
@@ -34,7 +34,7 @@
     "thaumaturgetechcompats:extremely_primordial_pearl",
     "thaumaturge:infusion"
   ],
-  "row": 4,
+  "row": 16,
   "stages": [
     {
       "required_knowledge": [

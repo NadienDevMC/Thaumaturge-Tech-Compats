@@ -1,0 +1,61 @@
+---
+title: Thaumium Flux Storage Core
+icon: thaumaturgetechcompats:thaumium_flux_storage_core
+id: thaumaturgetechcompats:thaumium_flux_storage_core
+---
+
+<Callout variant="info">
+    **Requires:** Thaumaturge (Dimensional Flux feature)
+</Callout>
+
+![](@thaumaturgetechcompats:thaumium_flux_storage_core){item}
+
+## What it is
+
+A power network of its own: Dimensional Flux is produced from flux rifts, moved by linked beams, stored in a multiblock core and spent by chargers and gear.
+
+**Used to make (same family):** [Alchemical Brass Flux Storage Core](@thaumaturgetechcompats:alchemical_brass_flux_storage_core)
+
+## How to get it
+
+The Thaumium Flux Storage Core and the Thaumium Flux Capacity Cell are made at the arcane workbench.
+
+The core only works while it is the centre of a ring of eight thaumium blocks on its own level, with one more thaumium block right above it and another right below it. Blocks of a higher tier count too. Until it is formed it neither stores nor passes on any flux. Right-click it to see its state.
+
+Capacity Cells placed on pedestals, of any kind, within six blocks of the core raise its capacity. Node stabilizers within eight blocks keep it calm: the fuller it is, the more stabilizer points it needs. Above half full and short of points, it overloads: it releases flux into the aura, throws sparks and hurts whoever stands near. The distances, figures and effects can be changed in the configuration.
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_thaumium', 'thaumaturge:alumentum', 'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:metal_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium', 'thaumaturge:alumentum', 'thaumaturge:plate_thaumium']}
+    result="thaumaturgetechcompats:thaumium_flux_storage_core"
+    count={1}
+/>
+
+| Ingredient | Amount |
+|---|---|
+| Thaumium Plate | 4 |
+| Alumentum | 2 |
+| Simple Arcane Mechanism | 2 |
+| Thaumium Block | 1 |
+
+| Cost | Value |
+|---|---|
+| Vis | 150 |
+| Crystals | Ordo ×20, Terra ×10, Aer ×10 |
+| Research | Flux Storage Core |
+
+## Step by step
+
+1. Start with a producer: a Rift Extractor next to an open flux rift. It takes one point of the rift every so often and turns it into Dimensional Flux (DF), and pushes it into the storages and links that touch it.
+2. Connect distant parts with Transmission Links: craft two at an arcane workbench, use the Transmission Linker on one and then on the other to pair them, and sneak-use the linker on a link to break the pair. Flux flows both ways until both are equally full; links side by side chain flux.
+3. Store flux in a Storage Core: build a ring of eight blocks of the core's metal around it on its own level, with one more block above and one below. Right-click the core to read its state.
+4. Raise the capacity with Capacity Cells on pedestals within six blocks of the core, and keep node stabilizers within eight blocks: above half full and short of stabilizer points the core overloads, releases flux and hurts whoever is near.
+5. Spend flux: an Environmental Charger gives it to every charged item, wand and vis item of every player in its radius; push flux into it with links, cores or extractors. Right-click it to read its radius and rate.
+
+## Tips and common mistakes
+
+- Links of different tiers pair, but the pair reaches only as far and moves only as much as the weaker one. A pair only works while both ends are loaded.
+- Until the core ring is complete it neither stores nor passes on flux. Blocks of a higher tier count for the ring.
+
+Family guide: [Dimensional Flux Network](+flux_network)

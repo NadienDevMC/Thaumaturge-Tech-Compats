@@ -17,8 +17,8 @@
       "feature": "magic_laser_drill"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 61,
+  "category": "thaumaturgetechcompats:foregoing",
+  "column": 4,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:magical_ore_laser_base"
@@ -45,7 +45,7 @@
   "parents": [
     "thaumaturgetechcompats:magical_laser_drill"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

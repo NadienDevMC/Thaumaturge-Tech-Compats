@@ -13,8 +13,8 @@
       "feature": "botania_spreaders"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 48,
+  "category": "thaumaturgetechcompats:botania",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:void_metal_spreader"
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:infusion"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

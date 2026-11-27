@@ -13,8 +13,8 @@
       "feature": "forcecraft_repair"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 15,
+  "category": "thaumaturgetechcompats:extras",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "forcecraft:infuser"

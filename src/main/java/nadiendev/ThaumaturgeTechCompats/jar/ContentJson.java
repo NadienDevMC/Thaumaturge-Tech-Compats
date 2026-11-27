@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.jar;
 
+import nadiendev.ThaumaturgeTechCompats.research.ResearchLayout;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -22,7 +23,7 @@ public final class ContentJson {
 
     public static CompletableFuture<?> save(PackOutput output, CachedOutput cache, String relativePath, JsonElement json) {
         Path path = output.getOutputFolder().resolve(relativePath);
-        return DataProvider.saveStable(cache, json, path);
+        return DataProvider.saveStable(cache, ResearchLayout.apply(path, json), path);
     }
 
     public static JsonObject item(String id) {

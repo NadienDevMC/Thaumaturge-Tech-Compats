@@ -13,8 +13,8 @@
       "feature": "mekanism_energy_tools_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 33,
+  "category": "thaumaturgetechcompats:mekanism",
+  "column": 0,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:energized_thaumium_pickaxe",
@@ -47,7 +47,7 @@
     "thaumaturge:base_infusion",
     "thaumaturge:metallurgy@2"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

@@ -1,0 +1,55 @@
+---
+title: Transmission Linker
+icon: thaumaturgetechcompats:transmission_linker
+id: thaumaturgetechcompats:transmission_linker
+---
+
+<Callout variant="info">
+    **Requires:** Thaumaturge (Dimensional Flux feature)
+</Callout>
+
+![](@thaumaturgetechcompats:transmission_linker){item}
+
+## What it is
+
+A power network of its own: Dimensional Flux is produced from flux rifts, moved by linked beams, stored in a multiblock core and spent by chargers and gear.
+
+## How to get it
+
+The Thaumium Transmission Link is made on an arcane workbench from thaumium plates, quicksilver and a simple arcane mechanism, and the recipe gives two of them. The Transmission Linker is made from quicksilver, a thaumium plate and a simple arcane mechanism.
+
+Use the linker on one link and then on another to pair them; sneak and use it on a link to break the pair. Each link has a single partner, and the beam between them is visible. Flux flows both ways until both buffers are equally full, and a link also takes flux from the storages next to it and gives it to the ones that can receive it. Links placed side by side pass flux along, so chains are possible. The reach of a pair is the smaller of the two, and it only works while both ends are loaded.
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={['thaumaturge:quicksilver', '', '', 'thaumaturge:plate_thaumium', '', '', 'thaumaturge:mechanism_simple', '', '']}
+    result="thaumaturgetechcompats:transmission_linker"
+    count={1}
+/>
+
+| Ingredient | Amount |
+|---|---|
+| Quicksilver | 1 |
+| Thaumium Plate | 1 |
+| Simple Arcane Mechanism | 1 |
+
+| Cost | Value |
+|---|---|
+| Vis | 20 |
+| Crystals | Aer ×1 |
+| Research | Transmission Link |
+
+## Step by step
+
+1. Start with a producer: a Rift Extractor next to an open flux rift. It takes one point of the rift every so often and turns it into Dimensional Flux (DF), and pushes it into the storages and links that touch it.
+2. Connect distant parts with Transmission Links: craft two at an arcane workbench, use the Transmission Linker on one and then on the other to pair them, and sneak-use the linker on a link to break the pair. Flux flows both ways until both are equally full; links side by side chain flux.
+3. Raise the capacity with Capacity Cells on pedestals within six blocks of the core, and keep node stabilizers within eight blocks: above half full and short of stabilizer points the core overloads, releases flux and hurts whoever is near.
+4. Spend flux: an Environmental Charger gives it to every charged item, wand and vis item of every player in its radius; push flux into it with links, cores or extractors. Right-click it to read its radius and rate.
+
+## Tips and common mistakes
+
+- Links of different tiers pair, but the pair reaches only as far and moves only as much as the weaker one. A pair only works while both ends are loaded.
+- Until the core ring is complete it neither stores nor passes on flux. Blocks of a higher tier count for the ring.
+
+Family guide: [Dimensional Flux Network](+flux_network)

@@ -9,8 +9,8 @@
       "feature": "tainted_food_farmersdelight"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 45,
+  "category": "thaumaturgetechcompats:food_farmers",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:tainted_beef_stew"
@@ -38,7 +38,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:bottle_taint"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

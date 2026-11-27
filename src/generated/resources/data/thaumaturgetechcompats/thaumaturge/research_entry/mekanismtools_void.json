@@ -21,8 +21,8 @@
       "feature": "mekanism_energy_tools_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 33,
+  "category": "thaumaturgetechcompats:mekanism",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:energized_void_pickaxe",
@@ -58,7 +58,7 @@
     "thaumaturgetechcompats:mekanismtools_alchemical_brass",
     "thaumaturge:infusion_eldritch"
   ],
-  "row": 6,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

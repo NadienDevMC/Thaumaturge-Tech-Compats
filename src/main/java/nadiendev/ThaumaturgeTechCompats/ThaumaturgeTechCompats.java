@@ -55,6 +55,7 @@ import nadiendev.ThaumaturgeTechCompats.smelter.SmelterIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.solarflux.SolarFluxIntegration;
 import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerIntegration;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierIntegration;
+import nadiendev.ThaumaturgeTechCompats.metals.ExtraMetalIntegration;
 import nadiendev.ThaumaturgeTechCompats.registry.ModItems;
 import nadiendev.ThaumaturgeTechCompats.registry.ModWandParts;
 import net.minecraft.resources.ResourceLocation;
@@ -116,6 +117,7 @@ public class ThaumaturgeTechCompats {
         FurnaceIntegration.register(modBus);
         GolemIntegration.register(modBus);
         WandTierIntegration.register(modBus);
+        ExtraMetalIntegration.register(modBus);
         FocusIntegration.register(modBus);
         BrainChargerIntegration.register(modBus);
         CreateIntegration.register(modBus);

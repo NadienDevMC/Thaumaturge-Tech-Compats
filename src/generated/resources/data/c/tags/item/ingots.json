@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:rifting_ingot",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:fibric_ingot",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:salis_ingot",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:crimson_ingot",
+      "required": false
+    }
+  ]
+}

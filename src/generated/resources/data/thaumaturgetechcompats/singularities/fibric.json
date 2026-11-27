@@ -1,0 +1,9 @@
+{
+  "displayName": "singularity.thaumaturgetechcompats.fibric",
+  "ingredient": {
+    "item": "thaumaturgetechcompats:fibric_ingot"
+  },
+  "name": "thaumaturgetechcompats:fibric",
+  "overlayColor": 7260405,
+  "underlayColor": 2047898
+}

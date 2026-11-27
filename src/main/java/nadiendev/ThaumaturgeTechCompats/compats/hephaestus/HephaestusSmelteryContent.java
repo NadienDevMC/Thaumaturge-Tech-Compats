@@ -4,6 +4,9 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.common.CompatJson;
+import nadiendev.ThaumaturgeTechCompats.compats.common.TechCategory;
+import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOJson;
+import nadiendev.ThaumaturgeTechCompats.tiercontent.ContentJson;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
@@ -13,6 +16,9 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class HephaestusSmelteryContent implements DataProvider {
+    /** Research entry of the smeltery metals (Avaritia tab), like the 26.1.2 branch. */
+    public static final String ENTRY = "hephaestus_smeltery";
+    private static final int COLUMN = 75;
     private static final String MOD = ThaumaturgeTechCompats.MOD_ID;
     private static final String HEPHAESTUS = HephaestusSmelteryIntegration.MOD_ID;
     private static final int INGOT = 90;
@@ -34,12 +40,15 @@ public class HephaestusSmelteryContent implements DataProvider {
             String name = metal.id();
             tasks.add(CompatJson.save(output, cache, base + "melting/" + name + "/ingot.json", melting(metal, input(metal, "ingots", metal.ingot()), INGOT, 100)));
             tasks.add(CompatJson.save(output, cache, base + "melting/" + name + "/block.json", melting(metal, input(metal, "storage_blocks", metal.block()), BLOCK, 200)));
-            tasks.add(CompatJson.save(output, cache, base + "melting/" + name + "/plate.json", melting(metal, metal.plate(), PLATE, 100)));
             tasks.add(CompatJson.save(output, cache, base + "casting/table/" + name + "/ingot_cast.json",
                     table(metal, "hephaestus:ingot_cast", INGOT, 100, metal.ingot())));
-            tasks.add(CompatJson.save(output, cache, base + "casting/table/" + name + "/plate_cast.json",
-                    table(metal, "hephaestus:plate_cast", PLATE, 100, metal.plate())));
             tasks.add(CompatJson.save(output, cache, base + "casting/basin/" + name + "/block_cast.json", basin(metal)));
+            // Only the Avaritia metals have a plate and a plate cast
+            if (metal.plate() != null) {
+                tasks.add(CompatJson.save(output, cache, base + "melting/" + name + "/plate.json", melting(metal, metal.plate(), PLATE, 100)));
+                tasks.add(CompatJson.save(output, cache, base + "casting/table/" + name + "/plate_cast.json",
+                        table(metal, "hephaestus:plate_cast", PLATE, 100, metal.plate())));
+            }
             // Crystal Matrix has no nugget item
             if (metal.nugget() != null) {
                 tasks.add(CompatJson.save(output, cache, base + "melting/" + name + "/nugget.json", melting(metal, input(metal, "nuggets", metal.nugget()), NUGGET, 33)));
@@ -48,6 +57,7 @@ public class HephaestusSmelteryContent implements DataProvider {
             }
             tasks.add(CompatJson.save(output, cache, "data/c/tags/fluid/" + metal.fluidName() + ".json", fluidTag(metal)));
         }
+        tasks.add(CompatJson.save(output, cache, "data/" + MOD + "/thaumaturge/research_entry/" + ENTRY + ".json", entry()));
         return CompletableFuture.allOf(tasks.toArray(CompletableFuture[]::new));
     }
 
@@ -56,10 +66,12 @@ public class HephaestusSmelteryContent implements DataProvider {
         return "Thaumaturge Tech Compats hephaestus smeltery";
     }
 
-    private static JsonArray conditions() {
+    private static JsonArray conditions(MoltenMetal metal) {
         JsonArray conditions = new JsonArray();
         conditions.add(CompatJson.modLoaded(HEPHAESTUS));
-        conditions.add(CompatJson.modLoaded("avaritia"));
+        if (metal.needsAvaritia()) {
+            conditions.add(CompatJson.modLoaded("avaritia"));
+        }
         conditions.add(CompatJson.feature(HephaestusSmelteryIntegration.TOGGLE));
         return conditions;
     }
@@ -90,7 +102,7 @@ public class HephaestusSmelteryContent implements DataProvider {
         JsonObject fuel = new JsonObject();
         fuel.addProperty("amount", 50);
         fuel.addProperty("id", "minecraft:lava");
-        JsonObject json = CompatJson.recipe("hephaestus:melting", conditions());
+        JsonObject json = CompatJson.recipe("hephaestus:melting", conditions(metal));
         json.add("fuel", fuel);
         json.add("ingredient", ingredient(input));
         json.add("result", fluid(metal, amount));
@@ -101,7 +113,7 @@ public class HephaestusSmelteryContent implements DataProvider {
 
     // 1.21.1 format: cast is an ingredient object, result is a plain item id
     private static JsonObject table(MoltenMetal metal, String cast, int amount, int cooling, String result) {
-        JsonObject json = CompatJson.recipe("hephaestus:casting_table", conditions());
+        JsonObject json = CompatJson.recipe("hephaestus:casting_table", conditions(metal));
         json.add("cast", ingredient(cast));
         json.addProperty("cooling_time", cooling);
         json.add("fluid", fluid(metal, amount));
@@ -111,11 +123,33 @@ public class HephaestusSmelteryContent implements DataProvider {
 
     // The basin takes its fluid as "input" and its duration as "time"
     private static JsonObject basin(MoltenMetal metal) {
-        JsonObject json = CompatJson.recipe("hephaestus:casting_basin", conditions());
+        JsonObject json = CompatJson.recipe("hephaestus:casting_basin", conditions(metal));
         json.add("input", fluid(metal, BLOCK));
         json.addProperty("result", metal.block());
         json.addProperty("time", 200);
         return json;
+    }
+
+    /** The entry needs Hephaestus and Avaritia: it is about melting the Avaritia metals. */
+    private static JsonArray entryConditions() {
+        JsonArray conditions = new JsonArray();
+        conditions.add(CompatJson.modLoaded(HEPHAESTUS));
+        conditions.add(CompatJson.modLoaded("avaritia"));
+        conditions.add(CompatJson.feature(HephaestusSmelteryIntegration.TOGGLE));
+        return conditions;
+    }
+
+    private static JsonObject entry() {
+        return EnderIOJson.entry(
+                ENTRY,
+                entryConditions(),
+                List.of(TechCategory.HEADER_ID, EnderIOJson.INFUSION_ENTRY),
+                COLUMN,
+                "avaritia:infinity_ingot",
+                List.of(),
+                EnderIOJson.CATEGORY_ARTIFICE, 1, 1,
+                ContentJson.aspects("thaumaturge:metallum", 6, "thaumaturge:ignis", 4, "thaumaturge:machina", 3),
+                2);
     }
 
     private static JsonObject fluidTag(MoltenMetal metal) {

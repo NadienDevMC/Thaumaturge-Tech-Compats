@@ -41,6 +41,12 @@ config = "thaumaturgetechcompats.enderio.mixins.json"
 [[mixins]]
 config = "thaumaturgetechcompats.sophisticated.mixins.json"
 
+[[mixins]]
+config = "thaumaturgetechcompats.hephaestustools.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.research.mixins.json"
+
 [[dependencies.${mod_id}]]
 modId = "neoforge"
 type = "required"

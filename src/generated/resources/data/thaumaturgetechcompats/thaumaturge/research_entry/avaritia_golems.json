@@ -1,6 +1,6 @@
 {
   "category": "thaumaturgetechcompats:avaritia",
-  "column": 0,
+  "column": 4,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:neutronium_plate"
@@ -32,7 +32,7 @@
     "thaumaturge:mat_stud_thaumium",
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 6,
+  "row": 8,
   "stages": [
     {
       "required_knowledge": [

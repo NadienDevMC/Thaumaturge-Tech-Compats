@@ -1,0 +1,57 @@
+---
+title: Void Metal Aura Converter
+icon: thaumaturgetechcompats:void_metal_aura_converter
+id: thaumaturgetechcompats:void_metal_aura_converter
+---
+
+<Callout variant="info">
+    **Requires:** Thaumaturge (any energy mod to use the FE)
+</Callout>
+
+![](@thaumaturgetechcompats:void_metal_aura_converter){item}
+
+## What it is
+
+The Void Metal Aura Converter is the fastest of the three: it drinks the aura faster than any other and keeps almost all of it as current, as long as there is vis to drink. The drain limit of the chunk keeps it from emptying the aura on its own.
+
+**Made from (same family):** [Alchemical Brass Aura Converter](@thaumaturgetechcompats:alchemical_brass_aura_converter)
+
+## How to get it
+
+It is infused over an alchemical brass aura converter with void metal plates, a complex mechanism and two vis resonators. Every vis becomes 560,000,000 FE. It gives out up to 500,000,000 FE per tick and stores 10,000,000,000 FE. The limit of the chunk keeps it from emptying the aura on its own.
+
+### Infusion Altar
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_void', 'thaumaturge:plate_void', 'thaumaturge:plate_void', '', 'thaumaturgetechcompats:alchemical_brass_aura_converter', 'thaumaturge:plate_void', 'thaumaturge:vis_resonator', 'thaumaturge:vis_resonator', 'thaumaturge:mechanism_complex']}
+    result="thaumaturgetechcompats:void_metal_aura_converter"
+    count={1}
+/>
+
+Seen from above: the middle cell is the central pedestal and the cells around it are the outer pedestals.
+
+| Ingredient | Where | Amount |
+|---|---|---|
+| Alchemical Brass Aura Converter | Central pedestal | 1 |
+| Void Metal Plate | Outer pedestals | 4 |
+| Complex Arcane Mechanism | Outer pedestals | 1 |
+| Vis Resonator | Outer pedestals | 2 |
+
+| Cost | Value |
+|---|---|
+| Essentia | Potentia ×80, Machina ×40, Auram ×40, Vacuos ×40 |
+| Instability | 4 |
+| Research | Void Metal Aura Converter |
+
+## Step by step
+
+1. Complete the matching research entry in the Thaumonomicon (Avaritia, Tech or Purity tab); without it the recipe stays locked.
+2. Place the converter against a block that accepts FE (a cable, a machine, a battery). It gives energy to every neighbouring block that accepts it and never takes any in.
+3. It drains vis from the aura of its chunk: every vis becomes 250,000 FE (Thaumium), 1,000,000 FE (Alchemical Brass) or 560,000,000 FE (Void Metal), at up to 250,000, 1,000,000 or 500,000,000 FE per tick. Right-click it to see the stored energy, the aura of the chunk, its state and its rate.
+4. Redstone signal stops it.
+
+## Tips and common mistakes
+
+- Every vis converted leaves a little flux behind, the converter never drains the aura under a quarter of its base, and all the converters of a chunk share a limit on what they can drain.
+
+Family guide: [Aura Converters](+aura_converters)

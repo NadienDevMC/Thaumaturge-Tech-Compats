@@ -46,7 +46,7 @@ public class SalisAssets implements DataProvider {
             textures.addProperty("halo", "avaritia:misc/halo");
             JsonObject halo = new JsonObject();
             halo.addProperty("texture", "#halo");
-            halo.addProperty("color", -16777216);
+            halo.addProperty("color", -872415232);
             halo.addProperty("size", 10);
             halo.addProperty("pulse", true);
             json.addProperty("loader", "avaritia:halo");

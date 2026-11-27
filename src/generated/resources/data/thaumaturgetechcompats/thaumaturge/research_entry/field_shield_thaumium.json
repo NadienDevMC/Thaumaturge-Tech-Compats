@@ -5,8 +5,8 @@
       "feature": "flux_network_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 59,
+  "category": "thaumaturgetechcompats:flux_gear",
+  "column": 0,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:thaumium_shield_generator"
@@ -35,7 +35,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:metallurgy@2"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

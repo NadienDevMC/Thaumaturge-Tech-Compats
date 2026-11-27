@@ -9,8 +9,8 @@
       "feature": "sophisticated_backpack_tiers"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 77,
+  "category": "thaumaturgetechcompats:sophisticated",
+  "column": 4,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:void_metal_backpack"
@@ -37,7 +37,7 @@
   "parents": [
     "thaumaturgetechcompats:tech"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

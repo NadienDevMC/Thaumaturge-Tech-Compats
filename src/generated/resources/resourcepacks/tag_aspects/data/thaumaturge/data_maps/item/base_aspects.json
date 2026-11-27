@@ -20431,6 +20431,1244 @@
           "aspect": "thaumaturge:motus"
         }
       ]
+    },
+    "thaumaturgetechcompats:akashic_record": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:cognitio"
+        },
+        {
+          "amount": 54,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 192,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_alchemical_brass_axe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:permutatio"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:fabrico"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_alchemical_brass_hoe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:permutatio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:fabrico"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_alchemical_brass_pickaxe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:permutatio"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:fabrico"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_alchemical_brass_shovel": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:permutatio"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:fabrico"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_alchemical_brass_sword": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:permutatio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:fabrico"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_thaumium_axe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 9,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_thaumium_hoe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_thaumium_pickaxe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 9,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_thaumium_shovel": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_thaumium_sword": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:instrumentum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_void_axe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_void"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 36,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_void_hoe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_void"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_void_pickaxe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_void"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 36,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_void_shovel": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_void"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:energized_void_sword": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_void"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_alchemical_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_energy_tools_thaumium"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:extremely_primordial_pearl": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 61,
+          "aspect": "thaumaturge:aer"
+        },
+        {
+          "amount": 61,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 61,
+          "aspect": "thaumaturge:aqua"
+        },
+        {
+          "amount": 61,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 61,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 61,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:infinity_alchemical_furnace": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 80,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:infinity_flux_jar": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "node_power"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 110,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 25,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 72,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 17,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 42,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 204,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 46,
+          "aspect": "thaumaturge:aer"
+        },
+        {
+          "amount": 46,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 46,
+          "aspect": "thaumaturge:aqua"
+        },
+        {
+          "amount": 46,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 46,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 46,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:infinity_infusion_pillar": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "infusion_altar_variants"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:matrix_alchemical_furnace": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:matrix_flux_jar": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "node_power"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 110,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:praemunio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:matrix_infusion_pillar": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "infusion_altar_variants"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 32,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:neutronium_alchemical_furnace": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 45,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:neutronium_flux_jar": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "node_power"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 110,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 19,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 14,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 42,
+          "aspect": "thaumaturge:metallum"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:neutronium_infusion_pillar": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "infusion_altar_variants"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:osmium_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_clusters"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:terra"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:thaummotor": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "create_tech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "create_casing_brass"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "create_thaummotor"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "node_power"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "thaumaturgetechcompats:uranium_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_item_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "mekanism_clusters"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:terra"
+        }
+      ]
     }
   }
 }

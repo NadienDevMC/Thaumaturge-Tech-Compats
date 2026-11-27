@@ -11,6 +11,22 @@
     {
       "id": "thaumaturgetechcompats:void_metal_shulker_box",
       "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:rifting_block",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:fibric_block",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:salis_block",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:crimson_block",
+      "required": false
     }
   ]
 }

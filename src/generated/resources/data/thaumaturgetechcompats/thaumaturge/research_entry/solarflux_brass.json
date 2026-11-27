@@ -17,8 +17,8 @@
       "feature": "solar_alchemical_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 12,
+  "category": "thaumaturgetechcompats:solarflux",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "solarflux:sp_brass_solar_panel"
@@ -46,7 +46,7 @@
     "thaumaturgetechcompats:solarflux_alchemical",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

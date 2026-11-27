@@ -1,0 +1,57 @@
+---
+title: Thaumium Environmental Charger
+icon: thaumaturgetechcompats:thaumium_environmental_charger
+id: thaumaturgetechcompats:thaumium_environmental_charger
+---
+
+<Callout variant="info">
+    **Requires:** Thaumaturge (Dimensional Flux feature)
+</Callout>
+
+![](@thaumaturgetechcompats:thaumium_environmental_charger){item}
+
+## What it is
+
+A power network of its own: Dimensional Flux is produced from flux rifts, moved by linked beams, stored in a multiblock core and spent by chargers and gear.
+
+**Used to make (same family):** [Alchemical Brass Environmental Charger](@thaumaturgetechcompats:alchemical_brass_environmental_charger)
+
+## How to get it
+
+The Thaumium Environmental Charger is made on an arcane workbench from seven thaumium plates, a vis resonator and a simple mechanism.
+
+It releases energy in a nearby area to automatically recharge the objects and tools you carry in your inventory. It keeps its own store of Dimensional Flux, which transmission links, storage cores and extractors fill by pushing into it, and every few ticks it gives a share to each charged item, wand and vis item of every player in reach. Right click it to read its state, its radius and its rate.
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_thaumium', 'thaumaturge:vis_resonator', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium']}
+    result="thaumaturgetechcompats:thaumium_environmental_charger"
+    count={1}
+/>
+
+| Ingredient | Amount |
+|---|---|
+| Thaumium Plate | 7 |
+| Vis Resonator | 1 |
+| Simple Arcane Mechanism | 1 |
+
+| Cost | Value |
+|---|---|
+| Vis | 60 |
+| Crystals | Aer ×2, Ordo ×2 |
+| Research | Environmental Charger |
+
+## Step by step
+
+1. Start with a producer: a Rift Extractor next to an open flux rift. It takes one point of the rift every so often and turns it into Dimensional Flux (DF), and pushes it into the storages and links that touch it.
+2. Connect distant parts with Transmission Links: craft two at an arcane workbench, use the Transmission Linker on one and then on the other to pair them, and sneak-use the linker on a link to break the pair. Flux flows both ways until both are equally full; links side by side chain flux.
+3. Raise the capacity with Capacity Cells on pedestals within six blocks of the core, and keep node stabilizers within eight blocks: above half full and short of stabilizer points the core overloads, releases flux and hurts whoever is near.
+4. Spend flux: an Environmental Charger gives it to every charged item, wand and vis item of every player in its radius; push flux into it with links, cores or extractors. Right-click it to read its radius and rate.
+
+## Tips and common mistakes
+
+- Links of different tiers pair, but the pair reaches only as far and moves only as much as the weaker one. A pair only works while both ends are loaded.
+- Until the core ring is complete it neither stores nor passes on flux. Blocks of a higher tier count for the ring.
+
+Family guide: [Dimensional Flux Network](+flux_network)

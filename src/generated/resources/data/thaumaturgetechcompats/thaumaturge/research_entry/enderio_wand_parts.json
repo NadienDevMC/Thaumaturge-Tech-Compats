@@ -13,8 +13,8 @@
       "feature": "enderio_wand_parts"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 73,
+  "category": "thaumaturgetechcompats:enderio",
+  "column": 4,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:end_steel_wand_cap"
@@ -43,7 +43,7 @@
     "thaumaturge:rod_greatwood",
     "thaumaturge:cap_thaumium"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

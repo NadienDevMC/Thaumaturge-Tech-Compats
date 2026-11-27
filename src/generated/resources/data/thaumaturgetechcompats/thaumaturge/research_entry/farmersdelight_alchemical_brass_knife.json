@@ -17,8 +17,8 @@
       "item": "thaumaturgetechcompats:thaumium_knife"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 45,
+  "category": "thaumaturgetechcompats:food_farmers",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:alchemical_brass_knife"
@@ -47,7 +47,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:metallurgy@2"
   ],
-  "row": 5,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

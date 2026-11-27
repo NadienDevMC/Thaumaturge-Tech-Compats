@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "hephaestus_tools"
+    }
+  ],
+  "binding_stats": {
+    "durability": 100
+  },
+  "color": 6967221,
+  "handle_stats": {
+    "attack_speed_mult": 0.0,
+    "damage_mult": 0.04,
+    "durability_mult": 0.08,
+    "speed_mult": 0.02
+  },
+  "head_stats": {
+    "attack_damage": 2.5,
+    "attack_speed": 1.0,
+    "durability": 8500,
+    "enchantability": 14,
+    "mining_speed": 6.0,
+    "tier": 5
+  },
+  "id": "thaumaturgetechcompats:rifting",
+  "ingredient": {
+    "item": "thaumaturgetechcompats:rifting_ingot"
+  }
+}

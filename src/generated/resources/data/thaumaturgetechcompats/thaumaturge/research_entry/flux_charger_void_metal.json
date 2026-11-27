@@ -13,8 +13,8 @@
       "feature": "flux_network_void_metal"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 57,
+  "category": "thaumaturgetechcompats:flux_network",
+  "column": 4,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_metal_environmental_charger"
@@ -46,7 +46,7 @@
     "thaumaturgetechcompats:flux_charger_alchemical_brass",
     "thaumaturge:base_eldritch"
   ],
-  "row": 6,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

@@ -98,6 +98,13 @@ public class MekanismClusterContent implements DataProvider {
             entry.addProperty("required", false);
             values.add(entry);
         }
+        // The native clusters of the extra metals belong to the same Thaumaturge tag
+        for (String id : nadiendev.ThaumaturgeTechCompats.metals.ExtraMetalContent.clusterIds()) {
+            JsonObject entry = new JsonObject();
+            entry.addProperty("id", id);
+            entry.addProperty("required", false);
+            values.add(entry);
+        }
         JsonObject json = new JsonObject();
         json.addProperty("replace", false);
         json.add("values", values);

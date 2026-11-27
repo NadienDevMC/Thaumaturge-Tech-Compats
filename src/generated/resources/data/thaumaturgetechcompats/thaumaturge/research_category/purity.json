@@ -33,6 +33,6 @@
     }
   ],
   "icon": "thaumaturgetechcompats:textures/research/cat_purity.png",
-  "index": 11,
+  "index": 24,
   "overlay_background": "thaumaturge:textures/gui/gui_research_back_over.png"
 }

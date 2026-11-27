@@ -13,8 +13,8 @@
       "feature": "create_casing_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 6,
+  "category": "thaumaturgetechcompats:create",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:alchemical_brass_casing"
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:create_seal",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

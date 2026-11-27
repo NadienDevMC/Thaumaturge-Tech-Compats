@@ -1,6 +1,6 @@
 {
   "category": "thaumaturgetechcompats:avaritia",
-  "column": 4,
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:infinity_brain_box"
@@ -28,7 +28,7 @@
     "thaumaturge:thaumatorium",
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 2,
+  "row": 8,
   "stages": [
     {
       "required_knowledge": [

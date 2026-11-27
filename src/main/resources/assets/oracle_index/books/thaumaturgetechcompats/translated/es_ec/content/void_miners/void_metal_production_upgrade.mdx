@@ -1,0 +1,54 @@
+---
+title: Mejora de producción de minero de metal del vacío
+icon: thaumaturgetechcompats:void_metal_production_upgrade
+id: thaumaturgetechcompats:void_metal_production_upgrade
+---
+
+<Callout variant="info">
+    **Requiere:** Void Miners Remastered
+</Callout>
+
+![](@thaumaturgetechcompats:void_metal_production_upgrade){item}
+
+## Qué es
+
+Una mejora de minero de metal del vacío que sube la producción del minero junto al que está. Va en un hueco libre de la estructura y su efecto se multiplica con los demás modificadores, incluidos los de Void Miners. Cada nivel lo hace más que el anterior.
+
+**Se fabrica con (misma familia):** [Mejora de producción de minero de latón alquímico](@thaumaturgetechcompats:alchemical_brass_production_upgrade)
+
+## Cómo conseguirlo
+
+Se fabrica en la mesa de trabajo arcana a partir de la misma mejora del nivel de latón alquímico, dos mecanismos de metal del vacío y dos placas.
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={['', 'thaumaturge:mechanism_complex', '', 'thaumaturge:plate_void', 'thaumaturgetechcompats:alchemical_brass_production_upgrade', 'thaumaturge:plate_void', '', 'thaumaturge:mechanism_complex', '']}
+    result="thaumaturgetechcompats:void_metal_production_upgrade"
+    count={1}
+/>
+
+| Ingrediente | Cantidad |
+|---|---|
+| Mecanismo arcano complejo | 2 |
+| Placa de metal del vacío | 2 |
+| Mejora de producción de minero de latón alquímico | 1 |
+
+| Coste | Valor |
+|---|---|
+| Vis | 50 |
+| Investigación | Mejoras de minero de metal del vacío |
+
+## Paso a paso
+
+1. Completa la entrada de investigación correspondiente en el Thaumonomicon (pestaña Avaritia, Tech o Pureza); sin ella la receta queda bloqueada.
+2. Abre una mesa de trabajo arcana, coloca los ingredientes con la forma de la receta y cárgala con vis (una varita o un cargador de mesa) y con los cristales que pide la receta. Haz los marcos con placas del metal, obsidiana y un marco base (o el marco del nivel anterior). Construye un altar de infusión: una Matriz rúnica, un pedestal central y las ocho piedras de pilar alrededor. Pon el objeto de partida en el pedestal central y los demás ingredientes en los pedestales de alrededor. El controlador parte de un Minero Rubetine (Taumio) o del controlador anterior, con placas, mecanismos y Jarras de flux.
+3. Construye la estructura con marcos, paneles de cristal y cualquier modificador de minero, como en Void Miners.
+4. Coloca una fuente de poder mágico al alcance de la máquina: un nodo, un nodo en jarra, una Jarra de flux, una Jarra de grieta o una grieta de flujo abierta. Un nodo hambriento nunca se acepta como fuente.
+5. El minero no gasta energía: solo trabaja mientras puede pagar unidades a la fuente, y se detiene cuando no puede. Añade mejoras en las ranuras libres: sus efectos se multiplican entre sí y con los modificadores de Void Miners.
+
+## Consejos y errores comunes
+
+- Los mensajes de chat y los tooltips te dicen el coste en unidades de aura, la fuente usada y por qué se detuvo el minero (sin fuente, fuente agotada o un nodo hambriento).
+
+Guía de la familia: [Mineros mágicos](+miners)

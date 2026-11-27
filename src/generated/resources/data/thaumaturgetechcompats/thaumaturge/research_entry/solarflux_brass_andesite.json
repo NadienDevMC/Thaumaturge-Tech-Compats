@@ -25,8 +25,8 @@
       "modid": "create"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 14,
+  "category": "thaumaturgetechcompats:solarflux",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "solarflux:sp_brass_andesite_solar_panel"
@@ -53,7 +53,7 @@
   "parents": [
     "thaumaturgetechcompats:solarflux_brass"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

@@ -5,8 +5,8 @@
       "feature": "node_power"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 12,
+  "category": "thaumaturgetechcompats:nodes",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:flux_jar"
@@ -35,7 +35,7 @@
     "thaumaturge:warded_jars",
     "thaumaturge:base_eldritch"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

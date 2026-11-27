@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    }
+  ],
+  "background": "thaumaturge:textures/gui/gui_research_back_3_smooth.png",
+  "formula": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:fabrico"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:metallum"
+    }
+  ],
+  "icon": "thaumaturgetechcompats:textures/block/flux_jar_top.png",
+  "index": 19,
+  "overlay_background": "thaumaturge:textures/gui/gui_research_back_over.png"
+}

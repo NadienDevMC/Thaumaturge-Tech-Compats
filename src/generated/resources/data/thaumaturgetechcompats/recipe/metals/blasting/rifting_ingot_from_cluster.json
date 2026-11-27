@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "rifting_ingot",
+  "ingredient": {
+    "item": "thaumaturgetechcompats:rifting_native_cluster"
+  },
+  "result": {
+    "count": 2,
+    "id": "thaumaturgetechcompats:rifting_ingot"
+  }
+}

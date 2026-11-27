@@ -1,0 +1,57 @@
+---
+title: Enlace de transmisión de taumio
+icon: thaumaturgetechcompats:thaumium_transmission_link
+id: thaumaturgetechcompats:thaumium_transmission_link
+---
+
+<Callout variant="info">
+    **Requiere:** Thaumaturge (función Flujo Dimensional)
+</Callout>
+
+![](@thaumaturgetechcompats:thaumium_transmission_link){item}
+
+## Qué es
+
+Una red de energía propia: el Flujo Dimensional se produce con grietas de flujo, se mueve por rayos enlazados, se guarda en un núcleo multibloque y lo gastan cargadores y equipo.
+
+**Se usa para fabricar (misma familia):** [Enlace de transmisión de latón alquímico](@thaumaturgetechcompats:alchemical_brass_transmission_link)
+
+## Cómo conseguirlo
+
+El Enlace de transmisión de taumio se fabrica en una mesa de trabajo arcana con placas de taumio, mercurio y un mecanismo arcano simple, y la receta da dos. El Enlazador de transmisión se fabrica con mercurio, una placa de taumio y un mecanismo arcano simple.
+
+Usa el enlazador en un enlace y luego en otro para emparejarlos; agáchate y úsalo en un enlace para romper la pareja. Cada enlace tiene una única pareja y el haz entre ambos es visible. El flujo va en los dos sentidos hasta que ambos búferes están igual de llenos, y un enlace también toma flujo de los almacenes que tiene al lado y se lo da a los que pueden recibirlo. Los enlaces colocados uno junto a otro se pasan el flujo, así que se pueden hacer cadenas. El alcance de una pareja es el menor de los dos y solo funciona mientras ambos extremos estén cargados.
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={['thaumaturge:plate_thaumium', 'thaumaturge:quicksilver', 'thaumaturge:plate_thaumium', 'thaumaturge:quicksilver', 'thaumaturge:mechanism_simple', 'thaumaturge:quicksilver', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium']}
+    result="thaumaturgetechcompats:thaumium_transmission_link"
+    count={2}
+/>
+
+| Ingrediente | Cantidad |
+|---|---|
+| Placa de taumio | 5 |
+| Mercurio | 3 |
+| Mecanismo arcano simple | 1 |
+
+| Coste | Valor |
+|---|---|
+| Vis | 40 |
+| Cristales | Aer ×2, Ordo ×1 |
+| Investigación | Enlace de transmisión |
+
+## Paso a paso
+
+1. Empieza con un productor: un Extractor de grietas junto a una grieta de flujo abierta. Toma un punto de la grieta cada poco y lo convierte en Flujo Dimensional (DF), y lo empuja a los almacenes y enlaces que lo tocan.
+2. Conecta partes lejanas con Enlaces de transmisión: fabrica dos en una mesa de trabajo arcana, usa el Enlazador de transmisión en uno y luego en el otro para emparejarlos, y úsalo agachado sobre un enlace para romper la pareja. El flujo va en ambos sentidos hasta que los dos están igual de llenos; los enlaces uno al lado de otro encadenan el flujo.
+3. Sube la capacidad con Celdas de capacidad en pedestales a menos de seis bloques del núcleo, y mantén estabilizadores de nodos a menos de ocho bloques: por encima de la mitad de llenado y sin puntos de estabilizador el núcleo se sobrecarga, suelta flujo y hiere a quien esté cerca.
+4. Gasta flujo: un Cargador ambiental lo da a cada objeto cargado, varita y objeto de vis de cada jugador en su radio; empuja flujo hacia él con enlaces, núcleos o extractores. Clic derecho para leer su radio y ritmo.
+
+## Consejos y errores comunes
+
+- Los enlaces de distintos niveles se emparejan, pero la pareja solo llega y mueve lo que el más débil. Una pareja solo funciona mientras ambos extremos están cargados.
+- Hasta que el anillo del núcleo esté completo ni guarda ni pasa flujo. Los bloques de un nivel superior cuentan para el anillo.
+
+Guía de la familia: [Red de Flujo Dimensional](+flux_network)

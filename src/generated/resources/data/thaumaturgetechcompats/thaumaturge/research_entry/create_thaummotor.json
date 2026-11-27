@@ -21,8 +21,8 @@
       "feature": "node_power"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 21,
+  "category": "thaumaturgetechcompats:create",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:thaummotor"

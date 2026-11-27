@@ -13,8 +13,8 @@
       "item": "thaumaturgetechcompats:thaumium_knife"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 45,
+  "category": "thaumaturgetechcompats:food_farmers",
+  "column": 2,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:thaumium_knife"
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 4,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

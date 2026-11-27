@@ -25,8 +25,8 @@
       "feature": "voidminers_magical_solar_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 42,
+  "category": "thaumaturgetechcompats:void_miners",
+  "column": 4,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_metal_solar_panel"
@@ -55,7 +55,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:base_eldritch"
   ],
-  "row": 6,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

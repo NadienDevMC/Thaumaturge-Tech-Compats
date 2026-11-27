@@ -14,9 +14,9 @@ import java.util.concurrent.CompletableFuture;
 
 public class PearlAssets implements DataProvider {
     private static final String MOD = ThaumaturgeTechCompats.MOD_ID;
-    private static final int HALO_COLOR = -16777216;
+    private static final int HALO_COLOR = -872415232;
     private static final int HALO_SIZE = 4;
-    private static final int INFINITY_HALO_SIZE = 10;
+    private static final int INFINITY_HALO_SIZE = 6;
 
     private final PackOutput output;
 
@@ -48,7 +48,7 @@ public class PearlAssets implements DataProvider {
         halo.addProperty("texture", "#halo");
         halo.addProperty("color", HALO_COLOR);
         halo.addProperty("size", tier == PlanetaryTier.INFINITY ? INFINITY_HALO_SIZE : HALO_SIZE);
-        halo.addProperty("pulse", true);
+        halo.addProperty("pulse", false);
 
         JsonObject json = new JsonObject();
         json.addProperty("parent", "minecraft:item/generated");

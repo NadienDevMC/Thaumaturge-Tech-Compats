@@ -53,6 +53,7 @@ import nadiendev.ThaumaturgeTechCompats.smelter.SmelterTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.solarflux.SolarFluxTranslations;
 import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerTranslations;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierTranslations;
+import nadiendev.ThaumaturgeTechCompats.metals.ExtraMetalTranslations;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 public final class ModTranslations {
@@ -83,6 +84,7 @@ public final class ModTranslations {
         FurnaceTranslations.english(lang);
         GolemTranslations.english(lang);
         WandTierTranslations.english(lang);
+        ExtraMetalTranslations.english(lang);
         FocusTranslations.english(lang);
         BrainChargerTranslations.english(lang);
         CreativeTranslations.english(lang);
@@ -115,10 +117,10 @@ public final class ModTranslations {
         SolarFluxTranslations.english(lang);
 
         lang.add("itemGroup.thaumaturgetechcompats.main", "Thaumaturge Tech Compats");
+        lang.add("oracle_index.title.thaumaturgetechcompats", "Thaumaturge Tech");
         lang.add("item.thaumaturgetechcompats.akashic_record", "Akashic Records");
         lang.add("item.thaumaturgetechcompats.extremely_primordial_pearl", "Extremely Primordial Pearl");
         lang.add("message.thaumaturgetechcompats.akashic_record", "Every aspect of the world floods your mind");
-        lang.add("research_category.thaumaturgetechcompats.avaritia", "Avaritia");
 
         lang.add("aspect.thaumaturgetechcompats.terminus", "Terminus");
         lang.add("aspect.thaumaturgetechcompats.terminus.desc", "The End of Games, Apocalypse, Grindstones");
@@ -171,6 +173,7 @@ public final class ModTranslations {
         FurnaceTranslations.spanish(lang);
         GolemTranslations.spanish(lang);
         WandTierTranslations.spanish(lang);
+        ExtraMetalTranslations.spanish(lang);
         FocusTranslations.spanish(lang);
         BrainChargerTranslations.spanish(lang);
         CreativeTranslations.spanish(lang);
@@ -203,10 +206,10 @@ public final class ModTranslations {
         SolarFluxTranslations.spanish(lang);
 
         lang.add("itemGroup.thaumaturgetechcompats.main", "Thaumaturge Tech Compats");
+        lang.add("oracle_index.title.thaumaturgetechcompats", "Thaumaturge Tech");
         lang.add("item.thaumaturgetechcompats.akashic_record", "Registros Akáshicos");
         lang.add("item.thaumaturgetechcompats.extremely_primordial_pearl", "Perla Extremadamente Primordial");
         lang.add("message.thaumaturgetechcompats.akashic_record", "Todos los aspectos del mundo inundan tu mente");
-        lang.add("research_category.thaumaturgetechcompats.avaritia", "Avaritia");
 
         lang.add("aspect.thaumaturgetechcompats.terminus", "Terminus");
         lang.add("aspect.thaumaturgetechcompats.terminus.desc", "El fin de los juegos, apocalipsis, piedras de molino");

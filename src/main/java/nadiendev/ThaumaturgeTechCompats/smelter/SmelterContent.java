@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.smelter;
 
+import nadiendev.ThaumaturgeTechCompats.research.ResearchLayout;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.device.DeviceJson;
@@ -38,7 +39,7 @@ public class SmelterContent implements DataProvider {
 
     private CompletableFuture<?> save(CachedOutput cache, String relativePath, JsonElement json) {
         Path path = output.getOutputFolder().resolve(relativePath);
-        return DataProvider.saveStable(cache, json, path);
+        return DataProvider.saveStable(cache, ResearchLayout.apply(path, json), path);
     }
 
     private static JsonObject research() {

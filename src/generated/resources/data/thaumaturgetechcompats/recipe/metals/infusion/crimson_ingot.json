@@ -1,0 +1,32 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 22,
+      "aspect": "thaumaturge:perditio"
+    },
+    {
+      "amount": 22,
+      "aspect": "thaumaturge:humanus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:ingot_void"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:crimson_blade"
+    },
+    {
+      "item": "thaumaturge:crimson_blade"
+    }
+  ],
+  "instability": 8,
+  "research": {
+    "entry": "thaumaturgetechcompats:extra_metals"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:crimson_ingot"
+  }
+}
