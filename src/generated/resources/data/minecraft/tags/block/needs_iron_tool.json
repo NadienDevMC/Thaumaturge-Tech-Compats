@@ -1,0 +1,52 @@
+{
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:alchemical_cobalt_solar_panel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:alchemical_solar_panel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:brass_andesite_solar_panel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:brass_solar_panel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:thaumium_zinc_solar_panel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:thaumium_generation_solar_panel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:void_uranium_solar_panel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:void_metal_generation_solar_panel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:rifting_block",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:crimson_block",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:fibric_block",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:salis_block",
+      "required": false
+    }
+  ]
+}

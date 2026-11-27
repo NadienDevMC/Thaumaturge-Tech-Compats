@@ -53,8 +53,9 @@
       "feature": "star_crucifix_infinity"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:infinity_salis_mundus"
     }
   ],
   "type": "thaumaturge:infusion",

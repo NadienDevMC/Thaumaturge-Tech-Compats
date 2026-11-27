@@ -1,0 +1,48 @@
+---
+title: Magical Solar Panel Controllers
+icon: thaumaturgetechcompats:void_metal_solar_panel
+related_items: [thaumaturgetechcompats:thaumium_solar_panel, thaumaturgetechcompats:alchemical_brass_solar_panel, thaumaturgetechcompats:void_metal_solar_panel]
+---
+
+> [!NOTE]
+> Requires **Void Miners Remastered**. The solar panel, and each tier on its own, can be switched off in the compatibilities config; on by default, game restart needed. Numbers are in the Void Miners magical config.
+
+## What it is
+
+A Void Miners solar panel that makes FE without sun or open sky: it generates only while it can pay units of power to a magical source nearby. When the payment fails it stops until the next try.
+
+| Tier | Controller | FE per tick | Energy stored | Units per payment | Source radius |
+| --- | --- | --- | --- | --- | --- |
+| Thaumium | [](@thaumaturgetechcompats:thaumium_solar_panel) | 1,000 | 25,000,000 | 1 | 8 |
+| Alchemical Brass | [](@thaumaturgetechcompats:alchemical_brass_solar_panel) | 2,500 | 100,000,000 | 2 | 12 |
+| Void Metal | [](@thaumaturgetechcompats:void_metal_solar_panel) | 6,000 | 500,000,000 | 4 | 16 |
+
+The generation figure is before the efficiency modifiers of the structure and does not depend on the sun or the weather.
+
+## How to get it
+
+Research the Magical Solar Panel entry of the tier. Infusion altar, each over the tier before:
+
+| Tier | Catalyst | Components | Aspects (instability) |
+| --- | --- | --- | --- |
+| Thaumium | Void Miners Rubetine Solar Panel | 3 thaumium plates, simple mechanism, 2 jarred nodes | lux 12, potentia 10, metallum 8, alkimia 6 (2) |
+| Alchemical Brass | Thaumium Solar Panel Controller | 3 brass plates, simple mechanism, 2 jarred nodes | lux 18, potentia 16, praecantatio 12, machina 10 (4) |
+| Void Metal | Alchemical Brass Solar Panel Controller | 3 void metal plates, complex mechanism, 2 jarred nodes, void seed | lux 24, potentia 24, vacuos 16, praecantatio 16 (6) |
+
+## Step by step
+
+1. Craft the solar frames and modifiers.
+2. Build the solar structure of the tier around the controller.
+3. Put a power source (jarred node, Flux Jar, Rift Jar, world node or flux rift, never a hungry node) within the tier radius.
+4. Connect an FE consumer or cable to the panel as with any Void Miners solar panel. Every 20 ticks it pays its units and generates.
+
+## Common mistakes
+
+- Expecting it to need sunlight: it does not.
+- Forgetting the power source: without it, no energy.
+- Mixing frames of different tiers.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Void Miners magical configuration.

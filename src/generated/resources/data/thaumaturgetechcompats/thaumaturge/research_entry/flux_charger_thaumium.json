@@ -5,8 +5,8 @@
       "feature": "flux_network_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 57,
+  "category": "thaumaturgetechcompats:10_flux_network",
+  "column": 4,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:thaumium_environmental_charger"
@@ -35,7 +35,7 @@
     "thaumaturge:recharge_pedestal",
     "thaumaturge:metallurgy@2"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

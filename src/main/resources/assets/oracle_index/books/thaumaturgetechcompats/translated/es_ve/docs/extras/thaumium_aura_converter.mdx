@@ -1,0 +1,58 @@
+---
+icon: thaumaturgetechcompats:thaumium_aura_converter
+title: Convertidor de aura de taumio
+---
+
+## Qué es
+
+El Convertidor de aura de taumio saca vis del aura de su chunk y lo convierte en **FE**, que reparte a todos los bloques vecinos que aceptan energía. Nunca recibe energía. Cada vis que convierte deja 0,1 de flujo en el aura, nunca baja el aura de un 25% de su valor base, y todos los conversores de un chunk comparten un límite de 1 vis por tick.
+
+| Propiedad | Valor |
+| --- | --- |
+| FE por vis | 250.000 |
+| Salida máxima por tick | 250.000 FE |
+| Reserva de energía | 10.000.000 FE |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'minecraft:redstone', 'thaumaturge:plate_thaumium', 
+        'minecraft:copper_ingot', 'thaumaturge:vis_resonator', 'minecraft:copper_ingot', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_aura_converter"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 4 × Placa de taumio, Polvo de redstone, 2 × Lingote de cobre, Resonador de Vis, Mecanismo arcano simple |
+| Vis | 50 |
+| Cristales | Ignis 2, Ordo 1 |
+| Investigación | **Convertidor de aura** (pestaña Extras) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, investigación Conversor de aura; los demás infundidos sobre el anterior).
+2. Colócalo en un chunk con aura y pon contra él bloques que acepten FE (baterías, máquinas, cables).
+3. Haz clic derecho para ver la energía guardada, el aura del chunk, su estado y su ritmo.
+4. Una señal de redstone detiene la conversión (la energía guardada se puede seguir sacando).
+
+## Se usa para fabricar
+
+- []($extras/alchemical_brass_aura_converter)
+
+> [!NOTE]- Thaumonomicon: Convertidor de aura
+> El resonador se ha sintonizado con el aura del chunk y el taumio se lleva la corriente.
+> 
+> **Convertidor de aura de taumio**
+> 
+> Se fabrica en la mesa de trabajo arcana con placas de taumio, cobre, redstone, un resonador de vis y un mecanismo simple. Drena vis del aura de su chunk y convierte cada vis en 250.000 FE. Entrega hasta 250.000 FE por tick y almacena 10.000.000 FE. Da la energía a todos los bloques vecinos que la acepten y nunca recibe ninguna.
+> Haz clic derecho para ver la energía almacenada, el aura del chunk, su estado y su ritmo. Cada vis que convierte deja un poco de flujo, nunca drena el aura por debajo de una cuarta parte de su base, y todos los convertidores de un chunk comparten un límite de lo que pueden drenar. Una señal de redstone lo detiene. Las cifras se pueden cambiar en la configuración.
+
+**Guías de este capítulo:** [Convertidores de aura]($extras/aura-converters)

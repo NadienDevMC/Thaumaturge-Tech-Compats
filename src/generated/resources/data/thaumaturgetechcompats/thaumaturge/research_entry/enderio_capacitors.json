@@ -13,8 +13,8 @@
       "feature": "enderio_capacitors"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 72,
+  "category": "thaumaturgetechcompats:15_enderio",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:void_metal_capacitor"
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:infusion"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

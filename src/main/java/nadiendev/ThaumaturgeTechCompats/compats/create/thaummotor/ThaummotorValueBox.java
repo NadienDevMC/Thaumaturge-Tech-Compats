@@ -33,6 +33,18 @@ public class ThaummotorValueBox extends ValueBoxTransform.Sided {
         TransformStack.of(stack).rotateZDegrees(-AngleHelper.horizontalAngle(facing) + 180.0F);
     }
 
+    /**
+     * Create only draws the in-world number of its own motor (see ScrollValueLabelRenderer); any other block gets the
+     * generic text box, which does not show the number. The number and brackets are drawn by
+     * ThaummotorClient with Create's motor label renderer, so the generic box is collapsed to nothing while the hit
+     * test, tooltip and hold-to-edit keep working (they only use getLocalOffset and the scale).
+     */
+    @Override
+    public void transform(LevelAccessor level, BlockPos pos, BlockState state, PoseStack stack) {
+        super.transform(level, pos, state, stack);
+        stack.scale(1.0E-5F, 1.0E-5F, 1.0E-5F);
+    }
+
     @Override
     protected boolean isSideActive(BlockState state, Direction direction) {
         Direction facing = state.getValue(ThaummotorBlock.FACING);

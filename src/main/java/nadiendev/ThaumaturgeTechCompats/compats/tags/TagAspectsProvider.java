@@ -27,6 +27,7 @@ public class TagAspectsProvider implements DataProvider {
         Set<String> defined = ThaumaturgeAspects.definedKeys();
         List<TagAspectEntry> entries = new ArrayList<>(TagAspectTable.entries(defined));
         entries.addAll(OritechAspectTable.entries());
+        entries.addAll(OwnItemAspectTable.entries());
 
         JsonObject values = new JsonObject();
         for (TagAspectEntry entry : entries) {

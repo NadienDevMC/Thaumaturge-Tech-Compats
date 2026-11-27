@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food_farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food"
+    },
+    {
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:tainted_carrot"
+    },
+    {
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:tainted_fried_rice"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    "#c:crops/rice",
+    "#c:eggs",
+    "thaumaturgetechcompats:tainted_carrot",
+    "#c:crops/onion"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:tainted_fried_rice"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_tech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_seal"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:fabrico"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "catalyst": "thaumaturge:seal_use",
+  "components": [
+    "create:cogwheel",
+    "create:brass_sheet",
+    "create:andesite_alloy",
+    "thaumaturge:mechanism_simple"
+  ],
+  "instability": 2,
+  "research": {
+    "entry": "thaumaturgetechcompats:create_seal"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:seal_create"
+  }
+}

@@ -1,0 +1,66 @@
+---
+id: thaumaturgetechcompats:energized_void_shovel
+type: item
+title: Energized Void Metal Shovel
+---
+
+> [!NOTE]
+> Needs the **Mekanism** mod.
+
+## What it is
+
+The Energized Void Metal Shovel is a tool that runs on Mekanism energy instead of durability: it never loses durability and every action spends energy (a charge bar shows what is left). With no energy it mines like bare hands and deals no attack damage.
+
+| Property | Value |
+| --- | --- |
+| Energy capacity (Mekanism joules) | 4,000,000 |
+| Energy per block mined | 400 |
+| Energy per hit | 600 |
+| Energy per strip, flatten or till | 300 |
+| Mining speed | 10.0 |
+| Attack damage bonus | 3.5 |
+| Enchantability | 22 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturgetechcompats:energized_alchemical_brass_shovel', 'mekanism:energy_tablet', 'mekanism:energy_tablet', 
+        'thaumaturge:plate_void', 'thaumaturge:void_shovel', 'mekanism:alloy_atomic', 
+        'thaumaturge:plate_void', '', 'mekanism:ultimate_control_circuit'
+    ]}
+    result="thaumaturgetechcompats:energized_void_shovel"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Void Shovel |
+| Pedestal items | 2 × Energy Tablet, Atomic Alloy, Ultimate Control Circuit, 2 × Void Metal Plate, [](@thaumaturgetechcompats:energized_alchemical_brass_shovel) |
+| Essentia | Machina 50, Potentia 50, Vacuos 30, Instrumentum 30, Praecantatio 20 |
+| Instability | 5 |
+| Research | **Energized Void Metal Tools** |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Energized Thaumium Tools, then Energized Alchemical Brass Tools, then Energized Void Metal Tools.
+2. Infuse it as shown above. The Alchemical Brass and Void Metal tools also take the energized tool of the tier before, of the same kind, on a pedestal (it is consumed).
+3. Charge it in an energy cube, a charge pad, the charging slot of a Mekanism machine or any other energy source.
+4. Use it like a normal tool and recharge it when the bar empties.
+
+> [!NOTE]- Thaumonomicon: Energized Void Metal Tools
+> A normal void metal tool, the energized alchemical brass tool of the same kind, two energy tablets, an atomic alloy, an ultimate control circuit and two void metal plates, on the infusion altar.
+> 
+> **Energized Void Metal Tools**
+> 
+> These tools come from the normal void metal ones, and the energized alchemical brass tool is consumed in the process. They work like the brass ones, with a far larger store of energy, a lower cost for every action, a faster mining speed and a stronger blow. They also lose no durability and they too are useless once the energy is gone. They are made in the infusion altar one by one: pickaxe, axe, shovel, hoe and sword.
+> 
+> The capacity, the cost of every action, the mining speed and the damage can be changed in the configuration.
+
+**Guides of this chapter:** [Native Osmium and Uranium Clusters]($mekanism/native-clusters) · [Energized Tools]($mekanism/energized-tools)

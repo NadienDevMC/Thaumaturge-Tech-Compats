@@ -5,7 +5,7 @@
       "feature": "node_power"
     }
   ],
-  "category": "thaumaturgetechcompats:avaritia",
+  "category": "thaumaturgetechcompats:09_nodes",
   "column": 2,
   "complexity": 2,
   "icons": [
@@ -34,7 +34,7 @@
     "thaumaturgetechcompats:node_power_flux_jar",
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 4,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

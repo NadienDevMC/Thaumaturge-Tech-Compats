@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.flux.charger;
 
+import nadiendev.ThaumaturgeTechCompats.registry.TierOrder;
 import nadiendev.ThaumaturgeTechCompats.flux.FluxTier;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -28,7 +29,7 @@ public final class ChargerIntegration {
     }
 
     public static void fillCreativeTab(CreativeModeTab.Output output) {
-        for (FluxTier tier : FluxTier.values()) {
+        for (FluxTier tier : TierOrder.display(FluxTier.values())) {
             if (ChargerConfig.enabled(tier)) {
                 output.accept(ChargerRegistry.item(tier).get());
             }

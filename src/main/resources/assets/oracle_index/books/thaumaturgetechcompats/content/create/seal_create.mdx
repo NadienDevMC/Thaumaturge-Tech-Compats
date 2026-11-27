@@ -1,0 +1,58 @@
+---
+id: thaumaturgetechcompats:seal_create
+type: item
+title: Create Seal
+---
+
+> [!NOTE]
+> Needs **Create** (through Create: Adapted in 26.1.2).
+
+## What it is
+
+The Create Seal is a golem seal that lets a golem work a block of Create: insert the items it carries, take items out, and (optionally) click the block to turn hand cranks and valve handles.
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'create:cogwheel', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:seal_use', 'create:brass_sheet', 
+        '', 'create:andesite_alloy', ''
+    ]}
+    result="thaumaturgetechcompats:seal_create"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Control Seal: Use |
+| Pedestal items | Cogwheel, Brass Sheet, Andesite Alloy, Simple Arcane Mechanism |
+| Essentia | Machina 20, Fabrico 10, Motus 10 |
+| Instability | 2 |
+| Research | **Create Seal** (Create tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Create Seal (Tech tab) and infuse it over a Use Seal.
+2. Place it on the face of a block of Create (by default it cannot go on other blocks).
+3. Open the seal: set the filter (9 slots) and the options Insert, Extract, Operate (click) and Sneaky click.
+4. Give it a golem with the Deft trait (a Clumsy golem cannot use it).
+5. With Extract on it looks every 20 ticks for a matching item; with Operate on the golem clicks every 8 ticks.
+6. A redstone signal stops the seal.
+
+> [!NOTE]- Thaumonomicon: Create Seal
+> The seal sits on a block of Create and lets a golem work it.
+> It inserts the items the golem carries into the block, takes items out of it, and can also click the block, which turns hand cranks and valve handles.
+> The filter picks the items for every task, and each task can be switched off in the seal's options.
+> 
+> **Create Seal**
+> 
+> It is infused over a Use Seal with a cogwheel, a brass sheet, andesite alloy and a simple mechanism.
+
+**Guides of this chapter:** [Create Seal]($create/create-seal)

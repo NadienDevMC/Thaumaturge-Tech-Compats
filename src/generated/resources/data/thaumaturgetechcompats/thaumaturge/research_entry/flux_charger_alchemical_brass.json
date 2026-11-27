@@ -9,8 +9,8 @@
       "feature": "flux_network_alchemical_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 57,
+  "category": "thaumaturgetechcompats:10_flux_network",
+  "column": 4,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:alchemical_brass_environmental_charger"
@@ -39,7 +39,7 @@
     "thaumaturge:base_infusion",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

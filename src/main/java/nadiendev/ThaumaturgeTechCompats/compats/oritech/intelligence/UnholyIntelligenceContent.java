@@ -64,7 +64,7 @@ public class UnholyIntelligenceContent implements DataProvider {
         key.add("m", item("thaumaturge:mind_clockwork"));
         key.add("c", item("thaumaturge:mechanism_complex"));
         key.add("j", item("thaumaturge:jar_brain"));
-        key.add("d", item(ORITECH + ":dubios_container"));
+        key.add("d", item(ORITECH + ":dubious_container"));
         JsonObject json = ContentJson.arcaneShaped(key, strings("tmt", "cjc", "tdt"), MOD + ":" + RESEARCH, VIS, ORITECH + ":unholy_intelligence");
         JsonArray crystals = new JsonArray();
         crystals.add(crystal("thaumaturge:ordo"));

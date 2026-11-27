@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "hephaestus_tools"
+    }
+  ],
+  "id": "hephaestus_tools:crimson",
+  "ingredient": {
+    "tag": "c:ingots/crimson"
+  },
+  "color": 11739182,
+  "head_stats": {
+    "durability": 12500,
+    "mining_speed": 7.0,
+    "attack_damage": 3.0,
+    "attack_speed": 1.0,
+    "tier": 5,
+    "enchantability": 15
+  },
+  "handle_stats": {
+    "durability_mult": 0.1,
+    "speed_mult": 0.03,
+    "damage_mult": 0.06,
+    "attack_speed_mult": 0.0
+  },
+  "binding_stats": {
+    "durability": 160
+  }
+}

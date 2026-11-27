@@ -1,6 +1,6 @@
 {
-  "category": "thaumaturgetechcompats:avaritia",
-  "column": 2,
+  "category": "thaumaturgetechcompats:01_avaritia",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:neutronium_wand_rod"
@@ -32,7 +32,7 @@
     "thaumaturge:rod_obsidian",
     "thaumaturgetechcompats:matrix_wand"
   ],
-  "row": 6,
+  "row": 12,
   "stages": [
     {
       "required_knowledge": [

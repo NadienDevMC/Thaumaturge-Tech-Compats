@@ -1,0 +1,48 @@
+---
+title: Aura Converters
+icon: thaumaturgetechcompats:thaumium_aura_converter
+related_items: [thaumaturgetechcompats:thaumium_aura_converter, thaumaturgetechcompats:alchemical_brass_aura_converter, thaumaturgetechcompats:void_metal_aura_converter]
+---
+
+> [!NOTE]
+> The Aura Converters, and each tier on its own, can be switched off in the compatibilities config. The figures live in the Aura Converter config.
+
+## What it is
+
+An Aura Converter drains vis from the aura of its chunk and turns it into **FE**, which it hands to every neighbouring block that accepts energy. It never takes energy in. It is a generator that eats the aura.
+
+| Converter | FE per vis | Output per tick (max) | Buffer |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_aura_converter) | 250,000 | 250,000 FE | 10,000,000 FE |
+| [](@thaumaturgetechcompats:alchemical_brass_aura_converter) | 1,000,000 | 1,000,000 FE | 100,000,000 FE |
+| [](@thaumaturgetechcompats:void_metal_aura_converter) | 560,000,000 | 500,000,000 FE | 10,000,000,000 FE |
+
+Limits that protect the aura (all configurable):
+
+- Every vis it converts leaves **0.1 flux** in the aura.
+- It never drains the aura below **25% of its base** value; at that point it shows *No vis*.
+- All the converters of a chunk share a limit of **1 vis per tick** together (*Chunk limit*). A converter that makes N FE per vis converts up to N FE per tick.
+- A **redstone signal** stops the conversion (the stored energy can still be taken out).
+
+## How to get it
+
+- **Thaumium**: arcane workbench, top row Thaumium Plate, Redstone Dust and Thaumium Plate; middle row Copper Ingot, Vis Resonator and Copper Ingot; bottom row Thaumium Plate, Simple Arcane Mechanism and Thaumium Plate (crystals ignis 2, ordo 1; 50 vis). Research: *Aura Converter*.
+- **Alchemical Brass**: infusion over a Thaumium Aura Converter with four brass plates, a Simple Arcane Mechanism and a Vis Resonator.
+- **Void Metal**: infusion over an Alchemical Brass Aura Converter with four void metal plates, a Complex Arcane Mechanism and two Vis Resonators.
+
+## Step by step
+
+1. Place the converter in a chunk with aura and put blocks that accept FE against it (batteries, machines, cables).
+2. Right-click it to read the stored energy, the aura of the chunk, its state and its rate. The states are *Converting*, *Paused*, *Buffer full*, *No vis*, *Chunk limit* and *Disabled*.
+3. Do not put several converters in one chunk and expect their output to add up: they share the chunk limit.
+
+## Common mistakes
+
+- Leaving a redstone signal on it.
+- Draining a chunk with a low aura: the converter stops at a quarter of the base aura.
+- Ignoring the flux: heavy use pollutes the chunk.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Aura Converter configuration.

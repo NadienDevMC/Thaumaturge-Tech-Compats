@@ -13,15 +13,20 @@
       "feature": "oritech_processing_grinder"
     },
     {
+      "type": "neoforge:registered",
+      "registry": "minecraft:recipe_serializer",
+      "value": "oritech:grinder"
+    },
+    {
       "type": "thaumaturgetechcompats:feature_enabled",
       "feature": "oritech_processing_bonus"
     }
   ],
   "type": "oritech:grinder",
-  "ingredients": [
+  "itemInputs": [
     "thaumaturge:cluster_gold"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "minecraft:raw_gold"

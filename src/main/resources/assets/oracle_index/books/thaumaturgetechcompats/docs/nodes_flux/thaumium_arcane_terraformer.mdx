@@ -1,0 +1,55 @@
+---
+icon: thaumaturgetechcompats:thaumium_arcane_terraformer
+title: Thaumium Arcane Terraformer
+---
+
+## What it is
+
+The Thaumium Arcane Terraformer repaints the biome of the area around it, column by column starting at its feet, to the biome of its **bait** (an item that stands for a biome: sand for a desert, snow for the tundra, a sapling for a forest).
+
+| Property | Value |
+| --- | --- |
+| Radius | 16 blocks |
+| Dimensional Flux stored | 200,000 |
+| DF per 4x4 column | 2,000 |
+| Columns per cycle | 2 |
+
+## How to get it
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'minecraft:grass_block', 'thaumaturge:plate_thaumium', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:vis_resonator', 'thaumaturge:mechanism_simple', 
+        'thaumaturge:plate_thaumium', 'minecraft:sand', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_arcane_terraformer"
+    count={1}
+/>
+
+| Recipe | |
+| --- | --- |
+| Station | Arcane Workbench, in this shape |
+| Ingredients | 4 × Thaumium Plate, Grass Block, 2 × Simple Arcane Mechanism, Vis Resonator, Sand |
+| Vis | 80 |
+| Crystals | Terra 2, Aqua 2 |
+| Research | **Thaumium Arcane Terraformer** (Flux Gear tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium one at the Arcane Workbench, the others infused around the one before).
+2. Supply it with DF (Storage Core, Transmission Link or Rift Extractor touching it).
+3. Right click it with the bait item. Sneak and right click with an empty hand to take the bait back.
+4. Right click it again to read its progress, radius and state. Biomes and dimensions blocked in the config are left alone.
+
+## Used to make
+
+- []($nodes_flux/alchemical_brass_arcane_terraformer)
+
+> [!NOTE]- Thaumonomicon: Thaumium Arcane Terraformer
+> The Thaumium Arcane Terraformer is made on an arcane workbench from four thaumium plates, grass, sand, two simple mechanisms and a vis resonator.
+> Right-click it with an item that stands for a biome, such as sand for a desert, snow for the tundra or a sapling for a forest, and it takes the flux of the network to repaint the area around it, column by column, starting at its feet. Sneak and right-click it with an empty hand to take the bait back. Biomes and dimensions listed in the configuration are left alone. Right-click it to read its progress.
+
+**Guides of this chapter:** [Shield Generators and Arcane Terraformers]($nodes_flux/flux-field)

@@ -1,0 +1,58 @@
+---
+title: Poder de nodo, Jarras de flux y Jarras de grieta
+icon: thaumaturgetechcompats:flux_jar
+related_items: [thaumaturgetechcompats:flux_jar, thaumaturgetechcompats:matrix_flux_jar, thaumaturgetechcompats:neutronium_flux_jar, thaumaturgetechcompats:infinity_flux_jar, thaumaturgetechcompats:rift_jar]
+---
+
+> [!NOTE]
+> La base de poder de nodos se puede desactivar en la configuración de compatibilidades (necesita reiniciar el juego). Los niveles de la Jarra de flux necesitan materiales de **Avaritia**. Los valores salen de la configuración del poder de nodo.
+
+## Qué es
+
+Varias máquinas de este mod (y de sus mods compatibles: mineros y paneles solares de Void Miners, el Taummotor, el Taladro Láser Mágico y otras) funcionan con **poder mágico** en vez de energía. Toman ese poder de una fuente cercana. Una máquina usa solo la primera fuente que encuentra, en este orden por defecto:
+
+1. un nodo en jarra,
+2. una [](@thaumaturgetechcompats:flux_jar),
+3. una [](@thaumaturgetechcompats:rift_jar),
+4. una grieta de flujo,
+5. un nodo del mundo.
+
+Puedes cambiar el orden en la lista del orden de fuentes de la configuración del poder de nodo.
+
+> [!IMPORTANT]
+> Un **nodo hambriento** nunca es una fuente válida. Por defecto (proporción de consumo 0) el poder que se toma de un nodo o de un nodo en jarra no se quita de sus aspectos, así que los nodos son una fuente inagotable; sube la proporción para que sean un depósito que se vacía.
+
+## Jarra de flux
+
+Va sacando flujo del aura de su chunk hasta llenarse; las máquinas queman ese flujo como poder. Al romperla, todo vuelve al aura como flujo. Un cubo vacío usado sobre ella saca 10 de flujo como un cubo de flujo líquido. Un caldero a su lado manda sus fugas y desbordes a la jarra en vez de contaminar el aura; si la jarra está llena o no hay ninguna, ese flujo desaparece y da 4 de disformidad temporal a los jugadores a menos de 4 bloques del caldero.
+
+| Jarra | Capacidad | Flujo por llenado (cada 20 ticks) |
+|---|---|---|
+| [](@thaumaturgetechcompats:flux_jar) | 100 | 0,25 |
+| [](@thaumaturgetechcompats:matrix_flux_jar) | 250 | 0,75 |
+| [](@thaumaturgetechcompats:neutronium_flux_jar) | 600 | 2 |
+| [](@thaumaturgetechcompats:infinity_flux_jar) | 1500 | 6 |
+
+Recetas: la Jarra de flux se fabrica en la mesa de trabajo arcana: un frasco arcano con una placa de metal del vacío en cada uno de sus cuatro lados. Los niveles superiores se infunden a partir de la jarra anterior con cuatro lingotes del material (Infinito además una [](@thaumaturgetechcompats:extremely_primordial_pearl)).
+
+## Jarra de grieta
+
+Colocada junto a una grieta de flujo, la desmonta punto a punto (cada 40 ticks, a menos de 4 bloques), guardando 20 unidades de poder por cada punto. Se detiene cuando la grieta llega a su tamaño mínimo. Su capacidad es 200. Una Jarra de grieta rota derrama lo que guarda como flujo (0,05 por unidad). Se fabrica en la mesa de trabajo arcana: frasco arcano, dos Semillas del vacío y dos placas de metal del vacío. También hace falta una Jarra de grieta con una grieta atrapada junto al caldero para hacer el lingote de Rifting.
+
+## Paso a paso
+
+1. Fabrica una Jarra de flux o de grieta y colócala al alcance de la máquina.
+2. Para una Jarra de grieta, ponla a menos de 4 bloques de una grieta de flujo.
+3. Pulsa clic derecho sobre la jarra para leer su flujo o poder.
+4. Mira la máquina con Jade o las gafas de Create para ver qué fuente usa.
+
+## Errores comunes
+
+- Usar un nodo hambriento como fuente.
+- Romper una Jarra de flux llena: contamina el aura con todo su flujo.
+- Esperar que una Jarra de grieta funcione con una grieta que ya está en su tamaño mínimo.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración del poder de nodos del mod.

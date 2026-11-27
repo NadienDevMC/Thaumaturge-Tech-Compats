@@ -1,0 +1,53 @@
+---
+title: Shield Generators and Arcane Terraformers
+icon: thaumaturgetechcompats:thaumium_shield_generator
+related_items: [thaumaturgetechcompats:thaumium_shield_generator, thaumaturgetechcompats:alchemical_brass_shield_generator, thaumaturgetechcompats:void_metal_shield_generator, thaumaturgetechcompats:thaumium_arcane_terraformer, thaumaturgetechcompats:alchemical_brass_arcane_terraformer, thaumaturgetechcompats:void_metal_arcane_terraformer]
+---
+
+> [!NOTE]
+> Part of the Dimensional Flux (DF) network, each tier with its own switch in the compatibilities config. Both devices also have master switches in the field config (shield and terraformer sections).
+
+## Shield Generators
+
+### What it is
+
+While it holds DF, the generator raises a bubble around itself that destroys the projectiles of hostile mobs, pushes hostile mobs out (never bosses) and takes the damage out of explosions inside (blocks inside the bubble are not destroyed). Every tick of the bubble costs DF, and so does every projectile and every explosion it absorbs. When the flux runs out it shuts down, and it starts again once it holds the flux of a number of ticks of operation. Right-click it to read its state.
+
+| Generator | Bubble radius | DF held | DF per tick |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_shield_generator) | 8 blocks | 100,000 | 10 |
+| [](@thaumaturgetechcompats:alchemical_brass_shield_generator) | 16 blocks | 1,000,000 | 40 |
+| [](@thaumaturgetechcompats:void_metal_shield_generator) | 32 blocks | 10,000,000 | 160 |
+
+Thaumium recipe, arcane workbench: top and bottom rows Thaumium Plate, Mirrored Glass and Thaumium Plate; middle row Simple Arcane Mechanism, Vis Resonator and Simple Arcane Mechanism. Higher tiers are infused around the previous one with four brass (or void metal) plates, a Simple Arcane Mechanism, a Vis Resonator and two Mirrored Glass.
+
+## Arcane Terraformers
+
+### What it is
+
+A terraformer repaints the biome of the area around it, column by column starting at its feet. It needs a **bait**: an item that stands for a biome (sand for a desert, snow for the tundra, a sapling for a forest; the list is the bait list of the field config). Biomes and dimensions listed in the config are left alone.
+
+| Terraformer | Radius | DF held | DF per 4x4 column | Columns per cycle |
+|---|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_arcane_terraformer) | 16 blocks | 200,000 | 2,000 | 2 |
+| [](@thaumaturgetechcompats:alchemical_brass_arcane_terraformer) | 32 blocks | 2,000,000 | 1,500 | 6 |
+| [](@thaumaturgetechcompats:void_metal_arcane_terraformer) | 64 blocks | 20,000,000 | 1,000 | 16 |
+
+Thaumium recipe, arcane workbench: top row Thaumium Plate, Grass Block and Thaumium Plate; middle row Simple Arcane Mechanism, Vis Resonator and Simple Arcane Mechanism; bottom row Thaumium Plate, Sand and Thaumium Plate.
+
+### Step by step
+
+1. Supply the device with DF (a Storage Core, Transmission Link or Rift Extractor touching it).
+2. Right-click the terraformer with the bait item. Sneak and right-click with an empty hand to take the bait back.
+3. Right-click it again to read its progress, radius and state (*working*, *waiting for Dimensional Flux*, *finished*, *no bait*).
+
+## Common mistakes
+
+- Using an item that is not a biome bait: the terraformer stops with *invalid bait*.
+- Expecting it to work in a dimension or biome blocked by the config.
+- Letting the shield run dry: it shuts down until it recovers enough flux.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's flux field configuration.

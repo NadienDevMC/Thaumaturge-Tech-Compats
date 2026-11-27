@@ -1,0 +1,54 @@
+---
+title: Native Osmium and Uranium Clusters
+icon: thaumaturgetechcompats:osmium_cluster
+related_items: [thaumaturgetechcompats:osmium_cluster, thaumaturgetechcompats:uranium_cluster]
+---
+
+> [!NOTE]
+> Requires **Mekanism**. In the compatibilities config you can switch off the clusters (with their smelting and crucible recipes, needs a game restart), all the Mekanism routes, or each route on its own. The x2, x3 and x4 routes are off by default (they share machine and input with the own ore recipes of Mekanism); the rest are on.
+
+## What it is
+
+Thaumaturge multiplies ore with **clusters**. This mod adds two it does not have: the [](@thaumaturgetechcompats:osmium_cluster) and the [](@thaumaturgetechcompats:uranium_cluster). They behave like the other clusters of Thaumaturge: a raw chunk of metal that gives two ingots when smelted.
+
+## How to get it
+
+### In the crucible (no Mekanism machine needed)
+
+With the research **Metal Purification** of Thaumaturge: crucible recipe with raw osmium or raw uranium (any raw material of that metal) as catalyst and the aspects 5 metallum + 5 ordo. Result: one cluster.
+
+### In Mekanism machines
+
+Ores and raw materials of osmium, uranium and the other cluster metals (iron, copper, gold, lead, tin, silver, cinnabar, quartz) also become clusters through these Mekanism routes:
+
+| Route | Default | Machine | Ore to cluster | Raw to cluster |
+| --- | --- | --- | --- | --- |
+| x2 | off | Enrichment Chamber | 1 ore: 2 clusters | 3 raw: 4 clusters |
+| x3 | off | Purification Chamber, oxygen | 1 ore: 3 clusters | 1 raw: 2 clusters |
+| x4 | off | Injection Chamber, hydrogen chloride | 1 ore: 4 clusters | 3 raw: 8 clusters |
+| x5 | on | Enrichment Chamber, from the crystal | 1 crystal: 1 cluster | |
+| Salis | on | Metallurgic Infuser, bio | 1 ore: 2 clusters | 3 raw: 4 clusters |
+
+The x5 route follows the normal Mekanism chain (dissolution, washing, crystallization) and then every crystal becomes a cluster. For the Salis route a Salis Mundus converts to 20 bio in a chemical conversion, and each operation uses 20 bio.
+
+### Other machines that accept the clusters
+
+- **Smelting** (200 ticks) or **blasting** (100 ticks): 2 ingots per cluster.
+- **Create** (needs Create): milling gives 2 crushed raw (350 ticks), crushing gives 2 plus a 75% chance of 2 more plus experience nuggets (250 ticks).
+- **Oritech** Pulverizer and Grinder: see the Oritech chapter (osmium cluster also gives raw platinum in the Grinder, uranium cluster gives small plutonium dust).
+
+## Step by step
+
+1. Pick a route: the crucible for a handful, a Mekanism chamber for volume.
+2. Feed ore or raw osmium/uranium to the chamber with the right chemical.
+3. Take the clusters out and smelt or crush them.
+
+## Common mistakes
+
+- Forgetting the chemical of x3 (oxygen) or x4 (hydrogen chloride): the machine will not run.
+- Turning off all the Mekanism routes: all routes disappear.
+- Expecting clusters of Osmium and Uranium without Mekanism installed: they do not exist.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).

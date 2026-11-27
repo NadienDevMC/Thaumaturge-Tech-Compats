@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.planetary.pearl;
 
+import nadiendev.ThaumaturgeTechCompats.registry.TierOrder;
 import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -20,7 +21,7 @@ public final class PearlIntegration {
     }
 
     public static void fillCreativeTab(CreativeModeTab.Output output) {
-        for (PlanetaryTier tier : PlanetaryTier.values()) {
+        for (PlanetaryTier tier : TierOrder.display(PlanetaryTier.values())) {
             if (PearlConfig.tierEnabled(tier)) {
                 output.accept(PearlRegistry.pearl(tier).get());
             }

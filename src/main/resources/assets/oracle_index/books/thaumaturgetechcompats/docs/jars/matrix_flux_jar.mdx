@@ -1,0 +1,64 @@
+---
+icon: thaumaturgetechcompats:matrix_flux_jar
+title: Crystal Matrix Flux Jar
+---
+
+> [!NOTE]
+> The Crystal Matrix, Neutronium and Infinity jars need the **Avaritia** mod.
+
+## What it is
+
+The Crystal Matrix Flux Jar slowly pulls **flux** out of the aura of its chunk until it is full. Machines that work on magical power use that flux as their power source, so the jar turns a pollution problem into fuel. A crucible next to it sends its leaks and overflow into the jar instead of the aura.
+
+| Property | Value |
+| --- | --- |
+| Flux capacity | 250 |
+| Flux pulled every 20 ticks | 0.75 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'avaritia:crystal_matrix_ingot', '', 
+        'avaritia:crystal_matrix_ingot', 'thaumaturgetechcompats:flux_jar', 'avaritia:crystal_matrix_ingot', 
+        '', 'avaritia:crystal_matrix_ingot', ''
+    ]}
+    result="thaumaturgetechcompats:matrix_flux_jar"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($jars/flux_jar) |
+| Pedestal items | 4 × Crystal Matrix Ingot |
+| Essentia | Vacuos 24, Praemunio 16, Vitreus 16, Terminus 4 |
+| Instability | 3 |
+| Center of the altar | []($matrices/matrix_infusion_matrix) (by default) |
+| Research | **Flux Jars of Avaritia** (Nodes & Flux tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Flux Jar at the Arcane Workbench; the higher ones infused from the jar before, with the Runic Matrix of their tier at the center).
+2. Place it in the chunk whose flux you want to use and wait: it fills whenever the aura has flux.
+3. Put a machine that uses magical power next to it (Thaummotor, magical miners and panels...).
+4. Right click it to read its flux. An empty bucket takes out 10 flux as a bucket of liquid flux.
+5. Do not break a full jar in your base: everything it held goes back into the aura.
+
+## Used to make
+
+- []($jars/neutronium_flux_jar)
+
+> [!NOTE]- Thaumonomicon: Flux Jars of Avaritia
+> Each Flux Jar is made on an infusion altar, starting from the one before it:
+> - The Crystal Matrix Flux Jar needs a Flux Jar and crystal matrix ingots.
+> - The Neutronium Flux Jar needs a Crystal Matrix Flux Jar and neutron ingots.
+> - The Infinity Flux Jar needs a Neutronium Flux Jar, infinity ingots and an Extremely Primordial Pearl.
+> They work like the plain Flux Jar, only bigger and faster, and breaking one still pours its flux back into the aura.
+
+**Guides of this chapter:** [Flux Jars]($jars/flux-jar)

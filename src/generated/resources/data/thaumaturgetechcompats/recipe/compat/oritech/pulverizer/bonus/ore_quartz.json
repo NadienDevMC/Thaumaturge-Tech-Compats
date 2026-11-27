@@ -18,10 +18,10 @@
     }
   ],
   "type": "oritech:pulverizer",
-  "ingredients": [
+  "itemInputs": [
     "thaumaturge:ore_quartz"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "minecraft:quartz"

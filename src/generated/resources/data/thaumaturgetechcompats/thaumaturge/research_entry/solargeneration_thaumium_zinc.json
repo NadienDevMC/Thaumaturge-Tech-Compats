@@ -1,0 +1,89 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_thaumium_zinc"
+    },
+    {
+      "type": "neoforge:or",
+      "values": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "alltheores"
+        }
+      ]
+    }
+  ],
+  "category": "thaumaturgetechcompats:03_solar_panels",
+  "column": 2,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_zinc_solar_panel"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.solargeneration_thaumium_zinc.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturgetechcompats:sol"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:solargeneration_thaumium"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.solargeneration_thaumium_zinc.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/solargeneration/thaumium_zinc_solar_panel"
+      ],
+      "text": "research.thaumaturgetechcompats.solargeneration_thaumium_zinc.stage_1"
+    }
+  ]
+}

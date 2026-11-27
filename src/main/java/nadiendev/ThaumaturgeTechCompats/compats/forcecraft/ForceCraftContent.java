@@ -23,7 +23,8 @@ public class ForceCraftContent implements DataProvider {
     private static final String FORCECRAFT = ForceCraftIntegration.MOD_ID;
     private static final String REAGENT = "thaumaturge:crystal_ordo";
     private static final String CENTER_TAG = "forcecraft:valid_infuser_charge";
-    private static final String TIER = "7";
+    // serialized name of UpgradeBookTier.SEVEN (its ordinal)
+    private static final String TIER = "6";
     private static final int TIME = 60;
     private static final int COLUMN = 15;
     private static final int ROW = 2;

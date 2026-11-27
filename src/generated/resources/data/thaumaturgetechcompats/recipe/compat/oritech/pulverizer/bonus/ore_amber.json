@@ -25,10 +25,10 @@
     }
   ],
   "type": "oritech:pulverizer",
-  "ingredients": [
+  "itemInputs": [
     "#c:ores/amber"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "thaumaturge:amber"

@@ -1,0 +1,50 @@
+---
+title: Solar Panel Stats and Recipes
+icon: thaumaturgetechcompats:void_metal_generation_solar_panel
+related_items: [thaumaturgetechcompats:alchemical_cobalt_solar_panel, thaumaturgetechcompats:thaumium_zinc_solar_panel, thaumaturgetechcompats:void_uranium_solar_panel]
+---
+
+> [!NOTE]
+> Needs the **Solar Generation** mod. Numbers are fixed in the code, not configurable.
+
+## What it is
+
+Energy numbers of each panel, in FE. "Generation" is what it produces per tick under full sun, "Transfer" is the most it hands out per tick and "Capacity" is what it stores.
+
+| Panel | Generation (FE/t) | Transfer (FE/t) | Capacity (FE) |
+| --- | --- | --- | --- |
+| [](@thaumaturgetechcompats:brass_andesite_solar_panel) | 11,000 | 5,095 | 500,000 |
+| [](@thaumaturgetechcompats:thaumium_zinc_solar_panel) | 19,500 | 50,500 | 1,000,000 |
+| [](@thaumaturgetechcompats:alchemical_cobalt_solar_panel) | 29,500 | 50,500 | 2,000,000 |
+| [](@thaumaturgetechcompats:alchemical_solar_panel) | 89,500 | 50,500 | 18,000,000 |
+| [](@thaumaturgetechcompats:brass_solar_panel) | 250,000 | 100,000 | 78,000,000 |
+| [](@thaumaturgetechcompats:thaumium_generation_solar_panel) | 791,800 | 7,000,000 | 88,000,000 |
+| [](@thaumaturgetechcompats:void_uranium_solar_panel) | 15,035,000 | 150,350,000 | 95,060,000 |
+| [](@thaumaturgetechcompats:void_metal_generation_solar_panel) | 15,500,000 | 155,000,000 | 98,000,000 |
+
+## Recipes
+
+| Panel | Where | Recipe |
+| --- | --- | --- |
+| Alchemical | crucible | Advanced Solar Panel (Solar Generation) as the catalyst, in a crucible with Sol 20 and Machina 10 |
+| Brass | arcane workbench, 20 vis | photovoltaic cells in the top row, brass plates in the bottom row and on both sides of the center, an Alchemical Solar Panel in the center |
+| Brass Andesite | arcane workbench, 20 vis | cells on top, andesite alloy on both sides, the Alchemical panel in the center, three Create brass ingots on the bottom row |
+| Thaumium Zinc | arcane workbench, 30 vis | cell, thaumium plate, cell on top; zinc, Alchemical panel, zinc in the middle; three thaumium plates below |
+| Alchemical Cobalt | arcane workbench, 20 vis | cells on top; cobalt, Alchemical panel, cobalt in the middle; three cobalt ingots below |
+| Thaumium | infusion altar, catalyst Brass Solar Panel | 4 thaumium plates, 3 photovoltaic cells, a Simple Arcane Mechanism; Sol 40, Potentia 20; instability 3 |
+| Void Metal | infusion altar, catalyst Thaumium Solar Panel | 4 void metal plates, 3 Advanced Solar Cores, a Complex Arcane Mechanism; Sol 60, Potentia 40, Vacuos 20; instability 4 |
+| Void Uranium | infusion altar, catalyst Void Metal Solar Panel | 3 void metal plates, 3 uranium ingots, 1 Advanced Solar Core, a Complex Arcane Mechanism; Sol 80, Potentia 60, Vacuos 40; instability 5 |
+
+Every branch panel except the first needs the Alchemical panel recipe enabled too, and the Thaumium, Void Metal and Void Uranium ones need the Brass panel toggle on.
+
+## Step by step
+
+1. Make an Alchemical Solar Panel in a crucible.
+2. For a branch: craft it at the arcane workbench with the Alchemical panel in the center.
+3. For the main line: craft the Brass panel, then infuse the Thaumium, Void Metal and Void Uranium panels in order.
+4. Research the entry of each panel first ("Brass Solar Panel", "Thaumium Solar Panel", and so on).
+
+## Common mistakes
+
+- Using a plain Advanced Solar Panel in the arcane workbench recipes: they need the Alchemical panel.
+- Forgetting that the infused panels consume their previous panel as the catalyst.

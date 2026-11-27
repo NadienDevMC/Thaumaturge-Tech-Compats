@@ -1,0 +1,58 @@
+---
+title: Estabilizadores y transductores de nodos
+icon: thaumaturgetechcompats:matrix_node_stabilizer
+related_items: [thaumaturgetechcompats:matrix_node_stabilizer, thaumaturgetechcompats:neutronium_node_stabilizer, thaumaturgetechcompats:infinity_node_stabilizer, thaumaturgetechcompats:matrix_node_transducer, thaumaturgetechcompats:neutronium_node_transducer, thaumaturgetechcompats:infinity_node_transducer]
+---
+
+> [!NOTE]
+> Necesita materiales de **Avaritia**. Puedes apagar cada dispositivo en la configuración de dispositivos, que también guarda los valores de cada nivel (secciones de estabilizadores y de transductores de nodos). Si lo apagas, se comporta como el Estabilizador de nodos avanzado o como el Transductor de nodos normal.
+
+## Estabilizadores de nodos
+
+### Qué son
+
+Un estabilizador mantiene quieto un nodo de aura. Nada puede sacar del nodo que sujeta, él sí puede sacar de nodos cercanos sin proteger, y una señal de redstone lo apaga. Los tres niveles de este mod agarran más fuerte que el Estabilizador de nodos avanzado.
+
+| Estabilizador | El nodo se alimenta del aura | Nodos inestables o que se apagan se asientan | Inestabilidad de infusión |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:matrix_node_stabilizer) | 50 veces más despacio | 3 veces más rápido que el básico | 12 |
+| [](@thaumaturgetechcompats:neutronium_node_stabilizer) | 200 veces más despacio | 4 veces más rápido | 14 |
+| [](@thaumaturgetechcompats:infinity_node_stabilizer) | 1000 veces más despacio | 5 veces más rápido | 16 |
+
+Además cuentan como **puntos de estabilizador** para el Núcleo de almacenamiento de flujo (Matriz de cristal 3, Neutronio 4, Infinito 6; el básico da 1 y el avanzado 2).
+
+### Cómo conseguirlos
+
+Se infunden alrededor del nivel anterior (catalizador): Estabilizador de nodos avanzado, luego el de matriz de cristal, luego el de neutronio. Componentes, alternados: lingote de su material, nitor, placa de su material, alumentum, repetido dos veces. Aspectos: auram 48/64/64, praecantatio 32, ordo 32, potentia 32 y terminus 8/16/24 (Matriz de cristal/Neutronio/Infinito).
+
+## Transductores de nodos
+
+### Qué son
+
+Un transductor se coloca sobre un nodo estabilizado y, alimentado con redstone, lo activa. Gasta el mismo único punto de aspecto por tick que el Transductor de nodos normal, pero carga el nodo más rápido y su carga se desvanece más despacio. Un nodo se activa a los 1000 puntos de carga.
+
+| Transductor | Carga por tick | Pierde 1 punto cada (sin redstone) | Vis de mesa |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:matrix_node_transducer) | 2 | 2 ticks | 400 |
+| [](@thaumaturgetechcompats:neutronium_node_transducer) | 4 | 4 ticks | 800 |
+| [](@thaumaturgetechcompats:infinity_node_transducer) | 10 | 10 ticks | 1600 |
+
+### Cómo conseguirlos
+
+Mesa de trabajo arcana: fila de arriba una placa, un comparador y una placa; fila del medio un lingote, el transductor del nivel anterior (el Transductor de nodos para Matriz de cristal) y un lingote; fila de abajo una placa, un nitor y una placa. Placas y lingotes son del nivel. La página de cada objeto muestra la cuadrícula. Cristales: ordo 2, 3 y 4.
+
+## Paso a paso
+
+1. Construye un estabilizador alrededor del nodo que quieras conservar (mira la escena de Ponder de nodos).
+2. Pon el transductor sobre el nodo estabilizado.
+3. Dale una señal de redstone y mantenla hasta que el nodo se active.
+
+## Errores comunes
+
+- Poner el transductor sobre un nodo que no está estabilizado.
+- Quitar la señal de redstone: la carga empieza a decaer.
+- Esperar que el estabilizador detenga a otros nodos: sigue pudiendo sacar de nodos cercanos sin proteger.
+
+## Notas
+
+- Sus valores se ajustan en la configuración de dispositivos del mod.

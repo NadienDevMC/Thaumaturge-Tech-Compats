@@ -1,64 +1,12 @@
 package nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools;
 
-import mekanism.api.Action;
-import mekanism.api.energy.IStrictEnergyHandler;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.transfer.access.ItemAccess;
+import net.neoforged.neoforge.transfer.energy.ItemAccessEnergyHandler;
 
-public class MekanismToolHandler implements IStrictEnergyHandler {
-    private final ItemStack stack;
-
-    public MekanismToolHandler(ItemStack stack) {
-        this.stack = stack;
-    }
-
-    @Override
-    public int getEnergyContainerCount() {
-        return 1;
-    }
-
-    @Override
-    public long getEnergy(int container) {
-        return container == 0 ? MekanismToolBehavior.stored(stack) : 0L;
-    }
-
-    @Override
-    public void setEnergy(int container, long energy) {
-        if (container == 0) {
-            MekanismToolBehavior.store(stack, energy);
-        }
-    }
-
-    @Override
-    public long getMaxEnergy(int container) {
-        return container == 0 ? MekanismToolBehavior.capacity(stack) : 0L;
-    }
-
-    @Override
-    public long getNeededEnergy(int container) {
-        return getMaxEnergy(container) - getEnergy(container);
-    }
-
-    @Override
-    public long insertEnergy(int container, long amount, Action action) {
-        if (container != 0 || amount <= 0L) {
-            return amount;
-        }
-        long accepted = Math.min(amount, getNeededEnergy(0));
-        if (accepted > 0L && action.execute()) {
-            MekanismToolBehavior.store(stack, getEnergy(0) + accepted);
-        }
-        return amount - accepted;
-    }
-
-    @Override
-    public long extractEnergy(int container, long amount, Action action) {
-        if (container != 0 || amount <= 0L) {
-            return 0L;
-        }
-        long extracted = Math.min(amount, getEnergy(0));
-        if (extracted > 0L && action.execute()) {
-            MekanismToolBehavior.store(stack, getEnergy(0) - extracted);
-        }
-        return extracted;
+/** Energy of the Mekanism tools: a NeoForge item energy handler (Mekanism energy is plain FE now) backed by the tool energy component. */
+public class MekanismToolHandler extends ItemAccessEnergyHandler {
+    public MekanismToolHandler(ItemStack stack, ItemAccess access) {
+        super(access, MekanismToolRegistry.ENERGY.get(), (int) MekanismToolBehavior.capacity(stack));
     }
 }

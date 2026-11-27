@@ -1,0 +1,55 @@
+---
+id: thaumaturgetechcompats:thaumium_shield_generator
+type: block
+title: Generador de escudo de taumio
+---
+
+## Qué es
+
+El Generador de escudo de taumio levanta una burbuja a su alrededor mientras guarde flujo dimensional. La burbuja destruye los proyectiles de los monstruos, empuja fuera a los monstruos (nunca a los jefes) y quita el daño de las explosiones de dentro (los bloques de dentro no se destruyen).
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio | 8 bloques |
+| Flujo dimensional que guarda | 100.000 |
+| DF por tick con la burbuja activa | 10 |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'thaumaturge:mirrored_glass', 'thaumaturge:plate_thaumium', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:vis_resonator', 'thaumaturge:mechanism_simple', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:mirrored_glass', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_shield_generator"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 4 × Placa de taumio, 2 × Cristal de espejo, 2 × Mecanismo arcano simple, Resonador de Vis |
+| Vis | 60 |
+| Cristales | Ordo 2, Terra 1 |
+| Investigación | **Generador de escudo de taumio** (pestaña Equipo flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del anterior).
+2. Dale DF (un Núcleo de almacenamiento, un Enlace de transmisión o un Extractor de grietas tocándolo).
+3. Cada tick de burbuja cuesta DF, igual que cada proyectil o explosión que absorbe. Cuando se acaba el flujo se apaga hasta volver a tener suficiente.
+4. Haz clic derecho para ver su estado.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:alchemical_brass_shield_generator)
+
+> [!NOTE]- Thaumonomicon: Generador de escudo de taumio
+> El Generador de escudo de taumio se fabrica en una mesa arcana con cuatro placas de taumio, dos vidrios espejados, dos mecanismos simples y un resonador de vis.
+> Mientras tenga Flujo Dimensional levanta una burbuja a su alrededor que destruye los proyectiles de los monstruos hostiles, empuja a los monstruos hostiles fuera y anula el daño de las explosiones en su interior. Cada tick de la burbuja cuesta flujo, y también cada proyectil y cada explosión que absorbe. Cuando se acaba el flujo se apaga, y vuelve a encenderse cuando se ha recuperado lo suficiente. Haz clic derecho para leer su estado.
+
+**Guías de este capítulo:** [Generadores de escudo y Terraformadores arcanos]($nodes_flux/flux-field)

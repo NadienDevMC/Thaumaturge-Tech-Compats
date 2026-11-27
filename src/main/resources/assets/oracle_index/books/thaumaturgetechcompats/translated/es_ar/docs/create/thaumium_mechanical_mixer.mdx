@@ -1,0 +1,67 @@
+---
+icon: thaumaturgetechcompats:thaumium_mechanical_mixer
+title: Mezcladora mecánica de taumio
+---
+
+> [!NOTE]
+> Necesita **Create** (a través de Create: Adapted en 26.1.2).
+
+## Qué es
+
+La Mezcladora mecánica de taumio funciona **exactamente igual que la máquina de Create de la que sale**: mismas recetas, mismas necesidades cinéticas, y aparece como catalizador en las mismas categorías de JEI. La única diferencia: mientras haya un nodo de aura al alcance trabaja muchas veces más rápido, con partículas de encantamiento encima. Lejos de todo nodo se comporta como la máquina normal.
+
+| Propiedad | Valor |
+| --- | --- |
+| Velocidad con un nodo al alcance (por defecto) | 15 veces más rápido |
+| Alcance hasta el nodo (por defecto) | 10 bloques |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturgetechcompats:thaumium_casing', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturgetechcompats:alchemical_brass_mechanical_mixer', 'thaumaturge:plate_thaumium', 
+        '', 'thaumaturge:plate_thaumium', ''
+    ]}
+    result="thaumaturgetechcompats:thaumium_mechanical_mixer"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($create/alchemical_brass_mechanical_mixer) |
+| Objetos en los pedestales | []($create/thaumium_casing), 2 × Placa de taumio, Mecanismo arcano simple |
+| Esencia | Potentia 20, Auram 10, Motus 10 |
+| Inestabilidad | 3 |
+| Investigación | **Maquinaria de taumio** (pestaña Create) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga la entrada de maquinaria de su nivel y fabrica la carcasa de ese nivel.
+2. Infunde la variante sobre la máquina del nivel anterior (la máquina normal de Create para el latón alquímico).
+3. Colócala **en lugar de** la máquina normal y conéctala a tu red cinética igual (ejes, engranajes, cintas).
+4. Asegúrate de que haya un nodo de aura a su alcance: busca el nodo más cercano por sí sola cada 20 ticks.
+5. Monta el resto de la línea como siempre (cintas, embudos, cuencos).
+
+## Se usa para fabricar
+
+- []($create/void_metal_mechanical_mixer)
+
+> [!NOTE]- Thaumonomicon: Maquinaria de taumio
+> Las variantes de taumio alcanzan nodos desde más lejos que las de latón alquímico.
+> 
+> **Carcasa de taumio**
+> 
+> Se infunde sobre una carcasa de latón alquímico con cuatro placas de taumio y un mecanismo simple.
+> 
+> **Variantes de máquina**
+> 
+> Cada variante se infunde sobre la variante de latón alquímico de la misma máquina, con una carcasa de taumio, dos placas de taumio y un mecanismo simple.
+
+**Guías de este capítulo:** [Variantes de máquina e impulso de nodo]($create/machine-variants)

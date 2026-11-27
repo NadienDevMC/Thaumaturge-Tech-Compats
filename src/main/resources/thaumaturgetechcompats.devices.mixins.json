@@ -5,8 +5,15 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AdvancedAlchemicalFurnaceStructureMixin",
+    "AspectIndexAccessor",
+    "AspectIndexHolderMixin",
     "BlockEntityAdvancedAlchemicalFurnaceMixin",
     "BlockEntityCrucibleMixin",
+    "BlockEntityCrucibleCapacityMixin",
+    "BlockEntityTypeJarMixin",
+    "BlockEntityCrucibleRiftingMixin",
+    "EntityCausalityCollapserMixin",
+    "RiftSegmentSweepMixin",
     "BlockEntityNodeMixin",
     "BlockEntityNodeTransducerMixin"
   ],

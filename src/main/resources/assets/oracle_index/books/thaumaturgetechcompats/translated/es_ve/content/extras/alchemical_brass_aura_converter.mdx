@@ -1,0 +1,61 @@
+---
+id: thaumaturgetechcompats:alchemical_brass_aura_converter
+type: block
+title: Convertidor de aura de latón alquímico
+---
+
+## Qué es
+
+El Convertidor de aura de latón alquímico saca vis del aura de su chunk y lo convierte en **FE**, que reparte a todos los bloques vecinos que aceptan energía. Nunca recibe energía. Cada vis que convierte deja 0,1 de flujo en el aura, nunca baja el aura de un 25% de su valor base, y todos los conversores de un chunk comparten un límite de 1 vis por tick.
+
+| Propiedad | Valor |
+| --- | --- |
+| FE por vis | 1.000.000 |
+| Salida máxima por tick | 1.000.000 FE |
+| Reserva de energía | 100.000.000 FE |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:vis_resonator', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        '', 'thaumaturgetechcompats:thaumium_aura_converter', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_aura_converter"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:thaumium_aura_converter) |
+| Objetos en los pedestales | 4 × Placa de latón alquímico, Mecanismo arcano simple, Resonador de Vis |
+| Esencia | Potentia 40, Machina 30, Auram 20 |
+| Inestabilidad | 3 |
+| Investigación | **Convertidor de aura de latón alquímico** (pestaña Extras) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, investigación Conversor de aura; los demás infundidos sobre el anterior).
+2. Colócalo en un chunk con aura y pon contra él bloques que acepten FE (baterías, máquinas, cables).
+3. Haz clic derecho para ver la energía guardada, el aura del chunk, su estado y su ritmo.
+4. Una señal de redstone detiene la conversión (la energía guardada se puede seguir sacando).
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:void_metal_aura_converter)
+
+> [!NOTE]- Thaumonomicon: Convertidor de aura de latón alquímico
+> El latón envuelve el resonador y nada se pierde por el camino.
+> 
+> **Convertidor de aura de latón alquímico**
+> 
+> Se infunde sobre un convertidor de aura de taumio con placas de latón alquímico, un mecanismo simple y un resonador de vis. Cada vis se convierte en 1.000.000 FE. Entrega hasta 1.000.000 FE por tick y almacena 100.000.000 FE.
+
+**Guías de este capítulo:** [Convertidores de aura]($extras/aura-converters)

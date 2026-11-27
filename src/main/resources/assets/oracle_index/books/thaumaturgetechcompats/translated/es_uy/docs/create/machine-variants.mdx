@@ -1,0 +1,56 @@
+---
+title: Variantes de máquina e impulso de nodo
+icon: thaumaturgetechcompats:alchemical_brass_mechanical_press
+related_items: [thaumaturgetechcompats:alchemical_brass_mechanical_press, thaumaturgetechcompats:thaumium_mechanical_mixer, thaumaturgetechcompats:void_metal_mechanical_saw, thaumaturgetechcompats:alchemical_brass_mechanical_drill, thaumaturgetechcompats:thaumium_deployer, thaumaturgetechcompats:void_metal_millstone, thaumaturgetechcompats:alchemical_brass_basin, thaumaturgetechcompats:thaumium_spout, thaumaturgetechcompats:void_metal_item_drain, thaumaturgetechcompats:alchemical_brass_depot]
+---
+
+> [!NOTE]
+> Requiere **Create** (mediante Create: Adapted en 26.1.2). En la configuración de Create puedes desactivar toda la integración, todas las variantes, cada máquina, cada nivel de carcasa y el impulso de nodos. Todos activados por defecto.
+
+## Qué es
+
+Diez máquinas de Create tienen una variante de latón alquímico, una de taumio y una de metal del vacío, treinta bloques en total:
+
+[](@thaumaturgetechcompats:alchemical_brass_mechanical_press), mezcladora mecánica, sierra mecánica, taladro mecánico, desplegador, muela, cuenca, surtidor, escurridor y depósito.
+
+Una variante funciona **exactamente igual que la original** (mismas recetas, mismas necesidades cinéticas; con la opción de JEI de Create activa las variantes salen como catalizadores en las categorías de JEI de la máquina normal). La única diferencia: mientras hay un nodo de aura a su alcance, trabaja muchas veces más rápido. Lejos de todo nodo se comporta como la máquina normal.
+
+## Cómo conseguirla
+
+Cada variante se infunde en el altar sobre la máquina del nivel anterior:
+
+| Nivel | Catalizador | Componentes | Aspectos |
+| --- | --- | --- | --- |
+| Latón alquímico | la máquina normal de Create | Carcasa de latón alquímico + 2 placas de latón | machina 20, metallum 10, motus 10 (inestabilidad 2) |
+| Taumio | la variante de latón alquímico | Carcasa de taumio + 2 placas de taumio + mecanismo simple | potentia 20, auram 10, motus 10 (inestabilidad 3) |
+| Metal del vacío | la variante de taumio | Carcasa de metal del vacío + 2 placas de metal del vacío + mecanismo complejo | vacuos 20, potentia 20, auram 20 (inestabilidad 4) |
+
+Primero desbloquea la investigación del nivel (mira [](@thaumaturgetechcompats:alchemical_brass_casing)).
+
+## Paso a paso
+
+1. Fabrica la variante de la máquina y colócala **en lugar de** la normal. Conéctala a tu red cinética igual (ejes, engranajes, cintas).
+2. Asegúrate de que hay un nodo de aura a su alcance. La máquina busca sola el nodo más cercano cada 20 ticks (el intervalo de búsqueda de la configuración de Create).
+3. Mientras hay un nodo cerca verás partículas de encantamiento sobre la máquina y trabajará al ritmo acelerado.
+4. Monta el resto de la línea como siempre (cintas, embudos, cuencas).
+
+## Números (configuración de Create)
+
+| Ajuste | Por defecto | Notas |
+| --- | --- | --- |
+| Multiplicador de velocidad | 15 en todos los niveles | de 1 a 64, por nivel de carcasa |
+| Radio de nodo | 6 / 10 / 16 bloques | latón / taumio / metal del vacío |
+| Intervalo de búsqueda (ticks) | 20 | cada cuánto busca un nodo |
+| Partículas | true | partículas mientras está acelerada |
+
+El impulso no se aplica con el ritmo de ticks del mundo congelado, y algunas máquinas pausan el impulso en el momento crítico de su acción (la prensa a mitad de golpe, el surtidor al llenar, el desplegador en su transición, un depósito con una máquina encima) para que el resultado salga bien.
+
+## Errores comunes
+
+- Colocar la variante más lejos del nodo que el alcance de su nivel. El metal del vacío llega a 16 bloques, el latón solo a 6.
+- Esperar impulso con el impulso de nodos desactivado: entonces las variantes se comportan como máquinas normales.
+- Cambiar un interruptor después de fabricar: las variantes desactivadas pierden recetas e investigación.
+
+## Notas
+
+- Se puede desactivar en la configuración de Create del mod.

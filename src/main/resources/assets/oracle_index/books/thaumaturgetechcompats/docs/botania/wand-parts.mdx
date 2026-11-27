@@ -1,0 +1,51 @@
+---
+title: Botania Wand Rods and Caps
+icon: thaumaturgetechcompats:terrasteel_wand_cap
+related_items: [thaumaturgetechcompats:livingwood_wand_rod, thaumaturgetechcompats:dreamwood_wand_rod, thaumaturgetechcompats:manasteel_wand_cap, thaumaturgetechcompats:elementium_wand_cap, thaumaturgetechcompats:terrasteel_wand_cap]
+---
+
+> [!NOTE]
+> Requires **Botania** (Botania Revived). The Botania integration and its wand parts can be switched off in the compatibilities config (on by default, game restart needed). Numbers are in the Botania wand config (startup config).
+
+## What it is
+
+Two rods and three caps to build wands of Thaumaturge with Botania materials. A wand is a rod plus a cap: the rod sets how much vis it holds, the cap sets what spells cost.
+
+| Part | Vis capacity / cost modifier |
+| --- | --- |
+| [](@thaumaturgetechcompats:livingwood_wand_rod) | capacity 60 |
+| [](@thaumaturgetechcompats:dreamwood_wand_rod) | capacity 120 (glows) |
+| [](@thaumaturgetechcompats:manasteel_wand_cap) | cost x0.9 |
+| [](@thaumaturgetechcompats:elementium_wand_cap) | cost x1.0, but x0.8 for aer, aqua, terra and ignis |
+| [](@thaumaturgetechcompats:terrasteel_wand_cap) | cost x0.8 |
+
+For reference: Thaumaturge's wooden rod holds 25, greatwood 50, silverwood 100. A cost modifier of 1.0 is the full price, 0.5 half, 0.0 free.
+
+## How to get it
+
+Research **Botanical Wands** in the Tech category (needs the Greatwood Rod and Thaumium Cap). Each part:
+
+| Part | Station | Recipe |
+| --- | --- | --- |
+| Livingwood Rod | arcane workbench (40 vis) | three Livingwood Twigs on a diagonal (shaped) |
+| Dreamwood Rod | infusion altar, catalyst Livingwood Rod | 4 Dreamwood Twigs; aspects herba 16, spiritus 16, praecantatio 12 |
+| Manasteel Cap | arcane workbench (60 vis) | 5 Manasteel Ingots as a cap (three on top, two below) |
+| Elementium Cap | infusion altar, catalyst Manasteel Cap | 3 Elementium Ingots + Pixie Dust; aspects aer 16, praecantatio 16, alienis 8 |
+| Terrasteel Cap | infusion altar, catalyst Manasteel Cap | 3 Terrasteel Ingots + Mana Diamond; aspects potentia 20, metallum 16, praecantatio 12 |
+
+## Step by step
+
+1. Craft a rod and a cap.
+2. Combine them in the wand assembly of Thaumaturge (they are registered as normal wand parts: any rod fits any cap).
+3. The vis an assembled wand costs to craft is the rod craft cost times the cap craft cost (Livingwood 6, Dreamwood 9; Manasteel 6, Elementium 8, Terrasteel 10).
+4. Recharge the wand from the aura as with any wand.
+
+## Common mistakes
+
+- Expecting Elementium to be better for every aspect: only aer, aqua, terra and ignis get 0.8.
+- Forgetting the previous part as catalyst for the infusions.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Botania wand parts configuration.

@@ -1,0 +1,67 @@
+---
+icon: thaumaturgetechcompats:neutronium_node_stabilizer
+title: Neutronium Node Stabilizer
+---
+
+> [!NOTE]
+> Needs materials of the **Avaritia** mod.
+
+## What it is
+
+The Neutronium Node Stabilizer holds an aura node steady with a stronger grip than the Advanced Node Stabilizer: nothing can pull from the node it holds, it can still pull from unprotected nodes nearby, and a redstone signal switches it off.
+
+| Property | Value |
+| --- | --- |
+| The held node feeds on the aura | 200 times slower |
+| Unstable or fading nodes settle | 4 times as fast |
+| Stabilizer points for a Flux Storage Core | 4 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:alumentum', 'avaritia:neutron_ingot', 'thaumaturge:nitor_white', 
+        'thaumaturgetechcompats:neutronium_plate', 'thaumaturgetechcompats:matrix_node_stabilizer', 'thaumaturgetechcompats:neutronium_plate', 
+        'thaumaturge:nitor_white', 'avaritia:neutron_ingot', 'thaumaturge:alumentum'
+    ]}
+    result="thaumaturgetechcompats:neutronium_node_stabilizer"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($devices/matrix_node_stabilizer) |
+| Pedestal items | 2 × Neutronium Ingot, 2 × White Nitor (or similar), 2 × []($avaritia/neutronium_plate), 2 × Alumentum |
+| Essentia | Auram 64, Praecantatio 32, Ordo 32, Potentia 32, Terminus 16 |
+| Instability | 14 |
+| Center of the altar | []($matrices/neutronium_infusion_matrix) (by default) |
+| Research | **Avaritia Node Stabilizers** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Node Stabilizers of Avaritia.
+2. Infuse it around the stabilizer of the tier before (the Advanced Node Stabilizer for Crystal Matrix).
+3. Place it the same way as any node stabilizer, next to the node you want to keep.
+4. It also counts as stabilizer points for a Flux Storage Core within 8 blocks.
+
+## Used to make
+
+- []($devices/infinity_node_stabilizer)
+
+> [!NOTE]- Thaumonomicon: Avaritia Node Stabilizers
+> Each stabilizer is infused around the previous one, using plates and ingots of its own material alternating with nitor and alumentum:
+> - Crystal Matrix: around an Advanced Node Stabilizer.
+> - Neutronium: around the Crystal Matrix one.
+> - Infinity: around the Neutronium one.
+> All three hold a node the way an Advanced Node Stabilizer does: nothing can pull from it, it can still pull from unprotected nodes nearby, and a redstone signal switches them off. What changes is the grip:
+> - Crystal Matrix: the node feeds on the aura 50 times slower than normal, and unstable or fading nodes settle 3 times as fast as with the basic stabilizer.
+> - Neutronium: 200 times slower, and 4 times as fast.
+> - Infinity: 1000 times slower, and 5 times as fast. The node practically stops feeding.
+
+**Guides of this chapter:** [Node Stabilizers and Transducers]($devices/node-devices)

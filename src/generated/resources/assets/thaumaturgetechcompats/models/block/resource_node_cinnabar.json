@@ -1,5 +1,5 @@
 {
-  "parent": "oritech:block/resource_node_iron",
+  "parent": "oritech:block/iron_resource_node",
   "textures": {
     "all": "thaumaturgetechcompats:block/resource_node_cinnabar"
   }

@@ -1,0 +1,57 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_environmental_charger
+title: Cargador ambiental de latón alquímico
+---
+
+## Qué es
+
+El Cargador ambiental de latón alquímico libera energía en la zona de alrededor para recargar solo los objetos con carga, varitas y objetos de vis del inventario de cada jugador al alcance. Guarda su propia reserva de flujo dimensional.
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio | 12 bloques |
+| DF por objeto por tick | 2.000 |
+| Flujo dimensional que guarda | 10.000.000 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:vis_resonator', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        '', 'thaumaturgetechcompats:thaumium_environmental_charger', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_environmental_charger"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($nodes_flux/thaumium_environmental_charger) |
+| Objetos en los pedestales | 4 × Placa de latón alquímico, Mecanismo arcano simple, Resonador de Vis |
+| Esencia | Potentia 40, Auram 30, Machina 20 |
+| Inestabilidad | 3 |
+| Investigación | **Cargador ambiental de latón alquímico** (pestaña Red de flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del cargador del nivel anterior).
+2. Dale DF: pon un Enlace de transmisión, un Núcleo de almacenamiento o un Extractor de grietas contra él.
+3. Quédate dentro de su radio con los objetos en la mochila. Las varitas se recargan convirtiendo DF en vis (20 DF por centésima de vis).
+4. Haz clic derecho para ver su DF, radio, ritmo y estado.
+
+## Se usa para fabricar
+
+- []($nodes_flux/void_metal_environmental_charger)
+
+> [!NOTE]- Thaumonomicon: Cargador ambiental de latón alquímico
+> El Cargador ambiental de latón alquímico se fabrica en un altar de infusión con un Cargador ambiental de taumio, cuatro placas de latón, un mecanismo simple y un resonador de vis.
+> Funciona como el de taumio, solo que con más radio, más ritmo y un almacén mayor.
+
+**Guías de este capítulo:** [Cargadores ambientales]($nodes_flux/flux-chargers)

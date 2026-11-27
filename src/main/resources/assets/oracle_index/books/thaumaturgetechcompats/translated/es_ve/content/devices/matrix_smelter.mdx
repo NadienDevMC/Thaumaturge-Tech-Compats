@@ -1,0 +1,60 @@
+---
+id: thaumaturgetechcompats:matrix_smelter
+type: block
+title: Fundición de esencia de matriz de cristal
+---
+
+> [!NOTE]
+> Necesita materiales del mod **Avaritia**.
+
+## Qué es
+
+La Fundición de esencia de matriz de cristal es una Fundición de esencia por encima de la de metal del vacío: convierte objetos en pasta de esencia, pierde menos esencia y entrega la pasta más rápido. Usa las mismas piezas alrededor: alambiques, bombas de pasta, puertos de ventilación y fuelles.
+
+| Propiedad | Valor |
+| --- | --- |
+| Eficiencia | 97% |
+| Entrega la pasta cada | 8 ticks |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'avaritia:crystal_matrix_ingot', 'thaumaturge:smelter_void', 'avaritia:crystal_matrix_ingot', 
+        'thaumaturgetechcompats:matrix_plate', 'thaumaturge:advanced_alchemical_construct', 'thaumaturgetechcompats:matrix_plate', 
+        'thaumaturgetechcompats:matrix_plate', 'thaumaturgetechcompats:matrix_plate', 'thaumaturgetechcompats:matrix_plate'
+    ]}
+    result="thaumaturgetechcompats:matrix_smelter"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 2 × Crystal Matrix Ingot, Fundición de esencia de metal del vacío, 5 × [](@thaumaturgetechcompats:matrix_plate), Constructo alquímico avanzado |
+| Vis | 1250 |
+| Cristales | Ignis 4 |
+| Investigación | **Fundiciones de Avaritia** (pestaña Avaritia) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Fundiciones de Avaritia y fabrícala en la Mesa de trabajo arcana con la fundición del nivel anterior en el medio.
+2. Colócala y conecta los alambiques, bombas de pasta, puertos de ventilación y fuelles como en cualquier Fundición de esencia.
+3. Mírala con Jade para leer su eficiencia y su intervalo de fundición.
+4. También es el corazón del Horno alquímico de Matriz de Cristal.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:neutronium_smelter)
+
+> [!NOTE]- Thaumonomicon: Fundiciones de Avaritia
+> Cada fundición se construye sobre la anterior, con cinco placas y dos lingotes de su propio material y una construcción alquímica avanzada:
+> - Matriz de Cristal: 97% de eficiencia, entrega la pulpa cada 8 ticks.
+> - Neutronio: 98,5% de eficiencia, cada 5 ticks.
+> - Infinito: eficiencia perfecta, así que nunca se pierde esencia, cada 2 ticks.
+> Funcionan exactamente igual que las demás fundiciones, con los mismos alambiques, bombas de pulpa, respiraderos y fuelles.
+
+**Guías de este capítulo:** [Fundiciones de esencia de Avaritia]($devices/smelters) · [Hornos alquímicos de Avaritia]($devices/furnaces)

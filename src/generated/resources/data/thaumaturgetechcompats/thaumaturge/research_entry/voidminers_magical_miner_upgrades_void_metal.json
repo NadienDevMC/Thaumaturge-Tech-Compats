@@ -37,8 +37,8 @@
       "feature": "voidminers_magical_miner_upgrades_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 40,
+  "category": "thaumaturgetechcompats:08_void_miners",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_metal_speed_upgrade"
@@ -66,7 +66,7 @@
     "thaumaturgetechcompats:voidminers_magical_miner_void_metal",
     "thaumaturgetechcompats:voidminers_magical_miner_upgrades_alchemical_brass"
   ],
-  "row": 6,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

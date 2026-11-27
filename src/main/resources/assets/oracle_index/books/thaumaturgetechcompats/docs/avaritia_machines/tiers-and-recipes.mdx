@@ -1,0 +1,55 @@
+---
+title: Higher Neutron Machines, Tiers and Recipes
+icon: thaumaturgetechcompats:void_metal_neutron_collector
+related_items: [thaumaturgetechcompats:thaumium_neutron_collector, thaumaturgetechcompats:alchemical_brass_neutron_collector, thaumaturgetechcompats:void_metal_neutron_collector, thaumaturgetechcompats:thaumium_neutron_compressor, thaumaturgetechcompats:alchemical_brass_neutron_compressor, thaumaturgetechcompats:void_metal_neutron_compressor]
+---
+
+> [!NOTE]
+> Needs the **Avaritia** mod. The higher machine tiers can be switched off in the compatibilities config (on by default, needs a restart). Numbers live in the Avaritia machines config.
+
+## What it is
+
+Avaritia's Neutron Collector and Neutronium Compressor already have three denser forms. This mod adds three more, made of Thaumium, Alchemical Brass and Void Metal. They work exactly like the Avaritia machines and use the same recipes, only **faster**, and each tier also **gives more** every time it finishes.
+
+| Tier | Collector and compressor | Speed (times per tick) | Output multiplier |
+| --- | --- | --- | --- |
+| Thaumium | [](@thaumaturgetechcompats:thaumium_neutron_collector), [](@thaumaturgetechcompats:thaumium_neutron_compressor) | 2 | 1 |
+| Alchemical Brass ("Brass") | [](@thaumaturgetechcompats:alchemical_brass_neutron_collector), [](@thaumaturgetechcompats:alchemical_brass_neutron_compressor) | 4 | 2 |
+| Void Metal ("Void") | [](@thaumaturgetechcompats:void_metal_neutron_collector), [](@thaumaturgetechcompats:void_metal_neutron_compressor) | 8 | 4 |
+
+A value of 1 is the Densest Neutronium machine of Avaritia. These are the defaults and the same for collectors and compressors.
+
+## How to get them
+
+Each machine is infused on an altar starting from the one before it.
+
+| Machine | Catalyst | Components | Instability |
+| --- | --- | --- | --- |
+| Thaumium | Densest Neutronium Collector or Compressor | 4 Thaumium Plates, Simple Arcane Mechanism | 3 |
+| Brass | Thaumium machine of the same kind | 4 Alchemical Brass Plates, Simple Arcane Mechanism | 6 |
+| Void | Brass machine of the same kind | 4 Void Metal Plates, Void Seed | 9 |
+
+Aspects needed on the altar:
+
+| Machine | Collector | Compressor |
+| --- | --- | --- |
+| Thaumium | Machina 24, Vacuos 16, Potentia 16, Terminus 4 | Machina 24, Praemunio 16, Ordo 16, Terminus 4 |
+| Brass | Machina 32, Vacuos 32, Potentia 24, Nuclear 16, Terminus 8 | Machina 32, Praemunio 32, Ordo 24, Nuclear 16, Terminus 8 |
+| Void | Machina 48, Vacuos 48, Alienis 32, Nuclear 24, Cosmic 32, Terminus 24 | Machina 48, Praemunio 48, Alienis 32, Nuclear 24, Cosmic 32, Terminus 24 |
+
+## Step by step
+
+1. Research "Higher Neutronium Machines".
+2. Make the altar with the right center: **Crystal Matrix** Runic Matrix for Thaumium, **Neutronium** for Brass, **Infinity** for Void.
+3. Place the previous machine as the catalyst and the plates and mechanism on pedestals.
+4. Provide the aspects (the Brass and Void ones need the new Nuclear and Cosmic essences) and infuse.
+
+## Common mistakes
+
+- Using the wrong center matrix: Solar (Thaumium), Nuclear (Brass) and Cosmic (Void) instability decide what can go wrong, and the altar will not accept a lower matrix.
+- Forgetting that the Void Seed, not a mechanism, is the extra ingredient of the Void tier.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Avaritia machines configuration.

@@ -1,5 +1,5 @@
 {
-  "category": "thaumaturgetechcompats:avaritia",
+  "category": "thaumaturgetechcompats:01_avaritia",
   "column": 6,
   "complexity": 3,
   "icons": [
@@ -32,7 +32,7 @@
     "thaumaturge:focus_greater",
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 6,
+  "row": 8,
   "stages": [
     {
       "required_knowledge": [

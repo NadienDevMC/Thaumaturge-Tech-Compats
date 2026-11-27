@@ -1,0 +1,58 @@
+---
+title: Node Stabilizers and Transducers
+icon: thaumaturgetechcompats:matrix_node_stabilizer
+related_items: [thaumaturgetechcompats:matrix_node_stabilizer, thaumaturgetechcompats:neutronium_node_stabilizer, thaumaturgetechcompats:infinity_node_stabilizer, thaumaturgetechcompats:matrix_node_transducer, thaumaturgetechcompats:neutronium_node_transducer, thaumaturgetechcompats:infinity_node_transducer]
+---
+
+> [!NOTE]
+> Needs materials of **Avaritia**. You can turn each device off in the device config, which also holds the tier values (node stabilizer and node transducer sections). If you switch a device off it behaves like the Advanced Node Stabilizer / the plain Node Transducer.
+
+## Node Stabilizers
+
+### What it is
+
+A stabilizer holds an aura node steady. Nothing can pull from the node it holds, it can still pull from unprotected nodes nearby, and a redstone signal switches it off. The three tiers of this mod grip harder than the Advanced Node Stabilizer.
+
+| Stabilizer | Node feeds on the aura | Unstable or fading nodes settle | Infusion instability |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:matrix_node_stabilizer) | 50 times slower | 3 times as fast as the basic one | 12 |
+| [](@thaumaturgetechcompats:neutronium_node_stabilizer) | 200 times slower | 4 times as fast | 14 |
+| [](@thaumaturgetechcompats:infinity_node_stabilizer) | 1000 times slower | 5 times as fast | 16 |
+
+Stabilizers also count as **stabilizer points** for the Flux Storage Core (Crystal Matrix 3, Neutronium 4, Infinity 6; the basic one gives 1 and the advanced one 2).
+
+### How to get it
+
+Infuse each one around the previous tier (catalyst): Advanced Node Stabilizer, then the Crystal Matrix one, then the Neutronium one. Components, alternating: ingot of its material, nitor, plate of its material, alumentum, repeated twice. Aspects: auram 48/64/64, praecantatio 32, ordo 32, potentia 32 and terminus 8/16/24 (Crystal Matrix/Neutronium/Infinity).
+
+## Node Transducers
+
+### What it is
+
+A transducer sits above a stabilized node and, powered by redstone, energizes it. It drains the same single point of aspect each tick as the plain Node Transducer, but charges the node faster and its charge fades slower. A node is energized at 1000 charge points.
+
+| Transducer | Charge per tick | Loses 1 point every (no redstone) | Workbench vis |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:matrix_node_transducer) | 2 | 2 ticks | 400 |
+| [](@thaumaturgetechcompats:neutronium_node_transducer) | 4 | 4 ticks | 800 |
+| [](@thaumaturgetechcompats:infinity_node_transducer) | 10 | 10 ticks | 1600 |
+
+### How to get it
+
+Arcane workbench: top row a plate, a comparator and a plate; middle row an ingot, the transducer of the previous tier (the Node Transducer for Crystal Matrix) and an ingot; bottom row a plate, a nitor and a plate. Plates and ingots are of the tier. Each item page shows the grid. Crystals: ordo 2, 3 and 4.
+
+## Step by step
+
+1. Build a stabilizer around the node you want to keep (see the node ponder scene).
+2. Put the transducer above the stabilized node.
+3. Give it a redstone signal and keep it powered until the node is energized.
+
+## Common mistakes
+
+- Putting the transducer on a node that is not stabilized.
+- Removing the redstone signal: the charge starts to decay.
+- Expecting the stabilizer to stop other nodes: it can still pull from unprotected nodes nearby.
+
+## Notes
+
+- Its values are adjusted in the mod's devices configuration.

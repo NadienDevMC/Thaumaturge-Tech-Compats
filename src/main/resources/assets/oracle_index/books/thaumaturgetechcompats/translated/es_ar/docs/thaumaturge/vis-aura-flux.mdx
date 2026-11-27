@@ -1,0 +1,39 @@
+---
+title: Vis, aura y flujo
+icon: thaumaturge:causality_collapser
+---
+
+> [!NOTE]
+> **Mod base:** esta página explica el propio Thaumaturge, el mod sobre el que se construye este addon. La última sección muestra lo que este addon añade encima.
+
+## Qué es
+
+- **El aura** es un campo de energía mágica sobre el mundo. Cada chunk tiene su propia aura, que se llena hasta una capacidad natural y se recarga con el tiempo. Los nodos de aura son nudos de energía concentrada dentro de ella (mira Nodos).
+- **La vis** es la energía pura y sin forma del aura. Las varitas la absorben, la Mesa de trabajo arcana la gasta y muchos dispositivos funcionan con ella. El Taumómetro muestra la vis del aura donde estás.
+- **El flujo** es vis "sucia". Aparece cuando la esencia se derrama al aire (las nubecitas moradas que ves cuando gotea un crisol o una jarra), cuando una infusión sale mal y cuando los dispositivos desperdician magia. El flujo ocupa sitio en el aura, impide que la vis se recargue y puede superar el límite natural. Se ve como una barra oscura en el Taumómetro.
+- **Flujo físico**: el flujo también puede condensarse en **Baba de flujo** y **Gas de flujo**. Tocarlos provoca Agotamiento de vis, que encarece el trabajo mágico.
+- **La corrupción** se alimenta de flujo y se extiende allí donde encuentra suficiente. Un nodo cuyo chunk está lleno de flujo puede corromperse.
+- **Grietas de flujo**: si el flujo sube lo bastante, rasga la realidad. Las grietas se alimentan de flujo y crecen, se vuelven más inestables con el tiempo y sueltan estallidos de energía caótica. Cuanto más grande la grieta, peor el estallido.
+- **Disformidad**: investigar magia prohibida y fabricar objetos oscuros deforma tu mente. Parte de la disformidad es temporal y se pasa; la permanente no se va nunca. Se nota como despistes, dolor y alucinaciones, algunas aterradoramente reales.
+
+## Paso a paso
+
+1. Mira por el Taumómetro para leer la vis y el flujo de tu chunk.
+2. Evita crear flujo: no dejes que la esencia se derrame, mantén estables las infusiones y vacía los crisoles que ya no uses.
+3. Limpia el flujo físico a mano, o construye un **Depurador de flujo** (elimina la baba y el gas en 16 bloques, alimentado con vis de aer desde un relé de vis o un nodo energizado).
+4. Limpia el flujo del aura con un **Condensador de flujo** y su celosía: alimentado con mucha esencia (de cualquier tipo menos esencia de flujo), convierte el flujo del aura en esencia de flujo, que sacas por abajo.
+5. Cierra una grieta lanzándole un **Colapso de causalidad**. Una grieta más calmada suelta un estallido más suave al colapsar.
+6. Vigila tu disformidad con el **Comprobador de cordura**. Las **Sales de baño purificadoras** echadas al agua dan alivio temporal, y el **Jabón de cordura** quita toda la disformidad temporal y tiene una pequeña probabilidad de quitar algo de la no permanente.
+
+## Para tener en cuenta
+
+- Una **Batería de vis** guarda 10 de vis: absorbe vis cuando el aura está por encima del 95% y la devuelve cuando baja del 75%.
+- Los árboles de plata recargan poco a poco el aura a su alrededor.
+
+## En Thaumaturge Tech Compats
+
+- **El flujo como energía**: la [](@thaumaturgetechcompats:flux_jar) saca flujo del aura y lo guarda, y las máquinas de este mod pueden funcionar con él. La [](@thaumaturgetechcompats:rift_jar) trabaja con grietas de flujo (mira Poder de nodo, Jarras de flux y Jarras de grieta, y Fuentes de poder mágico).
+- **Red de Flujo Dimensional**: núcleos de almacenamiento, enlaces de transmisión, cargadores, generadores de escudo y terraformadores (mira el capítulo Nodos y flujo).
+- **Del aura a la energía**: el [](@thaumaturgetechcompats:thaumium_aura_converter) absorbe vis del aura y la convierte en FE (mira Convertidores de aura).
+- **Contra la disformidad y la corrupción**: pociones de purificación y contra la disformidad (mira el capítulo Pureza).
+- **Más inestabilidad**: las matrices rúnicas de Avaritia traen sus propios efectos de inestabilidad (mira Efectos de inestabilidad).

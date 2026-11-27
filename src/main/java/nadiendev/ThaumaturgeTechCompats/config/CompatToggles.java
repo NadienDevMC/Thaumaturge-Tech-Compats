@@ -6,9 +6,12 @@ import nadiendev.ThaumaturgeTechCompats.infusion.InfusionIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachinesIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools.MekanismToolIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools.MekanismToolTier;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechFeatures;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.edible.EdibleIntegration;
+import nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.FarmersDelightTaintedIntegration;
 import nadiendev.ThaumaturgeTechCompats.emc.EmcIntegration;
 import nadiendev.ThaumaturgeTechCompats.essences.EssencesIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.FluxTier;
@@ -32,6 +35,15 @@ public final class CompatToggles {
 
     public static final String CREATE = "create";
     public static final String NODE_POWER = "node_power";
+    public static final String RIFT_COLLAPSER_SAFE = "rift_death_no_block_damage";
+    public static final String CRUCIBLE_CAPACITY = "crucible_aspect_capacity";
+    public static final String RIFT_APPEAR_SAFE = "rift_appear_no_block_damage";
+    public static final String MEKANISM = "mekanism";
+    public static final String MEKANISM_X2 = "mekanism_x2";
+    public static final String MEKANISM_X3 = "mekanism_x3";
+    public static final String MEKANISM_X4 = "mekanism_x4";
+    public static final String MEKANISM_X5 = "mekanism_x5";
+    public static final String MEKANISM_SALIS = "mekanism_salis";
     public static final String MEKANISM_CLUSTERS = "mekanism_clusters";
     public static final String JEI_CATALYSTS = "jei_catalysts";
     public static final String JEI_INFO = "jei_info";
@@ -54,6 +66,7 @@ public final class CompatToggles {
     public static final String TAG_ASPECTS_PARTS = "tag_aspects_parts";
     public static final String TAG_ASPECTS_INTERMEDIATES = "tag_aspects_intermediates";
     public static final String TAG_ASPECTS_FOODS = "tag_aspects_foods";
+    public static final String OWN_ITEM_ASPECTS = "own_item_aspects";
     public static final String ORITECH_ASPECTS = "oritech_aspects";
     public static final String ORITECH_PROCESSING = "oritech_processing";
     public static final String ENDERIO = "enderio";
@@ -63,6 +76,15 @@ public final class CompatToggles {
     public static final String ORITECH_GRINDER = "oritech_processing_grinder";
     public static final String ORITECH_BONUS = "oritech_processing_bonus";
     public static final String HEPHAESTUS_SMELTERY = HephaestusSmelteryIntegration.TOGGLE;
+    public static final String SOLAR_GENERATION = "solargeneration";
+    public static final String SOLAR_ALCHEMICAL = "solar_alchemical";
+    public static final String SOLAR_ALCHEMICAL_BRASS = "solar_alchemical_brass";
+    public static final String SOLAR_THAUMIUM = "solar_thaumium";
+    public static final String SOLAR_VOID_METAL = "solar_void_metal";
+    public static final String SOLAR_BRASS_ANDESITE = "solar_brass_andesite";
+    public static final String SOLAR_THAUMIUM_ZINC = "solar_thaumium_zinc";
+    public static final String SOLAR_ALCHEMICAL_COBALT = "solar_alchemical_cobalt";
+    public static final String SOLAR_VOID_URANIUM = "solar_void_uranium";
     public static final String AURA_CONVERTER = "aura_converter";
     public static final String AURA_CONVERTER_BRASS = "aura_converter_brass";
     public static final String AURA_CONVERTER_THAUMIUM = "aura_converter_thaumium";
@@ -75,7 +97,21 @@ public final class CompatToggles {
 
         builder.push("compats");
         define(builder, CREATE, "Recipes for the Thaumaturge clusters in Create.");
+        define(builder, MEKANISM, "Recipes for the Thaumaturge clusters in Mekanism.");
+        defineOff(builder, MEKANISM_X2, "Mekanism x2 route: Enrichment Chamber, ore to 2 clusters. Off by default: it shares machine and input with Mekanism own ore recipes.");
+        defineOff(builder, MEKANISM_X3, "Mekanism x3 route: Purification Chamber with oxygen, ore to 3 clusters. Off by default: it shares machine and input with Mekanism own ore recipes.");
+        defineOff(builder, MEKANISM_X4, "Mekanism x4 route: Chemical Injection Chamber with hydrogen chloride, ore to 4 clusters. Off by default: it shares machine and input with Mekanism own ore recipes.");
+        define(builder, MEKANISM_X5, "Mekanism x5 route: dissolution, washing and crystallization, then every crystal becomes a cluster in the Enrichment Chamber.");
+        define(builder, MEKANISM_SALIS, "Mekanism Salis Mundus route: Salis Mundus as bio infusion in the Metallurgic Infuser, ore to 2 clusters.");
+        define(builder, MEKANISM_CLUSTERS, "The Osmium and Uranium clusters, their smelting and crucible recipes. Needs a game restart.");
+        define(builder, MekanismToolIntegration.TOGGLE, "Energy tools for Mekanism: Thaumium, Alchemical Brass and Void Metal tools that run on Mekanism energy, with their infusion recipes and research. Needs a game restart.");
+        for (MekanismToolTier tier : MekanismToolTier.values()) {
+            define(builder, tier.toggle(), "The energized tools of this tier for Mekanism. Needs a game restart.");
+        }
         define(builder, NODE_POWER, "The node power base: machines of other mods that use nodes, node jars, flux jars and flux rifts as a power source, the Flux Jar and its research. Needs a game restart.");
+        define(builder, RIFT_COLLAPSER_SAFE, "Flux rifts do not break blocks when they die: the blast of the Causality Collapser keeps its force and still pushes and hurts, but the terrain stays intact. Turn it off for the original behaviour.");
+        define(builder, CRUCIBLE_CAPACITY, "The crucible overfills (and leaks flux) only when a single aspect passes the capacity of the node power config (1024 by default) instead of at 100 points in total. Turn it off for the original behaviour.");
+        define(builder, RIFT_APPEAR_SAFE, "Flux rifts do not eat the blocks around them while they appear and grow. Turn it off for the original behaviour.");
         for (FluxTier tier : FluxTier.values()) {
             define(builder, tier.toggle(), "The devices of the Dimensional Flux network of this tier. Needs a game restart.");
         }
@@ -107,6 +143,9 @@ public final class CompatToggles {
         define(builder, AvaritiaMachinesIntegration.TOGGLE, "Higher tiers of the Avaritia Neutron Collector and Neutronium Compressor, with their infusion recipes and research. Needs a game restart.");
         define(builder, TAINTED_FOOD, "Tainted versions of vanilla and Avaritia foods, brewed in the crucible, with their research. Needs a game restart.");
         define(builder, EDIBLE_ITEMS, "Edible copies of tools, weapons, ingots, gems, doors and the Goggles of Revealing, crafted with sugar; eating them gives status effects by item class and tier. Needs a game restart.");
+        for (String id : FarmersDelightTaintedIntegration.toggleIds()) {
+            define(builder, id, "Tainted Farmers Delight foods or knives, with their crucible and infusion recipes and research. Needs a game restart.");
+        }
         define(builder, FORCECRAFT, "Everything the addon adds for ForceCraft: the Repair infusion, the aspects of its items and mobs and the Force Flask rules. Needs a game restart.");
         define(builder, TAG_ASPECTS, "Aspects for every item of a common c: tag (ingots, ores, gems, dusts and so on), so any mod gets them by material. Applies when data packs reload.");
         define(builder, TAG_ASPECTS_INGOTS, "Tag aspects for c:ingots/*.");
@@ -119,6 +158,7 @@ public final class CompatToggles {
         define(builder, TAG_ASPECTS_PARTS, "Tag aspects for c:plates/*, c:rods/*, c:gears/* and c:wires/*.");
         define(builder, TAG_ASPECTS_INTERMEDIATES, "Tag aspects for c:clumps/*, c:dirty_dusts/*, c:shards/* and c:crystals/*.");
         define(builder, TAG_ASPECTS_FOODS, "Tag aspects for crops, seeds, mushrooms, fruits, vegetables, meats and fish.");
+        define(builder, OWN_ITEM_ASPECTS, "Aspects for the items of this addon that have no recipe Thaumaturge can read: the Rifting, Fibric, Salis and Crimson metals, the Avaritia jars, furnaces and pillars, the Thaummotor and the Mekanism clusters and energy tools. Applies when data packs reload.");
         define(builder, ORITECH_ASPECTS, "Aspects for the items and blocks of Oritech. Applies when data packs reload.");
         define(builder, ORITECH_PROCESSING, "Oritech Pulverizer and Grinder recipes for the Thaumaturge clusters and ores. Applies when data packs reload.");
         define(builder, ENDERIO, "Everything the addon adds for Ender IO. Turning it off turns every Ender IO feature off. Needs a game restart.");
@@ -133,6 +173,15 @@ public final class CompatToggles {
         define(builder, ORITECH_BONUS, "One extra raw material from every Thaumaturge cluster or ore in the Oritech Pulverizer and Grinder. Off gives the same yield as Oritech ores.");
         define(builder, ORITECH, "Everything the addon adds for Oritech: tiered ores, machine addons, their recipes and research. Needs a game restart.");
         define(builder, HEPHAESTUS_SMELTERY, "Molten Crystal Matrix, Neutronium and Infinity for the Hephaestus Forge smeltery, with melting and casting recipes. Needs a game restart.");
+        define(builder, SOLAR_GENERATION, "The solar panels built on Solar Generation. Needs a game restart.");
+        define(builder, SOLAR_ALCHEMICAL, "The alchemical solar panel. Needs a game restart.");
+        define(builder, SOLAR_ALCHEMICAL_BRASS, "The brass solar panel and its recipe and research. Needs a game restart.");
+        define(builder, SOLAR_THAUMIUM, "The thaumium solar panel. Needs a game restart.");
+        define(builder, SOLAR_VOID_METAL, "The void metal solar panel. Needs a game restart.");
+        define(builder, SOLAR_BRASS_ANDESITE, "The brass andesite solar panel. Needs Create. Needs a game restart.");
+        define(builder, SOLAR_THAUMIUM_ZINC, "The thaumium zinc solar panel. Needs Create or All The Ores. Needs a game restart.");
+        define(builder, SOLAR_ALCHEMICAL_COBALT, "The alchemical cobalt solar panel. Needs Hephaestus Forge. Needs a game restart.");
+        define(builder, SOLAR_VOID_URANIUM, "The void uranium solar panel. Needs All The Ores or Mekanism. Needs a game restart.");
         builder.pop();
 
         builder.push("oritech");

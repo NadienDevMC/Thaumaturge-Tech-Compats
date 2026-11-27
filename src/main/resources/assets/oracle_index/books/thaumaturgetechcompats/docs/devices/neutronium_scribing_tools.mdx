@@ -1,0 +1,82 @@
+---
+icon: thaumaturgetechcompats:neutronium_scribing_tools
+title: Neutronium Scribing Tools
+---
+
+> [!NOTE]
+> Needs materials of the **Avaritia** mod.
+
+## What it is
+
+The Neutronium Scribing Tools is a quill and inkwell that holds much more ink than ordinary scribing tools. It is used on the research table in the same way.
+
+| Property | Value |
+| --- | --- |
+| Ink uses | 1,000 |
+| Refill | black dye (quill over black dye in a crafting grid) |
+| Fire resistant | yes |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'avaritia:neutron_ingot', '', 
+        'avaritia:neutron_ingot', 'thaumaturgetechcompats:matrix_scribing_tools', 'avaritia:neutron_ingot', 
+        '', 'avaritia:neutron_ingot', ''
+    ]}
+    result="thaumaturgetechcompats:neutronium_scribing_tools"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($devices/matrix_scribing_tools) |
+| Pedestal items | 4 × Neutronium Ingot |
+| Essentia | Cognitio 32, Metallum 24, Instrumentum 24, Terminus 8 |
+| Instability | 5 |
+| Center of the altar | []($matrices/neutronium_infusion_matrix) (by default) |
+| Research | **Scribing Tools of Avaritia** (Avaritia tab) |
+| Makes | 1 |
+
+### Crafting table
+
+<CraftingRecipe
+    slots={[
+        'thaumaturgetechcompats:neutronium_scribing_tools', '', '', 
+        'minecraft:black_dye', '', '', 
+        '', '', ''
+    ]}
+    result="thaumaturgetechcompats:neutronium_scribing_tools"
+    count={1}
+/>
+
+| Recipe | |
+| --- | --- |
+| Station | crafting table, in this shape |
+| Ingredients | []($devices/neutronium_scribing_tools), Black Dye |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Scribing Tools of Avaritia.
+2. Infuse them from the tools of the tier before (ordinary scribing tools for Crystal Matrix).
+3. Put them in the research table like any scribing tools.
+4. Refill them as shown in the table above.
+
+## Used to make
+
+- []($devices/infinity_scribing_tools)
+
+> [!NOTE]- Thaumonomicon: Scribing Tools of Avaritia
+> Each set is made on an infusion altar, starting from ordinary scribing tools:
+> - The Crystal Matrix tools are surrounded by crystal matrix ingots.
+> - The Neutronium tools need the Crystal Matrix tools and neutron ingots.
+> - The Infinity tools need the Neutronium tools, infinity ingots and an Extremely Primordial Pearl.
+> All of them work on a research table exactly like ordinary scribing tools. The Infinity tools restore their ink on their own while I carry them. The Crystal Matrix and Neutronium tools can be refilled with black dye, like the ordinary ones.
+
+**Guides of this chapter:** [Wand Tiers, Foci and Scribing Tools]($devices/wands-foci)

@@ -17,11 +17,14 @@ import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachin
 import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryTranslations;
 import nadiendev.ThaumaturgeTechCompats.edible.EdibleTranslations;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodTranslations;
+import nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.FarmersDelightTaintedTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.intelligence.UnholyIntelligenceTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechTranslations;
 import nadiendev.ThaumaturgeTechCompats.purity.PurityTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.create.CreateTranslations;
+import nadiendev.ThaumaturgeTechCompats.compats.mekanism.MekanismTranslations;
+import nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools.MekanismToolTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.create.thaummotor.ThaummotorTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOTranslations;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterTranslations;
@@ -35,6 +38,7 @@ import nadiendev.ThaumaturgeTechCompats.flux.link.LinkTranslations;
 import nadiendev.ThaumaturgeTechCompats.planetary.crucifix.CrucifixTranslations;
 import nadiendev.ThaumaturgeTechCompats.planetary.pearl.PearlTranslations;
 import nadiendev.ThaumaturgeTechCompats.planetary.salis.SalisTranslations;
+import nadiendev.ThaumaturgeTechCompats.compats.common.ResearchTabs;
 import nadiendev.ThaumaturgeTechCompats.compats.common.TechCategory;
 import nadiendev.ThaumaturgeTechCompats.compats.jade.JadeTranslations;
 import nadiendev.ThaumaturgeTechCompats.ponder.PonderLang;
@@ -42,6 +46,7 @@ import nadiendev.ThaumaturgeTechCompats.scribing.ScribingTranslations;
 import nadiendev.ThaumaturgeTechCompats.singularity.SingularityTranslations;
 import nadiendev.ThaumaturgeTechCompats.smelter.SmelterTranslations;
 import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerTranslations;
+import nadiendev.ThaumaturgeTechCompats.materials.ExtraMaterialTranslations;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierTranslations;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
@@ -60,6 +65,7 @@ public final class ModTranslations {
         AvaritiaMachinesTranslations.english(lang);
         HephaestusSmelteryTranslations.english(lang);
         TaintedFoodTranslations.english(lang);
+        FarmersDelightTaintedTranslations.english(lang);
         EdibleTranslations.english(lang);
         UnholyIntelligenceTranslations.english(lang);
         ScribingTranslations.english(lang);
@@ -69,6 +75,7 @@ public final class ModTranslations {
         FurnaceTranslations.english(lang);
         GolemTranslations.english(lang);
         WandTierTranslations.english(lang);
+        ExtraMaterialTranslations.english(lang::add);
         FocusTranslations.english(lang);
         BrainChargerTranslations.english(lang);
         CreativeTranslations.english(lang);
@@ -78,8 +85,11 @@ public final class ModTranslations {
         ForceCraftTranslations.english(lang);
         ThaummotorTranslations.english(lang);
         CreateTranslations.english(lang);
+        MekanismTranslations.english(lang);
+        MekanismToolTranslations.english(lang);
         EnderIOTranslations.english(lang);
         AuraConverterTranslations.english(lang);
+        nadiendev.ThaumaturgeTechCompats.compats.solargeneration.SolarGenerationTranslations.english(lang);
         CoreTranslations.english(lang);
         LinkTranslations.english(lang);
         ChargerTranslations.english(lang);
@@ -91,14 +101,15 @@ public final class ModTranslations {
         EssencesTranslations.english(lang);
         EmcTranslations.english(lang);
         TechCategory.english(lang);
+        ResearchTabs.english(lang);
         JadeTranslations.english(lang);
         PonderLang.english(lang);
 
         lang.add("itemGroup.thaumaturgetechcompats.main", "Thaumaturge Tech Compats");
+        lang.add("oracle_index.title.thaumaturgetechcompats", "Thaumaturge Tech");
         lang.add("item.thaumaturgetechcompats.akashic_record", "Akashic Records");
         lang.add("item.thaumaturgetechcompats.extremely_primordial_pearl", "Extremely Primordial Pearl");
         lang.add("message.thaumaturgetechcompats.akashic_record", "Every aspect of the world floods your mind");
-        lang.add("research_category.thaumaturgetechcompats.avaritia", "Avaritia");
 
         lang.add("aspect.thaumaturgetechcompats.terminus", "Terminus");
         lang.add("aspect.thaumaturgetechcompats.terminus.desc", "The End of Games, Apocalypse, Grindstones");
@@ -138,6 +149,7 @@ public final class ModTranslations {
         AvaritiaMachinesTranslations.spanish(lang);
         HephaestusSmelteryTranslations.spanish(lang);
         TaintedFoodTranslations.spanish(lang);
+        FarmersDelightTaintedTranslations.spanish(lang);
         EdibleTranslations.spanish(lang);
         UnholyIntelligenceTranslations.spanish(lang);
         ScribingTranslations.spanish(lang);
@@ -147,6 +159,7 @@ public final class ModTranslations {
         FurnaceTranslations.spanish(lang);
         GolemTranslations.spanish(lang);
         WandTierTranslations.spanish(lang);
+        ExtraMaterialTranslations.spanish(lang::add);
         FocusTranslations.spanish(lang);
         BrainChargerTranslations.spanish(lang);
         CreativeTranslations.spanish(lang);
@@ -156,8 +169,11 @@ public final class ModTranslations {
         ForceCraftTranslations.spanish(lang);
         ThaummotorTranslations.spanish(lang);
         CreateTranslations.spanish(lang);
+        MekanismTranslations.spanish(lang);
+        MekanismToolTranslations.spanish(lang);
         EnderIOTranslations.spanish(lang);
         AuraConverterTranslations.spanish(lang);
+        nadiendev.ThaumaturgeTechCompats.compats.solargeneration.SolarGenerationTranslations.spanish(lang);
         CoreTranslations.spanish(lang);
         LinkTranslations.spanish(lang);
         ChargerTranslations.spanish(lang);
@@ -169,14 +185,15 @@ public final class ModTranslations {
         EssencesTranslations.spanish(lang);
         EmcTranslations.spanish(lang);
         TechCategory.spanish(lang);
+        ResearchTabs.spanish(lang);
         JadeTranslations.spanish(lang);
         PonderLang.spanish(lang);
 
         lang.add("itemGroup.thaumaturgetechcompats.main", "Thaumaturge Tech Compats");
+        lang.add("oracle_index.title.thaumaturgetechcompats", "Thaumaturge Tech");
         lang.add("item.thaumaturgetechcompats.akashic_record", "Registros Akáshicos");
         lang.add("item.thaumaturgetechcompats.extremely_primordial_pearl", "Perla Extremadamente Primordial");
         lang.add("message.thaumaturgetechcompats.akashic_record", "Todos los aspectos del mundo inundan tu mente");
-        lang.add("research_category.thaumaturgetechcompats.avaritia", "Avaritia");
 
         lang.add("aspect.thaumaturgetechcompats.terminus", "Terminus");
         lang.add("aspect.thaumaturgetechcompats.terminus.desc", "El fin de los juegos, apocalipsis, piedras de molino");

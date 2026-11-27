@@ -1,0 +1,65 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_flux_storage_core
+title: Alchemical Brass Flux Storage Core
+---
+
+## What it is
+
+The Alchemical Brass Flux Storage Core is the big store of **Dimensional Flux (DF)**, the energy of the flux network. It only works when its structure is formed, and it needs node stabilizers nearby when it is full.
+
+| Property | Value |
+| --- | --- |
+| Base capacity | 25,000,000 DF |
+| Stabilizer points needed when full | 8 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:alumentum', 'thaumaturge:metal_brass', 'thaumaturge:nitor_white', 
+        'thaumaturge:plate_brass', 'thaumaturgetechcompats:thaumium_flux_storage_core', 'thaumaturge:plate_brass', 
+        'thaumaturge:nitor_white', 'thaumaturge:metal_brass', 'thaumaturge:alumentum'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_flux_storage_core"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($nodes_flux/thaumium_flux_storage_core) |
+| Pedestal items | 2 × Alchemical Brass Block, 2 × White Nitor (or similar), 2 × Alchemical Brass Plate, 2 × Alumentum |
+| Essentia | Auram 32, Potentia 32, Praemunio 24, Ordo 24 |
+| Instability | 9 |
+| Research | **Alchemical Brass Storage Core** (Flux Network tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium core at the Arcane Workbench, the others infused around the core of the tier before).
+2. Build a ring of eight blocks of its metal around it on its own level, plus one block above and one below (higher-tier blocks also count). Right click it: it says Formed or how many blocks are missing.
+3. Place Flux Capacity Cells on pedestals within 6 blocks (up to 16 cells).
+4. Place node stabilizers within 8 blocks: basic 1 point, advanced 2, Crystal Matrix 3, Neutronium 4, Infinity 6.
+5. Connect sources and consumers: devices that touch it, or Transmission Links.
+6. Above half full and short of stabilizer points it overloads: it leaks flux, throws sparks and hurts whoever is within 5 blocks.
+
+## Used to make
+
+- []($nodes_flux/void_metal_flux_storage_core)
+
+> [!NOTE]- Thaumonomicon: Alchemical Brass Storage Core
+> The Alchemical Brass Flux Storage Core and the Alchemical Brass Flux Capacity Cell are made by infusion, the first from the Thaumium Flux Storage Core and the second from the Thaumium Flux Capacity Cell.
+> 
+> **Structure**
+> 
+> The core only works while it is the centre of a ring of eight alchemical brass blocks on its own level, with one more alchemical brass block right above it and another right below it. Blocks of a higher tier count too. Until it is formed it neither stores nor passes on any flux. Right-click it to see its state.
+> 
+> **Cells and stabilizers**
+> 
+> Capacity Cells placed on pedestals, of any kind, within six blocks of the core raise its capacity. Node stabilizers within eight blocks keep it calm: the fuller it is, the more stabilizer points it needs. Above half full and short of points, it overloads: it releases flux into the aura, throws sparks and hurts whoever stands near. The distances, figures and effects can be changed in the configuration.
+
+**Guides of this chapter:** [Flux Storage Cores and Capacity Cells]($nodes_flux/flux-storage)

@@ -17,7 +17,7 @@ public class ThaumaturgeKnifeItem extends KnifeItem {
     private final FarmersDelightKnife knife;
 
     public ThaumaturgeKnifeItem(FarmersDelightKnife knife, Properties properties) {
-        super(knife, properties);
+        super(knife.material(), properties);
         this.knife = knife;
     }
 

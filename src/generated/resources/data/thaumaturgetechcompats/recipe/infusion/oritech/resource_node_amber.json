@@ -32,7 +32,7 @@
       "aspect": "thaumaturge:terra"
     }
   ],
-  "catalyst": "oritech:resource_node_gold",
+  "catalyst": "oritech:gold_resource_node",
   "components": [
     "thaumaturge:ore_amber",
     "thaumaturge:amber",

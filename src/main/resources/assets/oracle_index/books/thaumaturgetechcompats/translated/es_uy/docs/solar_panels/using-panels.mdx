@@ -1,0 +1,41 @@
+---
+title: Usar los paneles solares
+icon: thaumaturgetechcompats:brass_solar_panel
+related_items: [thaumaturgetechcompats:brass_solar_panel, thaumaturgetechcompats:void_uranium_solar_panel]
+---
+
+> [!NOTE]
+> Necesita el mod **Solar Generation**. La radiación del panel de uranio del vacío necesita **Mekanism**.
+
+## Qué es
+
+Estos paneles son paneles de Solar Generation con sus propios números. Colócalos donde les llegue el sol, saca la energía con cables o máquinas junto a ellos y mira su estado en su menú.
+
+## Cómo funcionan
+
+- Cada tick el panel produce su **generación** multiplicada por la intensidad solar que calcula Solar Generation para esa posición (así que la producción sigue la misma curva de día y cielo que los demás paneles de ese mod).
+- Guarda la energía en su propia batería (su **capacidad**). Cuando la batería está llena deja de producir.
+- Cada tick ofrece energía a **todos los lados menos el de arriba** (así que la cara superior debe mirar al cielo): cualquier bloque ahí con capacidad de energía recibe hasta su ritmo de **transferencia** por tick.
+- Pulsa clic derecho en el panel para abrir su menú: muestra la energía almacenada y la producción actual.
+- Si rompes y recoges un panel, su energía almacenada se queda en el objeto.
+
+## Paso a paso
+
+1. Coloca el panel con la parte de arriba libre y abierta al cielo.
+2. Pon un cable, una batería o una máquina en cualquiera de los otros lados.
+3. Mira el menú para ver la producción y la energía almacenada.
+4. En los paneles grandes, recuerda el límite de transferencia: un panel de metal del vacío puede empujar 155.000.000 FE por tick, así que usa cables y baterías que lo aguanten.
+
+## La radiación del uranio del vacío
+
+El [](@thaumaturgetechcompats:void_uranium_solar_panel) es radiactivo. Con Mekanism instalado, cada segundo cada panel en tu **inventario** añade una dosis de 0,0002 Sv por cada objeto de la pila a tu radiación. Un traje Hazmat completo de Mekanism te protege del todo; los jugadores en creativo o espectador están exentos. Desactivar este panel en la configuración de compatibilidades quita el panel y la radiación.
+
+## Errores comunes
+
+- Tapar la parte de arriba del panel: necesita la cara superior despejada, y esa cara nunca saca energía.
+- Llevar pilas de paneles de uranio del vacío sin traje Hazmat.
+- Esperar la misma producción de noche: la producción sigue la curva solar de Solar Generation.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).

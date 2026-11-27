@@ -5,8 +5,9 @@
       "feature": "tainted_food"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "thaumaturgetechcompats:tainted_pumpkin_pie"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:tainted_pumpkin_pie"
     }
   ],
   "type": "thaumaturge:crucible",

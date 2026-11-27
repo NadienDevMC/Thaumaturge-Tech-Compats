@@ -1,0 +1,61 @@
+---
+id: thaumaturgetechcompats:alchemical_brass_aura_converter
+type: block
+title: Alchemical Brass Aura Converter
+---
+
+## What it is
+
+The Alchemical Brass Aura Converter drains vis from the aura of its chunk and turns it into **FE**, which it hands to every neighbouring block that accepts energy. It never takes energy in. Every vis it converts leaves 0.1 flux in the aura, it never drains the aura below 25% of its base value, and all the converters of a chunk share a limit of 1 vis per tick.
+
+| Property | Value |
+| --- | --- |
+| FE per vis | 1,000,000 |
+| Maximum output per tick | 1,000,000 FE |
+| Energy buffer | 100,000,000 FE |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:vis_resonator', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        '', 'thaumaturgetechcompats:thaumium_aura_converter', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_aura_converter"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:thaumium_aura_converter) |
+| Pedestal items | 4 × Alchemical Brass Plate, Simple Arcane Mechanism, Vis Resonator |
+| Essentia | Potentia 40, Machina 30, Auram 20 |
+| Instability | 3 |
+| Research | **Alchemical Brass Aura Converter** (Extras tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium one at the Arcane Workbench, research Aura Converter; the others infused over the one before).
+2. Place it in a chunk with aura and put blocks that accept FE against it (batteries, machines, cables).
+3. Right click it to read the stored energy, the aura of the chunk, its state and its rate.
+4. A redstone signal stops the conversion (the stored energy can still be taken out).
+
+## Used to make
+
+- [](@thaumaturgetechcompats:void_metal_aura_converter)
+
+> [!NOTE]- Thaumonomicon: Alchemical Brass Aura Converter
+> The brass wraps the resonator and nothing is lost on the way out.
+> 
+> **Alchemical Brass Aura Converter**
+> 
+> It is infused over a thaumium aura converter with alchemical brass plates, a simple mechanism and a vis resonator. Every vis becomes 1,000,000 FE. It gives out up to 1,000,000 FE per tick and stores 100,000,000 FE.
+
+**Guides of this chapter:** [Aura Converters]($extras/aura-converters)

@@ -45,8 +45,9 @@
       "feature": "star_crucifix_matrix"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:matrix_salis_mundus"
     }
   ],
   "type": "thaumaturge:infusion",

@@ -1,0 +1,48 @@
+---
+title: Conductos mágicos
+---
+
+> [!NOTE]
+> Requiere **Ender IO**. Los conductos (y toda la integración con Ender IO) se pueden desactivar en la configuración de compatibilidades; activados por defecto, hay que reiniciar el juego. Los números están en la configuración de conductos de Ender IO.
+
+## Qué es
+
+Nueve conductos que superan a los vibrantes de Ender IO: de **energía**, de **objetos** y de **fluidos**, cada uno en taumio, latón alquímico y metal del vacío. Son conductos de Ender IO (usan el objeto y el haz de conductos normales), así que se conectan, filtran y configuran igual que los de Ender IO, solo que más rápidos.
+
+| Nivel | Energía (RF por tick) | Objetos (objetos por ciclo, ticks por ciclo) | Fluidos (mB por tick) |
+| --- | --- | --- | --- |
+| Vibrante (Ender IO) | 192.000 | 64 por ciclo, 10 ticks | 8.000 |
+| Taumio | 750.000 | 64, cada 5 ticks | 32.000 |
+| Latón alquímico | 3.000.000 | 128, cada 4 ticks | 128.000 |
+| Metal del vacío | 12.000.000 | 256, cada 2 ticks | 512.000 |
+
+Los conductos de objetos se ajustan con su tasa de transferencia y sus ticks por ciclo (de 1 a 20, menos es más rápido); los de energía y fluidos solo tienen tasa de transferencia.
+
+## Cómo conseguirlos
+
+Investiga **Conductos mágicos** en la categoría Tech. Mesa de trabajo arcana, con forma: fila de arriba una placa del nivel, el material extra del tipo y una placa; fila del medio un Aglutinante de conductos (Ender IO), el conducto del nivel anterior y otro Aglutinante; fila de abajo una placa, el objeto inferior y una placa. El material extra es: lingote de aleación vibrante para energía, lingote de aleación pulsante para objetos, cristal vibrante para fluidos; el objeto inferior es una placa de taumio (taumio), mecanismo simple (latón alquímico) o semilla del vacío (metal del vacío). Cada fabricación da **8 conductos**.
+
+| Nivel | C (conducto anterior) | Vis | Cristales |
+| --- | --- | --- | --- |
+| Taumio | el conducto vibrante del mismo tipo (Ender IO) | 40 | cristal del tipo x2, ordo x1 |
+| Latón alquímico | el conducto de taumio del mismo tipo | 80 | cristal del tipo x3, ordo x2 |
+| Metal del vacío | el conducto de latón alquímico del mismo tipo | 120 | cristal del tipo x4, ordo x3 |
+
+Cristal del tipo: ignis para energía, aer para objetos, aqua para fluidos.
+
+## Paso a paso
+
+1. Fabrica o consigue un conducto vibrante del tipo que quieras.
+2. Fabrica con él el conducto de taumio y sube de nivel.
+3. Colócalos como cualquier conducto de Ender IO; usa las herramientas de conductos de Ender IO para conectar y fijar modos.
+
+## Errores comunes
+
+- Empezar desde un conducto básico: el primer nivel pide el vibrante.
+- Mezclar tipos: el conducto base debe ser del mismo tipo (energía con energía).
+- Olvidar los Aglutinantes de conductos (2 por fabricación).
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de los conductos de Ender IO del mod.

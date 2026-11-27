@@ -145,7 +145,7 @@ public class OritechContent implements DataProvider {
         return entry(NODES_RESEARCH,
                 List.of(TechCategory.HEADER_ID, "thaumaturge:base_infusion"),
                 NODE_ROW,
-                ORITECH + ":resource_node_uranium",
+                ORITECH + ":uranium_resource_node",
                 recipes,
                 "thaumaturge:artifice", 1, 1,
                 aspects("thaumaturge:permutatio", 4, "thaumaturge:metallum", 4, "thaumaturge:terra", 3),
@@ -226,13 +226,13 @@ public class OritechContent implements DataProvider {
     private static JsonObject deepDrill(OritechNode node) {
         JsonObject json = new JsonObject();
         json.add("neoforge:conditions", nodeConditions(node));
-        json.addProperty("type", ORITECH + ":deep_drill");
+        json.addProperty("type", ORITECH + ":bedrock_extractor");
         JsonArray ingredients = new JsonArray();
         ingredients.add(item(MOD + ":" + node.blockName()));
-        json.add("ingredients", ingredients);
+        json.add("itemInputs", ingredients);
         JsonArray results = new JsonArray();
         results.add(CompatJson.result(node.product(), node.production()));
-        json.add("results", results);
+        json.add("itemResults", results);
         json.addProperty("time", 1);
         return json;
     }

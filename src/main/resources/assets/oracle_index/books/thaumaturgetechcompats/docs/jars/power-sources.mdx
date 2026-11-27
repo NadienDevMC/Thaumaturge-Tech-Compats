@@ -1,0 +1,50 @@
+---
+title: Magical Power Sources
+icon: thaumaturgetechcompats:flux_jar
+related_items: [thaumaturgetechcompats:flux_jar, thaumaturgetechcompats:rift_jar]
+---
+
+> [!NOTE]
+> Part of the "node power" base (it can be switched off in the compatibilities config, on by default, needs a restart). Settings: the node power config.
+
+## What it is
+
+Several machines of this mod (the Thaummotor, the Magical Laser Drill, the magical Miners and Solar Panels of Void Miners, Unearthers and others) run on **magical power** instead of electricity. They draw it from a source close to them. The sources are:
+
+| Source | What it is |
+| --- | --- |
+| Jarred node | a node kept in a jar |
+| Flux Jar | a [](@thaumaturgetechcompats:flux_jar) of any tier |
+| Rift Jar | a [](@thaumaturgetechcompats:rift_jar) |
+| Rift | a free flux rift |
+| World node | a node in the world |
+
+A machine uses **only the first source it finds**, in the source order of the node power config (default: jarred node, Flux Jar, Rift Jar, rift, world node). A node that is hungry is **never** a valid source.
+
+## How the sources are spent
+
+| Setting | Default | Meaning |
+| --- | --- | --- |
+| Node consume ratio | 0 | fraction of the power drawn that is really removed from a node or jarred node; 0 makes nodes inexhaustible, 1 makes them a tank that empties |
+| Rift shrink chance | 0.33 | chance a free rift shrinks by one point for every unit of power taken |
+| Rift minimum size | 1 | a rift at or below this size stops being a source |
+
+Flux and Rift jars lose the power the machine takes; the Flux Jar refills itself from the aura.
+
+## Step by step
+
+1. Decide which source you want and place it close to the machine (the exact reach depends on each machine and is shown by its goggles or tooltip when it has one).
+2. Place the machine. It takes power every few moments while it works.
+3. If you want to choose which source is used first, edit the source order in the node power config.
+4. Watch the source: a Flux Jar or Rift Jar that runs empty, or a rift that reaches its minimum, stops powering the machine.
+
+## Common mistakes
+
+- Relying on a hungry node: it is never a valid source.
+- Putting a Flux Jar in a clean chunk: with no flux in the aura it never fills.
+- Expecting nodes to be drained by default: with the default consume ratio of 0 they are inexhaustible.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's node power configuration.

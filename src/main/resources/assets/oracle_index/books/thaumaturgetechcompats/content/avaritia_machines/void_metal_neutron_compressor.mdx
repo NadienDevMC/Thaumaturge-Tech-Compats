@@ -1,0 +1,65 @@
+---
+id: thaumaturgetechcompats:void_metal_neutron_compressor
+type: block
+title: Void Neutron Compressor
+---
+
+> [!NOTE]
+> Needs the **Avaritia** mod.
+
+## What it is
+
+The Void Neutron Compressor replaces Avaritia's Densest Neutronium Compressor and uses its recipes, the singularities included. It works several times per tick and multiplies the result of every recipe with the same materials.
+
+| Property | Value |
+| --- | --- |
+| Work cycles per tick (default) | 8 |
+| Output multiplier (default) | 4 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:plate_void', '', 
+        'thaumaturge:void_seed', 'thaumaturgetechcompats:alchemical_brass_neutron_compressor', 'thaumaturge:plate_void', 
+        'thaumaturge:plate_void', '', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_neutron_compressor"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:alchemical_brass_neutron_compressor) |
+| Pedestal items | 4 × Void Metal Plate, Void Seed |
+| Essentia | Machina 48, Praemunio 48, Alienis 32, Nuclear 24, Cosmic 32, Terminus 24 |
+| Instability | 9 |
+| Center of the altar | [](@thaumaturgetechcompats:infinity_infusion_matrix) (by default) |
+| Research | **Higher Neutronium Machines** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Higher Neutronium Machines and infuse it from the compressor of the tier before.
+2. Place it and open it with right click.
+3. Choose the recipe and feed the materials as in Avaritia's compressor.
+4. Collect the output; extra copies are limited by the room left in the output slot.
+
+> [!NOTE]- Thaumonomicon: Higher Neutronium Machines
+> Every machine is made on an infusion altar, starting from the one before it:
+> - The Thaumium Neutron Collector and Compressor need the Densest Neutronium Collector or Compressor, four thaumium plates and a Simple Arcane Mechanism.
+> - The Brass Neutron Collector and Compressor need the Thaumium machine, four alchemical brass plates and a Simple Arcane Mechanism.
+> - The Void Neutron Collector and Compressor need the Brass machine, four void metal plates and a Void Seed.
+> They work exactly like the machines of Avaritia and use the same recipes, only faster, and each tier also gives more every time it finishes. How much faster and how much more is set in the configuration.
+> Each tier can only be infused on an altar whose center is the Runic Matrix of its own tier, and that matrix brings its own instability to the craft:
+> - The Thaumium machines need the Crystal Matrix one: solar instability, with fires, lightning and burns.
+> - The Brass machines need the Neutronium one: nuclear instability, with radiation, flux poured into the aura and a meltdown that explodes.
+> - The Void machines need the Infinity one: cosmic instability, with flux torn open, warp, creatures from beyond and everything nearby thrown elsewhere.
+> The Brass and Void machines also ask for two new essences. Nuclear, made of potentia and perditio, is the power locked in the heart of matter. Cosmic, made of alienis and auram, is the vastness between the stars. The Brass machines ask for Nuclear, and the Void machines ask for Nuclear and Cosmic.
+
+**Guides of this chapter:** [Higher Neutron Machines, Tiers and Recipes]($avaritia_machines/tiers-and-recipes) · [Using the Tiered Neutron Compressors]($avaritia_machines/neutron-compressor)

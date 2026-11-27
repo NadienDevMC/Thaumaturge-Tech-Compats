@@ -1,0 +1,60 @@
+---
+title: Enlaces de transmisión y Extractor de grietas
+icon: thaumaturgetechcompats:thaumium_transmission_link
+related_items: [thaumaturgetechcompats:thaumium_transmission_link, thaumaturgetechcompats:alchemical_brass_transmission_link, thaumaturgetechcompats:void_metal_transmission_link, thaumaturgetechcompats:transmission_linker, thaumaturgetechcompats:rift_extractor]
+---
+
+> [!NOTE]
+> Parte de la red de Flujo Dimensional (DF). Cada nivel se puede desactivar en la configuración de compatibilidades. Valores: configuración de flujo (alcance y velocidad de los enlaces, y la sección del extractor de grietas).
+
+## Enlaces de transmisión
+
+### Qué son
+
+Los enlaces mueven DF entre dispositivos que nunca se tocan: dos enlaces sintonizados entre sí forman un rayo visible. El flujo va en los dos sentidos hasta que ambos búferes están igual de llenos, y un enlace también toma flujo de los almacenes que tiene al lado y se lo da a los que pueden recibirlo. Los enlaces puestos uno junto a otro se pasan el flujo, así que se pueden hacer cadenas. El alcance de una pareja es el menor de los dos, y solo funciona mientras ambos extremos estén cargados.
+
+| Enlace | Alcance | Mueve por tick |
+|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_transmission_link) | 16 bloques | 2.000 DF |
+| [](@thaumaturgetechcompats:alchemical_brass_transmission_link) | 48 bloques | 20.000 DF |
+| [](@thaumaturgetechcompats:void_metal_transmission_link) | 128 bloques | 200.000 DF |
+
+### Cómo conseguirlos
+
+- **Enlace de transmisión de taumio** (dos por crafteo): mesa de trabajo arcana, fila de arriba Placa de taumio, Azogue y Placa de taumio; fila del medio Azogue, Mecanismo arcano simple y Azogue; fila de abajo tres Placas de taumio (cristales aer 2, ordo 1; 40 de vis).
+- **Enlazador de transmisión**: mesa de trabajo arcana, columna de Azogue, Placa de taumio y Mecanismo arcano simple (cristal aer 1; 20 de vis).
+- **Enlace de latón alquímico**: infusión alrededor de un Enlace de taumio con cuatro placas de latón, un Mecanismo arcano simple y Azogue. El Enlace de metal del vacío continúa la cadena.
+
+### Paso a paso
+
+1. Coloca dos enlaces del mismo nivel.
+2. Usa el [](@thaumaturgetechcompats:transmission_linker) en el primer enlace y luego en el segundo: se emparejan.
+3. Para romper una pareja: agáchate y usa el enlazador en un enlace. Agáchate y úsalo al aire para limpiar la selección.
+4. Pulsa clic derecho en un enlace para leer su flujo, pareja, distancia, ritmo y estado (*enlazado*, *fuera de alcance*, *pareja no cargada*, *sin enlazar*, *desactivado*).
+
+Cada enlace tiene una sola pareja. Las parejas más lejos que el alcance no se conectan.
+
+## Extractor de grietas
+
+### Qué es
+
+El [](@thaumaturgetechcompats:rift_extractor) absorbe energía directamente de una grieta de flujo abierta a menos de 6 bloques, quitándole un punto de tamaño cada 40 ticks y convirtiendo cada punto en 5.000 DF. Se detiene cuando la grieta llega a su tamaño mínimo o cuando no le queda sitio. Guarda 50.000 DF y empuja hasta 2.000 DF por tick a los almacenes y Enlaces de transmisión que lo tocan.
+
+Receta en altar de infusión: una Jarra de flux como catalizador, una Semilla del vacío, cuatro placas de metal del vacío y un Mecanismo arcano complejo.
+
+### Paso a paso
+
+1. Coloca el extractor a menos de 6 bloques de una grieta de flujo.
+2. Pon un Núcleo de almacenamiento o un Enlace de transmisión pegado a él.
+3. Pulsa clic derecho para ver la grieta al alcance, el ritmo y el DF guardado.
+
+## Errores comunes
+
+- Emparejar enlaces separados más que el menor de los dos alcances.
+- Dejar el extractor sin un vecino que acepte DF: se llena y se detiene.
+- Enlazar sin seleccionar el primer enlace: el enlazador necesita dos clics.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de la red de flujo del mod.

@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_brass"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "b": "thaumaturge:plate_brass",
+    "p": "solargeneration:photovoltaic_cell",
+    "s": "thaumaturgetechcompats:alchemical_solar_panel"
+  },
+  "pattern": [
+    "ppp",
+    "bsb",
+    "bbb"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:solargeneration_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:brass_solar_panel"
+  },
+  "vis": 20
+}

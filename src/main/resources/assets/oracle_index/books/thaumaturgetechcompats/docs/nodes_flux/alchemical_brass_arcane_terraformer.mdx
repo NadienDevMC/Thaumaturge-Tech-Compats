@@ -1,0 +1,58 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_arcane_terraformer
+title: Alchemical Brass Arcane Terraformer
+---
+
+## What it is
+
+The Alchemical Brass Arcane Terraformer repaints the biome of the area around it, column by column starting at its feet, to the biome of its **bait** (an item that stands for a biome: sand for a desert, snow for the tundra, a sapling for a forest).
+
+| Property | Value |
+| --- | --- |
+| Radius | 32 blocks |
+| Dimensional Flux stored | 2,000,000 |
+| DF per 4x4 column | 1,500 |
+| Columns per cycle | 6 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'minecraft:snow_block', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        'minecraft:cactus', 'thaumaturgetechcompats:thaumium_arcane_terraformer', 'thaumaturge:plate_brass', 
+        'thaumaturge:vis_resonator', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_arcane_terraformer"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($nodes_flux/thaumium_arcane_terraformer) |
+| Pedestal items | 4 × Alchemical Brass Plate, Simple Arcane Mechanism, Vis Resonator, Cactus, Snow Block |
+| Essentia | Permutatio 40, Terra 30, Potentia 20 |
+| Instability | 3 |
+| Research | **Alchemical Brass Arcane Terraformer** (Flux Gear tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium one at the Arcane Workbench, the others infused around the one before).
+2. Supply it with DF (Storage Core, Transmission Link or Rift Extractor touching it).
+3. Right click it with the bait item. Sneak and right click with an empty hand to take the bait back.
+4. Right click it again to read its progress, radius and state. Biomes and dimensions blocked in the config are left alone.
+
+## Used to make
+
+- []($nodes_flux/void_metal_arcane_terraformer)
+
+> [!NOTE]- Thaumonomicon: Alchemical Brass Arcane Terraformer
+> The Alchemical Brass Arcane Terraformer is infused from a thaumium one, with four brass plates, a simple mechanism, a vis resonator, a cactus and a block of snow.
+> It repaints a wider area, several columns at a time, and for less flux per column.
+
+**Guides of this chapter:** [Shield Generators and Arcane Terraformers]($nodes_flux/flux-field)

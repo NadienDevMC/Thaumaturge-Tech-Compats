@@ -15,7 +15,7 @@ import java.util.function.Consumer;
 
 public class FluxKnifeItem extends KnifeItem {
     public FluxKnifeItem(Properties properties) {
-        super(FluxKnife.INSTANCE, properties);
+        super(FluxKnife.material(), properties);
     }
 
     @Override

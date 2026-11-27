@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_brass_andesite"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "a": "create:andesite_alloy",
+    "b": "create:brass_ingot",
+    "p": "solargeneration:photovoltaic_cell",
+    "s": "thaumaturgetechcompats:alchemical_solar_panel"
+  },
+  "pattern": [
+    "ppp",
+    "asa",
+    "bbb"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:solargeneration_brass_andesite"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:brass_andesite_solar_panel"
+  },
+  "vis": 20
+}

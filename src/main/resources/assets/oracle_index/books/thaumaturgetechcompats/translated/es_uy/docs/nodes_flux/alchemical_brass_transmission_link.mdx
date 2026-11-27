@@ -1,0 +1,57 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_transmission_link
+title: Enlace de transmisión de latón alquímico
+---
+
+## Qué es
+
+El Enlace de transmisión de latón alquímico mueve flujo dimensional entre dispositivos que no se tocan. Dos enlaces sintonizados forman un rayo visible; el flujo va en los dos sentidos hasta que ambos están igual de llenos, y cada enlace también toma flujo de los almacenes de al lado y lo da a los que pueden recibirlo. Los enlaces juntos se pasan el flujo, así que se pueden hacer cadenas.
+
+| Propiedad | Valor |
+| --- | --- |
+| Alcance | 48 bloques |
+| Mueve por tick | 20.000 DF |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:quicksilver', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        '', 'thaumaturgetechcompats:thaumium_transmission_link', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_transmission_link"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($nodes_flux/thaumium_transmission_link) |
+| Objetos en los pedestales | 4 × Placa de latón alquímico, Mecanismo arcano simple, Mercurio |
+| Esencia | Permutatio 24, Motus 24, Potentia 24 |
+| Inestabilidad | 3 |
+| Investigación | **Enlace de transmisión de latón alquímico** (pestaña Red de flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrica dos enlaces del mismo nivel (el de taumio en la Mesa de trabajo arcana, dos por crafteo).
+2. Usa el Vinculador de transmisión en el primer enlace y luego en el segundo: quedan emparejados.
+3. Mantén la pareja dentro del alcance (el menor de los dos) y ambos extremos cargados.
+4. Haz clic derecho en un enlace para ver su flujo, pareja, distancia, ritmo y estado.
+5. Para romper una pareja, agáchate y usa el vinculador en un enlace.
+
+## Se usa para fabricar
+
+- []($nodes_flux/void_metal_transmission_link)
+
+> [!NOTE]- Thaumonomicon: Enlace de transmisión de latón alquímico
+> El Enlace de transmisión de latón alquímico se fabrica en un altar de infusión a partir de un Enlace de transmisión de taumio, placas de latón alquímico, un mecanismo arcano simple y mercurio.
+> Llega más lejos y mueve mucho más Flujo cada tick. Se puede emparejar con un enlace de otro nivel, pero la pareja solo llega y mueve lo que permita el más débil de los dos.
+
+**Guías de este capítulo:** [Enlaces de transmisión y Extractor de grietas]($nodes_flux/flux-links)

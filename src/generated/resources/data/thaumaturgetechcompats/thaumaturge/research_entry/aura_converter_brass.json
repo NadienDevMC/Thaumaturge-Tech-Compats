@@ -13,8 +13,8 @@
       "feature": "aura_converter_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 27,
+  "category": "thaumaturgetechcompats:17_extras",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:alchemical_brass_aura_converter"
@@ -43,7 +43,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

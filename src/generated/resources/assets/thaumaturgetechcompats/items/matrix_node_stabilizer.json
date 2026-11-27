@@ -3,8 +3,8 @@
     "type": "minecraft:special",
     "base": "thaumaturgetechcompats:item/matrix_node_stabilizer",
     "model": {
-      "type": "thaumaturge:node_stabilizer",
-      "advanced": false
+      "type": "thaumaturgetechcompats:tiered_device",
+      "block": "thaumaturgetechcompats:matrix_node_stabilizer"
     }
   }
 }

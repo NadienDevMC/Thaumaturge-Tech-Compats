@@ -1,0 +1,69 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_brass"
+    }
+  ],
+  "category": "thaumaturgetechcompats:03_solar_panels",
+  "column": 0,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:brass_solar_panel"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.solargeneration_brass.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:sol"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:solargeneration_alchemical",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.solargeneration_brass.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/solargeneration/brass_solar_panel"
+      ],
+      "text": "research.thaumaturgetechcompats.solargeneration_brass.stage_1"
+    }
+  ]
+}

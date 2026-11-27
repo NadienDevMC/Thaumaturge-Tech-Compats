@@ -27,7 +27,7 @@
   "key": {
     "B": "enderio:conduit_binder",
     "C": {
-      "type": "enderio:conduit",
+      "neoforge:ingredient_type": "enderio:conduit",
       "conduit_type": "thaumaturgetechcompats:thaumium_energy"
     },
     "E": "enderio:vibrant_alloy_ingot",

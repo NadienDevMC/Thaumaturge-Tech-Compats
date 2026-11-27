@@ -5,8 +5,8 @@
       "feature": "avaritia_machine_tiers"
     }
   ],
-  "category": "thaumaturgetechcompats:avaritia",
-  "column": 4,
+  "category": "thaumaturgetechcompats:01_avaritia",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:void_metal_neutron_collector"

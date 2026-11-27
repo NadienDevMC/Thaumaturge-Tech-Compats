@@ -1,0 +1,40 @@
+---
+title: Ajustes de la comida contaminada
+icon: thaumaturgetechcompats:tainted_apple
+related_items: [thaumaturgetechcompats:tainted_apple]
+---
+
+> [!NOTE]
+> Archivo: la configuración de la comida contaminada. La mayoría de los valores piden reinicio del juego. El interruptor general está en la configuración de compatibilidades.
+
+## Qué es
+
+Todo lo de la comida contaminada se puede ajustar. Los mismos ajustes existen para las comidas de Farmer's Delight en la configuración de la comida contaminada de Farmer's Delight (mira ese capítulo).
+
+| Ajuste | Por defecto | Significado |
+| --- | --- | --- |
+| Activado | true | apaga todas las comidas contaminadas: sin objetos ni recetas |
+| Comidas | las diez | las comidas contaminadas que existen, por id de objeto; quita una entrada para quitar esa comida y su receta |
+| Multiplicador de hambre | 1,5 | multiplica el hambre que da el original (0,1 a 20) |
+| Multiplicador de saturación | 1,5 | multiplica la saturación que da el original (0 a 20) |
+| Efecto | Corrupción por flujo | efecto que aplica toda comida contaminada |
+| Duración del efecto (ticks) | 200 | duración base del efecto |
+| Multiplicador de duración | 1,0 | multiplica la duración; 0 quita el efecto |
+| Nivel del efecto | 0 | nivel del efecto, 0 es el nivel uno |
+| Probabilidad del efecto | 1,0 | probabilidad de que comer aplique el efecto |
+
+## Paso a paso
+
+1. Edita el archivo con el juego cerrado.
+2. Reinicia: la lista de objetos, los multiplicadores y la probabilidad del efecto se leen al arrancar.
+3. Para quitar una sola comida, borra su id de la lista de comidas.
+
+## Errores comunes
+
+- Poner el multiplicador de duración en 0 y esperar que se quede la Corrupción por flujo: quita el efecto por completo.
+- Editar con el juego abierto: la mayoría de los valores piden reinicio.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de la comida contaminada del mod.

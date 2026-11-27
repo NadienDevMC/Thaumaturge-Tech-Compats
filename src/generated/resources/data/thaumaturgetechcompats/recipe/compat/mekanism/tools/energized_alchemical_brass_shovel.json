@@ -1,0 +1,57 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools_thaumium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:instrumentum"
+    }
+  ],
+  "catalyst": "minecraft:iron_shovel",
+  "components": [
+    "mekanism:energy_tablet",
+    "mekanism:energy_tablet",
+    "mekanism:alloy_infused",
+    "mekanism:basic_control_circuit",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturgetechcompats:energized_thaumium_shovel"
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:mekanismtools_alchemical_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:energized_alchemical_brass_shovel"
+  }
+}

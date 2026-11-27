@@ -1,0 +1,54 @@
+---
+title: Runic Matrices of Avaritia
+icon: thaumaturgetechcompats:neutronium_infusion_matrix
+related_items: [thaumaturgetechcompats:matrix_infusion_matrix, thaumaturgetechcompats:neutronium_infusion_matrix, thaumaturgetechcompats:infinity_infusion_matrix]
+---
+
+> [!NOTE]
+> Needs the **Avaritia** mod. The matrix variants can be switched off in the compatibilities config. Numbers: the matrix sections of the infusion config, one per matrix.
+
+## What it is
+
+The Runic Matrix of Thaumaturge keeps an infusion in order only while the altar around it is perfectly balanced. These three matrices keep their own order and answer for it with their own disorder:
+
+- they **never ask for a symmetric altar**,
+- their **stability does not recover**,
+- what goes wrong is decided by the **instability of the craft** being infused, and it is never gentle.
+
+| Matrix | Instability | Essentia counting | Loss multiplier | Effect radius |
+| --- | --- | --- | --- | --- |
+| [](@thaumaturgetechcompats:matrix_infusion_matrix) | Solar | 1x | 1.0 | 6 blocks |
+| [](@thaumaturgetechcompats:neutronium_infusion_matrix) | Nuclear | 1x | 1.5 | 8 blocks |
+| [](@thaumaturgetechcompats:infinity_infusion_matrix) | Cosmic | 20x | 3.0 | 12 blocks |
+
+"Loss multiplier" is the multiplier of the stability the matrix loses each cycle: the faster it loses stability, the sooner the events start. "Essentia counting" means every unit of essentia that enters the matrix counts as that many units of the recipe, so the Infinity matrix is much cheaper in essentia. Each variant has a switch for its instability effects.
+
+## How to get them
+
+Each matrix is infused on an altar whose center is the **tier before it**:
+
+| Matrix | Catalyst | Components | Aspects | Instability |
+| --- | --- | --- | --- | --- |
+| Crystal Matrix | plain Runic Matrix (on a plain altar) | 4 Crystal Matrix Ingots | Potentia 24, Lux 16, Ignis 16, Terminus 4 | 3 |
+| Neutronium | Crystal Matrix Runic Matrix (center) | 4 Neutron Ingots | Potentia 32, Perditio 32, Metallum 24, Terminus 8 | 6 |
+| Infinity | Neutronium Runic Matrix (center) | 4 Infinity Ingots, [](@thaumaturgetechcompats:extremely_primordial_pearl) | Potentia 48, Alienis 48, Vacuos 32, Terminus 24 | 9 |
+
+Everything else of these metals (jars, foci, wand parts, smelteries, pedestals...) needs the matrix of its **own tier** at the center. Their tooltips say which one.
+
+## Step by step
+
+1. Research "Runic Matrices of Avaritia".
+2. Build a plain altar and infuse the Crystal Matrix matrix with a plain Runic Matrix as catalyst.
+3. Swap the altar's center for the new matrix and infuse the Neutronium one, then the Infinity one the same way.
+4. Prepare for the instability: see the Instability Effects page.
+
+## Common mistakes
+
+- Infusing the Neutronium matrix on a plain altar: it needs the Crystal Matrix one at the center.
+- Standing next to the altar when a Nuclear or Cosmic matrix is working.
+- Turning the tier rule off (globally or per tier in the infusion config): tiered items stop demanding their own matrix, so you skip the matching instability too, which changes the balance of the progression.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's infusion configuration.

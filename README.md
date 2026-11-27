@@ -21,6 +21,23 @@ Avaritia content for **Thaumaturge**, ported from the Thaumcraft compat of the o
 
 * `Neo/1.21.1` — Minecraft 1.21.1
 
+## For developers
+
+Releases are published to [Maven Central](https://central.sonatype.com/search?q=thaumaturgetechcompats). In your `build.gradle`:
+
+```groovy
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // <minecraft version>-<mod version>-NeoForge, for example 26.1.2-1.0.3-NeoForge
+    implementation 'fun.nadiendev:thaumaturgetechcompats:<version>'
+}
+```
+
+The version is the Minecraft version, the mod version and the loader joined by dashes, the same as the name of the jar on CurseForge. Search for `thaumaturgetechcompats` on Maven Central to see every version that is published. This applies to the NeoForge 26.1.2 branch.
+
 ## Credits
 
 Thank you to **Spiteful_Fox** for creating Avaritia and its Thaumcraft integration, the starting point of this mod. See [CREDITS.md](CREDITS.md).

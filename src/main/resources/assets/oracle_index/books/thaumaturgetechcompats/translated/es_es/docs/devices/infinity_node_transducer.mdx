@@ -1,0 +1,55 @@
+---
+icon: thaumaturgetechcompats:infinity_node_transducer
+title: Transductor de nodos de infinito
+---
+
+> [!NOTE]
+> Necesita materiales del mod **Avaritia**.
+
+## Qué es
+
+El Transductor de nodos de infinito va encima de un nodo estabilizado y, alimentado con redstone, lo energiza. Gasta el mismo punto de aspecto por tick que el Transductor de nodos normal, pero carga el nodo más rápido y su carga se pierde más despacio. Un nodo queda energizado con 1000 puntos de carga.
+
+| Propiedad | Valor |
+| --- | --- |
+| Carga por tick | 10 |
+| Pierde 1 punto de carga cada (sin redstone) | 10 ticks |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'thaumaturgetechcompats:infinity_plate', 'minecraft:comparator', 'thaumaturgetechcompats:infinity_plate', 
+        'avaritia:infinity_ingot', 'thaumaturgetechcompats:neutronium_node_transducer', 'avaritia:infinity_ingot', 
+        'thaumaturgetechcompats:infinity_plate', 'thaumaturge:nitor_white', 'thaumaturgetechcompats:infinity_plate'
+    ]}
+    result="thaumaturgetechcompats:infinity_node_transducer"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 4 × []($avaritia/infinity_plate), Comparador de redstone, 2 × Infinity Ingot, []($devices/neutronium_node_transducer), Nítor blanco (o similar) |
+| Vis | 1600 |
+| Cristales | Ordo 4 |
+| Investigación | **Transductores de Nodos de Avaritia** (pestaña Avaritia) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Transductores de nodos de Avaritia y fabrícalo en la Mesa de trabajo arcana alrededor del transductor del nivel anterior.
+2. Estabiliza primero el nodo (cualquier estabilizador de nodos).
+3. Coloca el transductor encima del nodo estabilizado.
+4. Dale una señal de redstone y mantenla hasta que el nodo esté energizado; sin la señal la carga baja.
+
+> [!NOTE]- Thaumonomicon: Transductores de Nodos de Avaritia
+> Cada transductor se construye alrededor del anterior, con cuatro placas y dos lingotes de su propio material, un comparador y un nitor:
+> - Matriz de Cristal: carga un nodo 2 veces más rápido y pierde la carga a la mitad de velocidad.
+> - Neutronio: 4 veces más rápido, con una carga que se desvanece 4 veces más despacio.
+> - Infinito: 10 veces más rápido, con una carga que se desvanece 10 veces más despacio.
+> Se colocan sobre un nodo estabilizado y se activan con redstone igual que el Transductor de nodos, y drenan el mismo punto de aspecto por tick, así que el nodo se energiza con una fracción de los aspectos.
+
+**Guías de este capítulo:** [Estabilizadores y transductores de nodos]($devices/node-devices)

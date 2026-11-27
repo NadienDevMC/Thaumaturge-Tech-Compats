@@ -1,0 +1,54 @@
+---
+id: thaumaturgetechcompats:void_metal_shield_generator
+type: block
+title: Generador de escudo de metal del vacío
+---
+
+## Qué es
+
+El Generador de escudo de metal del vacío levanta una burbuja a su alrededor mientras guarde flujo dimensional. La burbuja destruye los proyectiles de los monstruos, empuja fuera a los monstruos (nunca a los jefes) y quita el daño de las explosiones de dentro (los bloques de dentro no se destruyen).
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio | 32 bloques |
+| Flujo dimensional que guarda | 10.000.000 |
+| DF por tick con la burbuja activa | 160 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:mirrored_glass', 'thaumaturge:plate_void', 'thaumaturge:plate_void', 
+        'thaumaturge:vis_resonator', 'thaumaturgetechcompats:alchemical_brass_shield_generator', 'thaumaturge:plate_void', 
+        'thaumaturge:vis_resonator', 'thaumaturge:mechanism_complex', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_shield_generator"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:alchemical_brass_shield_generator) |
+| Objetos en los pedestales | 4 × Placa de metal del vacío, Mecanismo arcano complejo, 2 × Resonador de Vis, Cristal de espejo |
+| Esencia | Praemunio 80, Potentia 60, Vacuos 40, Machina 40 |
+| Inestabilidad | 4 |
+| Investigación | **Generador de escudo de metal del vacío** (pestaña Equipo flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del anterior).
+2. Dale DF (un Núcleo de almacenamiento, un Enlace de transmisión o un Extractor de grietas tocándolo).
+3. Cada tick de burbuja cuesta DF, igual que cada proyectil o explosión que absorbe. Cuando se acaba el flujo se apaga hasta volver a tener suficiente.
+4. Haz clic derecho para ver su estado.
+
+> [!NOTE]- Thaumonomicon: Generador de escudo de metal del vacío
+> El Generador de escudo de metal del vacío se infunde a partir de uno de latón alquímico, con cuatro placas de metal del vacío, un mecanismo complejo, dos resonadores de vis y un vidrio espejado.
+> Almacena el máximo de flujo y proyecta la burbuja más amplia, con un gasto de flujo por tick a la altura.
+
+**Guías de este capítulo:** [Generadores de escudo y Terraformadores arcanos]($nodes_flux/flux-field)

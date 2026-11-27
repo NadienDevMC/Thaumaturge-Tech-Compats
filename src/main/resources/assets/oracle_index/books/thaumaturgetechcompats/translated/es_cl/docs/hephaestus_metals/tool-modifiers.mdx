@@ -1,0 +1,39 @@
+---
+title: Modificadores de herramientas de Hephaestus
+---
+
+> [!NOTE]
+> Necesita **Hephaestus Tools**. Los modificadores aparecen en la Mesa del arsenal. Nivel máximo de cada uno: 12.
+
+## Qué son
+
+Cuatro mejoras extra para las herramientas de Hephaestus. Se aplica una en la **Mesa del arsenal** (pestaña Modificar): cada nivel consume **un lingote** de su material y necesita una ranura de mejora libre en la herramienta. Se puede subir hasta el nivel 12. En el nivel 12 la herramienta **nunca pierde durabilidad**.
+
+| Modificador | Lingote que consume por nivel | Efecto |
+|---|---|---|
+| Irrompible | Lingote de taumio | Probabilidad de no perder durabilidad que crece con cada nivel (actúa como Irrompibilidad de nivel 2 x nivel al cuadrado) |
+| Reparación de vis | Lingote de latón | La herramienta se repara con el tiempo, mucho más rápido mientras el aura del chunk tenga vis |
+| Teletransporte del vacío | Lingote de metal del vacío | Los bloques minados y los botines de los mobs van directos a tu inventario: probabilidad nivel / 8 por botín, siempre desde el nivel 8 |
+| Teletransporte ender | Tela de Thaumaturge | Usa la herramienta (clic derecho) para teletransportarte hacia delante como un enderman; al golpear a un mob puedes saltar a otro sitio |
+
+### Detalles de la Reparación de vis
+
+Cada 2 segundos, por cada herramienta dañada de tu inventario, repara hasta 5 puntos de durabilidad por nivel, pagando 0,02 de vis por punto del aura del chunk donde estás. Si el aura no puede pagar, repara solo una cantidad lenta (nivel / 6 puntos, al menos 1).
+
+### Detalles del Teletransporte ender
+
+- Alcance: 6 + 2 por nivel bloques (se detiene antes de las paredes).
+- Enfriamiento: 60 - 4 por nivel ticks, nunca menos de 10.
+- Al golpear a un mob, cada golpe tiene un 3% por nivel de probabilidad de enviarte a un punto aleatorio cercano (radio 3 + la mitad del nivel).
+
+## Paso a paso
+
+1. Construye la herramienta (por ejemplo con los metales de las páginas anteriores).
+2. Abre la Mesa del arsenal y ve a la pestaña Modificar.
+3. Elige el modificador e inserta sus lingotes. Un lingote da un nivel; repite hasta el nivel que quieras (máximo 12).
+
+## Errores comunes
+
+- Sin ranura de mejora libre en la herramienta: el modificador no se aplica.
+- Esperar que el Teletransporte del vacío recoja todo por debajo del nivel 8: antes solo una parte de los botines va al inventario.
+- Usar la Reparación de vis en un chunk sin vis: repara despacio.

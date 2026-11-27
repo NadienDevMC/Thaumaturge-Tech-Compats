@@ -1,0 +1,74 @@
+{
+  "category": "thaumaturgetechcompats:16_extra_metals",
+  "name": "research.thaumaturgetechcompats.extra_metals.title",
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:cap_void"
+  ],
+  "column": 0,
+  "row": 0,
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "icons": [
+    "thaumaturgetechcompats:rifting_ingot"
+  ],
+  "stages": [
+    {
+      "text": "research.thaumaturgetechcompats.extra_metals.stage_0",
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "category": "thaumaturge:auromancy",
+          "amount": 2
+        }
+      ],
+      "warp": 1
+    },
+    {
+      "text": "research.thaumaturgetechcompats.extra_metals.stage_1",
+      "recipes": [
+        "thaumaturgetechcompats:crucible/rifting_ingot",
+        "thaumaturgetechcompats:infusion/fibric_ingot",
+        "thaumaturgetechcompats:infusion/salis_ingot",
+        "thaumaturgetechcompats:infusion/crimson_ingot",
+        "thaumaturgetechcompats:wand/part/rifting_inert_wand_rod",
+        "thaumaturgetechcompats:wand/part/rifting_inert_wand_cap",
+        "thaumaturgetechcompats:infusion/rifting_wand_rod",
+        "thaumaturgetechcompats:infusion/rifting_wand_cap",
+        "thaumaturgetechcompats:wand/part/fibric_inert_wand_rod",
+        "thaumaturgetechcompats:wand/part/fibric_inert_wand_cap",
+        "thaumaturgetechcompats:infusion/fibric_wand_rod",
+        "thaumaturgetechcompats:infusion/fibric_wand_cap",
+        "thaumaturgetechcompats:wand/part/salis_inert_wand_rod",
+        "thaumaturgetechcompats:wand/part/salis_inert_wand_cap",
+        "thaumaturgetechcompats:infusion/salis_wand_rod",
+        "thaumaturgetechcompats:infusion/salis_wand_cap",
+        "thaumaturgetechcompats:wand/part/crimson_inert_wand_rod",
+        "thaumaturgetechcompats:wand/part/crimson_inert_wand_cap",
+        "thaumaturgetechcompats:infusion/crimson_wand_rod",
+        "thaumaturgetechcompats:infusion/crimson_wand_cap",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_rifting_thaumaturgetechcompats_rifting",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_fibric_thaumaturgetechcompats_fibric",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_salis_thaumaturgetechcompats_salis",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_crimson_thaumaturgetechcompats_crimson"
+      ]
+    }
+  ],
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:alienis"
+    }
+  ],
+  "complexity": 3
+}

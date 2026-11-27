@@ -35,6 +35,9 @@ public class HephaestusSmelteryContent implements DataProvider {
     public CompletableFuture<?> run(CachedOutput cache) {
         List<CompletableFuture<?>> tasks = new ArrayList<>();
         for (MoltenMetal metal : MoltenMetal.values()) {
+            if (metal.extra()) {
+                continue;
+            }
             String base = "data/" + MOD + "/recipe/smeltery/";
             String name = metal.id();
             tasks.add(CompatJson.save(output, cache, base + "melting/" + name + "/ingot.json", melting(metal, input(metal, "ingots", metal.ingot()), INGOT, 100)));

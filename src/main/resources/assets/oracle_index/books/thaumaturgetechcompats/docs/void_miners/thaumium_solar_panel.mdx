@@ -1,0 +1,62 @@
+---
+icon: thaumaturgetechcompats:thaumium_solar_panel
+title: Thaumium Solar Panel Controller
+---
+
+> [!NOTE]
+> Needs **Void Miners Remastered**.
+
+## What it is
+
+The Thaumium Solar Panel Controller is the controller of a Void Miners solar panel that makes FE **without sun or open sky**: it generates only while it can pay units of power to a magical source nearby.
+
+| Property | Value |
+| --- | --- |
+| FE per tick | 1,000 |
+| Energy stored (FE) | 25,000,000 |
+| Units paid every 20 ticks | 1 |
+| Power source radius | 8 blocks |
+| Modifier slots of its structure | 2 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:jar_node', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 
+        '', 'voidminersremastered:solar_rubetine_panel', '', 
+        'thaumaturge:jar_node', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_solar_panel"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Solar Rubetine Panel Controller |
+| Pedestal items | 3 × Thaumium Plate, Simple Arcane Mechanism, 2 × Node in a Jar |
+| Essentia | Lux 12, Potentia 10, Metallum 8, Alkimia 6 |
+| Instability | 2 |
+| Research | **Thaumium Solar Panel** (Void Miners tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research the Magical Solar Panel entry of its tier and infuse it over the controller of the tier before (the Rubetine Solar Panel for Thaumium).
+2. Craft the Thaumium solar frames and build the solar structure of the tier around the controller.
+3. Put a power source within the radius (jarred node, Flux Jar, Rift Jar, world node or flux rift; never a hungry node).
+4. Connect a cable or an FE consumer as with any Void Miners solar panel. Every 20 ticks it pays and generates.
+
+## Used to make
+
+- []($void_miners/alchemical_brass_solar_panel)
+
+> [!NOTE]- Thaumonomicon: Thaumium Solar Panel
+> The Thaumium Solar Panel Controller is made on an infusion altar from a Rubetine Solar Panel, thaumium plates, mechanisms and jarred nodes.
+> Its frames are made on an arcane workbench from thaumium plates, obsidian and a base frame. It generates energy only while it can pay units to a magical power source close by, with no need for sun or open sky. A hungry node is never a valid source.
+
+**Guides of this chapter:** [Magical Solar Panel Controllers]($void_miners/magical-solar-panel)

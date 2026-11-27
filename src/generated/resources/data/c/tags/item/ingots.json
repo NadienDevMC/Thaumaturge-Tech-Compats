@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#c:ingots/rifting",
+    "#c:ingots/fibric",
+    "#c:ingots/salis",
+    "#c:ingots/crimson"
+  ]
+}

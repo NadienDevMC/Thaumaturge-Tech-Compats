@@ -1,0 +1,55 @@
+---
+id: thaumaturgetechcompats:thaumium_shield_generator
+type: block
+title: Thaumium Shield Generator
+---
+
+## What it is
+
+The Thaumium Shield Generator raises a bubble around itself while it holds Dimensional Flux. The bubble destroys the projectiles of hostile mobs, pushes hostile mobs out (never bosses) and takes the damage out of explosions inside it (blocks inside are not destroyed).
+
+| Property | Value |
+| --- | --- |
+| Radius | 8 blocks |
+| Dimensional Flux stored | 100,000 |
+| DF per tick while the bubble is up | 10 |
+
+## How to get it
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'thaumaturge:mirrored_glass', 'thaumaturge:plate_thaumium', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:vis_resonator', 'thaumaturge:mechanism_simple', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:mirrored_glass', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_shield_generator"
+    count={1}
+/>
+
+| Recipe | |
+| --- | --- |
+| Station | Arcane Workbench, in this shape |
+| Ingredients | 4 × Thaumium Plate, 2 × Mirrored Glass, 2 × Simple Arcane Mechanism, Vis Resonator |
+| Vis | 60 |
+| Crystals | Ordo 2, Terra 1 |
+| Research | **Thaumium Shield Generator** (Flux Gear tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium generator at the Arcane Workbench, the others infused around the one before).
+2. Supply it with DF (Storage Core, Transmission Link or Rift Extractor touching it).
+3. Every tick of the bubble costs DF, and so does every projectile or explosion it absorbs. When the flux runs out it shuts down until it holds enough again.
+4. Right click it to read its state.
+
+## Used to make
+
+- [](@thaumaturgetechcompats:alchemical_brass_shield_generator)
+
+> [!NOTE]- Thaumonomicon: Thaumium Shield Generator
+> The Thaumium Shield Generator is made on an arcane workbench from four thaumium plates, two mirrored glass, two simple mechanisms and a vis resonator.
+> While it holds Dimensional Flux it raises a bubble around itself that destroys the projectiles of hostile mobs, pushes hostile mobs out and takes the damage out of explosions inside. Every tick of the bubble costs flux, and so does every projectile and every explosion it absorbs. When the flux runs out it shuts down, and it starts again once it has recovered enough. Right-click it to read its state.
+
+**Guides of this chapter:** [Shield Generators and Arcane Terraformers]($nodes_flux/flux-field)

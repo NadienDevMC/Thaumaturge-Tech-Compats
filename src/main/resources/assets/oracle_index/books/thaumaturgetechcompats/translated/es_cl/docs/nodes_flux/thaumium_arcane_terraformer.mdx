@@ -1,0 +1,55 @@
+---
+icon: thaumaturgetechcompats:thaumium_arcane_terraformer
+title: Terraformador arcano de taumio
+---
+
+## Qué es
+
+El Terraformador arcano de taumio repinta el bioma de la zona de alrededor, columna a columna empezando por sus pies, con el bioma de su **cebo** (un objeto que representa un bioma: arena para un desierto, nieve para la tundra, un brote para un bosque).
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio | 16 bloques |
+| Flujo dimensional que guarda | 200.000 |
+| DF por columna de 4x4 | 2.000 |
+| Columnas por ciclo | 2 |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'minecraft:grass_block', 'thaumaturge:plate_thaumium', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:vis_resonator', 'thaumaturge:mechanism_simple', 
+        'thaumaturge:plate_thaumium', 'minecraft:sand', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_arcane_terraformer"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 4 × Placa de taumio, Césped, 2 × Mecanismo arcano simple, Resonador de Vis, Arena |
+| Vis | 80 |
+| Cristales | Terra 2, Agua 2 |
+| Investigación | **Terraformador arcano de taumio** (pestaña Equipo flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del anterior).
+2. Dale DF (un Núcleo de almacenamiento, un Enlace de transmisión o un Extractor de grietas tocándolo).
+3. Haz clic derecho con el objeto cebo. Agáchate y haz clic derecho con la mano vacía para recuperar el cebo.
+4. Haz clic derecho otra vez para ver su progreso, radio y estado. Los biomas y dimensiones bloqueados en la configuración no se tocan.
+
+## Se usa para fabricar
+
+- []($nodes_flux/alchemical_brass_arcane_terraformer)
+
+> [!NOTE]- Thaumonomicon: Terraformador arcano de taumio
+> El Terraformador arcano de taumio se fabrica en una mesa arcana con cuatro placas de taumio, hierba, arena, dos mecanismos simples y un resonador de vis.
+> Haz clic derecho con un objeto que represente un bioma, como arena para un desierto, nieve para la tundra o un brote para un bosque, y usará el flujo de la red para repintar el área que lo rodea, columna a columna, empezando por sus pies. Agáchate y haz clic derecho con la mano vacía para recuperar el cebo. Los biomas y dimensiones de la lista de la configuración no se tocan. Haz clic derecho para leer su progreso.
+
+**Guías de este capítulo:** [Generadores de escudo y Terraformadores arcanos]($nodes_flux/flux-field)

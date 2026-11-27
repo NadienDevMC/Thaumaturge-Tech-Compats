@@ -9,8 +9,8 @@
       "feature": "flux_network_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 55,
+  "category": "thaumaturgetechcompats:10_flux_network",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:thaumium_transmission_link"

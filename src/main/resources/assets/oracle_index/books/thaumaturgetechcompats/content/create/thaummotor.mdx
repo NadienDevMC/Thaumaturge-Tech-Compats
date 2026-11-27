@@ -1,0 +1,56 @@
+---
+id: thaumaturgetechcompats:thaummotor
+type: block
+title: Thaummotor
+---
+
+> [!NOTE]
+> Needs **Create** (through Create: Adapted in 26.1.2).
+
+## What it is
+
+The Thaummotor is a Create motor with no wires and no fuel. It takes a small amount of power from a magical source close by and turns at a fixed speed, giving stress capacity to the whole kinetic network. Without a source it stops.
+
+| Property | Value |
+| --- | --- |
+| Power source radius | 8 blocks |
+| Speed (default / maximum) | 64 / 256 RPM |
+| Base stress capacity | 1,024 su |
+| Power drawn | 1 unit every 20 ticks |
+
+## How to get it
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium', 
+        'create:shaft', 'create:brass_casing', 'create:shaft', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaummotor"
+    count={1}
+/>
+
+| Recipe | |
+| --- | --- |
+| Station | Arcane Workbench, in this shape |
+| Ingredients | 4 × Thaumium Plate, 2 × Simple Arcane Mechanism, 2 × Shaft, Brass Casing |
+| Vis | 60 |
+| Crystals | none |
+| Research | **Thaummotor** (Create tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Thaummotor (Tech tab) and craft it at the Arcane Workbench.
+2. Place it and connect a shaft like to any Create motor.
+3. Put a power source within 8 blocks: a jarred node, a Flux Jar, a Rift Jar, a world node or a flux rift (never a hungry node).
+4. Scroll over its speed selector to set the speed, in either direction.
+5. Look at it with Create goggles to see which source it uses. Stress is multiplied by the source: jarred node ×1, Flux Jar ×1.5, world node ×2, Rift Jar ×2.5, flux rift ×3.
+
+> [!NOTE]- Thaumonomicon: Thaummotor
+> The Thaummotor is made on an arcane workbench from a brass casing, two shafts, two simple mechanisms and four thaumium plates.
+> While a jarred node, a node, a Flux Jar or a flux rift stands within reach, it takes a little power from it every so often and turns at a fixed speed, providing stress to the whole kinetic network. The richer the source, the more stress it provides, and with no source, or no power left in it, it stops. A hungry node is never a valid source. The goggles of Create tell which source it is using.
+
+**Guides of this chapter:** [Node Casings]($create/casings) · [Machine Variants and Node Boost]($create/machine-variants) · [Create Seal]($create/create-seal)

@@ -172,7 +172,7 @@ public final class OritechAspectTable {
         put("unholy_intelligence", Asp.COGNITIO.of(30), Asp.EXANIMIS.of(10), Asp.ALIENIS.of(10));
         put("heisenberg_compensator", Asp.ORDO.of(15), Asp.VACUOS.of(10), Asp.POTENTIA.of(10), Asp.PRAECANTATIO.of(5));
         put("flux_gate", Asp.POTENTIA.of(12), Asp.VINCULUM.of(8), Asp.ALIENIS.of(4));
-        put("dubios_container", Asp.VACUOS.of(12), Asp.PERDITIO.of(6), Asp.ALIENIS.of(4));
+        put("dubious_container", Asp.VACUOS.of(12), Asp.PERDITIO.of(6), Asp.ALIENIS.of(4));
         put("unstable_container", Asp.VACUOS.of(15), Asp.POTENTIA.of(10), Asp.PERDITIO.of(10));
         put("enderic_lens", Asp.VITREUS.of(12), Asp.ALIENIS.of(8), Asp.SENSUS.of(6));
         put("ion_thruster", Asp.MOTUS.of(15), Asp.VOLATUS.of(10), Asp.POTENTIA.of(8), Asp.METALLUM.of(10));

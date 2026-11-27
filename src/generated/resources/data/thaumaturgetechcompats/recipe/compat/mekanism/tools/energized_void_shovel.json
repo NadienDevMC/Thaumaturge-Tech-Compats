@@ -1,0 +1,65 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools_void"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools_thaumium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 50,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 50,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:praecantatio"
+    }
+  ],
+  "catalyst": "thaumaturge:void_shovel",
+  "components": [
+    "mekanism:energy_tablet",
+    "mekanism:energy_tablet",
+    "mekanism:alloy_atomic",
+    "mekanism:ultimate_control_circuit",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturgetechcompats:energized_alchemical_brass_shovel"
+  ],
+  "instability": 5,
+  "research": {
+    "entry": "thaumaturgetechcompats:mekanismtools_void"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:energized_void_shovel"
+  }
+}

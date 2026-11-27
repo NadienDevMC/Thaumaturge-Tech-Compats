@@ -1,0 +1,19 @@
+{
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "N": "#c:nuggets/salis"
+  },
+  "pattern": [
+    "NNN",
+    "N N"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:extra_metals"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:salis_inert_wand_cap"
+  },
+  "vis": 90
+}

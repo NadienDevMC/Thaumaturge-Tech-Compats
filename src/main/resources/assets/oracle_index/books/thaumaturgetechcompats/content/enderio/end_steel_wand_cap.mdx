@@ -1,0 +1,58 @@
+---
+id: thaumaturgetechcompats:end_steel_wand_cap
+type: item
+title: End Steel Cap
+---
+
+> [!NOTE]
+> Needs the **Ender IO** mod.
+
+## What it is
+
+The End Steel Cap is a Thaumaturge wand cap made of an Ender IO material. The cap sets the cost of every spell, and makes its own special aspects cheaper still; any cap fits any rod.
+
+| Property | Value |
+| --- | --- |
+| Spell cost multiplier | 0.8 |
+| Aspects it makes cheaper | Alienis, Tenebrae, Praemunio |
+| Cost multiplier for those aspects | 0.7 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'enderio:end_steel_ingot', '', 
+        'enderio:end_steel_ingot', 'thaumaturgetechcompats:vibrant_crystal_wand_cap', 'enderio:end_steel_ingot', 
+        '', 'enderio:end_steel_ingot', ''
+    ]}
+    result="thaumaturgetechcompats:end_steel_wand_cap"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:vibrant_crystal_wand_cap) |
+| Pedestal items | 4 × End Steel Ingot |
+| Essentia | Praecantatio 36, Metallum 27, Potentia 18 |
+| Instability | 5 |
+| Research | **Ender IO Wands** (Ender IO tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Ender IO Wands (Tech tab).
+2. Redstone, Conductive and Pulsating Alloy caps are made at the Arcane Workbench; every other cap is infused over the cap of the material before it.
+3. Assemble it with any rod in the wand assembly of Thaumaturge.
+
+> [!NOTE]- Thaumonomicon: Ender IO Wands
+> The rod and the cap are separate parts, and any rod fits any cap. The materials, from weakest to strongest, are redstone alloy, conductive alloy, pulsating alloy, energetic alloy, dark steel, soularium, pulsating crystal, vibrant alloy, vibrant crystal and end steel.
+> - The first three are crafted at an arcane workbench: a rod from three ingots and a cap from five.
+> - Every other rod and cap is infused from the part of the material before it, with four ingots, or four crystals for the crystal ones.
+> Stronger materials hold more vis in the rod and make every spell cheaper with the cap, and each cap makes its own aspects cheaper still. The crystals, the vibrant alloy and the end steel glow. The exact values are set in the configuration.
+
+**Guides of this chapter:** [Ender IO Wand Rods and Caps]($enderio/wand-parts)

@@ -25,10 +25,10 @@
     }
   ],
   "type": "oritech:pulverizer",
-  "ingredients": [
+  "itemInputs": [
     "#c:ores/cinnabar"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "thaumaturge:raw_cinnabar"

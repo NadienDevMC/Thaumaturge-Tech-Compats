@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.auraconverter;
 
+import nadiendev.ThaumaturgeTechCompats.registry.TierOrder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.CreativeModeTab;
@@ -31,7 +32,7 @@ public final class AuraConverterIntegration {
     }
 
     public static void fillCreativeTab(CreativeModeTab.Output output) {
-        for (AuraConverterTier tier : AuraConverterTier.values()) {
+        for (AuraConverterTier tier : TierOrder.display(AuraConverterTier.values())) {
             if (AuraConverterConfig.enabled(tier)) {
                 output.accept(AuraConverterRegistry.item(tier).get());
             }

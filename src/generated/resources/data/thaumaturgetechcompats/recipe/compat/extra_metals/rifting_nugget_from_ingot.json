@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:ingots/rifting"
+  ],
+  "result": {
+    "count": 9,
+    "id": "thaumaturgetechcompats:rifting_nugget"
+  }
+}

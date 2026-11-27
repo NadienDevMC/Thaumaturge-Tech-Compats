@@ -17,8 +17,8 @@
       "feature": "flux_storage_core"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 52,
+  "category": "thaumaturgetechcompats:10_flux_network",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_metal_flux_storage_core"
@@ -47,7 +47,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:base_eldritch"
   ],
-  "row": 8,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

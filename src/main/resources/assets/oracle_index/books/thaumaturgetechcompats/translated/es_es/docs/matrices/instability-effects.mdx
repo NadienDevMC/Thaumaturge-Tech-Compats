@@ -1,0 +1,56 @@
+---
+title: Efectos de inestabilidad
+icon: thaumaturgetechcompats:infinity_infusion_matrix
+related_items: [thaumaturgetechcompats:matrix_infusion_matrix, thaumaturgetechcompats:neutronium_infusion_matrix, thaumaturgetechcompats:infinity_infusion_matrix]
+---
+
+> [!WARNING]
+> Estos efectos pueden matarte, hacer explotar tu base y teletransportarte lejos. Todos los números son valores por defecto y se pueden cambiar por matriz en la configuración de infusión.
+
+## Qué es
+
+Mientras una Matriz rúnica por niveles ejecuta una infusión, su estabilidad baja. Cuando pasa de cero hacia abajo, cada ciclo se disparan eventos con cierta probabilidad. Cada 25 puntos de estabilidad por debajo de cero suman un nivel más de **intensidad**, y casi todas las cantidades se multiplican por ella. Los eventos alcanzan el radio de la matriz (6, 8 o 12 bloques). Cada efecto se puede desactivar en la configuración.
+
+## Solar (Matriz de Cristal)
+
+Cada crafteo es **el doble de inestable de día** (multiplicador de día 2; la configuración también puede exigir cielo abierto).
+
+| Evento | Probabilidad | Detalle |
+| --- | --- | --- |
+| Fuegos alrededor del altar | 0,6 | 4 intentos de fuego, por la intensidad |
+| Rayos | 0,25 | caen cerca del altar |
+| Quemadura | 0,7 | 4 segundos en llamas y 2 de daño, por la intensidad |
+
+## Nuclear (Neutronio)
+
+| Evento | Probabilidad | Detalle |
+| --- | --- | --- |
+| Radiación | 0,8 | 2 de daño y 10 segundos de debilidad, hambre y descomposición, por la intensidad |
+| Fusión | 0,08 | explosión de potencia 3, por la intensidad hasta tres veces; la rotura de bloques se puede desactivar |
+| Contaminación | 0,5 | derrama 8 de flujo en el aura, por la intensidad |
+
+## Cósmica (Infinito)
+
+| Evento | Probabilidad | Detalle |
+| --- | --- | --- |
+| Desgarro de flujo | 0,7 | derrama 15 de flujo, por la intensidad |
+| Warp | 0,6 | 2 de warp, por la intensidad; el 0,2 es del tipo que se desvanece despacio en vez del temporal |
+| Invocación | 0,4 | 3 criaturas (endermite, vex y lepisma por defecto; configurable), por la intensidad hasta tres veces |
+| Teletransporte | 0,5 | lanza a las criaturas hasta 16 bloques lejos |
+
+## Cómo seguir con vida
+
+1. Mantén baja la inestabilidad de la receta: para tus primeros crafteos elige recetas poco inestables. La estabilidad extra de los pilares solo ayuda a la Matriz rúnica normal, así que con una matriz por niveles lo decide la propia receta.
+2. Quédate muy fuera del radio (12 bloques en Infinito) mientras el altar trabaja.
+3. Lleva algo para curar el warp y las quemaduras, y ten jarras de flux cerca para los altares nucleares y cósmicos.
+4. Si no quieres la destrucción, desactiva la rotura de bloques de la fusión, o todos los efectos de la matriz, en la configuración de infusión.
+
+## Errores comunes
+
+- Estar junto a un altar Nuclear: la radiación hiere y debilita a todo lo vivo.
+- No prepararse para el flujo: la contaminación Nuclear y los desgarros Cósmicos derraman flujo en el aura.
+- Olvidar que lo Solar es peor de día, así que haz los crafteos de Matriz de Cristal de noche.
+
+## Notas
+
+- Sus valores se ajustan en la configuración de infusión del mod.

@@ -1,0 +1,52 @@
+---
+title: Flux Jars
+icon: thaumaturgetechcompats:flux_jar
+related_items: [thaumaturgetechcompats:flux_jar, thaumaturgetechcompats:matrix_flux_jar, thaumaturgetechcompats:neutronium_flux_jar, thaumaturgetechcompats:infinity_flux_jar]
+---
+
+> [!NOTE]
+> The Flux Jar is part of the "node power" base (it can be switched off in the compatibilities config, on by default, needs a restart). The Crystal Matrix, Neutronium and Infinity versions need the **Avaritia** mod. Numbers: the node power config.
+
+## What it is
+
+A Flux Jar slowly pulls **flux** out of the aura of its chunk until it is full. Machines that work on magical power can use that flux as their power source, so the jar turns a pollution problem into fuel. Breaking a jar pours everything it held back into the aura as flux.
+
+| Jar | Capacity | Flux per fill | Interval |
+| --- | --- | --- | --- |
+| [](@thaumaturgetechcompats:flux_jar) | 100 | 0.25 | 20 ticks |
+| [](@thaumaturgetechcompats:matrix_flux_jar) | 250 | 0.75 | 20 ticks |
+| [](@thaumaturgetechcompats:neutronium_flux_jar) | 600 | 2.0 | 20 ticks |
+| [](@thaumaturgetechcompats:infinity_flux_jar) | 1500 | 6.0 | 20 ticks |
+
+The fill interval, the capacity of each jar and the fill amount of each jar can be changed in the node power config.
+
+## How to get them
+
+- **Flux Jar**: arcane workbench (40 vis), a Warded Jar in the middle with a Void Metal Plate above, below, left and right. Needs the "Flux Jar" research.
+- **Crystal Matrix Flux Jar**: infusion altar, catalyst Flux Jar, 4 Crystal Matrix Ingots (Vacuos 24, Praemunio 16, Vitreus 16, Terminus 4, instability 3).
+- **Neutronium Flux Jar**: catalyst Crystal Matrix Flux Jar, 4 Neutron Ingots (Vacuos 32, Praemunio 32, Metallum 24, Terminus 8, instability 6).
+- **Infinity Flux Jar**: catalyst Neutronium Flux Jar, 4 Infinity Ingots and an Extremely Primordial Pearl (Vacuos 48, Praemunio 48, Alienis 32, Terminus 24, instability 9).
+
+The higher jars are infused with the Runic Matrix of their own tier at the center of the altar.
+
+## Step by step
+
+1. Place the Flux Jar anywhere in the chunk whose flux you want to use.
+2. Wait: it fills on its own whenever the chunk has flux in the aura.
+3. Put a machine that uses magical power next to it (for example a Thaummotor or a Magical Miner). The machine takes the jar as its source (see the Power Sources page).
+4. Use an empty bucket on the jar to take 10 flux out as a bucket of liquid flux.
+
+## Crucibles
+
+A crucible next to a Flux Jar sends its leaks and overflow into the jar instead of polluting the aura. If the jar is full, or there is none, that flux vanishes and gives temporary warp (4 by default) to the players within 4 blocks of the crucible. With the crucible aspect capacity option of the compatibilities config on, the crucible overfills when a single aspect passes 1024, not at 100 points in total.
+
+## Common mistakes
+
+- Expecting it to fill in a clean chunk: with no flux in the aura there is nothing to draw.
+- Breaking a full jar in your base: all its flux goes back into the aura.
+- Counting on a "hungry node" as an alternative: a hungry node is never a valid source.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's node power configuration.

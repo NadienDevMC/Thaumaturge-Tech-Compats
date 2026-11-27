@@ -1,0 +1,59 @@
+---
+id: thaumaturgetechcompats:void_metal_solar_panel
+type: block
+title: Controlador de panel solar de metal del vacío
+---
+
+> [!NOTE]
+> Necesita **Void Miners Remastered**.
+
+## Qué es
+
+El Controlador de panel solar de metal del vacío es el controlador de un panel solar de Void Miners que produce FE **sin sol ni cielo abierto**: solo genera mientras puede pagar unidades de poder a una fuente mágica cercana.
+
+| Propiedad | Valor |
+| --- | --- |
+| FE por tick | 6.000 |
+| Energía almacenada (FE) | 500.000.000 |
+| Unidades que paga cada 20 ticks | 4 |
+| Radio de la fuente de poder | 16 bloques |
+| Huecos de modificador de su estructura | 6 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:void_seed', 'thaumaturge:plate_void', 'thaumaturge:plate_void', 
+        'thaumaturge:jar_node', 'thaumaturgetechcompats:alchemical_brass_solar_panel', 'thaumaturge:plate_void', 
+        'thaumaturge:jar_node', '', 'thaumaturge:mechanism_complex'
+    ]}
+    result="thaumaturgetechcompats:void_metal_solar_panel"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:alchemical_brass_solar_panel) |
+| Objetos en los pedestales | 3 × Placa de metal del vacío, Mecanismo arcano complejo, 2 × Nodo en un frasco, Semilla del vacío |
+| Esencia | Lux 24, Potentia 24, Vacuos 16, Praecantatio 16 |
+| Inestabilidad | 6 |
+| Investigación | **Panel solar de metal del vacío** (pestaña Void Miners) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga la entrada de Panel solar mágico de su nivel e infúndelo sobre el controlador del nivel anterior (el Panel solar de Rubetina para el de taumio).
+2. Fabrica los marcos solares de metal del vacío y construye la estructura solar del nivel alrededor del controlador.
+3. Pon una fuente de poder dentro del radio (nodo en jarra, Jarra de flujo, Jarra de grieta, nodo del mundo o grieta de flujo; nunca un nodo hambriento).
+4. Conecta un cable o un consumidor de FE como en cualquier panel solar de Void Miners. Cada 20 ticks paga y genera.
+
+> [!NOTE]- Thaumonomicon: Panel solar de metal del vacío
+> El Controlador de panel solar de metal del vacío se fabrica en un altar de infusión con el Controlador de panel solar de latón alquímico, placas de metal del vacío, mecanismos y nodos en tarros, una semilla del vacío.
+> Sus marcos se fabrican en una mesa de trabajo arcana con placas de metal del vacío, obsidiana y el marco equivalente de latón alquímico. Genera energía únicamente mientras puede pagar unidades a una fuente de poder mágico cercana, sin necesitar sol ni cielo abierto. Un nodo hambriento nunca es una fuente válida.
+
+**Guías de este capítulo:** [Controladores de panel solar mágico]($void_miners/magical-solar-panel)

@@ -1,0 +1,58 @@
+---
+id: thaumaturgetechcompats:seal_create
+type: item
+title: Sello de Create
+---
+
+> [!NOTE]
+> Necesita **Create** (a través de Create: Adapted en 26.1.2).
+
+## Qué es
+
+El Sello de Create es un sello de gólem que permite a un gólem trabajar con un bloque de Create: meter los objetos que lleva, sacar objetos y (opcionalmente) hacer clic en el bloque para girar manivelas y volantes de válvula.
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'create:cogwheel', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:seal_use', 'create:brass_sheet', 
+        '', 'create:andesite_alloy', ''
+    ]}
+    result="thaumaturgetechcompats:seal_create"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | Sello: Usar |
+| Objetos en los pedestales | Engranaje, Lámina de latón, Aleación de andesita, Mecanismo arcano simple |
+| Esencia | Machina 20, Fabrico 10, Motus 10 |
+| Inestabilidad | 2 |
+| Investigación | **Sello de Create** (pestaña Create) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Sello de Create (pestaña Tech) e infúndelo sobre un Sello de uso.
+2. Colócalo en la cara de un bloque de Create (por defecto no se puede poner en otros bloques).
+3. Abre el sello: pon el filtro (9 huecos) y las opciones Meter, Sacar, Accionar (clic) y Clic agachado.
+4. Dale un gólem con el rasgo Diestro (un gólem Torpe no puede usarlo).
+5. Con Sacar activado busca cada 20 ticks un objeto que coincida; con Accionar el gólem hace clic cada 8 ticks.
+6. Una señal de redstone detiene el sello.
+
+> [!NOTE]- Thaumonomicon: Sello de Create
+> El sello se coloca sobre un bloque de Create y deja que un gólem lo trabaje.
+> Inserta en el bloque los objetos que lleva el gólem, saca objetos de él y también puede hacer clic en el bloque, lo que gira manivelas y manillas de válvula.
+> El filtro elige los objetos de cada tarea, y cada tarea se puede desactivar en las opciones del sello.
+> 
+> **Sello de Create**
+> 
+> Se infunde sobre un sello de uso con un engranaje, una lámina de latón, aleación de andesita y un mecanismo simple.
+
+**Guías de este capítulo:** [Sello de Create]($create/create-seal)

@@ -22,10 +22,10 @@
     }
   ],
   "type": "oritech:pulverizer",
-  "ingredients": [
+  "itemInputs": [
     "thaumaturge:cluster_tin"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "mekanism:raw_tin"

@@ -1,0 +1,55 @@
+---
+title: Runas de descuento y de velocidad de infusión
+icon: thaumaturgetechcompats:infinity_infusion_cost_stone
+related_items: [thaumaturgetechcompats:matrix_infusion_cost_stone, thaumaturgetechcompats:neutronium_infusion_cost_stone, thaumaturgetechcompats:infinity_infusion_cost_stone, thaumaturgetechcompats:matrix_infusion_speed_stone, thaumaturgetechcompats:neutronium_infusion_speed_stone, thaumaturgetechcompats:infinity_infusion_speed_stone]
+---
+
+> [!NOTE]
+> Necesita el mod **Avaritia**. Las variantes de las runas se pueden desactivar en la configuración de compatibilidades. Números: las secciones de runas de la configuración de infusión, una por nivel y tipo (coste o velocidad).
+
+## Qué es
+
+La Runa de Descuento y la Runa de Velocidad de Infusión normales ayudan al altar, pero piden algo a cambio. Las versiones de Avaritia piden menos y dan más. Van **bajo los cuatro pilares** del altar, como las runas normales. Los valores de abajo se suman por **cada runa** bajo un pilar.
+
+| Runa | Cambio de coste | Cambio de tiempo de ciclo |
+| --- | --- | --- |
+| Runa de Descuento normal | -0,02 | +1 |
+| Runa de Velocidad normal | +0,01 | -1 |
+| [](@thaumaturgetechcompats:matrix_infusion_cost_stone) | -0,03 | 0 |
+| [](@thaumaturgetechcompats:neutronium_infusion_cost_stone) | -0,05 | 0 |
+| [](@thaumaturgetechcompats:infinity_infusion_cost_stone) | -0,125 | 0 |
+| [](@thaumaturgetechcompats:matrix_infusion_speed_stone) | 0 | -2 |
+| [](@thaumaturgetechcompats:neutronium_infusion_speed_stone) | 0 | -3 |
+| [](@thaumaturgetechcompats:infinity_infusion_speed_stone) | -0,01 | -4 |
+
+Un cambio de coste negativo abarata el altar; un cambio de tiempo de ciclo negativo lo acelera. El altar **nunca cuesta menos de la mitad**. El modificador de estabilidad de estas runas es 0 y las matrices por niveles lo ignoran de todos modos.
+
+## Cómo conseguirlas
+
+Cada runa se infunde en un altar a partir de la runa anterior, con cuatro lingotes de su metal (y una [](@thaumaturgetechcompats:extremely_primordial_pearl) para Infinito), en un altar cuya Matriz rúnica sea la del **nivel anterior**.
+
+| Runa | Catalizador | Centro del altar | Aspectos | Inestabilidad |
+| --- | --- | --- | --- | --- |
+| Descuento de Matriz de Cristal | Runa de Descuento normal | Matriz rúnica normal | Ordo 16, Praecantatio 12, Terminus 2 | 2 |
+| Descuento de Neutronio | Descuento de Matriz de Cristal | Matriz de Matriz de Cristal | Ordo 24, Praecantatio 20, Terminus 4 | 4 |
+| Descuento de Infinito | Descuento de Neutronio | Matriz de Neutronio | Ordo 40, Praecantatio 32, Terminus 12 | 6 |
+| Velocidad de Matriz de Cristal | Runa de Velocidad normal | Matriz rúnica normal | Motus 16, Praecantatio 12, Terminus 2 | 2 |
+| Velocidad de Neutronio | Velocidad de Matriz de Cristal | Matriz de Matriz de Cristal | Motus 24, Praecantatio 20, Terminus 4 | 4 |
+| Velocidad de Infinito | Velocidad de Neutronio | Matriz de Neutronio | Motus 40, Praecantatio 32, Terminus 12 | 6 |
+
+## Paso a paso
+
+1. Investiga "Runas de Avaritia".
+2. Construye el altar con la matriz del nivel anterior.
+3. Infunde la runa con la anterior como catalizador y cuatro lingotes en los pedestales.
+4. Pon las runas bajo los cuatro pilares de tu altar de trabajo.
+
+## Errores comunes
+
+- Usar en el centro la matriz del mismo nivel: las runas y las matrices siguen al nivel **anterior**, mientras que el resto de objetos por niveles necesitan su propio nivel.
+- Esperar más de la mitad de descuento: el multiplicador de coste del altar nunca baja de 0,5.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de infusión del mod.

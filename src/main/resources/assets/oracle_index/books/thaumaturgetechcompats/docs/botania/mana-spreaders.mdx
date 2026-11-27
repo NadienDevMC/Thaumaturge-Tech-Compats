@@ -1,0 +1,52 @@
+---
+title: Tiered Mana Spreaders
+icon: thaumaturgetechcompats:void_metal_spreader
+related_items: [thaumaturgetechcompats:thaumium_spreader, thaumaturgetechcompats:alchemical_brass_spreader, thaumaturgetechcompats:void_metal_spreader]
+---
+
+> [!NOTE]
+> Requires **Botania** (Botania Revived). In the compatibilities config you can switch off the Botania integration, all the spreaders or each tier on its own; on by default, game restart needed. Numbers are in the Botania spreaders config.
+
+## What it is
+
+Three spreaders that go beyond the Gaia Spreader. They behave like a normal Botania spreader (accept lenses, can be bound with the Wand of the Forest) but hold far more mana and fire stronger bursts. Each tier improves on the last.
+
+| Tier | Burst mana | Mana capacity | Ticks before loss | Loss per tick | Speed multiplier |
+| --- | --- | --- | --- | --- | --- |
+| Gaia Spreader (Botania) | 640 | 6,400 | 120 | 20 | 2.0 |
+| [](@thaumaturgetechcompats:thaumium_spreader) | 1,280 | 12,800 | 140 | 24 | 2.5 |
+| [](@thaumaturgetechcompats:alchemical_brass_spreader) | 2,560 | 25,600 | 160 | 28 | 3.0 |
+| [](@thaumaturgetechcompats:void_metal_spreader) | 10,240 | 102,400 | 200 | 32 | 4.0 |
+
+The Void Metal Spreader is fire resistant. Burst colours can also be changed in the spreaders config.
+
+## How to get it
+
+Research **Higher Mana Spreaders** in the Tech category. Each is infused at the altar over the tier before it:
+
+| Tier | Catalyst | Components | Aspects | Instability |
+| --- | --- | --- | --- | --- |
+| Thaumium | Gaia Spreader | 4 thaumium plates + simple mechanism | praecantatio 24, potentia 24, auram 16, terminus 4 | 4 |
+| Alchemical Brass | Thaumium Mana Spreader | 4 brass plates + simple mechanism | praecantatio 32, potentia 32, machina 24, terminus 8 | 7 |
+| Void Metal | Alchemical Brass Mana Spreader | 4 void metal plates + void seed | praecantatio 48, potentia 48, vacuos 32, terminus 24 | 10 |
+
+## Step by step
+
+1. Infuse the spreader (the catalyst is consumed).
+2. Place it like any Botania spreader and bind it with the Wand of the Forest to a pool or other mana target.
+3. Add a lens as usual if you want one.
+4. The spreader fires as soon as it holds one burst of mana, so a Void Metal spreader needs 10,240 mana in it per shot.
+
+> [!TIP]
+> A burst only starts losing mana after a set time (ticks before loss), so higher tiers also carry mana farther before it decays.
+
+## Common mistakes
+
+- Feeding it with too little mana: it waits for a full burst (1,280 / 2,560 / 10,240).
+- Skipping a tier: each recipe needs the previous tier's spreader as catalyst.
+- Changing numbers while the world runs: restart.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Botania spreaders configuration.

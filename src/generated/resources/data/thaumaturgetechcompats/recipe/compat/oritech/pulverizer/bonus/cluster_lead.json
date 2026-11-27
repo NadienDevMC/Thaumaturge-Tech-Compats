@@ -22,10 +22,10 @@
     }
   ],
   "type": "oritech:pulverizer",
-  "ingredients": [
+  "itemInputs": [
     "thaumaturge:cluster_lead"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "mekanism:raw_lead"

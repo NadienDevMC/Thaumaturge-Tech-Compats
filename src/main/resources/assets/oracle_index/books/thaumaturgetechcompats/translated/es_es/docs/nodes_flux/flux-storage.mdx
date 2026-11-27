@@ -1,0 +1,49 @@
+---
+title: Núcleos de almacenamiento y celdas de capacidad de flujo
+icon: thaumaturgetechcompats:thaumium_flux_storage_core
+related_items: [thaumaturgetechcompats:thaumium_flux_storage_core, thaumaturgetechcompats:alchemical_brass_flux_storage_core, thaumaturgetechcompats:void_metal_flux_storage_core, thaumaturgetechcompats:thaumium_flux_capacity_cell, thaumaturgetechcompats:alchemical_brass_flux_capacity_cell, thaumaturgetechcompats:void_metal_flux_capacity_cell]
+---
+
+> [!NOTE]
+> La red de Flujo Dimensional (DF) se puede apagar por nivel en la configuración de compatibilidades (reinicio del juego). Los valores salen de la configuración de flujo (capacidad base del núcleo) y de la de núcleos.
+
+## Qué es
+
+El **Flujo Dimensional (DF)** es la energía de la red de flujo: núcleos de almacenamiento, enlaces, extractores, cargadores, generadores de escudo y equipo lo usan. El Núcleo de almacenamiento de flujo es la gran reserva. Un núcleo solo funciona cuando su estructura está formada.
+
+| Núcleo | Capacidad base | Cada celda añade | Puntos de estabilizador con el núcleo lleno |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_flux_storage_core) | 1.000.000 DF | 500.000 DF | 4 |
+| [](@thaumaturgetechcompats:alchemical_brass_flux_storage_core) | 25.000.000 DF | 12.500.000 DF | 8 |
+| [](@thaumaturgetechcompats:void_metal_flux_storage_core) | 1.000.000.000 DF | 500.000.000 DF | 12 |
+
+Las celdas son [](@thaumaturgetechcompats:thaumium_flux_capacity_cell), [](@thaumaturgetechcompats:alchemical_brass_flux_capacity_cell) y [](@thaumaturgetechcompats:void_metal_flux_capacity_cell).
+
+## Cómo conseguirlos
+
+- **Núcleo de taumio**: mesa de trabajo arcana, filas de arriba y de abajo Placa de taumio, Alumentum y Placa de taumio; fila del medio Mecanismo arcano simple, Bloque de taumio y Mecanismo arcano simple (cristales ordo 20, terra 10, aer 10; 150 de vis).
+- **Celda de taumio**: mesa de trabajo arcana, filas de arriba y de abajo Placa de taumio, Alumentum y Placa de taumio; fila del medio Alumentum, Frasco arcano y Alumentum (cristales ordo 10, aqua 5; 80 de vis).
+- **Núcleo y celda de Latón alquímico y de Metal del vacío**: infusión, alrededor del nivel anterior. Componentes: bloque (o lingote) de metal, nitor, placa y alumentum alternados para los núcleos, y lingotes, alumentum y placas para las celdas.
+
+## Paso a paso
+
+1. Coloca el núcleo.
+2. Construye un **anillo de ocho bloques de su metal** a su alrededor en su mismo nivel, más un bloque encima y otro debajo (los bloques de un nivel superior también valen). Pulsa clic derecho en el núcleo: indica *Formado* o cuántos bloques faltan.
+3. Coloca **Celdas de capacidad sobre pedestales** a menos de 6 bloques del núcleo (el núcleo cuenta hasta 16 celdas).
+4. Coloca **estabilizadores de nodos** a menos de 8 bloques. Dan puntos de estabilizador: básico 1, avanzado 2, Matriz de cristal 3, Neutronio 4, Infinito 6.
+5. Conecta el núcleo a fuentes y consumidores: dispositivos que lo toquen, o Enlaces de transmisión.
+
+## Sobrecarga
+
+Cuanto más lleno está un núcleo, más puntos de estabilizador necesita. Por encima de la mitad y sin puntos suficientes, **se sobrecarga**: cada 40 ticks suelta flujo al aura, lanza chispas, avisa y hace daño a quien esté a menos de 5 bloques, y pierde una parte de su capacidad. Solo puede explotar si está activado (apagado por defecto). Cuando la capacidad baja por debajo de lo que guarda, el exceso se suelta como flujo al aura (100.000 DF por punto de flujo).
+
+## Errores comunes
+
+- No completar el anillo y los bloques de arriba y de abajo: el núcleo no guarda nada hasta que se forme.
+- Pocos estabilizadores cerca de un núcleo lleno.
+- Colocar las celdas demasiado lejos (más de 6 bloques) o no sobre pedestales.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración del núcleo de flujo del mod.

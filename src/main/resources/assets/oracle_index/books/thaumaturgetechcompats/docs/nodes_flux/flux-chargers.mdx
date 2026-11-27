@@ -1,0 +1,43 @@
+---
+title: Environmental Chargers
+icon: thaumaturgetechcompats:thaumium_environmental_charger
+related_items: [thaumaturgetechcompats:thaumium_environmental_charger, thaumaturgetechcompats:alchemical_brass_environmental_charger, thaumaturgetechcompats:void_metal_environmental_charger]
+---
+
+> [!NOTE]
+> Part of the Dimensional Flux (DF) network. Each tier can be switched off in the compatibilities config. Numbers: flux config (charger radius and charge rate) and charger config.
+
+## What it is
+
+An Environmental Charger releases energy into a nearby area to recharge, automatically, the charged items, wands and vis items you carry in your inventory, with no need to take anything out. It keeps its own store of DF, which Transmission Links, Storage Cores and Rift Extractors fill by pushing into it. Every few ticks it gives a share to each chargeable item of every player in reach.
+
+| Charger | Radius | DF per item per tick | Store |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_environmental_charger) | 8 blocks | 200 | 1,000,000 DF |
+| [](@thaumaturgetechcompats:alchemical_brass_environmental_charger) | 12 blocks | 2,000 | 10,000,000 DF |
+| [](@thaumaturgetechcompats:void_metal_environmental_charger) | 16 blocks | 20,000 | 100,000,000 DF |
+
+It also recharges the wands, staves and sceptres of Thaumaturge by converting DF into vis of their primal aspects (20 DF per hundredth of vis) and other vis-rechargeable items (2,000 DF per vis).
+
+## How to get it
+
+- **Thaumium**: arcane workbench, top row Thaumium Plate, Vis Resonator and Thaumium Plate; middle row Thaumium Plate, Simple Arcane Mechanism and Thaumium Plate; bottom row three Thaumium Plates (crystals aer 2, ordo 2; 60 vis).
+- **Alchemical Brass**: infusion around the Thaumium charger with four brass plates, a Simple Arcane Mechanism and a Vis Resonator. The Void Metal charger continues the chain.
+
+## Step by step
+
+1. Place the charger and feed it DF: put a Transmission Link, Storage Core or Rift Extractor against it (a Transmission Link, paired with the [](@thaumaturgetechcompats:transmission_linker), can bring the DF from a far away core).
+2. Stay within its radius with the items in your pack.
+3. Right-click it to read its DF, radius, rate and status (*recharging*, *no Dimensional Flux*, *nothing to recharge nearby*).
+
+## Common mistakes
+
+- Leaving it empty: with no DF it does nothing.
+- Expecting items outside the radius to charge.
+- Forgetting that the wand conversion costs DF: a wand refills slowly if the charger rate is low.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's flux network configuration.
+- Its values are adjusted in the mod's flux charger configuration.

@@ -1,0 +1,57 @@
+---
+id: thaumaturgetechcompats:void_metal_aura_converter
+type: block
+title: Void Metal Aura Converter
+---
+
+## What it is
+
+The Void Metal Aura Converter drains vis from the aura of its chunk and turns it into **FE**, which it hands to every neighbouring block that accepts energy. It never takes energy in. Every vis it converts leaves 0.1 flux in the aura, it never drains the aura below 25% of its base value, and all the converters of a chunk share a limit of 1 vis per tick.
+
+| Property | Value |
+| --- | --- |
+| FE per vis | 560,000,000 |
+| Maximum output per tick | 500,000,000 FE |
+| Energy buffer | 10,000,000,000 FE |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:vis_resonator', 'thaumaturge:plate_void', 'thaumaturge:plate_void', 
+        'thaumaturge:vis_resonator', 'thaumaturgetechcompats:alchemical_brass_aura_converter', 'thaumaturge:plate_void', 
+        'thaumaturge:mechanism_complex', '', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_aura_converter"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:alchemical_brass_aura_converter) |
+| Pedestal items | 4 × Void Metal Plate, Complex Arcane Mechanism, 2 × Vis Resonator |
+| Essentia | Potentia 80, Machina 40, Auram 40, Vacuos 40 |
+| Instability | 4 |
+| Research | **Void Metal Aura Converter** (Extras tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium one at the Arcane Workbench, research Aura Converter; the others infused over the one before).
+2. Place it in a chunk with aura and put blocks that accept FE against it (batteries, machines, cables).
+3. Right click it to read the stored energy, the aura of the chunk, its state and its rate.
+4. A redstone signal stops the conversion (the stored energy can still be taken out).
+
+> [!NOTE]- Thaumonomicon: Void Metal Aura Converter
+> The void drinks the aura and gives it back as pure power.
+> 
+> **Void Metal Aura Converter**
+> 
+> It is infused over an alchemical brass aura converter with void metal plates, a complex mechanism and two vis resonators. Every vis becomes 560,000,000 FE. It gives out up to 500,000,000 FE per tick and stores 10,000,000,000 FE. The limit of the chunk keeps it from emptying the aura on its own.
+
+**Guides of this chapter:** [Aura Converters]($extras/aura-converters)

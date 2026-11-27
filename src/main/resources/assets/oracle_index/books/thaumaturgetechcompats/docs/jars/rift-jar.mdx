@@ -1,0 +1,46 @@
+---
+title: The Rift Jar and the Rifting Ingot
+icon: thaumaturgetechcompats:rift_jar
+related_items: [thaumaturgetechcompats:rift_jar, thaumaturgetechcompats:rifting_ingot]
+---
+
+> [!NOTE]
+> Part of the "node power" base (it can be switched off in the compatibilities config, on by default). Numbers: the rift jar section of the node power config.
+
+## What it is
+
+A flux rift cannot be sealed, only worn down. The [](@thaumaturgetechcompats:rift_jar), set beside a flux rift, takes the rift apart **one point at a time** and keeps that as power for any machine that uses magical power. It stops once the rift is down to its smallest size. A broken Rift Jar spills what it still holds back into the aura as flux.
+
+| Setting | Default | Meaning |
+| --- | --- | --- |
+| Capacity | 200 | power the jar can hold |
+| Capture radius | 4 blocks | how far it reaches a rift |
+| Capture interval | 40 ticks | time between two absorptions; each shrinks the rift by 1 point |
+| Power per size | 20 | power gained per point of rift size taken |
+| Release ratio | 0.05 | flux poured out per unit of power left when it is broken |
+
+## How to get it
+
+Arcane workbench (60 vis): a Warded Jar in the middle, a Void Seed above and below, and a Void Metal Plate left and right. Needs the "Rift Jar" research.
+
+## Step by step
+
+1. Find or create a flux rift (for example with a Flux Knife).
+2. Place the Rift Jar within 4 blocks of the rift.
+3. Wait: every 40 ticks the rift shrinks by one point and the jar gains 20 power.
+4. Put a magical-power machine next to the jar to use that power.
+
+## The Rifting Ingot
+
+The Rift Jar is also the key to the Rifting Ingot. Next to a crucible, a Rift Jar that **holds a trapped rift** (any power above zero in it) lets you drop a Void Metal Ingot into a crucible with water, 20 Praecantatio and 20 Sol to make a [](@thaumaturgetechcompats:rifting_ingot). Without the trapped rift the game tells you "The void metal needs a Rift Jar with a trapped rift next to the crucible" and nothing happens.
+
+## Common mistakes
+
+- Putting the jar too far from the rift (more than the capture radius).
+- Using an empty Rift Jar next to the crucible: it must hold power.
+- Forgetting that a rift at its minimum size (1 by default) stops being a source.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's node power configuration.

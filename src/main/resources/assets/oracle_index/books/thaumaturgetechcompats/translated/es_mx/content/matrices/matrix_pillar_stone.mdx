@@ -1,0 +1,59 @@
+---
+id: thaumaturgetechcompats:matrix_pillar_stone
+type: block
+title: Piedra de pilar de infusión de Matriz de Cristal
+---
+
+> [!NOTE]
+> Necesita el mod **Avaritia**.
+
+## Qué es
+
+La Piedra de pilar de infusión de Matriz de Cristal es la piedra de un altar de infusión por niveles: ocho forman los cuatro pilares. Espolvoreadas con Salis Mundus se convierten en Pilares de infusión de Matriz de Cristal, que bajan el coste y el tiempo de ciclo del altar.
+
+| Propiedad | Valor |
+| --- | --- |
+| Cambio de coste del altar | -0,1 |
+| Cambio del tiempo de ciclo | -1 |
+| Estabilidad (solo con la Matriz rúnica normal) | +0,25 |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'avaritia:crystal_matrix_ingot', 'thaumaturge:stone_eldritch_tile', 'avaritia:crystal_matrix_ingot', 
+        'thaumaturge:stone_eldritch_tile', '', 'thaumaturge:stone_eldritch_tile', 
+        'avaritia:crystal_matrix_ingot', 'thaumaturge:stone_eldritch_tile', 'avaritia:crystal_matrix_ingot'
+    ]}
+    result="thaumaturgetechcompats:matrix_pillar_stone"
+    count={4}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 4 × Crystal Matrix Ingot, 4 × Baldosa de piedra de Eldricht |
+| Vis | 200 |
+| Cristales | ninguno |
+| Investigación | **Pilares de Avaritia** (pestaña Avaritia) |
+| Da | 4 |
+
+## Cómo se usa
+
+1. Investiga Pilares de Avaritia y fabrica cuatro a la vez en la Mesa de trabajo arcana (cada nivel usa las piedras del anterior).
+2. Construye el altar como el normal: cuatro pilares en las esquinas de dos piedras cada uno, un pedestal en el medio y una Matriz rúnica.
+3. Espolvorea Salis Mundus sobre la estructura para levantar los pilares.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:neutronium_pillar_stone)
+
+> [!NOTE]- Thaumonomicon: Pilares de Avaritia
+> Las piedras de pilar de infusión se fabrican en la mesa de trabajo arcana, de cuatro en cuatro, con lingotes y las piedras del nivel anterior: las de Matriz de Cristal parten de Baldosas de piedra de Eldricht, las de Neutronio de las de Matriz de Cristal y las de Infinito de las de Neutronio, con una Perla Extremadamente Primordial.
+> Los pedestales se infunden a partir del pedestal del nivel anterior, empezando por el Pedestal de Eldritch, en un altar cuyo centro sea la Matriz rúnica de su propio nivel.
+> El altar se construye igual que el normal: ocho piedras, un pedestal y una Matriz rúnica de cualquier tipo. Salis Mundus convierte las piedras en pilares del mismo nivel, y el aspecto de los pilares sigue a la piedra usada.
+> Cada nivel baja más el coste y el tiempo de ciclo del altar que el anterior, y los pilares también dan estabilidad a la Matriz rúnica normal. Los valores exactos se ajustan en la configuración.
+
+**Guías de este capítulo:** [Construir un altar de infusión por niveles]($matrices/build-the-altar) · [Pilares y pedestales]($matrices/pillars-and-pedestals)

@@ -17,11 +17,11 @@
       "feature": "oritech_node_amber"
     }
   ],
-  "type": "oritech:deep_drill",
-  "ingredients": [
+  "type": "oritech:bedrock_extractor",
+  "itemInputs": [
     "thaumaturgetechcompats:resource_node_amber"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 1,
       "id": "thaumaturge:amber"

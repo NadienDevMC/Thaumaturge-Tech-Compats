@@ -1,0 +1,48 @@
+---
+title: Convertidores de aura
+icon: thaumaturgetechcompats:thaumium_aura_converter
+related_items: [thaumaturgetechcompats:thaumium_aura_converter, thaumaturgetechcompats:alchemical_brass_aura_converter, thaumaturgetechcompats:void_metal_aura_converter]
+---
+
+> [!NOTE]
+> Los convertidores de aura, y cada nivel por separado, se pueden desactivar en la configuración de compatibilidades. Las cifras están en la configuración del convertidor de aura.
+
+## Qué es
+
+Un Convertidor de aura saca vis del aura de su chunk y lo convierte en **FE**, que entrega a todos los bloques vecinos que acepten energía. Nunca recibe energía. Es un generador que se alimenta del aura.
+
+| Convertidor | FE por vis | Salida por tick (máx.) | Búfer |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_aura_converter) | 250.000 | 250.000 FE | 10.000.000 FE |
+| [](@thaumaturgetechcompats:alchemical_brass_aura_converter) | 1.000.000 | 1.000.000 FE | 100.000.000 FE |
+| [](@thaumaturgetechcompats:void_metal_aura_converter) | 560.000.000 | 500.000.000 FE | 10.000.000.000 FE |
+
+Límites que protegen el aura (todos configurables):
+
+- Cada vis que convierte deja **0,1 de flujo** en el aura.
+- Nunca drena el aura por debajo del **25% de su valor base**; en ese punto muestra *Sin vis*.
+- Todos los convertidores de un chunk comparten un límite de **1 vis por tick** en total (*Límite del chunk*). Un convertidor que da N FE por vis convierte hasta N FE por tick.
+- Una **señal de redstone** detiene la conversión (la energía guardada aún se puede sacar).
+
+## Cómo conseguirlos
+
+- **Taumio**: mesa de trabajo arcana, fila de arriba Placa de taumio, Polvo de redstone y Placa de taumio; fila del medio Lingote de cobre, Resonador de vis y Lingote de cobre; fila de abajo Placa de taumio, Mecanismo arcano simple y Placa de taumio (cristales ignis 2, ordo 1; 50 de vis). Investigación: *Convertidor de aura*.
+- **Latón alquímico**: infusión sobre un Convertidor de aura de taumio con cuatro placas de latón, un Mecanismo arcano simple y un Resonador de vis.
+- **Metal del vacío**: infusión sobre un Convertidor de aura de latón alquímico con cuatro placas de metal del vacío, un Mecanismo arcano complejo y dos Resonadores de vis.
+
+## Paso a paso
+
+1. Coloca el convertidor en un chunk con aura y pon pegados bloques que acepten FE (baterías, máquinas, cables).
+2. Pulsa clic derecho para leer la energía guardada, el aura del chunk, su estado y su ritmo. Los estados son *Convirtiendo*, *En pausa*, *Búfer lleno*, *Sin vis*, *Límite del chunk* y *Desactivado*.
+3. No pongas varios convertidores en un chunk esperando que se sumen: comparten el límite del chunk.
+
+## Errores comunes
+
+- Dejarle una señal de redstone.
+- Drenar un chunk con poca aura: el convertidor se detiene a un cuarto del aura base.
+- Ignorar el flujo: el uso intensivo contamina el chunk.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración del convertidor de aura del mod.

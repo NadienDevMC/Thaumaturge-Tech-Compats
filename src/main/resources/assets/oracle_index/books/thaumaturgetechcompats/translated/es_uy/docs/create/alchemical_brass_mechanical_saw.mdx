@@ -1,0 +1,68 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_mechanical_saw
+title: Sierra mecánica de latón alquímico
+---
+
+> [!NOTE]
+> Necesita **Create** (a través de Create: Adapted en 26.1.2).
+
+## Qué es
+
+La Sierra mecánica de latón alquímico funciona **exactamente igual que la máquina de Create de la que sale**: mismas recetas, mismas necesidades cinéticas, y aparece como catalizador en las mismas categorías de JEI. La única diferencia: mientras haya un nodo de aura al alcance trabaja muchas veces más rápido, con partículas de encantamiento encima. Lejos de todo nodo se comporta como la máquina normal.
+
+| Propiedad | Valor |
+| --- | --- |
+| Velocidad con un nodo al alcance (por defecto) | 15 veces más rápido |
+| Alcance hasta el nodo (por defecto) | 6 bloques |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturgetechcompats:alchemical_brass_casing', '', 
+        '', 'create:mechanical_saw', '', 
+        'thaumaturge:plate_brass', '', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_mechanical_saw"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | Sierra mecánica |
+| Objetos en los pedestales | []($create/alchemical_brass_casing), 2 × Placa de latón alquímico |
+| Esencia | Machina 20, Metallum 10, Motus 10 |
+| Inestabilidad | 2 |
+| Investigación | **Maquinaria de latón alquímico** (pestaña Create) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga la entrada de maquinaria de su nivel y fabrica la carcasa de ese nivel.
+2. Infunde la variante sobre la máquina del nivel anterior (la máquina normal de Create para el latón alquímico).
+3. Colócala **en lugar de** la máquina normal y conéctala a tu red cinética igual (ejes, engranajes, cintas).
+4. Asegúrate de que haya un nodo de aura a su alcance: busca el nodo más cercano por sí sola cada 20 ticks.
+5. Monta el resto de la línea como siempre (cintas, embudos, cuencos).
+
+## Se usa para fabricar
+
+- []($create/thaumium_mechanical_saw)
+
+> [!NOTE]- Thaumonomicon: Maquinaria de latón alquímico
+> La carcasa zumba junto a un nodo. Integrada en una máquina de Create da una variante de esa máquina: una prensa, mezcladora, sierra o taladro mecánicos, un desplegador, muela, cuenca, surtidor, escurridor o depósito que funciona igual que el original.
+> Mientras haya un nodo de aura cerca, la variante trabaja muchas veces más rápido. Lejos de todo nodo se comporta como la máquina normal.
+> 
+> **Carcasa de latón alquímico**
+> 
+> Se fabrica en la mesa de trabajo arcana con una carcasa de latón de Create y cuatro placas de latón.
+> 
+> **Variantes de máquina**
+> 
+> Cada variante se infunde sobre la máquina de Create correspondiente, con una carcasa de latón alquímico y dos placas de latón.
+
+**Guías de este capítulo:** [Carcasas de nodo]($create/casings) · [Variantes de máquina e impulso de nodo]($create/machine-variants) · [Sello de Create]($create/create-seal)

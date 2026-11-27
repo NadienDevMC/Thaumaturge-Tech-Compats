@@ -1,0 +1,63 @@
+---
+icon: thaumaturgetechcompats:void_metal_spout
+title: Surtidor de metal del vacío
+---
+
+> [!NOTE]
+> Necesita **Create** (a través de Create: Adapted en 26.1.2).
+
+## Qué es
+
+La Surtidor de metal del vacío funciona **exactamente igual que la máquina de Create de la que sale**: mismas recetas, mismas necesidades cinéticas, y aparece como catalizador en las mismas categorías de JEI. La única diferencia: mientras haya un nodo de aura al alcance trabaja muchas veces más rápido, con partículas de encantamiento encima. Lejos de todo nodo se comporta como la máquina normal.
+
+| Propiedad | Valor |
+| --- | --- |
+| Velocidad con un nodo al alcance (por defecto) | 15 veces más rápido |
+| Alcance hasta el nodo (por defecto) | 16 bloques |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturgetechcompats:void_metal_casing', '', 
+        'thaumaturge:mechanism_complex', 'thaumaturgetechcompats:thaumium_spout', 'thaumaturge:plate_void', 
+        '', 'thaumaturge:plate_void', ''
+    ]}
+    result="thaumaturgetechcompats:void_metal_spout"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($create/thaumium_spout) |
+| Objetos en los pedestales | []($create/void_metal_casing), 2 × Placa de metal del vacío, Mecanismo arcano complejo |
+| Esencia | Vacuos 20, Potentia 20, Auram 20 |
+| Inestabilidad | 4 |
+| Investigación | **Maquinaria de metal del vacío** (pestaña Create) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga la entrada de maquinaria de su nivel y fabrica la carcasa de ese nivel.
+2. Infunde la variante sobre la máquina del nivel anterior (la máquina normal de Create para el latón alquímico).
+3. Colócala **en lugar de** la máquina normal y conéctala a tu red cinética igual (ejes, engranajes, cintas).
+4. Asegúrate de que haya un nodo de aura a su alcance: busca el nodo más cercano por sí sola cada 20 ticks.
+5. Monta el resto de la línea como siempre (cintas, embudos, cuencos).
+
+> [!NOTE]- Thaumonomicon: Maquinaria de metal del vacío
+> Las variantes de metal del vacío son las mejores y responden a un nodo desde la mayor distancia.
+> 
+> **Carcasa de metal del vacío**
+> 
+> Se infunde sobre una carcasa de taumio con cuatro placas de metal del vacío y un mecanismo complejo.
+> 
+> **Variantes de máquina**
+> 
+> Cada variante se infunde sobre la variante de taumio de la misma máquina, con una carcasa de metal del vacío, dos placas de metal del vacío y un mecanismo complejo.
+
+**Guías de este capítulo:** [Carcasas de nodo]($create/casings) · [Variantes de máquina e impulso de nodo]($create/machine-variants) · [Sello de Create]($create/create-seal)

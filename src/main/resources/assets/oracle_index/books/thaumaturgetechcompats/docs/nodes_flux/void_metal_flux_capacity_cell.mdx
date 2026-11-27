@@ -1,0 +1,57 @@
+---
+icon: thaumaturgetechcompats:void_metal_flux_capacity_cell
+title: Void Metal Flux Capacity Cell
+---
+
+## What it is
+
+The Void Metal Flux Capacity Cell adds capacity to a Flux Storage Core when it stands on a pedestal near the core.
+
+| Property | Value |
+| --- | --- |
+| Capacity added to a core | 500,000,000 DF |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_void', 'thaumaturge:ingot_void', 'thaumaturge:alumentum', 
+        '', 'thaumaturgetechcompats:alchemical_brass_flux_capacity_cell', '', 
+        'thaumaturge:alumentum', 'thaumaturge:ingot_void', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_flux_capacity_cell"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($nodes_flux/alchemical_brass_flux_capacity_cell) |
+| Pedestal items | 2 × Void Metal Ingot, 2 × Alumentum, 2 × Void Metal Plate |
+| Essentia | Auram 36, Potentia 36, Vacuos 24, Ordo 24 |
+| Instability | 10 |
+| Research | **Void Metal Storage Core** (Flux Network tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium cell at the Arcane Workbench, the others infused around the cell of the tier before).
+2. Put it on a pedestal within 6 blocks of a formed Flux Storage Core.
+3. The core counts up to 16 cells.
+
+> [!NOTE]- Thaumonomicon: Void Metal Storage Core
+> The Void Metal Flux Storage Core and the Void Metal Flux Capacity Cell are made by infusion, the first from the Alchemical Brass Flux Storage Core and the second from the Alchemical Brass Flux Capacity Cell.
+> 
+> **Structure**
+> 
+> The core only works while it is the centre of a ring of eight void metal blocks on its own level, with one more void metal block right above it and another right below it. Blocks of a higher tier count too. Until it is formed it neither stores nor passes on any flux. Right-click it to see its state.
+> 
+> **Cells and stabilizers**
+> 
+> Capacity Cells placed on pedestals, of any kind, within six blocks of the core raise its capacity. Node stabilizers within eight blocks keep it calm: the fuller it is, the more stabilizer points it needs. Above half full and short of points, it overloads: it releases flux into the aura, throws sparks and hurts whoever stands near. The distances, figures and effects can be changed in the configuration.
+
+**Guides of this chapter:** [Flux Storage Cores and Capacity Cells]($nodes_flux/flux-storage)

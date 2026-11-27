@@ -1,0 +1,53 @@
+---
+icon: thaumaturgetechcompats:rift_extractor
+title: Rift Extractor
+---
+
+## What it is
+
+The Rift Extractor absorbs energy directly from an open flux rift, taking one point of its size at a time and turning it into Dimensional Flux, which it pushes into the storages and Transmission Links touching it.
+
+| Property | Value |
+| --- | --- |
+| Range | 6 blocks |
+| Dimensional Flux stored | 50,000 |
+| Moves per tick | 2,000 DF |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:mechanism_complex', 'thaumaturge:void_seed', 'thaumaturge:plate_void', 
+        '', 'thaumaturgetechcompats:flux_jar', '', 
+        'thaumaturge:plate_void', 'thaumaturge:plate_void', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:rift_extractor"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($jars/flux_jar) |
+| Pedestal items | Void Seed, 4 × Void Metal Plate, Complex Arcane Mechanism |
+| Essentia | Vacuos 24, Potentia 24, Alienis 16, Praemunio 8 |
+| Instability | 4 |
+| Research | **Rift Extractor** (Flux Network tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Infuse it with a Flux Jar as the central item.
+2. Place it within 6 blocks of a flux rift.
+3. Put a Storage Core or a Transmission Link against it.
+4. Every 40 ticks it takes one point of the rift (5,000 DF each). It stops when the rift is at its smallest size or it has no room.
+
+> [!NOTE]- Thaumonomicon: Rift Extractor
+> The Rift Extractor is made on an infusion altar from a Flux Jar, a void seed, four void metal plates and a complex arcane mechanism.
+> It absorbs energy directly from an open flux rift within reach, taking one point of its size every so often, and turns each point into Dimensional Flux. It stops once the rift is down to its smallest size or once it has no room left to store more. The Flux it holds is pushed into the storages and Transmission Links that touch it.
+
+**Guides of this chapter:** [Transmission Links and Rift Extractor]($nodes_flux/flux-links)

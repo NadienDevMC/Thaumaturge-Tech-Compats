@@ -1,0 +1,69 @@
+---
+icon: thaumaturgetechcompats:energized_thaumium_hoe
+title: Energized Thaumium Hoe
+---
+
+> [!NOTE]
+> Needs the **Mekanism** mod.
+
+## What it is
+
+The Energized Thaumium Hoe is a tool that runs on Mekanism energy instead of durability: it never loses durability and every action spends energy (a charge bar shows what is left). With no energy it mines like bare hands and deals no attack damage.
+
+| Property | Value |
+| --- | --- |
+| Energy capacity (Mekanism joules) | 250,000 |
+| Energy per block mined | 600 |
+| Energy per hit | 1,000 |
+| Energy per strip, flatten or till | 500 |
+| Mining speed | 6.0 |
+| Attack damage bonus | 2.0 |
+| Enchantability | 14 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'mekanism:energy_tablet', 'mekanism:energy_tablet', 
+        '', 'thaumaturge:thaumium_hoe', '', 
+        'thaumaturge:plate_thaumium', 'mekanism:advanced_control_circuit', 'mekanism:alloy_reinforced'
+    ]}
+    result="thaumaturgetechcompats:energized_thaumium_hoe"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Thaumium Hoe |
+| Pedestal items | 2 × Energy Tablet, Reinforced Alloy, Advanced Control Circuit, 2 × Thaumium Plate |
+| Essentia | Machina 15, Potentia 15, Metallum 10, Instrumentum 10 |
+| Instability | 1 |
+| Research | **Energized Thaumium Tools** |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Energized Thaumium Tools, then Energized Alchemical Brass Tools, then Energized Void Metal Tools.
+2. Infuse it as shown above. The Alchemical Brass and Void Metal tools also take the energized tool of the tier before, of the same kind, on a pedestal (it is consumed).
+3. Charge it in an energy cube, a charge pad, the charging slot of a Mekanism machine or any other energy source.
+4. Use it like a normal tool and recharge it when the bar empties.
+
+## Used to make
+
+- []($mekanism/energized_alchemical_brass_hoe)
+
+> [!NOTE]- Thaumonomicon: Energized Thaumium Tools
+> The plan is simple enough. A normal thaumium tool, two energy tablets, a reinforced alloy, an advanced control circuit and two thaumium plates, all together on an infusion altar.
+> 
+> **Energized Thaumium Tools**
+> 
+> The infusion altar gives me an energized thaumium pickaxe, axe, shovel, hoe or sword from the matching normal tool. They no longer lose durability. They hold energy, and every block mined, every hit on a creature and every stripped, flattened or tilled block spends some of it. They are charged in an energy cube, a charge pad, a charging slot of any Mekanism machine or with any other source of energy, and the charge bar under the item shows what is left. With no energy left they mine like bare hands, drop nothing a tool should drop and hit like a fist, until I charge them again.
+> 
+> They are the first of the energized tools: they hold the least energy, spend the most of it and work the slowest, and the alchemical brass ones improve on them. The capacity, the cost of every action, the mining speed and the damage can be changed in the configuration.
+
+**Guides of this chapter:** [Energized Tools]($mekanism/energized-tools)

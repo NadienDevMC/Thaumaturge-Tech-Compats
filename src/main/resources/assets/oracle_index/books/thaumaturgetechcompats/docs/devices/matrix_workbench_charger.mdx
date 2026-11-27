@@ -1,0 +1,63 @@
+---
+icon: thaumaturgetechcompats:matrix_workbench_charger
+title: Crystal Matrix Workbench Charger
+---
+
+> [!NOTE]
+> Needs materials of the **Avaritia** mod.
+
+## What it is
+
+The Crystal Matrix Workbench Charger sits on top of an Arcane Workbench and pulls vis from the aura of the chunks around it. It reaches farther than the ordinary charger and charges only part of the vis of each craft.
+
+| Property | Value |
+| --- | --- |
+| Vis radius | 2 chunks |
+| Vis of each craft that is charged | 70% |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'avaritia:crystal_matrix_ingot', 'thaumaturgetechcompats:matrix_plate', 'thaumaturgetechcompats:matrix_plate', 
+        'avaritia:crystal_matrix_ingot', 'thaumaturge:arcane_workbench_charger', 'thaumaturgetechcompats:matrix_plate', 
+        'thaumaturge:vis_resonator', '', 'thaumaturgetechcompats:matrix_plate'
+    ]}
+    result="thaumaturgetechcompats:matrix_workbench_charger"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Workbench Charger |
+| Pedestal items | 4 × []($avaritia/matrix_plate), Vis Resonator, 2 × Crystal Matrix Ingot |
+| Essentia | Auram 24, Potentia 24, Fabrico 16, Terminus 4 |
+| Instability | 4 |
+| Center of the altar | []($matrices/matrix_infusion_matrix) (by default) |
+| Research | **Workbench Chargers of Avaritia** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Workbench Chargers of Avaritia.
+2. Infuse it over the charger of the tier before (the ordinary Arcane Workbench Charger for Crystal Matrix).
+3. Place it on top of the Arcane Workbench.
+4. Craft as usual: the vis comes from the chunks in its radius. Jade shows its discount and radius.
+
+## Used to make
+
+- []($devices/neutronium_workbench_charger)
+
+> [!NOTE]- Thaumonomicon: Workbench Chargers of Avaritia
+> Each charger is made on an infusion altar, starting from the one before it:
+> - The Crystal Matrix one starts from an ordinary workbench charger.
+> - The Neutronium one starts from the Crystal Matrix one.
+> - The Infinity one starts from the Neutronium one.
+> They sit on top of the workbench like the ordinary one. By default they draw from 2, 3 and 4 chunks around it and charge only 70%, 40% and 10% of the vis of each craft.
+
+**Guides of this chapter:** [Mnemonic Matrices and Workbench Chargers]($devices/brain-boxes-chargers)

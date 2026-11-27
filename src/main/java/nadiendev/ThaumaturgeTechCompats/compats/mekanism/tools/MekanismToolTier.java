@@ -1,13 +1,15 @@
 package nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools;
 
+import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.block.Block;
 
-public enum MekanismToolTier implements Tier {
+public enum MekanismToolTier {
     THAUMIUM("thaumium", "Thaumium", "taumio", "mekanism_energy_tools_thaumium", "thaumaturge:thaumium_", "thaumaturge:plate_thaumium",
             "mekanism:alloy_reinforced", "mekanism:advanced_control_circuit", Rarity.UNCOMMON, BlockTags.INCORRECT_FOR_IRON_TOOL,
             250_000L, 600L, 1000L, 500L, 6.0D, 2.0D, 14),
@@ -126,33 +128,17 @@ public enum MekanismToolTier implements Tier {
         return ordinal() == 0 ? null : values()[ordinal() - 1];
     }
 
-    @Override
-    public int getUses() {
-        return 1;
+    public TagKey<Item> repairTag() {
+        return TagKey.create(Registries.ITEM, ThaumaturgeTechCompats.id("mekanism_tool_repair/" + id));
     }
 
-    @Override
-    public float getSpeed() {
-        return (float) MekanismToolConfig.miningSpeed(this);
-    }
-
-    @Override
-    public float getAttackDamageBonus() {
+    public float attackDamageBonus() {
         return (float) MekanismToolConfig.attackDamage(this);
     }
 
-    @Override
-    public TagKey<Block> getIncorrectBlocksForDrops() {
-        return incorrectBlocks;
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return MekanismToolConfig.enchantability(this);
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return Ingredient.EMPTY;
+    /** Durability is a placeholder: the default components drop it, the tools run on energy. */
+    public ToolMaterial material() {
+        return new ToolMaterial(incorrectBlocks, 1, (float) MekanismToolConfig.miningSpeed(this), attackDamageBonus(),
+                MekanismToolConfig.enchantability(this), repairTag());
     }
 }

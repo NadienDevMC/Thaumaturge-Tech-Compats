@@ -1,0 +1,53 @@
+---
+title: Generadores de escudo y Terraformadores arcanos
+icon: thaumaturgetechcompats:thaumium_shield_generator
+related_items: [thaumaturgetechcompats:thaumium_shield_generator, thaumaturgetechcompats:alchemical_brass_shield_generator, thaumaturgetechcompats:void_metal_shield_generator, thaumaturgetechcompats:thaumium_arcane_terraformer, thaumaturgetechcompats:alchemical_brass_arcane_terraformer, thaumaturgetechcompats:void_metal_arcane_terraformer]
+---
+
+> [!NOTE]
+> Parte de la red de Flujo Dimensional (DF), cada nivel con su propio interruptor en la configuración de compatibilidades. Ambos dispositivos también tienen interruptores generales en la configuración de campo (secciones del escudo y del terraformador).
+
+## Generadores de escudo
+
+### Qué son
+
+Mientras tiene DF, el generador levanta a su alrededor una burbuja que destruye los proyectiles de los mobs hostiles, empuja a los mobs hostiles fuera (nunca a los jefes) y quita el daño de las explosiones de dentro (los bloques de dentro de la burbuja no se destruyen). Cada tick de burbuja cuesta DF, y también cada proyectil y cada explosión que absorbe. Cuando se acaba el flujo se apaga, y vuelve a arrancar cuando guarda el flujo de un número de ticks de funcionamiento. Pulsa clic derecho para leer su estado.
+
+| Generador | Radio de la burbuja | DF que guarda | DF por tick |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_shield_generator) | 8 bloques | 100.000 | 10 |
+| [](@thaumaturgetechcompats:alchemical_brass_shield_generator) | 16 bloques | 1.000.000 | 40 |
+| [](@thaumaturgetechcompats:void_metal_shield_generator) | 32 bloques | 10.000.000 | 160 |
+
+Receta de taumio, mesa de trabajo arcana: filas de arriba y de abajo Placa de taumio, Cristal espejado y Placa de taumio; fila del medio Mecanismo arcano simple, Resonador de vis y Mecanismo arcano simple. Los niveles superiores se infunden alrededor del anterior con cuatro placas de latón (o de metal del vacío), un Mecanismo arcano simple, un Resonador de vis y dos Cristales espejados.
+
+## Terraformadores arcanos
+
+### Qué son
+
+Un terraformador repinta el bioma de la zona que lo rodea, columna a columna empezando por sus pies. Necesita un **cebo**: un objeto que represente un bioma (arena para un desierto, nieve para la tundra, un brote para un bosque; la lista es la lista de cebos de la configuración de campo). Los biomas y dimensiones listados en la configuración se dejan en paz.
+
+| Terraformador | Radio | DF que guarda | DF por columna de 4x4 | Columnas por ciclo |
+|---|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_arcane_terraformer) | 16 bloques | 200.000 | 2.000 | 2 |
+| [](@thaumaturgetechcompats:alchemical_brass_arcane_terraformer) | 32 bloques | 2.000.000 | 1.500 | 6 |
+| [](@thaumaturgetechcompats:void_metal_arcane_terraformer) | 64 bloques | 20.000.000 | 1.000 | 16 |
+
+Receta de taumio, mesa de trabajo arcana: fila de arriba Placa de taumio, Bloque de hierba y Placa de taumio; fila del medio Mecanismo arcano simple, Resonador de vis y Mecanismo arcano simple; fila de abajo Placa de taumio, Arena y Placa de taumio.
+
+### Paso a paso
+
+1. Dale DF al dispositivo (un Núcleo de almacenamiento, Enlace de transmisión o Extractor de grietas pegado a él).
+2. Pulsa clic derecho en el terraformador con el cebo. Agáchate y pulsa clic derecho con la mano vacía para recoger el cebo.
+3. Pulsa clic derecho otra vez para leer su progreso, radio y estado (*trabajando*, *esperando Flujo Dimensional*, *terminado*, *sin cebo*).
+
+## Errores comunes
+
+- Usar un objeto que no es un cebo de bioma: el terraformador se detiene con *cebo no válido*.
+- Esperar que funcione en una dimensión o bioma bloqueado por la configuración.
+- Dejar que el escudo se quede sin flujo: se apaga hasta que recupera el suficiente.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración del campo de flujo del mod.

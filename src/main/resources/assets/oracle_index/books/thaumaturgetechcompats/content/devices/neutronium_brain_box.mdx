@@ -1,0 +1,63 @@
+---
+id: thaumaturgetechcompats:neutronium_brain_box
+type: block
+title: Neutronium Mnemonic Matrix
+---
+
+> [!NOTE]
+> Needs materials of the **Avaritia** mod.
+
+## What it is
+
+The Neutronium Mnemonic Matrix is a Mnemonic Matrix of Neutronium: placed against a Thaumatorium it lets it remember more formulas at the same time. It stacks with ordinary matrices and loses no formula.
+
+| Property | Value |
+| --- | --- |
+| Simultaneous formulas added (default) | 6 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturgetechcompats:neutronium_plate', '', 
+        'thaumaturge:mind_biothaumic', 'thaumaturgetechcompats:matrix_brain_box', 'thaumaturgetechcompats:neutronium_plate', 
+        'thaumaturgetechcompats:neutronium_plate', '', 'thaumaturgetechcompats:neutronium_plate'
+    ]}
+    result="thaumaturgetechcompats:neutronium_brain_box"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:matrix_brain_box) |
+| Pedestal items | 4 × [](@thaumaturgetechcompats:neutronium_plate), Biothaumic Mind |
+| Essentia | Cognitio 40, Machina 32, Metallum 24, Terminus 8 |
+| Instability | 7 |
+| Center of the altar | [](@thaumaturgetechcompats:neutronium_infusion_matrix) (by default) |
+| Research | **Mnemonic Matrices of Avaritia** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Mnemonic Matrices of Avaritia.
+2. Infuse it over the matrix of the tier before, with the Runic Matrix of its tier at the center of the altar.
+3. Place it against the Thaumatorium like an ordinary Mnemonic Matrix.
+4. Look at it with Jade to see how many formulas it adds.
+
+## Used to make
+
+- [](@thaumaturgetechcompats:infinity_brain_box)
+
+> [!NOTE]- Thaumonomicon: Mnemonic Matrices of Avaritia
+> Each matrix is made on an infusion altar, starting from the one before it:
+> - The Crystal Matrix one starts from an ordinary mnemonic matrix.
+> - The Neutronium one starts from the Crystal Matrix one.
+> - The Infinity one starts from the Neutronium one.
+> They are placed against a thaumatorium exactly like the ordinary ones, and they stack with them. By default they allow 4, 6 and 10 formulas at the same time.
+
+**Guides of this chapter:** [Mnemonic Matrices and Workbench Chargers]($devices/brain-boxes-chargers)

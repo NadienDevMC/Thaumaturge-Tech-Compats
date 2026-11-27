@@ -3,14 +3,17 @@ package nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
+import nadiendev.ThaumaturgeTechCompats.taintedfood.OriginalItemComponents;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.DiggerItem;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.component.UseRemainder;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
+import net.minecraft.world.item.consume_effects.ConsumeEffect;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.component.ItemAttributeModifiers;
-import net.minecraft.world.item.component.Tool;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
@@ -37,7 +40,7 @@ public final class FarmersDelightTaintedItems {
 
     public static void register(IEventBus modBus, boolean foods, boolean knives, boolean fluxKnifeEnabled) {
         if (foods) {
-            FoodProperties placeholder = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1F).build();
+            FoodProperties placeholder = new FoodProperties(1, 0.1F, false);
             for (FarmersDelightFood food : FarmersDelightFood.values()) {
                 if (FarmersDelightTaintedConfig.foodEnabled(food)) {
                     FOODS.put(food, ITEMS.register(food.id(), () -> new FarmersDelightFoodItem(food, foodProperties(food, placeholder))));
@@ -55,7 +58,7 @@ public final class FarmersDelightTaintedItems {
             fluxKnife = ITEMS.register(FluxKnife.ID, () -> new FluxKnifeItem(fluxKnifeProperties()));
         }
         ITEMS.register(modBus);
-        modBus.addListener(EventPriority.LOWEST, FarmersDelightTaintedItems::onModifyDefaults);
+        modBus.addListener(FarmersDelightTaintedItems::onModifyDefaults);
     }
 
     public static List<Item> foods() {
@@ -79,11 +82,8 @@ public final class FarmersDelightTaintedItems {
     }
 
     private static Item.Properties fluxKnifeProperties() {
-        return new Item.Properties().rarity(FluxKnife.RARITY).attributes(fluxKnifeAttributes());
-    }
-
-    private static ItemAttributeModifiers fluxKnifeAttributes() {
-        return DiggerItem.createAttributes(FluxKnife.INSTANCE, KNIFE_BASE_DAMAGE, FarmersDelightTaintedConfig.fluxKnifeAttackSpeed());
+        return new Item.Properties().rarity(FluxKnife.RARITY)
+                .tool(FluxKnife.material(), ModTags.Blocks.MINEABLE_WITH_KNIFE, KNIFE_BASE_DAMAGE, FarmersDelightTaintedConfig.fluxKnifeAttackSpeed(), 0.0F);
     }
 
     private static Item.Properties foodProperties(FarmersDelightFood food, FoodProperties placeholder) {
@@ -95,75 +95,54 @@ public final class FarmersDelightTaintedItems {
     }
 
     private static Item.Properties knifeProperties(FarmersDelightKnife knife) {
-        return new Item.Properties().rarity(knife.rarity()).attributes(attributes(knife));
-    }
-
-    private static ItemAttributeModifiers attributes(FarmersDelightKnife knife) {
-        return DiggerItem.createAttributes(knife, KNIFE_BASE_DAMAGE, FarmersDelightTaintedConfig.attackSpeed(knife));
+        return new Item.Properties().rarity(knife.rarity())
+                .tool(knife.material(), ModTags.Blocks.MINEABLE_WITH_KNIFE, KNIFE_BASE_DAMAGE, FarmersDelightTaintedConfig.attackSpeed(knife), 0.0F);
     }
 
     private static void onModifyDefaults(ModifyDefaultComponentsEvent event) {
-        modifyFluxKnife(event);
         for (Map.Entry<FarmersDelightFood, DeferredItem<Item>> entry : FOODS.entrySet()) {
-            Optional<Item> original = BuiltInRegistries.ITEM.getOptional(entry.getKey().original());
-            if (original.isEmpty()) {
-                continue;
-            }
-            DataComponentMap components = original.get().components();
-            FoodProperties food = components.get(DataComponents.FOOD);
-            if (food == null) {
-                continue;
-            }
-            FoodProperties tainted = taint(food);
-            int stackSize = components.getOrDefault(DataComponents.MAX_STACK_SIZE, 64);
-            Rarity rarity = components.get(DataComponents.RARITY);
-            event.modify(entry.getValue().get(), builder -> {
-                builder.set(DataComponents.FOOD, tainted);
-                builder.set(DataComponents.MAX_STACK_SIZE, stackSize);
+            Identifier originalId = entry.getKey().original();
+            // Original components are resolved while this item's defaults are built (holders are not bound yet)
+            event.modify(entry.getValue().get(), (builder, context, item) -> {
+                DataComponentMap components = OriginalItemComponents.get(context, originalId);
+                if (components == null) {
+                    return;
+                }
+                FoodProperties food = components.get(DataComponents.FOOD);
+                if (food == null) {
+                    return;
+                }
+                builder.set(DataComponents.FOOD, taint(food));
+                builder.set(DataComponents.CONSUMABLE, taint(components.getOrDefault(DataComponents.CONSUMABLE, Consumables.DEFAULT_FOOD)));
+                UseRemainder remainder = components.get(DataComponents.USE_REMAINDER);
+                if (remainder != null) {
+                    builder.set(DataComponents.USE_REMAINDER, remainder);
+                }
+                builder.set(DataComponents.MAX_STACK_SIZE, components.getOrDefault(DataComponents.MAX_STACK_SIZE, 64));
+                Rarity rarity = components.get(DataComponents.RARITY);
                 if (rarity != null) {
                     builder.set(DataComponents.RARITY, rarity);
                 }
             });
         }
-        for (Map.Entry<FarmersDelightKnife, DeferredItem<Item>> entry : KNIVES.entrySet()) {
-            FarmersDelightKnife knife = entry.getKey();
-            ItemAttributeModifiers attributes = attributes(knife);
-            Tool tool = knife.createToolProperties(ModTags.Blocks.MINEABLE_WITH_KNIFE);
-            int durability = FarmersDelightTaintedConfig.durability(knife);
-            event.modify(entry.getValue().get(), builder -> {
-                builder.set(DataComponents.MAX_DAMAGE, durability);
-                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, attributes);
-                builder.set(DataComponents.TOOL, tool);
-            });
-        }
-    }
-
-    private static void modifyFluxKnife(ModifyDefaultComponentsEvent event) {
-        if (fluxKnife == null) {
-            return;
-        }
-        ItemAttributeModifiers attributes = fluxKnifeAttributes();
-        Tool tool = FluxKnife.INSTANCE.createToolProperties(ModTags.Blocks.MINEABLE_WITH_KNIFE);
-        int durability = FarmersDelightTaintedConfig.fluxKnifeDurability();
-        event.modify(fluxKnife.get(), builder -> {
-            builder.set(DataComponents.MAX_DAMAGE, durability);
-            builder.set(DataComponents.ATTRIBUTE_MODIFIERS, attributes);
-            builder.set(DataComponents.TOOL, tool);
-        });
     }
 
     private static FoodProperties taint(FoodProperties food) {
         int nutrition = Math.max(1, Math.round(food.nutrition() * FarmersDelightTaintedConfig.hungerMultiplier()));
         float saturation = food.saturation() * FarmersDelightTaintedConfig.saturationMultiplier();
-        List<FoodProperties.PossibleEffect> effects = new ArrayList<>(food.effects());
+        return new FoodProperties(nutrition, saturation, food.canAlwaysEat());
+    }
+
+    private static Consumable taint(Consumable consumable) {
+        List<ConsumeEffect> effects = new ArrayList<>(consumable.onConsumeEffects());
         if (FarmersDelightTaintedConfig.foodEffectDuration() > 0 && FarmersDelightTaintedConfig.foodEffectChance() > 0.0F) {
-            effects.add(new FoodProperties.PossibleEffect(
-                    () -> FarmersDelightTaintedEffect.create(
+            effects.add(new ApplyStatusEffectsConsumeEffect(
+                    List.of(FarmersDelightTaintedEffect.create(
                             FarmersDelightTaintedConfig.foodEffectId(),
                             FarmersDelightTaintedConfig.foodEffectDuration(),
-                            FarmersDelightTaintedConfig.foodEffectAmplifier()),
+                            FarmersDelightTaintedConfig.foodEffectAmplifier())),
                     FarmersDelightTaintedConfig.foodEffectChance()));
         }
-        return new FoodProperties(nutrition, saturation, food.canAlwaysEat(), food.eatSeconds(), food.usingConvertsTo(), effects);
+        return new Consumable(consumable.consumeSeconds(), consumable.animation(), consumable.sound(), consumable.hasConsumeParticles(), effects);
     }
 }

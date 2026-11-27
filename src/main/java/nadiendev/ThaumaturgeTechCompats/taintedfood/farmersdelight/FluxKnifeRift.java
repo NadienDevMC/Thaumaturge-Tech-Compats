@@ -10,11 +10,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
@@ -50,7 +50,7 @@ public final class FluxKnifeRift {
             return InteractionResult.SUCCESS;
         }
         ItemStack stack = context.getItemInHand();
-        if (player.getCooldowns().isOnCooldown(stack.getItem())) {
+        if (player.getCooldowns().isOnCooldown(stack)) {
             return InteractionResult.FAIL;
         }
         BlockPos target = context.getClickedPos().relative(context.getClickedFace());
@@ -69,11 +69,11 @@ public final class FluxKnifeRift {
         }
         int wear = FarmersDelightTaintedConfig.riftDurabilityCost();
         if (wear > 0) {
-            stack.hurtAndBreak(wear, player, LivingEntity.getSlotForHand(context.getHand()));
+            stack.hurtAndBreak(wear, player, context.getHand().asEquipmentSlot());
         }
         int cooldown = FarmersDelightTaintedConfig.riftCooldown();
         if (cooldown > 0) {
-            player.getCooldowns().addCooldown(stack.getItem(), cooldown);
+            player.getCooldowns().addCooldown(stack, cooldown);
         }
         effects(server, target);
         return InteractionResult.SUCCESS;
@@ -98,13 +98,13 @@ public final class FluxKnifeRift {
     }
 
     private static boolean spawn(ServerLevel level, BlockPos pos, int size) {
-        EntityFluxRift rift = TTEntities.FLUX_RIFT.get().create(level);
+        EntityFluxRift rift = TTEntities.FLUX_RIFT.get().create(level, EntitySpawnReason.EVENT);
         if (rift == null) {
             return false;
         }
         RandomSource random = level.getRandom();
         rift.reseed(random.nextInt());
-        rift.moveTo(pos.getX() + CELL_CENTER, pos.getY() + CELL_CENTER, pos.getZ() + CELL_CENTER, random.nextFloat() * FULL_TURN, 0.0F);
+        rift.snapTo(pos.getX() + CELL_CENTER, pos.getY() + CELL_CENTER, pos.getZ() + CELL_CENTER, random.nextFloat() * FULL_TURN, 0.0F);
         rift.resize(size);
         return level.addFreshEntity(rift);
     }

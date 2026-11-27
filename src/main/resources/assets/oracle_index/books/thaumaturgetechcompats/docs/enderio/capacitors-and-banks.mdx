@@ -1,0 +1,57 @@
+---
+title: Magical Capacitors and Capacitor Banks
+icon: thaumaturgetechcompats:void_metal_capacitor
+related_items: [thaumaturgetechcompats:thaumium_capacitor, thaumaturgetechcompats:alchemical_brass_capacitor, thaumaturgetechcompats:void_metal_capacitor]
+---
+
+> [!NOTE]
+> Requires **Ender IO**. The capacitors, the capacitor banks and the whole Ender IO integration can be switched off in the compatibilities config; on by default, game restart needed. Numbers are in the Ender IO capacitors config.
+
+## What it is
+
+### Capacitors
+
+Three capacitors for the capacitor slot of any Ender IO machine. They work like an octadic capacitor with a higher **level**: the machine stores more energy, uses its energy better and works faster.
+
+| Tier | Item | Level (default) |
+| --- | --- | --- |
+| Basic / double-layer / octadic (Ender IO) | | 1 / 2 / 3 |
+| Thaumium | [](@thaumaturgetechcompats:thaumium_capacitor) | 4.0 |
+| Alchemical Brass | [](@thaumaturgetechcompats:alchemical_brass_capacitor) | 5.5 |
+| Void Metal | [](@thaumaturgetechcompats:void_metal_capacitor) | 7.5 |
+
+Each tier can have a separate level for energy capacity, energy use, fuel efficiency and burning energy generation (0 uses the general level).
+
+### Capacitor banks
+
+The Ender IO blocks **Thaumium Capacitor Bank**, **Alchemical Brass Capacitor Bank** and **Void Metal Capacitor Bank** work like Ender IO banks: place them touching and they share one pool of energy, but only banks of the same kind join. The bank moves as much energy per tick as it stores.
+
+| Tier | Energy per block (default) |
+| --- | --- |
+| Thaumium | 8,000,000 |
+| Alchemical Brass | 16,000,000 |
+| Void Metal | 32,000,000 |
+
+## How to get it
+
+Research **Magical Capacitors** and **Magical Capacitor Banks** in the Tech category.
+
+**Capacitors** (infusion altar), each over the tier before. Components: 4 plates of the tier, 2 Vibrant Alloy Ingots, 1 Vibrant Crystal, plus a simple mechanism (Alchemical Brass) or a void seed (Void Metal). The catalyst is an Octadic Capacitor for Thaumium, then the Thaumium capacitor, then the Alchemical Brass one. Aspects: potentia 24/48/72, metallum 12/24/36, machina 12/24/36 (Thaumium/Brass/Void). Instability 3/6/9.
+
+**Banks** (infusion altar): each bank is infused from the one below it with four plates of the new metal and four capacitors of that same metal. The Thaumium bank comes from a Vibrant Capacitor Bank, the Alchemical Brass one from the Thaumium bank, the Void Metal one from the Alchemical Brass bank.
+
+## Step by step
+
+1. Infuse the capacitor and place it in the capacitor slot of an Ender IO machine.
+2. For storage, infuse banks and place them touching each other; only banks of one tier merge.
+3. Connect an Ender IO energy conduit to the bank to charge or drain.
+
+## Common mistakes
+
+- Mixing tiers in one bank cluster: banks of different kinds do not join.
+- Expecting the capacitor to work outside the machine's capacitor slot.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Ender IO capacitors configuration.

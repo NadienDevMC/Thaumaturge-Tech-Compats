@@ -1,6 +1,6 @@
 {
-  "category": "thaumaturgetechcompats:avaritia",
-  "column": 2,
+  "category": "thaumaturgetechcompats:01_avaritia",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:matrix_scribing_tools",

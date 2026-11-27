@@ -9,8 +9,8 @@
       "feature": "aura_converter_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 27,
+  "category": "thaumaturgetechcompats:17_extras",
+  "column": 2,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:thaumium_aura_converter"
@@ -39,7 +39,7 @@
     "thaumaturge:vis_generator",
     "thaumaturge:metallurgy@2"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

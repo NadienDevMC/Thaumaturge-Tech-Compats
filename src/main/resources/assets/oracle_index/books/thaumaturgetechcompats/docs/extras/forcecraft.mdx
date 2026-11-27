@@ -1,0 +1,40 @@
+---
+title: ForceCraft Repair
+---
+
+> [!NOTE]
+> Needs **ForceCraft**. In the compatibilities config you can switch off everything for ForceCraft, or only the Repair infusion, the aspects or the Force Flask rules. The research is **Force Repair**.
+
+## What it is
+
+A new infusion for the Force Infuser: the **Repair** infusion. A tool, armor piece or Force Rod with it mends itself slowly while it is in your inventory, drawing vis from the aura of the chunk where you stand. If the aura is empty, nothing is repaired.
+
+| Setting (config) | Default |
+|---|---|
+| Interval between repair pulses | 100 ticks |
+| Durability repaired per pulse (each item) | 1 |
+| Vis drained per durability point | 0.5 |
+| Repairs the whole inventory | yes (off: armor and both hands only) |
+| Respects aura preservation | yes |
+| Tooltip line on infused items | yes |
+
+## How to get it
+
+1. Finish the research **Force Repair**.
+2. In a Force Infuser, put an **Order Shard** in one of the eight slots around a Force tool, Force armor piece or Force Rod.
+3. Put an **Upgrade Tome of the seventh tier** in the book slot.
+4. Run the infusion. It can be added to an item that is already infused.
+
+## Other ForceCraft support
+
+The mod also gives aspects to ForceCraft items and mobs and adds rules to the Force Flask: it cannot capture the entities in the blocked entities list of the ForceCraft config (on top of the ForceCraft flask blacklist tag). Mobs of Thaumaturge not listed are captured like any other mob.
+
+## Common mistakes
+
+- Using a tome of another tier: the infusion needs the seventh-tier tome.
+- Expecting repairs in a chunk whose aura is empty.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's ForceCraft configuration.

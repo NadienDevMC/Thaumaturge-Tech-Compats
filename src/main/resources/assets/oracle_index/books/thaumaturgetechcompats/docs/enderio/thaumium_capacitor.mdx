@@ -1,0 +1,58 @@
+---
+icon: thaumaturgetechcompats:thaumium_capacitor
+title: Thaumium Capacitor
+---
+
+> [!NOTE]
+> Needs the **Ender IO** mod.
+
+## What it is
+
+The Thaumium Capacitor goes in the capacitor slot of any Ender IO machine. It works like an octadic capacitor with a higher level: the machine stores more energy, uses its energy better and works faster.
+
+| Property | Value |
+| --- | --- |
+| Capacitor level (default) | 4.0 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'enderio:vibrant_crystal', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 
+        'enderio:vibrant_alloy_ingot', 'enderio:octadic_capacitor', 'thaumaturge:plate_thaumium', 
+        'enderio:vibrant_alloy_ingot', '', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_capacitor"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Octadic Capacitor |
+| Pedestal items | 4 × Thaumium Plate, 2 × Vibrant Alloy Ingot, Vibrant Crystal |
+| Essentia | Potentia 24, Metallum 12, Machina 12 |
+| Instability | 3 |
+| Research | **Magical Capacitors** (Ender IO tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Magical Capacitors (Tech tab).
+2. Infuse it over the capacitor of the tier before (an Octadic Capacitor for Thaumium).
+3. Put it in the capacitor slot of an Ender IO machine.
+4. Four of them, with four plates, also infuse the capacitor bank of the same metal (Magical Capacitor Banks).
+
+## Used to make
+
+- []($enderio/alchemical_brass_capacitor)
+
+> [!NOTE]- Thaumonomicon: Magical Capacitors
+> Every capacitor is infused from the one below it, with four plates of the new metal, two Vibrant Alloy Ingots and a Vibrant Crystal. The Thaumium Capacitor is infused from an Octadic Capacitor, the Alchemical Brass Capacitor from the Thaumium one, and the Void Metal Capacitor from the Alchemical Brass one. Alchemical Brass adds a simple mechanism and Void Metal a void seed.
+> They go in the capacitor slot of any Ender IO machine and work like an octadic capacitor with a higher level, so the machine stores more energy and works faster. The exact levels are set in the configuration.
+
+**Guides of this chapter:** [Magical Capacitors and Capacitor Banks]($enderio/capacitors-and-banks)

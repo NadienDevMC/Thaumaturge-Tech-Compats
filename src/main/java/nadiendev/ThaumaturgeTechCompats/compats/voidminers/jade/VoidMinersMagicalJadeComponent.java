@@ -53,11 +53,11 @@ public enum VoidMinersMagicalJadeComponent implements IBlockComponentProvider {
             tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_AURA,
                     Component.translatable(VoidMinersMagicalTranslations.sourceKey(source)).withStyle(ChatFormatting.LIGHT_PURPLE)));
         }
-        tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_COST, tag.getInt(VoidMinersMagicalJadeData.UNITS),
+        tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_COST, tag.getIntOr(VoidMinersMagicalJadeData.UNITS, 0),
                 tag.getIntOr(VoidMinersMagicalJadeData.INTERVAL, 0), MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.COST, 0.0F))));
         if (solar) {
             tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_GENERATION,
-                    String.format("%,d", tag.getLong(VoidMinersMagicalJadeData.GENERATION))));
+                    String.format("%,d", tag.getLongOr(VoidMinersMagicalJadeData.GENERATION, 0L))));
             tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_UPGRADES_SOLAR,
                     MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.GENERATION_FACTOR, 0.0F)),
                     MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.COST, 0.0F))));

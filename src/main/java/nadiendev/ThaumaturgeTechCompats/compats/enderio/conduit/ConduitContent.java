@@ -50,7 +50,7 @@ public class ConduitContent implements DataProvider {
     private static JsonObject catalyst(ConduitKind kind, EnderIOTier tier) {
         EnderIOTier previous = tier.previous();
         JsonObject json = new JsonObject();
-        json.addProperty("type", CONDUIT);
+        json.addProperty("neoforge:ingredient_type", CONDUIT);
         json.addProperty("conduit_type", previous == null ? kind.base() : MOD + ":" + kind.name(previous));
         return json;
     }

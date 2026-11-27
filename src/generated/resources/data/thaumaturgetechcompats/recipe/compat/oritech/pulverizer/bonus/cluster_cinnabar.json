@@ -18,10 +18,10 @@
     }
   ],
   "type": "oritech:pulverizer",
-  "ingredients": [
+  "itemInputs": [
     "thaumaturge:cluster_cinnabar"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "thaumaturge:raw_cinnabar"

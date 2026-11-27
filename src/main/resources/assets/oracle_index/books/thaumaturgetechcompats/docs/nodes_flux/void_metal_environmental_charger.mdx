@@ -1,0 +1,53 @@
+---
+icon: thaumaturgetechcompats:void_metal_environmental_charger
+title: Void Metal Environmental Charger
+---
+
+## What it is
+
+The Void Metal Environmental Charger releases energy into the area around it to recharge, automatically, the charged items, wands and vis items in the inventory of every player in reach. It keeps its own store of Dimensional Flux.
+
+| Property | Value |
+| --- | --- |
+| Radius | 16 blocks |
+| DF per item per tick | 20,000 |
+| Dimensional Flux stored | 100,000,000 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:vis_resonator', 'thaumaturge:plate_void', 'thaumaturge:plate_void', 
+        'thaumaturge:vis_resonator', 'thaumaturgetechcompats:alchemical_brass_environmental_charger', 'thaumaturge:plate_void', 
+        'thaumaturge:mechanism_complex', '', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_environmental_charger"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($nodes_flux/alchemical_brass_environmental_charger) |
+| Pedestal items | 4 × Void Metal Plate, Complex Arcane Mechanism, 2 × Vis Resonator |
+| Essentia | Potentia 80, Auram 60, Machina 40, Vacuos 40 |
+| Instability | 5 |
+| Research | **Void Metal Environmental Charger** (Flux Network tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium charger at the Arcane Workbench, the others infused around the charger of the tier before).
+2. Feed it DF: put a Transmission Link, Storage Core or Rift Extractor against it.
+3. Stay within its radius with the items in your pack. Wands are refilled by turning DF into vis (20 DF per hundredth of vis).
+4. Right click it to read its DF, radius, rate and status.
+
+> [!NOTE]- Thaumonomicon: Void Metal Environmental Charger
+> The Void Metal Environmental Charger is made on an infusion altar from an Alchemical Brass Environmental Charger, four void metal plates, a complex mechanism and two vis resonators.
+> It works like the others, with the widest radius, the highest rate and the biggest store.
+
+**Guides of this chapter:** [Environmental Chargers]($nodes_flux/flux-chargers)

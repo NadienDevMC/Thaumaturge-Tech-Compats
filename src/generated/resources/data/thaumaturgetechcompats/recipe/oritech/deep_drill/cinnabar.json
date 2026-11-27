@@ -17,11 +17,11 @@
       "feature": "oritech_node_cinnabar"
     }
   ],
-  "type": "oritech:deep_drill",
-  "ingredients": [
+  "type": "oritech:bedrock_extractor",
+  "itemInputs": [
     "thaumaturgetechcompats:resource_node_cinnabar"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 1,
       "id": "thaumaturge:raw_cinnabar"

@@ -5,8 +5,9 @@
       "feature": "tainted_food"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "thaumaturgetechcompats:tainted_cosmic_meatballs"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:tainted_cosmic_meatballs"
     }
   ],
   "type": "thaumaturge:crucible",

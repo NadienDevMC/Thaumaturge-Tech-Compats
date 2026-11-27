@@ -42,6 +42,31 @@ public final class ContentJson {
         return CompletableFuture.allOf(saved, DataProvider.saveStable(cache, definition, definitionPath));
     }
 
+    /** Flat item with an Avaritia halo: a plain generated model plus an item definition of type avaritia:halo. */
+    public static CompletableFuture<?> haloItem(PackOutput output, CachedOutput cache, String name, int color, int size, boolean pulse) {
+        JsonObject textures = new JsonObject();
+        textures.addProperty("layer0", MOD + ":item/" + name);
+        JsonObject model = new JsonObject();
+        model.addProperty("parent", "minecraft:item/generated");
+        model.add("textures", textures);
+
+        JsonObject halo = new JsonObject();
+        halo.addProperty("type", "avaritia:halo");
+        halo.addProperty("color", color);
+        halo.addProperty("model", MOD + ":item/" + name);
+        halo.addProperty("pulse", pulse);
+        halo.addProperty("size", size);
+        halo.addProperty("texture", "avaritia:misc/halo");
+        JsonObject definition = new JsonObject();
+        definition.add("model", halo);
+        definition.addProperty("oversized_in_gui", true);
+
+        Path assets = output.getOutputFolder().resolve("assets/" + MOD);
+        return CompletableFuture.allOf(
+                RecipeSaver.save(cache, model, assets.resolve("models/item/" + name + ".json")),
+                RecipeSaver.save(cache, definition, assets.resolve("items/" + name + ".json")));
+    }
+
     public static JsonObject item(String id) {
         JsonObject json = new JsonObject();
         json.addProperty("item", id);

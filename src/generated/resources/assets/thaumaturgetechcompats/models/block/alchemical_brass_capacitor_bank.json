@@ -1,26 +1,6 @@
 {
-  "parent": "minecraft:block/block",
-  "children": {
-    "block": {
-      "else": {
-        "parent": "thaumaturgetechcompats:block/alchemical_brass_capacitor_bank_part"
-      },
-      "if": {
-        "parent": "thaumaturgetechcompats:block/athena/alchemical_brass_capacitor_bank_part"
-      },
-      "loader": "endercore:modloaded",
-      "mod": "athena"
-    },
-    "overlay": {
-      "parent": "enderio:block/io_overlay"
-    }
-  },
-  "item_render_order": [
-    "overlay",
-    "block"
-  ],
-  "loader": "neoforge:composite",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "particle": "thaumaturgetechcompats:block/alchemical_brass_capacitor_bank"
+    "all": "thaumaturgetechcompats:block/alchemical_brass_capacitor_bank"
   }
 }

@@ -1,0 +1,71 @@
+---
+icon: thaumaturgetechcompats:matrix_infusion_matrix
+title: Matriz rúnica de Matriz de Cristal
+---
+
+> [!NOTE]
+> Necesita el mod **Avaritia**.
+
+## Qué es
+
+La Matriz rúnica de Matriz de Cristal es una Matriz rúnica de Matriz de Cristal para el centro del altar de infusión. Nunca pide un altar simétrico y su estabilidad no se recupera; lo que sale mal depende de la inestabilidad del crafteo, y trae su propia inestabilidad peligrosa. Todo lo del nivel Matriz de Cristal que se infunde la necesita en el centro del altar.
+
+| Propiedad | Valor |
+| --- | --- |
+| Inestabilidad | Solar: quema, prende fuego y llama rayos; el doble de inestable de día |
+| Cómputo de esencia | 1x |
+| Multiplicador de pérdida de estabilidad | 1,0 |
+| Radio de los efectos | 6 bloques |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'avaritia:crystal_matrix_ingot', '', 
+        'avaritia:crystal_matrix_ingot', 'thaumaturge:infusion_matrix', 'avaritia:crystal_matrix_ingot', 
+        '', 'avaritia:crystal_matrix_ingot', ''
+    ]}
+    result="thaumaturgetechcompats:matrix_infusion_matrix"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | Matriz rúnica |
+| Objetos en los pedestales | 4 × Crystal Matrix Ingot |
+| Esencia | Potentia 24, Lux 16, Ignis 16, Terminus 4 |
+| Inestabilidad | 3 |
+| Centro del altar | Matriz rúnica (por defecto) |
+| Investigación | **Matrices rúnicas de Avaritia** (pestaña Avaritia) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Matrices rúnicas de Avaritia.
+2. Infúndela en un altar cuyo centro sea la matriz del nivel anterior (una Matriz rúnica normal para Matriz de Cristal).
+3. Ponla en el centro de tu altar para infundir los objetos de su nivel.
+4. Quédate fuera del radio de efectos mientras trabaja y prepárate para su inestabilidad (fuego, radiación o efectos cósmicos).
+
+## Se usa para fabricar
+
+- []($matrices/neutronium_infusion_matrix)
+
+> [!NOTE]- Thaumonomicon: Matrices rúnicas de Avaritia
+> Cada Matriz rúnica se fabrica en un altar de infusión, partiendo de la anterior:
+> - La Matriz rúnica de Matriz de Cristal necesita una Matriz rúnica y lingotes de matriz de cristal.
+> - La Matriz rúnica de Neutronio necesita la de Matriz de Cristal y lingotes de neutrones.
+> - La Matriz rúnica de Infinito necesita la de Neutronio, lingotes de infinito y una Perla Extremadamente Primordial.
+> Infunden igual que la Matriz rúnica y se colocan en el mismo altar, pero nunca piden un altar simétrico y su estabilidad no se recupera. Lo que sale mal lo decide la inestabilidad del crafteo que se infunde, y nunca es suave:
+> - La de Matriz de Cristal sufre inestabilidad solar: quema, prende fuegos y llama a los rayos, y cada crafteo es el doble de inestable de día.
+> - La de Neutronio sufre inestabilidad nuclear: emite radiación, derrama flux y puede fundirse en una explosión.
+> - La de Infinito cuenta cada unidad de esencia que recibe como veinte, y sufre inestabilidad cósmica, la más peligrosa de todas: abre desgarros de flux, da disformidad, invoca criaturas del más allá y lanza todo lo que tiene cerca a otro lugar.
+> Cada una solo se puede infundir en un altar cuyo centro sea la del nivel anterior: la de Matriz de Cristal en una Matriz rúnica normal, la de Neutronio en la de Matriz de Cristal y la de Infinito en la de Neutronio.
+> Todo lo demás que infundo con estos metales responde al mismo desorden: frascos, frascos de flux, cajas de cerebro, cargadores de mesa de trabajo, estabilizadores de nodo, herramientas de escritura, focos, piezas de varita y los pedestales del altar. Cada uno solo se puede infundir en un altar cuyo centro sea la Matriz rúnica de su propio nivel, así que los de Matriz de Cristal sufren inestabilidad solar, los de Neutronio inestabilidad nuclear y los de Infinito inestabilidad cósmica. Su descripción dice qué matriz necesitan.
+> La fuerza de cada uno de estos efectos, y si cada nivel pide su propia matriz, se ajusta en la configuración.
+
+**Guías de este capítulo:** [Construir un altar de infusión por niveles]($matrices/build-the-altar) · [Matrices rúnicas de Avaritia]($matrices/runic-matrices) · [Efectos de inestabilidad]($matrices/instability-effects)

@@ -5,8 +5,8 @@
       "feature": "node_power"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 12,
+  "category": "thaumaturgetechcompats:09_nodes",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:rift_jar"
@@ -33,7 +33,7 @@
   "parents": [
     "thaumaturgetechcompats:node_power_flux_jar"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

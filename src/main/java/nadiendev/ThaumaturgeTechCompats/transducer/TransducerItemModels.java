@@ -20,7 +20,7 @@ public class TransducerItemModels extends ModelAssets {
         for (DeviceTier tier : DeviceTier.values()) {
             String name = TransducerIntegration.blockName(tier);
             itemModel(name, EntityItemModels.nodeDeviceModel(mod("block/" + name)));
-            itemDefinition(name, EntityItemModels.nodeDeviceDefinition(mod("item/" + name), true));
+            itemDefinition(name, EntityItemModels.tieredDeviceDefinition(mod("item/" + name), mod(name)));
         }
     }
 }

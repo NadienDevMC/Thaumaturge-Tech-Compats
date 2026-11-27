@@ -5,8 +5,8 @@
       "feature": "planetary_pearl_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 64,
+  "category": "thaumaturgetechcompats:02_avaritia_pearls",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:infinity_planetary_endest_pearl"
@@ -33,7 +33,7 @@
   "parents": [
     "thaumaturgetechcompats:planetary_endest_pearl"
   ],
-  "row": 0,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

@@ -15,15 +15,15 @@ public final class MekanismToolBehavior {
     }
 
     public static long stored(ItemStack stack) {
-        return Math.min(stack.getOrDefault(MekanismToolRegistry.ENERGY.get(), 0L), capacity(stack));
+        return Math.min((long) stack.getOrDefault(MekanismToolRegistry.ENERGY.get(), 0), capacity(stack));
     }
 
     public static long capacity(ItemStack stack) {
-        return stack.getItem() instanceof MekanismEnergyTool tool ? MekanismToolConfig.capacity(tool.tier()) : 0L;
+        return stack.getItem() instanceof MekanismEnergyTool tool ? Math.min(MekanismToolConfig.capacity(tool.tier()), Integer.MAX_VALUE) : 0L;
     }
 
     public static void store(ItemStack stack, long energy) {
-        stack.set(MekanismToolRegistry.ENERGY.get(), Math.max(0L, Math.min(energy, capacity(stack))));
+        stack.set(MekanismToolRegistry.ENERGY.get(), (int) Math.max(0L, Math.min(energy, capacity(stack))));
     }
 
     public static boolean hasEnergy(ItemStack stack) {

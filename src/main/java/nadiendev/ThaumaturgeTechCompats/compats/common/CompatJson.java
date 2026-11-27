@@ -82,6 +82,22 @@ public final class CompatJson {
         return json;
     }
 
+    /** Sized ingredient of 26.1.x ({@code {"count": n, "ingredient": "#tag"}}), the format Mekanism reads now. */
+    public static JsonObject sizedTag(String tag, int count) {
+        JsonObject json = new JsonObject();
+        json.addProperty("count", count);
+        json.addProperty("ingredient", "#" + tag);
+        return json;
+    }
+
+    /** Sized ingredient of 26.1.x for one item ({@code {"count": n, "ingredient": "mod:item"}}). */
+    public static JsonObject sizedItem(String item, int count) {
+        JsonObject json = new JsonObject();
+        json.addProperty("count", count);
+        json.addProperty("ingredient", item);
+        return json;
+    }
+
     public static JsonObject result(String id, int count) {
         JsonObject json = new JsonObject();
         json.addProperty("count", count);

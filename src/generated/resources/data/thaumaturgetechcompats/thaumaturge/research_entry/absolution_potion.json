@@ -13,8 +13,8 @@
       "feature": "absolution_potion"
     }
   ],
-  "category": "thaumaturgetechcompats:purity",
-  "column": 1,
+  "category": "thaumaturgetechcompats:14_purity",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:absolution_potion"

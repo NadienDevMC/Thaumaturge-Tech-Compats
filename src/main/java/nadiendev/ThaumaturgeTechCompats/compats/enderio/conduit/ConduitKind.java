@@ -3,13 +3,13 @@ package nadiendev.ThaumaturgeTechCompats.compats.enderio.conduit;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOTier;
 
 public enum ConduitKind {
-    ENERGY("energy", "enderio:energy", "enderio:ender_energy", "enderio:vibrant_alloy_ingot", "Energy", "de energía",
+    ENERGY("energy", "enderio:energy", "enderio:vibrant_energy", "enderio:vibrant_alloy_ingot", "Energy", "de energía",
             new int[]{750_000, 3_000_000, 12_000_000}, null,
             "thaumaturge:potentia", "thaumaturge:machina", "thaumaturge:motus"),
-    ITEM("item", "enderio:item", "enderio:ender_item", "enderio:pulsating_alloy_ingot", "Item", "de objetos",
+    ITEM("item", "enderio:item", "enderio:vibrant_item", "enderio:pulsating_alloy_ingot", "Item", "de objetos",
             new int[]{64, 128, 256}, new int[]{5, 4, 2},
             "thaumaturge:motus", "thaumaturge:permutatio", "thaumaturge:machina"),
-    FLUID("fluid", "enderio:fluid", "enderio:ender_fluid", "enderio:vibrant_crystal", "Fluid", "de fluidos",
+    FLUID("fluid", "enderio:fluid", "enderio:vibrant_fluid", "enderio:vibrant_crystal", "Fluid", "de fluidos",
             new int[]{32_000, 128_000, 512_000}, null,
             "thaumaturge:aqua", "thaumaturge:motus", "thaumaturge:machina");
 

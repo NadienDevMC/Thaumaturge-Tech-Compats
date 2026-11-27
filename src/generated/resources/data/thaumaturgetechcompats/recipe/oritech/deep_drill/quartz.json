@@ -17,11 +17,11 @@
       "feature": "oritech_node_quartz"
     }
   ],
-  "type": "oritech:deep_drill",
-  "ingredients": [
+  "type": "oritech:bedrock_extractor",
+  "itemInputs": [
     "thaumaturgetechcompats:resource_node_quartz"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 1,
       "id": "minecraft:quartz"

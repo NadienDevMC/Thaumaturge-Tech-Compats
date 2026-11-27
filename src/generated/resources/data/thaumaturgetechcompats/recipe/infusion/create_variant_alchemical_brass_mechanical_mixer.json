@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_tech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_casing_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_variants"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_variant_mixer"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "catalyst": "create:mechanical_mixer",
+  "components": [
+    "thaumaturgetechcompats:alchemical_brass_casing",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass"
+  ],
+  "instability": 2,
+  "research": {
+    "entry": "thaumaturgetechcompats:create_casing_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_mechanical_mixer"
+  }
+}

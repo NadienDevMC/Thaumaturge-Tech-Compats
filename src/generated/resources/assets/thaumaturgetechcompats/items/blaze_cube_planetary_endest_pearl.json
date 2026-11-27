@@ -1,6 +1,11 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "thaumaturgetechcompats:item/blaze_cube_planetary_endest_pearl"
-  }
+    "type": "avaritia:halo",
+    "color": -872415232,
+    "model": "thaumaturgetechcompats:item/blaze_cube_planetary_endest_pearl",
+    "pulse": false,
+    "size": 4,
+    "texture": "avaritia:misc/halo"
+  },
+  "oversized_in_gui": true
 }

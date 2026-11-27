@@ -1,0 +1,59 @@
+---
+icon: thaumaturgetechcompats:void_uranium_solar_panel
+title: Void Uranium Solar Panel
+---
+
+> [!NOTE]
+> Needs the **Solar Generation** mod.
+
+## What it is
+
+The Void Uranium Solar Panel is a Solar Generation panel with much bigger numbers. Every tick it produces its generation multiplied by the sun intensity of its position, stores it in its battery and offers it to every side except the top.
+
+| Property | Value |
+| --- | --- |
+| Generation under full sun (FE per tick) | 15,035,000 |
+| Transfer (FE per tick) | 150,350,000 |
+| Capacity (FE) | 95,060,000 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:mechanism_complex', 'thaumaturge:plate_void', 'mekanism:ingot_uranium', 
+        'solargeneration:solar_core_advanced', 'thaumaturgetechcompats:void_metal_generation_solar_panel', 'thaumaturge:plate_void', 
+        'mekanism:ingot_uranium', 'thaumaturge:plate_void', 'mekanism:ingot_uranium'
+    ]}
+    result="thaumaturgetechcompats:void_uranium_solar_panel"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($solar_panels/void_metal_generation_solar_panel) |
+| Pedestal items | 3 × Void Metal Plate, 3 × Uranium Ingot, Advanced Solar Core, Complex Arcane Mechanism |
+| Essentia | Sol 80, Potentia 60, Vacuos 40 |
+| Instability | 5 |
+| Research | **Void Uranium Solar Panel** (Solar Panels tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research its entry in the Solar Panels tab and make it (the Alchemical panel in a crucible; the branch panels at the Arcane Workbench around the Alchemical panel; Thaumium, Void Metal and Void Uranium infused in a chain from the Brass panel).
+2. Place it with the top free and open to the sky.
+3. Put a cable, battery or machine on any other side.
+4. Right click it to see the stored energy and the current production. Broken and picked up, it keeps its energy.
+
+> [!NOTE]- Thaumonomicon: Void Uranium Solar Panel
+> The panel glows with a light that is not the sun's.
+> 
+> **Void Uranium Solar Panel**
+> 
+> It is infused over a void metal solar panel using void metal plates, uranium ingots, an advanced solar core and a complex mechanism. It needs All The Ores or Mekanism.
+
+**Guides of this chapter:** [Solar Generation Panels]($solar_panels/overview) · [Solar Panel Stats and Recipes]($solar_panels/stats-and-recipes) · [Using the Solar Panels]($solar_panels/using-panels)

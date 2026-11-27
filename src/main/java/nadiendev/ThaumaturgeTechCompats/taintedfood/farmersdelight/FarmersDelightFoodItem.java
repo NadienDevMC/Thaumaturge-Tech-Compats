@@ -17,7 +17,7 @@ public class FarmersDelightFoodItem extends ConsumableItem {
     @Override
     public Component getName(ItemStack stack) {
         Component original = BuiltInRegistries.ITEM.getOptional(food.original())
-                .map(Item::getDescription)
+                .map(item -> new ItemStack(item).getHoverName())
                 .orElseGet(() -> Component.translatable(food.original().toLanguageKey("item")));
         return Component.translatable(food.gender().nameKey(), original);
     }

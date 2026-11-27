@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    }
+  ],
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "minecraft:block_state_property",
+      "block": "thaumaturge:taint_fibre"
+    },
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": "minecraft:shears"
+      }
+    }
+  ],
+  "table": "thaumaturgetechcompats:gameplay/taint_fibre_shears"
+}

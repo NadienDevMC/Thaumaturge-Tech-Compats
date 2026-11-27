@@ -7,6 +7,7 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalIntegration;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
+import nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.FarmersDelightTaintedIntegration;
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 
@@ -29,6 +30,9 @@ public class CatalystsJeiPlugin implements IModPlugin {
         }
         if (CatalystSupport.loaded(ThaumaturgeCatalysts.MOD_ID)) {
             guard("Thaumaturge", () -> ThaumaturgeCatalysts.register(registration));
+        }
+        if (FarmersDelightTaintedIntegration.isLoaded()) {
+            guard("Farmers Delight", () -> FarmersDelightCatalysts.register(registration));
         }
         if (VoidMinersMagicalIntegration.isLoaded()) {
             guard("Void Miners", () -> VoidMinersCatalysts.register(registration));

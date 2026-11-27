@@ -1,10 +1,10 @@
 {
   "model": {
     "type": "avaritia:halo",
-    "color": -16777216,
+    "color": -872415232,
     "model": "thaumaturgetechcompats:item/infinity_plate",
-    "pulse": true,
-    "size": 10,
+    "pulse": false,
+    "size": 6,
     "texture": "avaritia:misc/halo"
   },
   "oversized_in_gui": true

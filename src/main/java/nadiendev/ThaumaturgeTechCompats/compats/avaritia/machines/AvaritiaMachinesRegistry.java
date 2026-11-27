@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines;
 
+import nadiendev.ThaumaturgeTechCompats.registry.TierOrder;
 import committee.nova.mods.avaritia.init.registry.ModBlocks;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.registries.Registries;
@@ -101,7 +102,7 @@ public final class AvaritiaMachinesRegistry {
 
     public static List<Item> items() {
         List<Item> items = new ArrayList<>();
-        for (AvaritiaMachineTier tier : AvaritiaMachineTier.values()) {
+        for (AvaritiaMachineTier tier : TierOrder.display(AvaritiaMachineTier.values())) {
             DeferredItem<BlockItem> collector = COLLECTOR_ITEMS.get(tier);
             DeferredItem<BlockItem> compressor = COMPRESSOR_ITEMS.get(tier);
             if (collector != null) {

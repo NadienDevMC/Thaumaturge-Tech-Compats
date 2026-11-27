@@ -1,0 +1,60 @@
+---
+title: Transmission Links and Rift Extractor
+icon: thaumaturgetechcompats:thaumium_transmission_link
+related_items: [thaumaturgetechcompats:thaumium_transmission_link, thaumaturgetechcompats:alchemical_brass_transmission_link, thaumaturgetechcompats:void_metal_transmission_link, thaumaturgetechcompats:transmission_linker, thaumaturgetechcompats:rift_extractor]
+---
+
+> [!NOTE]
+> Part of the Dimensional Flux (DF) network. Each tier can be switched off in the compatibilities config. Numbers: flux config (link range, link rate and the rift extractor section).
+
+## Transmission Links
+
+### What it is
+
+Links move DF between devices that never touch: two links tuned to each other form a visible beam. Flux flows both ways until both buffers are equally full, and a link also takes flux from the storages next to it and gives it to the ones that can receive it. Links placed side by side pass flux along, so chains are possible. The reach of a pair is the smaller of the two, and it only works while both ends are loaded.
+
+| Link | Range | Moves per tick |
+|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_transmission_link) | 16 blocks | 2,000 DF |
+| [](@thaumaturgetechcompats:alchemical_brass_transmission_link) | 48 blocks | 20,000 DF |
+| [](@thaumaturgetechcompats:void_metal_transmission_link) | 128 blocks | 200,000 DF |
+
+### How to get it
+
+- **Thaumium Transmission Link** (two per craft): arcane workbench, top row Thaumium Plate, Quicksilver and Thaumium Plate; middle row Quicksilver, Simple Arcane Mechanism and Quicksilver; bottom row three Thaumium Plates (crystals aer 2, ordo 1; 40 vis).
+- **Transmission Linker**: arcane workbench, column of Quicksilver, Thaumium Plate and Simple Arcane Mechanism (crystal aer 1; 20 vis).
+- **Alchemical Brass Link**: infusion around a Thaumium Link with four brass plates, a Simple Arcane Mechanism and Quicksilver. The Void Metal Link continues the chain.
+
+### Step by step
+
+1. Place two links of the same tier.
+2. Use the [](@thaumaturgetechcompats:transmission_linker) on the first link, then on the second: they pair.
+3. To break a pair: sneak and use the linker on a link. Sneak and use it in the air to clear the selection.
+4. Right-click a link to read its flux, partner, distance, rate and status (*linked*, *out of range*, *partner not loaded*, *not linked*, *disabled*).
+
+Each link has a single partner. Pairs farther than the range will not connect.
+
+## Rift Extractor
+
+### What it is
+
+The [](@thaumaturgetechcompats:rift_extractor) absorbs energy directly from an open flux rift within 6 blocks, taking one point of its size every 40 ticks and turning each point into 5,000 DF. It stops when the rift is at its smallest size or it has no room. It holds 50,000 DF and pushes up to 2,000 DF per tick into the storages and Transmission Links touching it.
+
+Infusion altar recipe: a Flux Jar as catalyst, a Void Seed, four void metal plates and a Complex Arcane Mechanism.
+
+### Step by step
+
+1. Place the extractor within 6 blocks of a flux rift.
+2. Put a Storage Core or a Transmission Link against it.
+3. Right-click it to see the rift in reach, the rate and the DF held.
+
+## Common mistakes
+
+- Pairing links of different distance beyond the shorter range.
+- Leaving the extractor without a neighbour that accepts DF: it fills up and stops.
+- Linking without selecting the first link: the linker needs two clicks.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's flux network configuration.

@@ -32,6 +32,15 @@ config = "thaumaturgetechcompats.voidminers.mixins.json"
 [[mixins]]
 config = "thaumaturgetechcompats.enderio.mixins.json"
 
+[[mixins]]
+config = "thaumaturgetechcompats.farmersdelight.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.hephaestustools.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.research.mixins.json"
+
 [[dependencies.${mod_id}]]
 modId = "neoforge"
 type = "required"
@@ -132,8 +141,22 @@ side = "BOTH"
 
 
 [[dependencies.${mod_id}]]
+modId = "farmersdelight"
+type = "optional"
+versionRange = "[${farmersdelight_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
 modId = "create"
 type = "optional"
 versionRange = "[${create_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "solargeneration"
+type = "optional"
+versionRange = "[${solargeneration_version},)"
 ordering = "AFTER"
 side = "BOTH"

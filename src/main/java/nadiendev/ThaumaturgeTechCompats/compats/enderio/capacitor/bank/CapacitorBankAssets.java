@@ -33,8 +33,6 @@ public class CapacitorBankAssets implements DataProvider {
             tasks.add(ContentJson.save(output, cache, ASSETS + EIO + "/blockstates/" + name + ".json", blockstate(name)));
             tasks.add(ContentJson.save(output, cache, ASSETS + EIO + "/models/item/" + name + ".json", itemModel(name)));
             tasks.add(ContentJson.save(output, cache, ASSETS + MOD + "/models/block/" + name + ".json", blockModel(name)));
-            tasks.add(ContentJson.save(output, cache, ASSETS + MOD + "/models/block/" + name + "_part.json", partModel(name)));
-            tasks.add(ContentJson.save(output, cache, ASSETS + MOD + "/models/block/athena/" + name + "_part.json", athenaModel(name)));
         }
         return CompletableFuture.allOf(tasks.toArray(CompletableFuture[]::new));
     }
@@ -46,7 +44,11 @@ public class CapacitorBankAssets implements DataProvider {
 
     private static JsonObject blockstate(String name) {
         JsonObject model = new JsonObject();
+        model.addProperty("type", MOD + ":ctm_io_overlay");
+        // plain cube: used when Athena is missing, and for the item/particle fallback
         model.addProperty("model", MOD + ":block/" + name);
+        model.addProperty("athena:loader", "athena:ctm");
+        model.add("ctm_textures", ctmTextures(name));
         JsonObject variants = new JsonObject();
         variants.add("", model);
         JsonObject json = new JsonObject();
@@ -54,57 +56,24 @@ public class CapacitorBankAssets implements DataProvider {
         return json;
     }
 
-    private static JsonObject blockModel(String name) {
-        JsonObject overlay = new JsonObject();
-        overlay.addProperty("parent", EIO + ":block/io_overlay");
-
-        JsonObject whenAthena = new JsonObject();
-        whenAthena.addProperty("parent", MOD + ":block/athena/" + name + "_part");
-        JsonObject otherwise = new JsonObject();
-        otherwise.addProperty("parent", MOD + ":block/" + name + "_part");
-        JsonObject block = new JsonObject();
-        block.addProperty("loader", "endercore:modloaded");
-        block.addProperty("mod", "athena");
-        block.add("if", whenAthena);
-        block.add("else", otherwise);
-
-        JsonObject children = new JsonObject();
-        children.add("overlay", overlay);
-        children.add("block", block);
-
-        JsonObject textures = new JsonObject();
-        textures.addProperty("particle", MOD + ":block/" + name);
-
-        JsonObject json = new JsonObject();
-        json.addProperty("parent", "minecraft:block/block");
-        json.add("children", children);
-        json.add("item_render_order", ContentJson.strings("overlay", "block"));
-        json.addProperty("loader", "neoforge:composite");
-        json.add("textures", textures);
-        return json;
-    }
-
-    private static JsonObject partModel(String name) {
-        JsonObject textures = new JsonObject();
-        textures.addProperty("all", MOD + ":block/" + name);
-        JsonObject json = new JsonObject();
-        json.addProperty("parent", "minecraft:block/cube_all");
-        json.addProperty("render_type", "solid");
-        json.add("textures", textures);
-        return json;
-    }
-
-    private static JsonObject athenaModel(String name) {
+    private static JsonObject ctmTextures(String name) {
         JsonObject ctm = new JsonObject();
         ctm.addProperty("center", MOD + ":block/ctm/" + name + "_center");
         ctm.addProperty("empty", MOD + ":block/ctm/" + name + "_empty");
         ctm.addProperty("horizontal", MOD + ":block/ctm/" + name + "_horizontal");
         ctm.addProperty("particle", MOD + ":block/" + name);
         ctm.addProperty("vertical", MOD + ":block/ctm/" + name + "_vertical");
+        return ctm;
+    }
+
+    // 26.1: the blockstate uses our "ctm_io_overlay" type (Athena CTM + Ender IO I/O overlay, see
+    // CtmOverlayBlockStateModel); this plain cube is its fallback.
+    private static JsonObject blockModel(String name) {
+        JsonObject textures = new JsonObject();
+        textures.addProperty("all", MOD + ":block/" + name);
         JsonObject json = new JsonObject();
-        json.addProperty("loader", "athena:athena");
-        json.addProperty("athena:loader", "athena:ctm");
-        json.add("ctm_textures", ctm);
+        json.addProperty("parent", "minecraft:block/cube_all");
+        json.add("textures", textures);
         return json;
     }
 

@@ -25,6 +25,9 @@ public class HephaestusSmelteryAssets implements DataProvider {
     public CompletableFuture<?> run(CachedOutput cache) {
         List<CompletableFuture<?>> tasks = new ArrayList<>();
         for (MoltenMetal metal : MoltenMetal.values()) {
+            if (metal.extra()) {
+                continue;
+            }
             String block = metal.fluidName();
             String bucket = metal.bucketName();
             tasks.add(CompatJson.save(output, cache, "assets/" + MOD + "/blockstates/" + block + ".json", blockState(block)));

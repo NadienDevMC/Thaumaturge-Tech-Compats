@@ -1,0 +1,55 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_production_upgrade
+title: Mejora de producción de minero de latón alquímico
+---
+
+> [!NOTE]
+> Necesita **Void Miners Remastered**.
+
+## Qué es
+
+La Mejora de producción de minero de latón alquímico va en un hueco de modificador de una estructura de Void Miners. Las mejoras se **multiplican** entre sí y con los modificadores propios de Void Miners.
+
+| Propiedad | Valor |
+| --- | --- |
+| Va en | minero (objetos) |
+| Multiplicador | 1,25 |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:mechanism_simple', '', 
+        'thaumaturge:plate_brass', 'thaumaturgetechcompats:thaumium_production_upgrade', 'thaumaturge:plate_brass', 
+        '', 'thaumaturge:mechanism_simple', ''
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_production_upgrade"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 2 × Mecanismo arcano simple, 2 × Placa de latón alquímico, []($void_miners/thaumium_production_upgrade) |
+| Vis | 35 |
+| Cristales | ninguno |
+| Investigación | **Mejoras de minero de latón alquímico** (pestaña Void Miners) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícala en la Mesa de trabajo arcana alrededor de la misma mejora del nivel anterior (para la de taumio, el modificador de Void Miners que corresponde).
+2. Ponla en un hueco de modificador del tipo de estructura correcto (mejoras de minero en mineros, mejoras solares en paneles solares).
+3. Pon varias: sus multiplicadores se multiplican.
+
+## Se usa para fabricar
+
+- []($void_miners/void_metal_production_upgrade)
+
+> [!NOTE]- Thaumonomicon: Mejoras de minero de latón alquímico
+> Cada mejora de latón alquímico se fabrica en una mesa de trabajo arcana con la misma mejora del tier de taumio, dos mecanismos y dos placas de latón alquímico.
+> Colócalas en los huecos libres de la estructura. Sus efectos se multiplican entre sí y con los modificadores reales de Void Miners, y las de coste reducen las unidades de aura que el minero paga a su fuente de poder.
+
+**Guías de este capítulo:** [Controladores de minero mágico]($void_miners/magical-miner) · [Controladores de panel solar mágico]($void_miners/magical-solar-panel) · [Marcos, mejoras y fuentes de poder]($void_miners/frames-upgrades-power)

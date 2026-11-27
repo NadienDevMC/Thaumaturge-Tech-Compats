@@ -17,6 +17,7 @@ import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechIntegration;
 import nadiendev.ThaumaturgeTechCompats.furnace.FurnaceIntegration;
 import nadiendev.ThaumaturgeTechCompats.smelter.SmelterIntegration;
 import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerIntegration;
+import nadiendev.ThaumaturgeTechCompats.materials.ExtraMaterialsIntegration;
 import nadiendev.ThaumaturgeTechCompats.transducer.TransducerIntegration;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -52,6 +53,14 @@ public class DeviceBlockTags extends BlockTagsProvider {
         optionalBlocks(FieldIntegration.blocks());
         optionalBlocks(CreateIntegration.blocks());
         optionalBlocks(ThaummotorIntegration.blocks());
+        ExtraMaterialsIntegration.blockIds().forEach(id -> {
+            getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_PICKAXE).addOptionalElement(id);
+            getOrCreateRawBuilder(BlockTags.NEEDS_IRON_TOOL).addOptionalElement(id);
+        });
+        nadiendev.ThaumaturgeTechCompats.compats.solargeneration.SolarGenerationIntegration.blockIds().forEach(id -> {
+            getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_PICKAXE).addOptionalElement(id);
+            getOrCreateRawBuilder(BlockTags.NEEDS_IRON_TOOL).addOptionalElement(id);
+        });
         EnderIOIntegration.blockIds().forEach(id -> getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_PICKAXE).addOptionalElement(id));
         OritechIntegration.blockIds().forEach(id -> getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_PICKAXE).addOptionalElement(id));
     }

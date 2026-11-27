@@ -1,0 +1,64 @@
+---
+id: thaumaturgetechcompats:matrix_workbench_charger
+type: block
+title: Cargador de Mesa de Matriz de Cristal
+---
+
+> [!NOTE]
+> Necesita materiales del mod **Avaritia**.
+
+## Qué es
+
+El Cargador de Mesa de Matriz de Cristal va encima de una Mesa de trabajo arcana y saca vis del aura de los chunks de alrededor. Llega más lejos que el cargador normal y solo cobra una parte del vis de cada crafteo.
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio de vis | 2 chunks |
+| Vis de cada crafteo que se cobra | 70% |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'avaritia:crystal_matrix_ingot', 'thaumaturgetechcompats:matrix_plate', 'thaumaturgetechcompats:matrix_plate', 
+        'avaritia:crystal_matrix_ingot', 'thaumaturge:arcane_workbench_charger', 'thaumaturgetechcompats:matrix_plate', 
+        'thaumaturge:vis_resonator', '', 'thaumaturgetechcompats:matrix_plate'
+    ]}
+    result="thaumaturgetechcompats:matrix_workbench_charger"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | Cargador de mesa de trabajo |
+| Objetos en los pedestales | 4 × [](@thaumaturgetechcompats:matrix_plate), Resonador de Vis, 2 × Crystal Matrix Ingot |
+| Esencia | Auram 24, Potentia 24, Fabrico 16, Terminus 4 |
+| Inestabilidad | 4 |
+| Centro del altar | [](@thaumaturgetechcompats:matrix_infusion_matrix) (por defecto) |
+| Investigación | **Cargadores de Mesa de Avaritia** (pestaña Avaritia) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Cargadores de mesa de Avaritia.
+2. Infúndelo sobre el cargador del nivel anterior (el Cargador de la mesa de trabajo arcana normal para Matriz de Cristal).
+3. Colócalo encima de la Mesa de trabajo arcana.
+4. Craftea como siempre: el vis sale de los chunks de su radio. Jade muestra su descuento y su radio.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:neutronium_workbench_charger)
+
+> [!NOTE]- Thaumonomicon: Cargadores de Mesa de Avaritia
+> Cada cargador se fabrica en un altar de infusión, partiendo del anterior:
+> - El de Matriz de Cristal parte de un cargador de mesa normal.
+> - El de Neutronio parte del de Matriz de Cristal.
+> - El del Infinito parte del de Neutronio.
+> Se colocan sobre la mesa igual que el normal. Por defecto extraen de 2, 3 y 4 chunks a su alrededor y cobran solo el 70%, el 40% y el 10% del vis de cada fabricación.
+
+**Guías de este capítulo:** [Matrices Mnemotécnicas y Cargadores de Mesa]($devices/brain-boxes-chargers)

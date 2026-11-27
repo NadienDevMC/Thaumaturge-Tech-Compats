@@ -35,7 +35,6 @@ public class PurityContent implements DataProvider {
     @Override
     public CompletableFuture<?> run(CachedOutput cache) {
         List<CompletableFuture<?>> tasks = new ArrayList<>();
-        tasks.add(save(cache, "thaumaturge/research_category/" + CATEGORY, category()));
         tasks.add(save(cache, "thaumaturge/research_entry/" + HEADER, header()));
         tasks.add(save(cache, "thaumaturge/research_entry/" + ENTRY, entry()));
         tasks.add(save(cache, "thaumaturge/scan/" + SCAN, scan()));
@@ -57,23 +56,6 @@ public class PurityContent implements DataProvider {
         JsonArray array = new JsonArray();
         array.add(CompatJson.feature(CompatToggles.PURIFICATION_POTION));
         return array;
-    }
-
-    private static JsonObject category() {
-        JsonObject json = new JsonObject();
-        json.add("neoforge:conditions", conditions());
-        json.addProperty("background", "thaumaturge:textures/gui/gui_research_back_4_smooth.png");
-        json.add("formula", ContentJson.aspects(
-                "thaumaturge:ordo", 20,
-                "thaumaturge:victus", 10,
-                "thaumaturge:lux", 10,
-                "thaumaturge:aqua", 5,
-                "thaumaturge:alkimia", 5,
-                "thaumaturge:vitium", 5));
-        json.addProperty("icon", MOD + ":textures/research/cat_purity.png");
-        json.addProperty("index", 11);
-        json.addProperty("overlay_background", "thaumaturge:textures/gui/gui_research_back_over.png");
-        return json;
     }
 
     static JsonObject knowledge(String type, String category, int amount) {

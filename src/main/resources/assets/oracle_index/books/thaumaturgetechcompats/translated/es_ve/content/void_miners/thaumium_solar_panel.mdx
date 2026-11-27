@@ -1,0 +1,63 @@
+---
+id: thaumaturgetechcompats:thaumium_solar_panel
+type: block
+title: Controlador de panel solar de taumio
+---
+
+> [!NOTE]
+> Necesita **Void Miners Remastered**.
+
+## Qué es
+
+El Controlador de panel solar de taumio es el controlador de un panel solar de Void Miners que produce FE **sin sol ni cielo abierto**: solo genera mientras puede pagar unidades de poder a una fuente mágica cercana.
+
+| Propiedad | Valor |
+| --- | --- |
+| FE por tick | 1.000 |
+| Energía almacenada (FE) | 25.000.000 |
+| Unidades que paga cada 20 ticks | 1 |
+| Radio de la fuente de poder | 8 bloques |
+| Huecos de modificador de su estructura | 2 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:jar_node', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 
+        '', 'voidminersremastered:solar_rubetine_panel', '', 
+        'thaumaturge:jar_node', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_solar_panel"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | Panel Solar de Rubetine |
+| Objetos en los pedestales | 3 × Placa de taumio, Mecanismo arcano simple, 2 × Nodo en un frasco |
+| Esencia | Lux 12, Potentia 10, Metallum 8, Alkimia 6 |
+| Inestabilidad | 2 |
+| Investigación | **Panel solar de taumio** (pestaña Void Miners) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga la entrada de Panel solar mágico de su nivel e infúndelo sobre el controlador del nivel anterior (el Panel solar de Rubetina para el de taumio).
+2. Fabrica los marcos solares de taumio y construye la estructura solar del nivel alrededor del controlador.
+3. Pon una fuente de poder dentro del radio (nodo en jarra, Jarra de flujo, Jarra de grieta, nodo del mundo o grieta de flujo; nunca un nodo hambriento).
+4. Conecta un cable o un consumidor de FE como en cualquier panel solar de Void Miners. Cada 20 ticks paga y genera.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:alchemical_brass_solar_panel)
+
+> [!NOTE]- Thaumonomicon: Panel solar de taumio
+> El Controlador de panel solar de taumio se fabrica en un altar de infusión con un Panel solar de Rubetina, placas de taumio, mecanismos y nodos en tarros.
+> Sus marcos se fabrican en una mesa de trabajo arcana con placas de taumio, obsidiana y un marco base. Genera energía únicamente mientras puede pagar unidades a una fuente de poder mágico cercana, sin necesitar sol ni cielo abierto. Un nodo hambriento nunca es una fuente válida.
+
+**Guías de este capítulo:** [Controladores de panel solar mágico]($void_miners/magical-solar-panel)

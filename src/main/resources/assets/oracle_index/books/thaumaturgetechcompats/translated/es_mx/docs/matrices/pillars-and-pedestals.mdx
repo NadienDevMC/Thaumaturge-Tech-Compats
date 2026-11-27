@@ -1,0 +1,60 @@
+---
+title: Pilares y pedestales
+icon: thaumaturgetechcompats:infinity_infusion_pillar
+related_items: [thaumaturgetechcompats:matrix_pillar_stone, thaumaturgetechcompats:neutronium_pillar_stone, thaumaturgetechcompats:infinity_pillar_stone, thaumaturgetechcompats:matrix_infusion_pillar, thaumaturgetechcompats:neutronium_infusion_pillar, thaumaturgetechcompats:infinity_infusion_pillar, thaumaturgetechcompats:matrix_infusion_pedestal, thaumaturgetechcompats:neutronium_infusion_pedestal, thaumaturgetechcompats:infinity_infusion_pedestal]
+---
+
+> [!NOTE]
+> Necesita el mod **Avaritia**. Las variantes de pilares y pedestales se pueden desactivar en la configuración de compatibilidades. Números: las secciones del altar de la configuración de infusión, una por nivel.
+
+## Qué es
+
+Los pilares y los pedestales del altar de infusión son solo piedra, y la piedra es lo que lo limita. Con los metales de Avaritia el altar pide menos y responde más rápido.
+
+| Pieza | Cambio de coste | Cambio de tiempo de ciclo | Estabilidad (solo matriz normal) |
+| --- | --- | --- | --- |
+| Pilar antiguo (Thaumaturge) | -0,1 | -1 | - |
+| Pilar Eldritch (Thaumaturge) | +0,05 | -3 | - |
+| Pilar de Matriz de Cristal (los cuatro) | -0,1 | -1 | +0,25 |
+| Pilar de Neutronio | -0,15 | -2 | +0,35 |
+| Pilar de Infinito | -0,2 | -3 | +0,5 |
+| Pedestal de Matriz de Cristal (cada uno alrededor) | -0,01 | 0 | 0 |
+| Pedestal de Neutronio | -0,015 | 0 | 0 |
+| Pedestal de Infinito | -0,02 | 0 | 0 |
+
+Los valores de los pilares se aplican cuando los **cuatro pilares son de ese nivel**; los de los pedestales, por cada pedestal de ese nivel alrededor del altar. El altar nunca cuesta menos de la mitad. La columna de estabilidad solo importa con la Matriz rúnica normal, porque las matrices por niveles no recuperan estabilidad.
+
+## Cómo conseguirlos
+
+Las **Piedras de pilar** se fabrican en la mesa de trabajo arcana, cuatro por crafteo. Filas de arriba y de abajo: lingote, piedra, lingote; fila del medio: piedra, centro, piedra.
+
+| Piedra | Lingote | Piedra usada | Centro | Vis |
+| --- | --- | --- | --- | --- |
+| [](@thaumaturgetechcompats:matrix_pillar_stone) | Lingote de Matriz de Cristal | Baldosa de piedra de Eldritch | vacío | 200 |
+| [](@thaumaturgetechcompats:neutronium_pillar_stone) | Lingote de neutrones | Piedra de pilar de Matriz de Cristal | vacío | 400 |
+| [](@thaumaturgetechcompats:infinity_pillar_stone) | Lingote de infinito | Piedra de pilar de Neutronio | [](@thaumaturgetechcompats:extremely_primordial_pearl) | 800 |
+
+Los **pedestales** se infunden a partir del pedestal anterior, empezando por el Pedestal de Eldritch, con cuatro lingotes del nivel en un altar cuyo centro sea la Matriz rúnica de su **propio** nivel:
+
+| Pedestal | Catalizador | Aspectos | Inestabilidad |
+| --- | --- | --- | --- |
+| Matriz de Cristal | Pedestal de Eldritch | Ordo 20, Terra 16, Terminus 3 | 2 |
+| Neutronio | Pedestal de Matriz de Cristal | Ordo 32, Terra 24, Terminus 6 | 4 |
+| Infinito | Pedestal de Neutronio, más una Perla Extremadamente Primordial | Ordo 48, Terra 40, Terminus 14 | 6 |
+
+## Paso a paso
+
+1. Investiga "Pilares de Avaritia".
+2. Fabrica las Piedras de pilar nivel a nivel (cada nivel usa las piedras del anterior).
+3. Construye la estructura de ocho piedras del altar con ellas, pon un pedestal en el centro y esparce Salis Mundus para despertar los pilares (se convierten en [](@thaumaturgetechcompats:matrix_infusion_pillar), [](@thaumaturgetechcompats:neutronium_infusion_pillar) o [](@thaumaturgetechcompats:infinity_infusion_pillar)).
+4. Infunde los pedestales por niveles aparte en un altar con el centro correcto, y colócalos alrededor.
+
+## Errores comunes
+
+- Mezclar niveles de pilar: el bonus de los pilares se aplica cuando los cuatro son del mismo nivel.
+- Olvidar la Perla Extremadamente Primordial en el centro de la receta de las piedras de Infinito.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de infusión del mod.

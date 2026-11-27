@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_tech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_casing_brass"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "c": "create:brass_casing",
+    "p": "thaumaturge:plate_brass"
+  },
+  "pattern": [
+    " p ",
+    "pcp",
+    " p "
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:create_casing_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_casing"
+  },
+  "vis": 20
+}

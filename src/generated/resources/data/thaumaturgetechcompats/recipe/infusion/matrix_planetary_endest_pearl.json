@@ -45,8 +45,9 @@
       "feature": "planetary_pearl_copper"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:matrix_salis_mundus"
     }
   ],
   "type": "thaumaturge:infusion",

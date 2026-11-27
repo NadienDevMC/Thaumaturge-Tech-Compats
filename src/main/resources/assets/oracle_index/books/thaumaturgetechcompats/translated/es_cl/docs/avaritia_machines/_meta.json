@@ -1,0 +1,11 @@
+{
+  "tiers-and-recipes.mdx": "Máquinas neutrónicas superiores, niveles y recetas",
+  "neutron-collector.mdx": "Usar los colectores neutrónicos mejorados",
+  "neutron-compressor.mdx": "Usar los compresores neutrónicos mejorados",
+  "thaumium_neutron_collector.mdx": "Colector neutrónico de taumio",
+  "alchemical_brass_neutron_collector.mdx": "Colector neutrónico de latón",
+  "void_metal_neutron_collector.mdx": "Colector neutrónico del vacío",
+  "thaumium_neutron_compressor.mdx": "Compresor neutrónico de taumio",
+  "alchemical_brass_neutron_compressor.mdx": "Compresor neutrónico de latón",
+  "void_metal_neutron_compressor.mdx": "Compresor neutrónico del vacío"
+}

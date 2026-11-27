@@ -1,0 +1,62 @@
+---
+icon: thaumaturgetechcompats:thaumium_flux_storage_core
+title: Núcleo de almacenamiento de flujo de Taumio
+---
+
+## Qué es
+
+El Núcleo de almacenamiento de flujo de Taumio es el gran almacén de **flujo dimensional (DF)**, la energía de la red de flujo. Solo funciona con su estructura formada, y necesita estabilizadores de nodos cerca cuando está lleno.
+
+| Propiedad | Valor |
+| --- | --- |
+| Capacidad base | 1.000.000 DF |
+| Puntos de estabilizador necesarios cuando está lleno | 4 |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'thaumaturge:alumentum', 'thaumaturge:plate_thaumium', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:metal_thaumium', 'thaumaturge:mechanism_simple', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:alumentum', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_flux_storage_core"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 4 × Placa de taumio, 2 × Alumentum, 2 × Mecanismo arcano simple, Bloque de taumaturgo |
+| Vis | 150 |
+| Cristales | Ordo 20, Terra 10, Aer 10 |
+| Investigación | **Núcleo de almacenamiento de flujo** (pestaña Red de flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del núcleo del nivel anterior).
+2. Construye un anillo de ocho bloques de su metal alrededor, a su altura, más un bloque encima y otro debajo (los bloques de nivel superior también cuentan). Haz clic derecho: dice Formado o cuántos bloques faltan.
+3. Pon Celdas de capacidad de flujo sobre pedestales a menos de 6 bloques (hasta 16 celdas).
+4. Pon estabilizadores de nodos a menos de 8 bloques: básico 1 punto, avanzado 2, Matriz de Cristal 3, Neutronio 4, Infinito 6.
+5. Conecta fuentes y consumidores: dispositivos que lo toquen, o Enlaces de transmisión.
+6. Por encima de la mitad y sin puntos de estabilizador suficientes se sobrecarga: pierde flujo, echa chispas y daña a quien esté a menos de 5 bloques.
+
+## Se usa para fabricar
+
+- []($nodes_flux/alchemical_brass_flux_storage_core)
+
+> [!NOTE]- Thaumonomicon: Núcleo de almacenamiento de flujo
+> El Núcleo de almacenamiento de flujo de Taumio y la Celda de capacidad de flujo de Taumio se fabrican en la mesa de trabajo arcana.
+> 
+> **Estructura**
+> 
+> El núcleo solo funciona mientras sea el centro de un anillo de ocho bloques de taumio a su altura, con otro bloque de taumio justo encima y otro justo debajo. Los bloques de un tier superior también valen. Mientras no esté formado ni guarda ni transmite flujo. Haz clic derecho sobre él para ver su estado.
+> 
+> **Celdas y estabilizadores**
+> 
+> Las Celdas de capacidad puestas en pedestales, del tipo que sean, a menos de seis bloques del núcleo aumentan su capacidad. Los estabilizadores de nodo a menos de ocho bloques lo mantienen en calma: cuanto más lleno está, más puntos de estabilizador necesita. Por encima de la mitad y sin puntos suficientes se sobrecarga: suelta flujo al aura, lanza chispas y daña a quien esté cerca. Las distancias, las cifras y los efectos se pueden cambiar en la configuración.
+
+**Guías de este capítulo:** [Núcleos de almacenamiento y celdas de capacidad de flujo]($nodes_flux/flux-storage)

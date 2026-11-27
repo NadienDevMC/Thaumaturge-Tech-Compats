@@ -1,0 +1,52 @@
+---
+title: Jarras de flux
+icon: thaumaturgetechcompats:flux_jar
+related_items: [thaumaturgetechcompats:flux_jar, thaumaturgetechcompats:matrix_flux_jar, thaumaturgetechcompats:neutronium_flux_jar, thaumaturgetechcompats:infinity_flux_jar]
+---
+
+> [!NOTE]
+> La Jarra de flux forma parte de la base de "poder de nodos" (se puede desactivar en la configuración de compatibilidades, activada por defecto, pide reinicio). Las versiones de Matriz de Cristal, Neutronio e Infinito necesitan el mod **Avaritia**. Números: la configuración del poder de nodos.
+
+## Qué es
+
+Una Jarra de flux va sacando **flujo** del aura de su chunk hasta llenarse. Las máquinas que funcionan con poder mágico pueden usar ese flujo como fuente, así que la jarra convierte un problema de contaminación en combustible. Al romper una jarra, todo lo que guardaba vuelve al aura como flujo.
+
+| Jarra | Capacidad | Flujo por llenado | Intervalo |
+| --- | --- | --- | --- |
+| [](@thaumaturgetechcompats:flux_jar) | 100 | 0,25 | 20 ticks |
+| [](@thaumaturgetechcompats:matrix_flux_jar) | 250 | 0,75 | 20 ticks |
+| [](@thaumaturgetechcompats:neutronium_flux_jar) | 600 | 2,0 | 20 ticks |
+| [](@thaumaturgetechcompats:infinity_flux_jar) | 1500 | 6,0 | 20 ticks |
+
+El intervalo de llenado, la capacidad de cada jarra y la cantidad de llenado de cada jarra se pueden cambiar en la configuración del poder de nodos.
+
+## Cómo conseguirlas
+
+- **Jarra de flux**: mesa de trabajo arcana (40 de vis), un frasco arcano en el centro con una Placa de metal del vacío arriba, abajo, a la izquierda y a la derecha. Pide la investigación "Jarra de flux".
+- **Jarra de flux de Matriz de Cristal**: altar de infusión, catalizador Jarra de flux, 4 lingotes de Matriz de Cristal (Vacuos 24, Praemunio 16, Vitreus 16, Terminus 4, inestabilidad 3).
+- **Jarra de flux de Neutronio**: catalizador Jarra de flux de Matriz de Cristal, 4 lingotes de neutrones (Vacuos 32, Praemunio 32, Metallum 24, Terminus 8, inestabilidad 6).
+- **Jarra de flux del Infinito**: catalizador Jarra de flux de Neutronio, 4 lingotes de infinito y una Perla Extremadamente Primordial (Vacuos 48, Praemunio 48, Alienis 32, Terminus 24, inestabilidad 9).
+
+Las jarras superiores se infunden con la Matriz rúnica de su propio nivel en el centro del altar.
+
+## Paso a paso
+
+1. Coloca la Jarra de flux en cualquier punto del chunk cuyo flujo quieras usar.
+2. Espera: se llena sola mientras el chunk tenga flujo en el aura.
+3. Pon al lado una máquina que use poder mágico (por ejemplo un Taummotor o un Minero mágico). La máquina toma la jarra como fuente (mira la página de Fuentes de poder).
+4. Usa un cubo vacío sobre la jarra para sacar 10 de flujo como un cubo de flujo líquido.
+
+## Calderos
+
+Un caldero (crisol) junto a una Jarra de flux manda sus fugas y desbordes a la jarra en vez de contaminar el aura. Si la jarra está llena, o no hay ninguna, ese flujo desaparece y da warp temporal (4 por defecto) a los jugadores a menos de 4 bloques del caldero. Con la opción de capacidad por aspecto del caldero activada (configuración de compatibilidades), el caldero se desborda cuando un solo aspecto pasa de 1024, no a los 100 puntos en total.
+
+## Errores comunes
+
+- Esperar que se llene en un chunk limpio: sin flujo en el aura no hay nada que sacar.
+- Romper una jarra llena en tu base: todo su flujo vuelve al aura.
+- Contar con un "nodo hambriento" como alternativa: un nodo hambriento nunca es una fuente válida.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración del poder de nodos del mod.

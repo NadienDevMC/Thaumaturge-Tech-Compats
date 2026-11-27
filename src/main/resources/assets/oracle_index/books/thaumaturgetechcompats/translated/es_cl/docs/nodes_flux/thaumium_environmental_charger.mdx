@@ -1,0 +1,54 @@
+---
+icon: thaumaturgetechcompats:thaumium_environmental_charger
+title: Cargador ambiental de taumio
+---
+
+## Qué es
+
+El Cargador ambiental de taumio libera energía en la zona de alrededor para recargar solo los objetos con carga, varitas y objetos de vis del inventario de cada jugador al alcance. Guarda su propia reserva de flujo dimensional.
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio | 8 bloques |
+| DF por objeto por tick | 200 |
+| Flujo dimensional que guarda | 1.000.000 |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'thaumaturge:vis_resonator', 'thaumaturge:plate_thaumium', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_environmental_charger"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 7 × Placa de taumio, Resonador de Vis, Mecanismo arcano simple |
+| Vis | 60 |
+| Cristales | Aer 2, Ordo 2 |
+| Investigación | **Cargador ambiental** (pestaña Red de flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del cargador del nivel anterior).
+2. Dale DF: pon un Enlace de transmisión, un Núcleo de almacenamiento o un Extractor de grietas contra él.
+3. Quédate dentro de su radio con los objetos en la mochila. Las varitas se recargan convirtiendo DF en vis (20 DF por centésima de vis).
+4. Haz clic derecho para ver su DF, radio, ritmo y estado.
+
+## Se usa para fabricar
+
+- []($nodes_flux/alchemical_brass_environmental_charger)
+
+> [!NOTE]- Thaumonomicon: Cargador ambiental
+> El Cargador ambiental de taumio se fabrica en una mesa de trabajo arcana con siete placas de taumio, un resonador de vis y un mecanismo simple.
+> Libera energía en un área cercana para recargar automáticamente los objetos y herramientas que llevas en tu inventario. Guarda su propio almacén de Flujo Dimensional, que los enlaces de transmisión, los núcleos de almacenamiento y los extractores llenan empujando hacia él, y cada pocos ticks da una parte a cada objeto con carga, varita u objeto de vis de todos los jugadores a su alcance. Haz clic derecho para leer su estado, su radio y su ritmo.
+
+**Guías de este capítulo:** [Cargadores ambientales]($nodes_flux/flux-chargers)

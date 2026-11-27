@@ -9,8 +9,8 @@
       "feature": "biome_purification_potion"
     }
   ],
-  "category": "thaumaturgetechcompats:purity",
-  "column": -1,
+  "category": "thaumaturgetechcompats:14_purity",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:biome_purification_potion"

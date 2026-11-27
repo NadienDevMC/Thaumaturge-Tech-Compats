@@ -1,0 +1,49 @@
+---
+title: Controladores de minero mágico
+icon: thaumaturgetechcompats:void_metal_miner
+related_items: [thaumaturgetechcompats:thaumium_miner, thaumaturgetechcompats:alchemical_brass_miner, thaumaturgetechcompats:void_metal_miner]
+---
+
+> [!NOTE]
+> Requiere **Void Miners Remastered**. El minero, y cada nivel por separado, se pueden desactivar en la configuración de compatibilidades; activados por defecto, hay que reiniciar el juego. Los números están en la configuración mágica de Void Miners.
+
+## Qué es
+
+Un minero de Void Miners que **no gasta nada de FE**: solo trabaja mientras puede pagar unas unidades de poder a una fuente mágica cercana, y se detiene en cuanto no puede. Es una multiestructura como el minero Rubetine: el controlador más marcos, paneles de cristal y modificadores de minero.
+
+| Nivel | Controlador | Nivel de minado (recetas de Void Miners) | Velocidad x | Producción x | Unidades por pago | Radio de la fuente |
+| --- | --- | --- | --- | --- | --- | --- |
+| Taumio | [](@thaumaturgetechcompats:thaumium_miner) | 3 | 1,5 | 1,5 | 1 | 8 |
+| Latón alquímico | [](@thaumaturgetechcompats:alchemical_brass_miner) | 5 | 3,0 | 2,0 | 2 | 12 |
+| Metal del vacío | [](@thaumaturgetechcompats:void_metal_miner) | 7 | 5,0 | 3,0 | 4 | 16 |
+
+(Los niveles de minado van de 1 Rubetine a 9 Definitivo y se pueden cambiar en la configuración.)
+
+## Cómo conseguirlo
+
+Investiga la entrada del nivel en la categoría Tech (minero mágico de taumio, de latón alquímico o de metal del vacío). Altar de infusión, cada uno sobre el nivel anterior:
+
+| Nivel | Catalizador | Componentes | Aspectos (inestabilidad) |
+| --- | --- | --- | --- |
+| Taumio | Minero Rubetine de Void Miners | 3 placas de taumio, mecanismo simple, 2 Jarras de flux | machina 12, terra 8, metallum 8, potentia 6 (2) |
+| Latón alquímico | Controlador de minero de taumio | 3 placas de latón, mecanismo simple, 2 Jarras de flux | machina 18, terra 12, praecantatio 10, potentia 12 (4) |
+| Metal del vacío | Controlador de minero de latón alquímico | 3 placas de metal del vacío, mecanismo complejo, 2 Jarras de flux, semilla del vacío | machina 24, terra 16, vacuos 16, potentia 12 (6) |
+
+## Paso a paso
+
+1. Fabrica los marcos del minero y los modificadores que quieras (mira la página de marcos, mejoras y fuentes de poder).
+2. Construye la multiestructura del nivel alrededor del controlador con sus marcos, los paneles de cristal de Void Miners y los huecos de modificador.
+3. Coloca una fuente de poder dentro del radio del nivel: un nodo en jarra, una Jarra de flux, una Jarra de grieta, un nodo del mundo o una grieta de flujo. Un nodo hambriento nunca vale.
+4. El minero paga sus unidades cada 20 ticks (el intervalo de la configuración). Mientras paga, mina; si el pago falla, se detiene hasta el siguiente intento.
+5. Recoge la producción como en cualquier minero de Void Miners.
+
+## Errores comunes
+
+- Sin fuente de poder en rango: el minero no hace nada.
+- Un nodo hambriento como fuente: nunca se acepta.
+- Usar marcos de otro nivel en la estructura.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración mágica de Void Miners del mod.

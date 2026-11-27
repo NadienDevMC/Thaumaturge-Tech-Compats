@@ -1,0 +1,48 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food_farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food"
+    },
+    {
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:tainted_cooked_porkchop"
+    },
+    {
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:tainted_cooked_bacon"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    "thaumaturgetechcompats:tainted_cooked_porkchop"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "thaumaturgetechcompats:tainted_cooked_bacon"
+      }
+    }
+  ],
+  "tool": {
+    "children": [
+      {
+        "action": "knife_dig",
+        "neoforge:ingredient_type": "farmersdelight:item_ability"
+      },
+      "#c:tools/knife"
+    ],
+    "neoforge:ingredient_type": "neoforge:compound"
+  }
+}

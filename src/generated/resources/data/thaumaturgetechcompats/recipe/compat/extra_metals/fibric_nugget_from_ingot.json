@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:ingots/fibric"
+  ],
+  "result": {
+    "count": 9,
+    "id": "thaumaturgetechcompats:fibric_nugget"
+  }
+}

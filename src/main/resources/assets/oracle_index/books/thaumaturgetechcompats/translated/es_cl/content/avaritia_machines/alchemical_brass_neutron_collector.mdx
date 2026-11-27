@@ -1,0 +1,69 @@
+---
+id: thaumaturgetechcompats:alchemical_brass_neutron_collector
+type: block
+title: Colector neutrónico de latón
+---
+
+> [!NOTE]
+> Necesita el mod **Avaritia**.
+
+## Qué es
+
+El Colector neutrónico de latón sustituye al Colector de neutronio más denso de Avaritia: mismo inventario, menú y salida, pero trabaja varias veces por tick y añade objetos extra cada vez que termina un ciclo de producción.
+
+| Propiedad | Valor |
+| --- | --- |
+| Ciclos de trabajo por tick (por defecto) | 4 |
+| Multiplicador de producción (por defecto) | 2 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:plate_brass', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturgetechcompats:thaumium_neutron_collector', 'thaumaturge:plate_brass', 
+        'thaumaturge:plate_brass', '', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_neutron_collector"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:thaumium_neutron_collector) |
+| Objetos en los pedestales | 4 × Placa de latón alquímico, Mecanismo arcano simple |
+| Esencia | Machina 32, Vacuos 32, Potentia 24, Nuclear 16, Terminus 8 |
+| Inestabilidad | 6 |
+| Centro del altar | [](@thaumaturgetechcompats:neutronium_infusion_matrix) (por defecto) |
+| Investigación | **Máquinas de neutronio superiores** (pestaña Avaritia) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Máquinas de neutronio superiores e infúndelo a partir de la máquina del nivel anterior (mira la receta; el centro del altar decide su inestabilidad).
+2. Colócalo como el colector de Avaritia y haz clic derecho para abrir su menú.
+3. Trabaja solo y llena su hueco de salida. Saca lo producido a mano o con una tolva.
+4. Vacíalo a menudo: los objetos extra solo se añaden mientras el hueco de salida tiene sitio.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:void_metal_neutron_collector)
+
+> [!NOTE]- Thaumonomicon: Máquinas de neutronio superiores
+> Cada máquina se fabrica en un altar de infusión, partiendo de la anterior:
+> - El Colector y el Compresor neutrónicos de taumio necesitan el Colector o el Compresor de neutronio más denso, cuatro placas de taumio y un Mecanismo arcano simple.
+> - El Colector y el Compresor neutrónicos de latón necesitan la máquina de taumio, cuatro placas de latón alquímico y un Mecanismo arcano simple.
+> - El Colector y el Compresor neutrónicos del vacío necesitan la máquina de latón, cuatro placas de metal del vacío y una Semilla del vacío.
+> Funcionan igual que las máquinas de Avaritia y usan las mismas recetas, solo que más rápido, y cada nivel además da más cada vez que termina. Cuánto más rápido y cuánto más se ajusta en la configuración.
+> Cada nivel solo se puede infundir en un altar cuyo centro sea la Matriz rúnica de su propio nivel, y esa matriz trae su propia inestabilidad a la fabricación:
+> - Las máquinas de taumio necesitan la de Matriz de Cristal: inestabilidad solar, con fuegos, rayos y quemaduras.
+> - Las máquinas de latón necesitan la de Neutronio: inestabilidad nuclear, con radiación, flux derramado en el aura y una fusión que explota.
+> - Las máquinas del vacío necesitan la de Infinito: inestabilidad cósmica, con flux desgarrado, disformidad, criaturas del más allá y todo lo cercano lanzado a otra parte.
+> Las máquinas de latón y del vacío también piden dos esencias nuevas. Nuclear, hecha de potentia y perditio, es el poder encerrado en el corazón de la materia. Cósmico, hecho de alienis y auram, es la inmensidad entre las estrellas. Las máquinas de latón piden Nuclear, y las del vacío piden Nuclear y Cósmico.
+
+**Guías de este capítulo:** [Máquinas neutrónicas superiores, niveles y recetas]($avaritia_machines/tiers-and-recipes) · [Usar los colectores neutrónicos mejorados]($avaritia_machines/neutron-collector)

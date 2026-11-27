@@ -5,8 +5,8 @@
       "feature": "tainted_food"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 36,
+  "category": "thaumaturgetechcompats:12_food_tainted",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturge:tainted_goo"
@@ -34,7 +34,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:bottle_taint"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

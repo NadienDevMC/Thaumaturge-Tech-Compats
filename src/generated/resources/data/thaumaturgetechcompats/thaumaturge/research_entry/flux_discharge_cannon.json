@@ -17,8 +17,8 @@
       "feature": "flux_gear_discharge_cannon"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 58,
+  "category": "thaumaturgetechcompats:11_flux_gear",
+  "column": 6,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:discharge_cannon"
@@ -50,7 +50,7 @@
     "thaumaturgetechcompats:flux_charger_void_metal",
     "thaumaturge:base_eldritch"
   ],
-  "row": 6,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

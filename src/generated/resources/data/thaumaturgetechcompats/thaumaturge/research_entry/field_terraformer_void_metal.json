@@ -13,8 +13,8 @@
       "feature": "flux_network_void_metal"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 60,
+  "category": "thaumaturgetechcompats:11_flux_gear",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_metal_arcane_terraformer"
@@ -47,7 +47,7 @@
     "thaumaturge:infusion",
     "thaumaturge:base_eldritch"
   ],
-  "row": 6,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

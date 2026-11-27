@@ -101,8 +101,11 @@ public final class HephaestusSmelteryRegistry {
 
     public static List<Item> buckets() {
         List<Item> items = new ArrayList<>();
-        for (DeferredItem<BucketItem> bucket : BUCKETS.values()) {
-            items.add(bucket.get());
+        for (MoltenMetal metal : nadiendev.ThaumaturgeTechCompats.registry.TierOrder.display(MoltenMetal.values())) {
+            DeferredItem<BucketItem> bucket = BUCKETS.get(metal);
+            if (bucket != null) {
+                items.add(bucket.get());
+            }
         }
         return items;
     }

@@ -1,0 +1,55 @@
+---
+title: Infusion Cost and Speed Stones
+icon: thaumaturgetechcompats:infinity_infusion_cost_stone
+related_items: [thaumaturgetechcompats:matrix_infusion_cost_stone, thaumaturgetechcompats:neutronium_infusion_cost_stone, thaumaturgetechcompats:infinity_infusion_cost_stone, thaumaturgetechcompats:matrix_infusion_speed_stone, thaumaturgetechcompats:neutronium_infusion_speed_stone, thaumaturgetechcompats:infinity_infusion_speed_stone]
+---
+
+> [!NOTE]
+> Needs the **Avaritia** mod. The stone variants can be switched off in the compatibilities config. Numbers: the stones sections of the infusion config, one per tier and kind (cost or speed).
+
+## What it is
+
+The plain Infusion Cost Stone and Infusion Speed Stone help the altar but ask something back. The Avaritia versions ask for less and give more. They go **under the four pillars** of the altar, like the plain stones. The values below are added for **every stone** under a pillar.
+
+| Stone | Cost change | Cycle time change |
+| --- | --- | --- |
+| plain Cost Stone | -0.02 | +1 |
+| plain Speed Stone | +0.01 | -1 |
+| [](@thaumaturgetechcompats:matrix_infusion_cost_stone) | -0.03 | 0 |
+| [](@thaumaturgetechcompats:neutronium_infusion_cost_stone) | -0.05 | 0 |
+| [](@thaumaturgetechcompats:infinity_infusion_cost_stone) | -0.125 | 0 |
+| [](@thaumaturgetechcompats:matrix_infusion_speed_stone) | 0 | -2 |
+| [](@thaumaturgetechcompats:neutronium_infusion_speed_stone) | 0 | -3 |
+| [](@thaumaturgetechcompats:infinity_infusion_speed_stone) | -0.01 | -4 |
+
+A negative cost change makes the altar cheaper; a negative cycle time change makes it quicker. The altar **never costs less than half**. The stability modifier of these stones is 0 and tiered matrices ignore it anyway.
+
+## How to get them
+
+Each stone is infused on an altar from the stone before it, with four ingots of its metal (and an [](@thaumaturgetechcompats:extremely_primordial_pearl) for Infinity), on an altar whose Runic Matrix is the **tier before** it.
+
+| Stone | Catalyst | Altar center | Aspects | Instability |
+| --- | --- | --- | --- | --- |
+| Crystal Matrix Cost | plain Infusion Cost Stone | plain Runic Matrix | Ordo 16, Praecantatio 12, Terminus 2 | 2 |
+| Neutronium Cost | Crystal Matrix Cost | Crystal Matrix matrix | Ordo 24, Praecantatio 20, Terminus 4 | 4 |
+| Infinity Cost | Neutronium Cost | Neutronium matrix | Ordo 40, Praecantatio 32, Terminus 12 | 6 |
+| Crystal Matrix Speed | plain Infusion Speed Stone | plain Runic Matrix | Motus 16, Praecantatio 12, Terminus 2 | 2 |
+| Neutronium Speed | Crystal Matrix Speed | Crystal Matrix matrix | Motus 24, Praecantatio 20, Terminus 4 | 4 |
+| Infinity Speed | Neutronium Speed | Neutronium matrix | Motus 40, Praecantatio 32, Terminus 12 | 6 |
+
+## Step by step
+
+1. Research "Runic Stones of Avaritia".
+2. Build the altar with the matrix of the tier before.
+3. Infuse the stone with the previous one as catalyst and four ingots on the pedestals.
+4. Put the stones under the four pillars of your working altar.
+
+## Common mistakes
+
+- Using the stone of the same tier at the center: stones and matrices follow the tier **before** them, while all other tiered items need their own tier.
+- Expecting more than half off: the altar's cost multiplier never goes below 0.5.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's infusion configuration.

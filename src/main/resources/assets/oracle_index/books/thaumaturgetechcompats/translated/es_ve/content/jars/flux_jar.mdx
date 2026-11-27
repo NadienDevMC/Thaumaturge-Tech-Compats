@@ -1,0 +1,62 @@
+---
+id: thaumaturgetechcompats:flux_jar
+type: block
+title: Jarra de flux
+---
+
+> [!NOTE]
+> Las jarras de Matriz de Cristal, Neutronio e Infinito necesitan el mod **Avaritia**.
+
+## Qué es
+
+La Jarra de flux va sacando poco a poco **flujo** del aura de su chunk hasta llenarse. Las máquinas que funcionan con poder mágico usan ese flujo como fuente de poder, así que la jarra convierte un problema de contaminación en combustible. Un crisol a su lado manda sus fugas y desbordes a la jarra en vez de al aura.
+
+| Propiedad | Valor |
+| --- | --- |
+| Capacidad de flujo | 100 |
+| Flujo absorbido cada 20 ticks | 0,25 |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:plate_void', '', 
+        'thaumaturge:plate_void', 'thaumaturge:jar_normal', 'thaumaturge:plate_void', 
+        '', 'thaumaturge:plate_void', ''
+    ]}
+    result="thaumaturgetechcompats:flux_jar"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 4 × Placa de metal del vacío, Jarra |
+| Vis | 40 |
+| Cristales | ninguno |
+| Investigación | **Jarra de flux** (pestaña Nodos y flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícala (la Jarra de flujo en la Mesa de trabajo arcana; las superiores infundidas a partir de la anterior, con la Matriz rúnica de su nivel en el centro).
+2. Colócala en el chunk cuyo flujo quieres usar y espera: se llena siempre que el aura tenga flujo.
+3. Pon a su lado una máquina que use poder mágico (Taumomotor, mineros y paneles mágicos...).
+4. Haz clic derecho para ver su flujo. Un cubo vacío saca 10 de flujo como un cubo de flujo líquido.
+5. No rompas una jarra llena en tu base: todo lo que guardaba vuelve al aura.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:alchemical_brass_miner)
+- [](@thaumaturgetechcompats:thaumium_miner)
+- [](@thaumaturgetechcompats:void_metal_miner)
+- [](@thaumaturgetechcompats:rift_extractor)
+- [](@thaumaturgetechcompats:matrix_flux_jar)
+
+> [!NOTE]- Thaumonomicon: Jarra de flux
+> La Jarra de flux se fabrica en una mesa de trabajo arcana con un frasco arcano rodeado de cuatro placas de metal del vacío.
+> Va sacando flux del aura que la rodea hasta llenarse, y las máquinas que funcionan con poder mágico pueden usar ese flux como fuente. Un nodo hambriento nunca es una fuente segura, y una jarra rota tampoco: al romper la Jarra de flux, todo lo que guarda vuelve al aura.
+
+**Guías de este capítulo:** [Jarras de flux]($jars/flux-jar) · [Fuentes de poder mágico]($jars/power-sources)

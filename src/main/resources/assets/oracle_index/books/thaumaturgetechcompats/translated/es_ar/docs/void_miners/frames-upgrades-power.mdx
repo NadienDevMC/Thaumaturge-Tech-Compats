@@ -1,0 +1,51 @@
+---
+title: Marcos, mejoras y fuentes de poder
+icon: thaumaturgetechcompats:thaumium_miner_frame
+related_items: [thaumaturgetechcompats:thaumium_miner_frame, thaumaturgetechcompats:thaumium_solar_frame, thaumaturgetechcompats:thaumium_speed_upgrade, thaumaturgetechcompats:thaumium_production_upgrade, thaumaturgetechcompats:thaumium_efficiency_upgrade, thaumaturgetechcompats:thaumium_solar_generation_upgrade, thaumaturgetechcompats:thaumium_solar_saving_upgrade]
+---
+
+> [!NOTE]
+> Requiere **Void Miners Remastered**. Las mejoras de cada nivel, del minero y del panel solar, tienen sus propios interruptores en la configuración de compatibilidades; activados por defecto, hay que reiniciar.
+
+## Marcos
+
+Cada nivel tiene un [](@thaumaturgetechcompats:thaumium_miner_frame) y un [](@thaumaturgetechcompats:thaumium_solar_frame) (también de latón alquímico y de metal del vacío). Son los bloques de la estructura. Mesa de trabajo arcana, con forma: placas del nivel en las cuatro esquinas, obsidiana en los cuatro lados y, en el centro, el marco equivalente del nivel anterior (en taumio, el marco base de Void Miners). El coste de vis crece con el nivel (30 para el marco de minero de taumio, 70 para el marco solar de metal del vacío).
+
+## La estructura
+
+Cada nivel tiene su propia multiestructura, más alta y ancha según sube el nivel (5x5 en taumio, 7x7 en latón y metal del vacío). Se compone del controlador, marcos (F), paneles de cristal de Void Miners (P) y huecos de modificador (M). Huecos de modificador: taumio 2, latón alquímico 4, metal del vacío 6. Un hueco admite cualquier modificador de Void Miners de ese tipo o cualquier mejora de este mod del tipo correcto (minero o solar).
+
+## Mejoras
+
+Cinco mejoras. Van en los huecos de modificador y se **multiplican** entre sí y con los modificadores propios de Void Miners.
+
+| Mejora | Tipo | Taumio | Latón alquímico | Metal del vacío |
+| --- | --- | --- | --- | --- |
+| Velocidad | minero, multiplicador de velocidad | 1,15 | 1,35 | 1,7 |
+| Producción | minero, objetos | 1,1 | 1,25 | 1,5 |
+| Eficiencia | minero, coste de poder | 0,9 | 0,75 | 0,55 |
+| Generación solar | solar, generación | 1,15 | 1,35 | 1,7 |
+| Ahorro solar | solar, coste de poder | 0,9 | 0,75 | 0,55 |
+
+Receta (mesa de trabajo arcana, con forma, vis 20 / 35 / 50 para taumio / latón / vacío):
+
+Un mecanismo encima y debajo del centro (simple en taumio y latón, complejo en vacío), una placa del nivel a la izquierda y a la derecha, y en el centro la misma mejora del nivel anterior (en taumio, el modificador equivalente de Void Miners: modificador Rubetine de velocidad, de objetos o de energía, o el de eficiencia o de clima solar).
+
+## Fuentes de poder
+
+Los dos tipos de controlador toman unidades de una **fuente mágica**: un nodo en jarra, una Jarra de flux, una Jarra de grieta, un nodo del mundo o una grieta de flujo. Los nodos hambrientos nunca valen. Qué tipos se permiten lo fija la lista de fuentes de las secciones del minero y del panel solar de la configuración; el intervalo (20 ticks por defecto) es cuánto cubre un pago.
+
+## Colores
+
+Cada nivel tiene un color (marcos, estructura, rayo, nombres): taumio morado claro, latón alquímico dorado, metal del vacío morado oscuro. Se cambian en la sección de colores de la configuración y se aplican al recargar recursos (F3+T).
+
+## Errores comunes
+
+- Construir una estructura de taumio con marcos de latón.
+- Poner una mejora solar en un minero (el hueco solo admite el tipo correcto).
+- Esperar que los valores de las mejoras se sumen: se multiplican.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración mágica de Void Miners del mod.

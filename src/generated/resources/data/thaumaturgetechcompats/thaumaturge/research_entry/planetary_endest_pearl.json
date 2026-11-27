@@ -5,8 +5,8 @@
       "feature": "planetary_pearl_copper"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 63,
+  "category": "thaumaturgetechcompats:02_avaritia_pearls",
+  "column": 0,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:copper_planetary_endest_pearl"

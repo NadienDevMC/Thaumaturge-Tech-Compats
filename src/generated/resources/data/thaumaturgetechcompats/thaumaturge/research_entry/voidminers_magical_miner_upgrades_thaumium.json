@@ -21,8 +21,8 @@
       "feature": "voidminers_magical_miner_upgrades_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 40,
+  "category": "thaumaturgetechcompats:08_void_miners",
+  "column": 2,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:thaumium_speed_upgrade"
@@ -49,7 +49,7 @@
   "parents": [
     "thaumaturgetechcompats:voidminers_magical_miner_thaumium"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

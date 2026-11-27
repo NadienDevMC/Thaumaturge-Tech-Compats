@@ -19,13 +19,14 @@ public final class EntityItemModels {
         return model;
     }
 
-    public static JsonObject nodeDeviceDefinition(String base, boolean transducer) {
+    /**
+     * Item definition of a tiered furnace, stabilizer or transducer: the Thaumaturge item renderer of the base device
+     * with the tier textures (device/client/TieredDeviceSpecialRenderer).
+     */
+    public static JsonObject tieredDeviceDefinition(String base, String block) {
         JsonObject renderer = new JsonObject();
-        renderer.addProperty("type", "thaumaturge:node_stabilizer");
-        renderer.addProperty("advanced", false);
-        if (transducer) {
-            renderer.addProperty("transducer", true);
-        }
+        renderer.addProperty("type", "thaumaturgetechcompats:tiered_device");
+        renderer.addProperty("block", block);
         JsonObject special = new JsonObject();
         special.addProperty("type", "minecraft:special");
         special.addProperty("base", base);

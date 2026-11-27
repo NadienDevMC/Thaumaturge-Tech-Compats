@@ -1,0 +1,63 @@
+---
+title: Varitas de Matriz, Neutronio e Infinito
+icon: thaumaturgetechcompats:infinity_wand_cap
+related_items: [thaumaturgetechcompats:matrix_wand_rod, thaumaturgetechcompats:matrix_wand_cap, thaumaturgetechcompats:neutronium_wand_rod, thaumaturgetechcompats:neutronium_wand_cap, thaumaturgetechcompats:infinity_wand_cap]
+---
+
+> [!NOTE]
+> Necesita el mod **Avaritia**. La varita del Infinito se construye en la Mesa de crafteo extrema de Avaritia.
+
+## Qué es
+
+Tres niveles de piezas de varita. Cualquier vara encaja con cualquier pomo, así que puedes mezclarlas, pero las mejores varitas usan el mismo nivel en ambas.
+
+| Pieza | Efecto | Vis guardado (vara) |
+| --- | --- | --- |
+| [](@thaumaturgetechcompats:matrix_wand_rod) | canaliza el vis sin perder nada | 1000 |
+| [](@thaumaturgetechcompats:matrix_wand_cap) | hace que los hechizos no cuesten nada | - |
+| [](@thaumaturgetechcompats:neutronium_wand_rod) | guarda mucho más vis y desperdicia mucho menos | 5000 |
+| [](@thaumaturgetechcompats:neutronium_wand_cap) | recorta a la mitad el coste de cada hechizo (modificador de coste 0,5) | - |
+| [](@thaumaturgetechcompats:infinity_wand_cap) | hace los hechizos gratis; con la vara de Infinito la varita además rellena sola todos los aspectos primarios | - |
+
+Una varita con piezas de Matriz de Cristal guarda 1000 de vis y sus hechizos no cuestan nada; con piezas de Neutronio guarda 5000 de vis y los hechizos cuestan la mitad.
+
+## Cómo conseguirlas
+
+| Pieza | Cómo |
+| --- | --- |
+| Vara de Matriz de Cristal | mesa de trabajo arcana (300 de vis): tres lingotes de Matriz de Cristal en diagonal |
+| Pomo de Matriz de Cristal | mesa de trabajo arcana: tres lingotes de Matriz de Cristal arriba y dos Placas de Matriz de Cristal abajo, con el centro vacío |
+| Vara de Neutronio | altar de infusión, catalizador Vara de Matriz de Cristal, dos lingotes de neutrones y dos Placas de Neutronio (Terra 32, Praecantatio 24, Potentia 24, Terminus 8; inestabilidad 8) |
+| Pomo de Neutronio | altar de infusión, catalizador Pomo de Matriz de Cristal, dos lingotes de neutrones y dos Placas de Neutronio (Potentia 24, Metallum 24, Auram 12, Terminus 8; inestabilidad 6) |
+| Pomo de Infinito | altar de infusión, catalizador Pomo de Neutronio, cuatro lingotes de infinito y dos Placas de Infinito (Praecantatio 48, Alienis 32, Potentia 32, Terminus 24; inestabilidad 10) |
+| Varita del Infinito | Mesa de crafteo extrema, nivel 4 (mira abajo) |
+
+## La varita del Infinito
+
+Es demasiado grandiosa para una mesa de trabajo arcana. El patrón es un barrido en diagonal, con C = lingote de Matriz de Cristal, N = lingote de neutrones, I = lingote de infinito y X = Bloque de infinito (el bloque "infinito" de Avaritia):
+
+```
+- - - - - - C - -
+- - - - - C I C -
+- - - - - N I I C
+- - - - N I N C -
+- - - N X N - - -
+- C N I N - - - -
+C I I N - - - - -
+- C I C - - - - -
+- - C - - - - - -
+```
+
+El resultado es una varita con la vara de Infinito y el pomo de Infinito.
+
+## Paso a paso
+
+1. Termina la investigación "Varita de Matriz de Cristal", luego "Varita de Neutronio" y luego "Varita del Infinito" (la última necesita los Registros Akáshicos investigados).
+2. Fabrica la vara y el pomo de Matriz de Cristal y móntalos en una varita como cualquier varita de Thaumaturge.
+3. Infunde las piezas de Neutronio usando las de Matriz de Cristal como catalizadores, en un altar cuyo centro sea la Matriz rúnica correcta.
+4. Infunde el Pomo de Infinito sobre un Pomo de Neutronio y fabrica la varita del Infinito completa en la Mesa de crafteo extrema.
+
+## Errores comunes
+
+- Olvidar el catalizador: cada nivel necesita la pieza del nivel anterior.
+- Intentar fabricar la varita del Infinito en la mesa de trabajo arcana: solo existe como receta de la Mesa de crafteo extrema.

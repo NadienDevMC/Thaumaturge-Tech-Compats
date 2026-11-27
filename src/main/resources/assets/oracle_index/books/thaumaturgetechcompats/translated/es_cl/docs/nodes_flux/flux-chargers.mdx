@@ -1,0 +1,43 @@
+---
+title: Cargadores ambientales
+icon: thaumaturgetechcompats:thaumium_environmental_charger
+related_items: [thaumaturgetechcompats:thaumium_environmental_charger, thaumaturgetechcompats:alchemical_brass_environmental_charger, thaumaturgetechcompats:void_metal_environmental_charger]
+---
+
+> [!NOTE]
+> Parte de la red de Flujo Dimensional (DF). Cada nivel se puede desactivar en la configuración de compatibilidades. Valores: configuración de flujo (radio y velocidad de carga de los cargadores) y de cargadores.
+
+## Qué es
+
+Un Cargador ambiental suelta energía en una zona cercana para recargar automáticamente los objetos cargables, varitas y objetos de vis que llevas en el inventario, sin tener que sacar nada. Guarda su propia reserva de DF, que llenan los Enlaces de transmisión, los Núcleos de almacenamiento y los Extractores de grietas al empujar hacia él. Cada pocos ticks da una parte a cada objeto cargable de cada jugador al alcance.
+
+| Cargador | Radio | DF por objeto y tick | Reserva |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_environmental_charger) | 8 bloques | 200 | 1.000.000 DF |
+| [](@thaumaturgetechcompats:alchemical_brass_environmental_charger) | 12 bloques | 2.000 | 10.000.000 DF |
+| [](@thaumaturgetechcompats:void_metal_environmental_charger) | 16 bloques | 20.000 | 100.000.000 DF |
+
+También recarga las varitas, bastones y cetros de Thaumaturge convirtiendo DF en vis de sus aspectos primarios (20 DF por centésima de vis) y otros objetos recargables con vis (2.000 DF por vis).
+
+## Cómo conseguirlos
+
+- **Taumio**: mesa de trabajo arcana, fila de arriba Placa de taumio, Resonador de vis y Placa de taumio; fila del medio Placa de taumio, Mecanismo arcano simple y Placa de taumio; fila de abajo tres Placas de taumio (cristales aer 2, ordo 2; 60 de vis).
+- **Latón alquímico**: infusión alrededor del cargador de taumio con cuatro placas de latón, un Mecanismo arcano simple y un Resonador de vis. El de metal del vacío continúa la cadena.
+
+## Paso a paso
+
+1. Coloca el cargador y dale DF: pon pegado un Enlace de transmisión, un Núcleo de almacenamiento o un Extractor de grietas (un Enlace de transmisión, emparejado con el [](@thaumaturgetechcompats:transmission_linker), puede traer el DF de un núcleo lejano).
+2. Quédate dentro de su radio con los objetos en la mochila.
+3. Pulsa clic derecho para leer su DF, radio, ritmo y estado (*recargando*, *sin Flujo Dimensional*, *nada que recargar cerca*).
+
+## Errores comunes
+
+- Dejarlo vacío: sin DF no hace nada.
+- Esperar que se carguen objetos fuera del radio.
+- Olvidar que la conversión de las varitas cuesta DF: una varita se rellena despacio si el ritmo del cargador es bajo.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de la red de flujo del mod.
+- Sus valores se ajustan en la configuración del cargador de flujo del mod.

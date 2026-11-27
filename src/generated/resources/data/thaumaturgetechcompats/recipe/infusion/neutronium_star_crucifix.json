@@ -49,8 +49,9 @@
       "feature": "star_crucifix_neutronium"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:neutronium_salis_mundus"
     }
   ],
   "type": "thaumaturge:infusion",

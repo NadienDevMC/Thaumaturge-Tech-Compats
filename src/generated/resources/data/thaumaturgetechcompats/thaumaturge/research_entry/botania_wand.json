@@ -13,8 +13,8 @@
       "feature": "botania_wand"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 48,
+  "category": "thaumaturgetechcompats:07_botania",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:terrasteel_wand_cap"
@@ -43,7 +43,7 @@
     "thaumaturge:rod_greatwood",
     "thaumaturge:cap_thaumium"
   ],
-  "row": 4,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

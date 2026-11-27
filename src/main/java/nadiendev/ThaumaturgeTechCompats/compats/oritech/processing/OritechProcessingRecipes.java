@@ -95,14 +95,14 @@ public class OritechProcessingRecipes implements DataProvider {
         ingredient.addProperty(source.ingredientType, source.ingredient);
         JsonArray ingredients = new JsonArray();
         ingredients.add(ingredient);
-        json.add("ingredients", ingredients);
+        json.add("itemInputs", ingredients);
         int base = machine == Machine.PULVERIZER ? source.pulverizer : source.grinder;
         JsonArray results = new JsonArray();
         results.add(CompatJson.result(source.main, base + (bonus ? BONUS : 0)));
         if (machine == Machine.GRINDER && source.byproduct != null) {
             results.add(CompatJson.result(source.byproduct.id, source.byproduct.count));
         }
-        json.add("results", results);
+        json.add("itemResults", results);
         json.addProperty("time", machine == Machine.PULVERIZER ? source.pulverizerTime : GRINDER_TIME);
         return json;
     }
@@ -112,6 +112,14 @@ public class OritechProcessingRecipes implements DataProvider {
         conditions.add(CompatJson.modLoaded(ORITECH));
         conditions.add(CompatJson.feature(CompatToggles.ORITECH_PROCESSING));
         conditions.add(CompatJson.feature(machine.toggle));
+        if (machine == Machine.GRINDER) {
+            // the grinder recipe type only exists in some Oritech versions
+            JsonObject serializer = new JsonObject();
+            serializer.addProperty("type", "neoforge:registered");
+            serializer.addProperty("registry", "minecraft:recipe_serializer");
+            serializer.addProperty("value", "oritech:grinder");
+            conditions.add(serializer);
+        }
         if (bonus) {
             conditions.add(CompatJson.feature(CompatToggles.ORITECH_BONUS));
         } else {

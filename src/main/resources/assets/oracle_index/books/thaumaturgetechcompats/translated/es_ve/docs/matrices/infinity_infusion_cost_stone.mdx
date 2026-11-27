@@ -1,0 +1,59 @@
+---
+icon: thaumaturgetechcompats:infinity_infusion_cost_stone
+title: Runa de Descuento de Infusión de Infinito
+---
+
+> [!NOTE]
+> Necesita el mod **Avaritia**.
+
+## Qué es
+
+La Runa de Descuento de Infusión de Infinito va **debajo de los cuatro pilares** del altar de infusión, como las piedras normales, y cambia el coste o el tiempo de ciclo del altar por cada piedra colocada. El altar nunca cuesta menos de la mitad.
+
+| Propiedad | Valor |
+| --- | --- |
+| Cambio de coste del altar | -0,125 |
+| Cambio del tiempo de ciclo | 0 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'avaritia:infinity_ingot', '', 
+        'thaumaturgetechcompats:extremely_primordial_pearl', 'thaumaturgetechcompats:neutronium_infusion_cost_stone', 'avaritia:infinity_ingot', 
+        'avaritia:infinity_ingot', '', 'avaritia:infinity_ingot'
+    ]}
+    result="thaumaturgetechcompats:infinity_infusion_cost_stone"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($matrices/neutronium_infusion_cost_stone) |
+| Objetos en los pedestales | 4 × Infinity Ingot, []($avaritia/extremely_primordial_pearl) |
+| Esencia | Ordo 40, Praecantatio 32, Terminus 12 |
+| Inestabilidad | 6 |
+| Centro del altar | []($matrices/neutronium_infusion_matrix) (por defecto) |
+| Investigación | **Runas de Avaritia** (pestaña Avaritia) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Piedras rúnicas de Avaritia.
+2. Infúndela a partir de la piedra del nivel anterior, en un altar cuyo centro sea la Matriz rúnica del nivel **anterior**.
+3. Coloca las piedras debajo de los cuatro pilares de tu altar.
+
+> [!NOTE]- Thaumonomicon: Runas de Avaritia
+> Cada runa se fabrica en un altar de infusión, partiendo de la anterior, con cuatro lingotes de su metal y, en las de Infinito, una Perla Extremadamente Primordial:
+> - Las runas de Matriz de Cristal parten de la Runa de Descuento o de la Runa de Velocidad de Infusión.
+> - Las runas de Neutronio parten de las de Matriz de Cristal.
+> - Las runas de Infinito parten de las de Neutronio.
+> Cada runa solo se puede infundir en un altar cuya Matriz rúnica sea la del nivel anterior: las de Matriz de Cristal en una Matriz rúnica normal, las de Neutronio en la de Matriz de Cristal y las de Infinito en la de Neutronio.
+> Se colocan bajo los cuatro pilares del altar igual que las runas normales, y cada nivel baja más el coste o el tiempo de ciclo del altar que el anterior. El altar nunca cuesta menos de la mitad, y los valores exactos se ajustan en la configuración.
+
+**Guías de este capítulo:** [Runas de descuento y de velocidad de infusión]($matrices/runic-stones)

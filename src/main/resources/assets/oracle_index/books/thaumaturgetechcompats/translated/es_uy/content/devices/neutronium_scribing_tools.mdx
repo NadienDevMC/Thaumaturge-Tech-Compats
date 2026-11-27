@@ -1,0 +1,83 @@
+---
+id: thaumaturgetechcompats:neutronium_scribing_tools
+type: item
+title: Herramientas de escritura de Neutronio
+---
+
+> [!NOTE]
+> Necesita materiales del mod **Avaritia**.
+
+## Qué es
+
+Los Herramientas de escritura de Neutronio son una pluma y un tintero que guardan mucha más tinta que los útiles de escritura normales. Se usan igual en la mesa de investigación.
+
+| Propiedad | Valor |
+| --- | --- |
+| Usos de tinta | 1.000 |
+| Recarga | tinte negro (la pluma sobre tinte negro en una cuadrícula de crafteo) |
+| Resistente al fuego | sí |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'avaritia:neutron_ingot', '', 
+        'avaritia:neutron_ingot', 'thaumaturgetechcompats:matrix_scribing_tools', 'avaritia:neutron_ingot', 
+        '', 'avaritia:neutron_ingot', ''
+    ]}
+    result="thaumaturgetechcompats:neutronium_scribing_tools"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:matrix_scribing_tools) |
+| Objetos en los pedestales | 4 × Neutronium Ingot |
+| Esencia | Cognitio 32, Metallum 24, Instrumentum 24, Terminus 8 |
+| Inestabilidad | 5 |
+| Centro del altar | [](@thaumaturgetechcompats:neutronium_infusion_matrix) (por defecto) |
+| Investigación | **Herramientas de escritura de Avaritia** (pestaña Avaritia) |
+| Da | 1 |
+
+### Mesa de crafteo
+
+<CraftingRecipe
+    slots={[
+        'thaumaturgetechcompats:neutronium_scribing_tools', '', '', 
+        'minecraft:black_dye', '', '', 
+        '', '', ''
+    ]}
+    result="thaumaturgetechcompats:neutronium_scribing_tools"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | mesa de crafteo, con esta forma |
+| Ingredientes | [](@thaumaturgetechcompats:neutronium_scribing_tools), Tinte negro |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Útiles de escritura de Avaritia.
+2. Infúndelos a partir de los útiles del nivel anterior (útiles de escritura normales para Matriz de Cristal).
+3. Ponlos en la mesa de investigación como cualquier útil de escritura.
+4. Recárgalos como indica la tabla de arriba.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:infinity_scribing_tools)
+
+> [!NOTE]- Thaumonomicon: Herramientas de escritura de Avaritia
+> Cada juego se fabrica en un altar de infusión, partiendo de unas herramientas de escritura normales:
+> - Las de Matriz de Cristal se rodean de lingotes de matriz de cristal.
+> - Las de Neutronio necesitan las de Matriz de Cristal y lingotes de neutrones.
+> - Las del Infinito necesitan las de Neutronio, lingotes de infinito y una Perla Extremadamente Primordial.
+> Todas funcionan en una mesa de investigación igual que las normales. Las del Infinito recuperan su tinta solas mientras las llevo encima. Las de Matriz de Cristal y Neutronio se pueden rellenar con tinte negro, como las normales.
+
+**Guías de este capítulo:** [Niveles de varita, focos y herramientas de escritura]($devices/wands-foci)

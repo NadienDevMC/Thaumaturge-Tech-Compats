@@ -1,0 +1,7 @@
+{
+  "parent": "solargeneration:block/solar_panel",
+  "textures": {
+    "main": "solargeneration:block/signalum",
+    "particle": "solargeneration:block/particle_signalum"
+  }
+}

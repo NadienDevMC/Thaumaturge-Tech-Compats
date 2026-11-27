@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#c:storage_blocks/rifting",
+    "#c:storage_blocks/fibric",
+    "#c:storage_blocks/salis",
+    "#c:storage_blocks/crimson"
+  ]
+}

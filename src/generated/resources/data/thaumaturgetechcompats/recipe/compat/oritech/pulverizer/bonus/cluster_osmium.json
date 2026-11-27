@@ -30,10 +30,10 @@
     }
   ],
   "type": "oritech:pulverizer",
-  "ingredients": [
+  "itemInputs": [
     "thaumaturgetechcompats:osmium_cluster"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "mekanism:raw_osmium"

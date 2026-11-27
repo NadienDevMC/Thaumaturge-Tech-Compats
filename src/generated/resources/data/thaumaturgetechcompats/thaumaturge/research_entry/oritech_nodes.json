@@ -13,11 +13,11 @@
       "feature": "oritech_nodes"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 9,
+  "category": "thaumaturgetechcompats:05_oritech",
+  "column": 0,
   "complexity": 2,
   "icons": [
-    "oritech:resource_node_uranium"
+    "oritech:uranium_resource_node"
   ],
   "meta": [
     "round",
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:base_infusion"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

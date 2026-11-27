@@ -16,6 +16,6 @@
   "type": "thaumaturgetechcompats:forcecraft_repair_infusion",
   "center": "#forcecraft:valid_infuser_charge",
   "ingredient": "thaumaturge:crystal_ordo",
-  "tier": "7",
+  "tier": "6",
   "time": 60
 }

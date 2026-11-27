@@ -1,0 +1,50 @@
+---
+title: Sello de Create
+icon: thaumaturgetechcompats:seal_create
+related_items: [thaumaturgetechcompats:seal_create]
+---
+
+> [!NOTE]
+> Requiere **Create** (mediante Create: Adapted en 26.1.2). El sello se puede desactivar en la configuración de Create (activado por defecto).
+
+## Qué es
+
+El [](@thaumaturgetechcompats:seal_create) es un sello de gólem que deja que un gólem maneje un bloque de Create. Tiene tres tareas, cada una con su opción:
+
+| Opción | Por defecto | Qué hace el gólem |
+| --- | --- | --- |
+| Insertar objetos llevados | activada | mete en el bloque los objetos que lleva (según el filtro) |
+| Extraer objetos | activada | saca del bloque los objetos que coinciden |
+| Operar el bloque (clic) | desactivada | hace clic en el bloque: gira manivelas y asas de válvula |
+| Simular clic sigiloso | desactivada | el clic se hace como si fuera agachado |
+
+## Cómo conseguirlo
+
+Investiga **Sello de Create** en la categoría Tech (pide un Sello de uso y teoría de Golemancia). Se infunde sobre un Sello de uso como catalizador: engranaje de Create, lámina de latón, aleación de andesita y un mecanismo simple. Aspectos: 20 machina, 10 fabrico, 10 motus. Inestabilidad 2.
+
+## Paso a paso
+
+1. Coloca el sello en la cara de un bloque de Create (o de una de las variantes de carcasa). Por defecto no se puede poner en otros bloques.
+2. Abre el sello: configura el filtro (9 huecos, con cantidades si es lista blanca) y las opciones de arriba.
+3. Dale un gólem con el rasgo Hábil (Deft). Un gólem Torpe (Clumsy) no puede usarlo.
+4. Para alimentar: el gólem lleva los objetos y el sello los inserta. Para vaciar: con Extraer activo, el sello busca cada 20 ticks un objeto que coincida en el bloque y manda al gólem a por él.
+5. Para manivelas: activa Operar. El gólem hace clic cada 8 ticks. Puede llevar una herramienta en la mano si el filtro la nombra.
+6. Una señal de redstone detiene el sello.
+
+## Ajustes (configuración de Create, sección del sello)
+
+| Ajuste | Por defecto |
+| --- | --- |
+| Intervalo de búsqueda (ticks) | 20 |
+| Intervalo de trabajo (ticks) | 8 |
+| Se puede poner en cualquier bloque | no |
+
+## Errores comunes
+
+- Ponerlo en un bloque que no es de Create con la opción de ponerlo en cualquier bloque desactivada.
+- Dejar el filtro vacío o que no coincida: el gólem no llevará nada para la tarea.
+- Usar un gólem Torpe o sin Hábil.
+
+## Notas
+
+- Se puede desactivar en la configuración de Create del mod.

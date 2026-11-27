@@ -34,15 +34,12 @@ public class SingularityProvider implements DataProvider {
     }
 
     private static JsonObject singularity(SingularityKind kind) {
-        JsonObject ingredient = new JsonObject();
-        ingredient.addProperty("item", kind.ingredient());
-
         JsonObject json = new JsonObject();
         json.addProperty("name", ThaumaturgeTechCompats.MOD_ID + ":" + kind.id());
         json.addProperty("displayName", kind.displayKey());
         json.addProperty("overlayColor", kind.overlayColor());
         json.addProperty("underlayColor", kind.underlayColor());
-        json.add("ingredient", ingredient);
+        json.addProperty("ingredient", kind.ingredient());
         return json;
     }
 }

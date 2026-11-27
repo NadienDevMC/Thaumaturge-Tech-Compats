@@ -1,0 +1,51 @@
+---
+title: Frames, Upgrades and Power Sources
+icon: thaumaturgetechcompats:thaumium_miner_frame
+related_items: [thaumaturgetechcompats:thaumium_miner_frame, thaumaturgetechcompats:thaumium_solar_frame, thaumaturgetechcompats:thaumium_speed_upgrade, thaumaturgetechcompats:thaumium_production_upgrade, thaumaturgetechcompats:thaumium_efficiency_upgrade, thaumaturgetechcompats:thaumium_solar_generation_upgrade, thaumaturgetechcompats:thaumium_solar_saving_upgrade]
+---
+
+> [!NOTE]
+> Requires **Void Miners Remastered**. The upgrades of each tier, for the miner and for the solar panel, have their own switches in the compatibilities config; on by default, restart needed.
+
+## Frames
+
+Every tier has a [](@thaumaturgetechcompats:thaumium_miner_frame) and a [](@thaumaturgetechcompats:thaumium_solar_frame) (also in Alchemical Brass and Void Metal). They are the structure blocks. Arcane workbench, shaped: plates of the tier in the four corners, obsidian on the four sides and, in the center, the matching frame of the previous tier (for Thaumium, the base frame of Void Miners). Vis cost grows with the tier (30 for the thaumium miner frame, 70 for the void metal solar frame).
+
+## The structure
+
+Each tier has its own multiblock layout, taller and wider as the tier rises (5x5 for thaumium, 7x7 for brass and void metal). It is made of the controller, frames (F), Void Miners glass panels (P) and modifier slots (M). Number of modifier slots: Thaumium 2, Alchemical Brass 4, Void Metal 6. A modifier slot accepts any Void Miners modifier of that kind or any upgrade of this mod of the right kind (miner or solar).
+
+## Upgrades
+
+Five upgrades. They go in the modifier slots and **multiply** with each other and with Void Miners' own modifiers.
+
+| Upgrade | Kind | Thaumium | Alchemical Brass | Void Metal |
+| --- | --- | --- | --- | --- |
+| Speed | miner, speed multiplier | 1.15 | 1.35 | 1.7 |
+| Production | miner, items | 1.1 | 1.25 | 1.5 |
+| Efficiency | miner, power cost | 0.9 | 0.75 | 0.55 |
+| Solar Generation | solar, generation | 1.15 | 1.35 | 1.7 |
+| Solar Saving | solar, power cost | 0.9 | 0.75 | 0.55 |
+
+Recipe (arcane workbench, shaped, vis 20 / 35 / 50 for Thaumium / Brass / Void):
+
+A mechanism above and below the center (simple for Thaumium and Brass, complex for Void), a plate of the tier on the left and on the right, and in the center the same upgrade of the previous tier (for Thaumium, the matching Void Miners modifier: Rubetine speed, item or energy modifier, solar efficiency or weather modifier).
+
+## Power sources
+
+Both controller kinds draw units from a **magical source**: a jarred node, a Flux Jar, a Rift Jar, a world node or a flux rift. Hungry nodes are never valid. Which kinds are allowed is set in the source list of the miner and solar panel sections of the config; the interval (default 20 ticks) is how long one payment covers.
+
+## Colours
+
+Each tier has a colour (frames, structure, beam, names): Thaumium light purple, Alchemical Brass gold, Void Metal dark purple. Changeable in the colours section of the config, applied on resource reload (F3+T).
+
+## Common mistakes
+
+- Building a thaumium structure with brass frames.
+- Putting a solar upgrade in a miner (the slot only accepts the right kind).
+- Expecting the upgrade values to add up: they multiply.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Void Miners magical configuration.

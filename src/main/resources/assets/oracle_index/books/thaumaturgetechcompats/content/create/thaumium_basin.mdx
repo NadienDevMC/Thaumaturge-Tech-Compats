@@ -1,0 +1,68 @@
+---
+id: thaumaturgetechcompats:thaumium_basin
+type: block
+title: Thaumium Basin
+---
+
+> [!NOTE]
+> Needs **Create** (through Create: Adapted in 26.1.2).
+
+## What it is
+
+The Thaumium Basin works **exactly like the Create machine it is made from**: same recipes, same kinetic needs, and it appears as a catalyst in the same JEI categories. The only difference: while an aura node is within reach it works many times faster, with enchant particles above it. Away from every node it behaves as the plain machine.
+
+| Property | Value |
+| --- | --- |
+| Speed while a node is in reach (default) | 15 times faster |
+| Node reach (default) | 10 blocks |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturgetechcompats:thaumium_casing', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturgetechcompats:alchemical_brass_basin', 'thaumaturge:plate_thaumium', 
+        '', 'thaumaturge:plate_thaumium', ''
+    ]}
+    result="thaumaturgetechcompats:thaumium_basin"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:alchemical_brass_basin) |
+| Pedestal items | [](@thaumaturgetechcompats:thaumium_casing), 2 × Thaumium Plate, Simple Arcane Mechanism |
+| Essentia | Potentia 20, Auram 10, Motus 10 |
+| Instability | 3 |
+| Research | **Thaumium Machinery** (Create tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research the machinery entry of its tier and make the casing of that tier.
+2. Infuse the variant over the machine of the tier before (the plain Create machine for Alchemical Brass).
+3. Place it **instead of** the plain machine and connect it to your kinetic network the same way (shafts, cogs, belts).
+4. Make sure an aura node is within its reach: it looks for the nearest node by itself every 20 ticks.
+5. Build the rest of the line as usual (belts, funnels, basins).
+
+## Used to make
+
+- [](@thaumaturgetechcompats:void_metal_basin)
+
+> [!NOTE]- Thaumonomicon: Thaumium Machinery
+> The thaumium variants reach nodes from farther away than the alchemical brass ones.
+> 
+> **Thaumium Casing**
+> 
+> It is infused over an alchemical brass casing with four thaumium plates and a simple mechanism.
+> 
+> **Machine variants**
+> 
+> Each variant is infused over the alchemical brass variant of the same machine, with a thaumium casing, two thaumium plates and a simple mechanism.
+
+**Guides of this chapter:** [Node Casings]($create/casings) · [Machine Variants and Node Boost]($create/machine-variants) · [Create Seal]($create/create-seal)

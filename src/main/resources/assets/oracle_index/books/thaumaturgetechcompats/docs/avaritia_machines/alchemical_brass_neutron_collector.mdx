@@ -1,0 +1,68 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_neutron_collector
+title: Brass Neutron Collector
+---
+
+> [!NOTE]
+> Needs the **Avaritia** mod.
+
+## What it is
+
+The Brass Neutron Collector replaces Avaritia's Densest Neutronium Collector: same inventory, menu and output, but it works several times per tick and adds extra items every time a production cycle finishes.
+
+| Property | Value |
+| --- | --- |
+| Work cycles per tick (default) | 4 |
+| Output multiplier (default) | 2 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:plate_brass', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturgetechcompats:thaumium_neutron_collector', 'thaumaturge:plate_brass', 
+        'thaumaturge:plate_brass', '', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_neutron_collector"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($avaritia_machines/thaumium_neutron_collector) |
+| Pedestal items | 4 × Alchemical Brass Plate, Simple Arcane Mechanism |
+| Essentia | Machina 32, Vacuos 32, Potentia 24, Nuclear 16, Terminus 8 |
+| Instability | 6 |
+| Center of the altar | []($matrices/neutronium_infusion_matrix) (by default) |
+| Research | **Higher Neutronium Machines** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Higher Neutronium Machines and infuse it from the machine of the tier before (see the recipe; the altar center decides its instability).
+2. Place it like Avaritia's collector and right click it to open its menu.
+3. It works by itself and fills its output slot. Take the output by hand or with a hopper.
+4. Empty it often: the extra items are only added while the output slot has room.
+
+## Used to make
+
+- []($avaritia_machines/void_metal_neutron_collector)
+
+> [!NOTE]- Thaumonomicon: Higher Neutronium Machines
+> Every machine is made on an infusion altar, starting from the one before it:
+> - The Thaumium Neutron Collector and Compressor need the Densest Neutronium Collector or Compressor, four thaumium plates and a Simple Arcane Mechanism.
+> - The Brass Neutron Collector and Compressor need the Thaumium machine, four alchemical brass plates and a Simple Arcane Mechanism.
+> - The Void Neutron Collector and Compressor need the Brass machine, four void metal plates and a Void Seed.
+> They work exactly like the machines of Avaritia and use the same recipes, only faster, and each tier also gives more every time it finishes. How much faster and how much more is set in the configuration.
+> Each tier can only be infused on an altar whose center is the Runic Matrix of its own tier, and that matrix brings its own instability to the craft:
+> - The Thaumium machines need the Crystal Matrix one: solar instability, with fires, lightning and burns.
+> - The Brass machines need the Neutronium one: nuclear instability, with radiation, flux poured into the aura and a meltdown that explodes.
+> - The Void machines need the Infinity one: cosmic instability, with flux torn open, warp, creatures from beyond and everything nearby thrown elsewhere.
+> The Brass and Void machines also ask for two new essences. Nuclear, made of potentia and perditio, is the power locked in the heart of matter. Cosmic, made of alienis and auram, is the vastness between the stars. The Brass machines ask for Nuclear, and the Void machines ask for Nuclear and Cosmic.
+
+**Guides of this chapter:** [Higher Neutron Machines, Tiers and Recipes]($avaritia_machines/tiers-and-recipes) · [Using the Tiered Neutron Collectors]($avaritia_machines/neutron-collector)

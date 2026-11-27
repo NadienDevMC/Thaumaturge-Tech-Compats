@@ -1,0 +1,50 @@
+---
+title: Fuentes de poder mágico
+icon: thaumaturgetechcompats:flux_jar
+related_items: [thaumaturgetechcompats:flux_jar, thaumaturgetechcompats:rift_jar]
+---
+
+> [!NOTE]
+> Parte de la base de "poder de nodos" (se puede desactivar en la configuración de compatibilidades, activada por defecto, pide reinicio). Ajustes: la configuración del poder de nodos.
+
+## Qué es
+
+Varias máquinas de este mod (el Taummotor, el Taladro Láser Mágico, los Mineros y Paneles solares mágicos de Void Miners, los Unearther y otras) funcionan con **poder mágico** en vez de electricidad. Lo toman de una fuente cercana. Las fuentes son:
+
+| Fuente | Qué es |
+| --- | --- |
+| Nodo en jarra | un nodo guardado en una jarra |
+| Jarra de flux | una [](@thaumaturgetechcompats:flux_jar) de cualquier nivel |
+| Jarra de grieta | una [](@thaumaturgetechcompats:rift_jar) |
+| Grieta | una grieta de flujo libre |
+| Nodo del mundo | un nodo en el mundo |
+
+Una máquina usa **solo la primera fuente que encuentra**, en el orden de fuentes de la configuración del poder de nodos (por defecto: nodo en jarra, Jarra de flux, Jarra de grieta, grieta, nodo del mundo). Un nodo hambriento **nunca** es una fuente válida.
+
+## Cómo se gastan las fuentes
+
+| Ajuste | Por defecto | Significado |
+| --- | --- | --- |
+| Proporción de consumo de nodos | 0 | fracción del poder tomado que se quita de verdad de un nodo o nodo en jarra; 0 hace los nodos inagotables, 1 los convierte en un depósito que se vacía |
+| Probabilidad de encogerse de la grieta | 0,33 | probabilidad de que una grieta libre se reduzca un punto por cada unidad de poder tomada |
+| Tamaño mínimo de grieta | 1 | una grieta de este tamaño o menos deja de ser una fuente |
+
+Las jarras de flux y de grieta pierden el poder que toma la máquina; la Jarra de flux se rellena sola desde el aura.
+
+## Paso a paso
+
+1. Decide qué fuente quieres y colócala cerca de la máquina (el alcance exacto depende de cada máquina y lo muestran las gafas o el tooltip cuando lo tiene).
+2. Coloca la máquina. Toma poder cada poco mientras trabaja.
+3. Si quieres elegir qué fuente se usa primero, edita el orden de fuentes en la configuración del poder de nodos.
+4. Vigila la fuente: una Jarra de flux o de grieta que se queda vacía, o una grieta que llega al mínimo, deja de alimentar la máquina.
+
+## Errores comunes
+
+- Contar con un nodo hambriento: nunca es una fuente válida.
+- Poner una Jarra de flux en un chunk limpio: sin flujo en el aura no se llena nunca.
+- Esperar que los nodos se agoten por defecto: con el ratio de consumo por defecto de 0 son inagotables.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración del poder de nodos del mod.

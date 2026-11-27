@@ -1,0 +1,63 @@
+---
+icon: thaumaturgetechcompats:neutronium_infusion_speed_stone
+title: Infusion Speed Stone (Neutronium)
+---
+
+> [!NOTE]
+> Needs the **Avaritia** mod.
+
+## What it is
+
+The Infusion Speed Stone (Neutronium) goes **under the four pillars** of the infusion altar, like the plain stones, and changes the cost or the cycle time of the altar for every stone placed. The altar never costs less than half.
+
+| Property | Value |
+| --- | --- |
+| Altar cost change | 0 |
+| Cycle time change | -3 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'avaritia:neutron_ingot', '', 
+        'avaritia:neutron_ingot', 'thaumaturgetechcompats:matrix_infusion_speed_stone', 'avaritia:neutron_ingot', 
+        '', 'avaritia:neutron_ingot', ''
+    ]}
+    result="thaumaturgetechcompats:neutronium_infusion_speed_stone"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($matrices/matrix_infusion_speed_stone) |
+| Pedestal items | 4 × Neutronium Ingot |
+| Essentia | Motus 24, Praecantatio 20, Terminus 4 |
+| Instability | 4 |
+| Center of the altar | []($matrices/matrix_infusion_matrix) (by default) |
+| Research | **Runic Stones of Avaritia** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Runic Stones of Avaritia.
+2. Infuse it from the stone of the tier before, on an altar whose center is the Runic Matrix of the tier **before** it.
+3. Place the stones under the four pillars of your working altar.
+
+## Used to make
+
+- []($matrices/infinity_infusion_speed_stone)
+
+> [!NOTE]- Thaumonomicon: Runic Stones of Avaritia
+> Each stone is made on an infusion altar, starting from the one before it, with four ingots of its metal and, for the Infinity ones, an Extremely Primordial Pearl:
+> - The Crystal Matrix stones start from the Infusion Cost Stone or the Infusion Speed Stone.
+> - The Neutronium stones start from the Crystal Matrix ones.
+> - The Infinity stones start from the Neutronium ones.
+> Each stone can only be infused on an altar whose Runic Matrix is the tier before it: the Crystal Matrix ones on a plain Runic Matrix, the Neutronium ones on the Crystal Matrix one and the Infinity ones on the Neutronium one.
+> They go under the four pillars of the altar just like the plain stones, and each tier lowers the cost or the cycle time of the altar more than the one before. The altar never costs less than half, and the exact values are set in the configuration.
+
+**Guides of this chapter:** [Infusion Cost and Speed Stones]($matrices/runic-stones)

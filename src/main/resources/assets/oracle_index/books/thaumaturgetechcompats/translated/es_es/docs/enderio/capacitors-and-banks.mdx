@@ -1,0 +1,57 @@
+---
+title: Capacitores mágicos y bancos de capacitores
+icon: thaumaturgetechcompats:void_metal_capacitor
+related_items: [thaumaturgetechcompats:thaumium_capacitor, thaumaturgetechcompats:alchemical_brass_capacitor, thaumaturgetechcompats:void_metal_capacitor]
+---
+
+> [!NOTE]
+> Requiere **Ender IO**. Los capacitores, los bancos de capacitores y toda la integración con Ender IO se pueden desactivar en la configuración de compatibilidades; activados por defecto, hay que reiniciar el juego. Los números están en la configuración de capacitores de Ender IO.
+
+## Qué es
+
+### Capacitores
+
+Tres capacitores para la ranura de capacitor de cualquier máquina de Ender IO. Funcionan como un capacitor octádico con un **nivel** más alto: la máquina almacena más energía, la aprovecha mejor y trabaja más rápido.
+
+| Nivel | Objeto | Nivel (por defecto) |
+| --- | --- | --- |
+| Básico / de doble capa / octádico (Ender IO) | | 1 / 2 / 3 |
+| Taumio | [](@thaumaturgetechcompats:thaumium_capacitor) | 4,0 |
+| Latón alquímico | [](@thaumaturgetechcompats:alchemical_brass_capacitor) | 5,5 |
+| Metal del vacío | [](@thaumaturgetechcompats:void_metal_capacitor) | 7,5 |
+
+Cada nivel puede tener un nivel aparte para la capacidad de energía, el uso de energía, la eficiencia de combustible y la generación de energía por combustión (0 usa el nivel general).
+
+### Bancos de capacitores
+
+Los bloques de Ender IO **Banco de capacitores de taumio**, **de latón alquímico** y **de metal del vacío** funcionan como los bancos de Ender IO: colócalos tocándose y comparten una sola reserva de energía, pero solo se unen bancos del mismo tipo. El banco mueve por tick tanta energía como almacena.
+
+| Nivel | Energía por bloque (por defecto) |
+| --- | --- |
+| Taumio | 8.000.000 |
+| Latón alquímico | 16.000.000 |
+| Metal del vacío | 32.000.000 |
+
+## Cómo conseguirlos
+
+Investiga **Capacitores mágicos** y **Bancos de capacitores mágicos** en la categoría Tech.
+
+**Capacitores** (altar de infusión), cada uno sobre el nivel anterior. Componentes: 4 placas del nivel, 2 lingotes de aleación vibrante, 1 cristal vibrante, más un mecanismo simple (latón alquímico) o una semilla del vacío (metal del vacío). El catalizador es un Capacitor octádico para el de taumio, luego el de taumio, luego el de latón alquímico. Aspectos: potentia 24/48/72, metallum 12/24/36, machina 12/24/36 (taumio/latón/vacío). Inestabilidad 3/6/9.
+
+**Bancos** (altar de infusión): cada banco se infunde desde el de abajo con cuatro placas del metal nuevo y cuatro capacitores de ese mismo metal. El de taumio sale de un Banco de capacitores vibrante, el de latón alquímico del de taumio y el de metal del vacío del de latón alquímico.
+
+## Paso a paso
+
+1. Infunde el capacitor y colócalo en la ranura de capacitor de una máquina de Ender IO.
+2. Para almacenar, infunde bancos y colócalos tocándose; solo se fusionan los de un mismo nivel.
+3. Conecta un conducto de energía de Ender IO al banco para cargarlo o vaciarlo.
+
+## Errores comunes
+
+- Mezclar niveles en un mismo grupo de bancos: los de distinto tipo no se unen.
+- Esperar que el capacitor funcione fuera de la ranura de capacitor de la máquina.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de los capacitores de Ender IO del mod.

@@ -1,0 +1,36 @@
+---
+title: Nodos
+icon: thaumaturge:jar_node
+---
+
+> [!NOTE]
+> **Mod base:** esta página explica el propio Thaumaturge, el mod sobre el que se construye este addon. La última sección muestra lo que este addon añade encima.
+
+## Qué es
+
+Los **nodos de aura** son nudos de energía mágica concentrada. Cada nodo tiene una cantidad base de energía alineada con uno o más aspectos, normalmente primarios y rara vez compuestos. A simple vista cuesta verlos (los delatan unos destellos débiles); mirando por el Taumómetro se ven con claridad.
+
+Los nodos se recargan condensando poco a poco la vis en bruto de su propio chunk. Un nodo refleja su hogar: si el aura se agota, el nodo palidece y se desespera; si el flujo se acumula en su chunk, el nodo puede **corromperse** y extender la corrupción. Además, los nodos grandes absorben a los pequeños cercanos.
+
+## Paso a paso
+
+1. **Extráelo.** Mantén el clic derecho sobre un nodo con una varita. Solo responden los aspectos primarios; los compuestos quedan fuera de alcance. La Extracción avanzada de nodos duplica lo que sacas.
+2. **No lo mates.** Un nodo vaciado del todo en un aspecto empieza a marchitarse, y un nodo sin aspectos desaparece. Tras la investigación Preservador de nodos tu varita deja el último punto de cada aspecto (agáchate si de verdad quieres vaciarlo). Una varita inicial de hierro y madera simple es demasiado tosca para esto.
+3. **Muévelo.** Rodea un nodo de cristal, ponle un techo de losas de madera y golpea el cristal con la varita: el nodo entra en un frasco (**Nodo en un frasco**). El ritual cuesta mucha vis y puede dañar el nodo. Un nodo en frasco queda dormido y se recarga a la mitad de velocidad. Haz clic en el frasco con una varita para liberarlo (el frasco se rompe).
+4. **Sujétalo.** Un **Estabilizador de nodos** justo debajo de un nodo hace que se alimente a la mitad de velocidad, impide que absorba o alimente a los nodos cercanos y puede calmar poco a poco un nodo inestable o que se apaga. Una señal de redstone lo apaga. El **Estabilizador de nodos avanzado** es la versión más fuerte.
+5. **Energízalo.** Con un estabilizador debajo, pon un **Transductor de nodo** encima y dale redstone solo al transductor. El nodo pasa a ser un **nodo energizado**: suelta energía sin parar, sus aspectos compuestos se separan en primarios y sus comportamientos salvajes se detienen mientras fluye la energía.
+6. **Lleva el flujo de energía.** Los **Relés de vis** a 8 bloques de un nodo energizado (o de otro relé) llevan su energía a dispositivos, Pedestales de carga y la Mesa de trabajo arcana.
+
+## Para tener en cuenta
+
+- Nunca quites ni apagues el estabilizador de un nodo energizado: explota, ensucia el aura y suelta baba y gas de flujo.
+- Si el transductor pierde la señal demasiado tiempo, el nodo vuelve a la normalidad y su energía se pierde.
+- Un nodo energizado se recarga tragando vis en bruto del aura, lo que puede agotar la zona si sacas demasiado rápido. Un nodo energizado corrupto come flujo en su lugar.
+- Los nodos primordiales forman parte de la investigación Eldricht.
+
+## En Thaumaturge Tech Compats
+
+- Estabilizadores y transductores más fuertes: el [](@thaumaturgetechcompats:matrix_node_stabilizer), el [](@thaumaturgetechcompats:matrix_node_transducer) y sus niveles superiores (mira Estabilizadores y transductores de nodos).
+- Los nodos como fuente de energía de las máquinas de este mod, incluidos los nodos en frasco (mira Poder de nodo, Jarras de flux y Jarras de grieta, y Fuentes de poder mágico).
+- Máquinas de Create que van más rápido cerca de un nodo ([](@thaumaturgetechcompats:thaumium_casing); mira Carcasas de nodo, y Variantes de máquina e impulso de nodo).
+- Un nodo hambriento nunca es una fuente de energía válida.

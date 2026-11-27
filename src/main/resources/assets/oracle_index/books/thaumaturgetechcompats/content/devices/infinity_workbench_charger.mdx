@@ -1,0 +1,60 @@
+---
+id: thaumaturgetechcompats:infinity_workbench_charger
+type: block
+title: Infinity Workbench Charger
+---
+
+> [!NOTE]
+> Needs materials of the **Avaritia** mod.
+
+## What it is
+
+The Infinity Workbench Charger sits on top of an Arcane Workbench and pulls vis from the aura of the chunks around it. It reaches farther than the ordinary charger and charges only part of the vis of each craft.
+
+| Property | Value |
+| --- | --- |
+| Vis radius | 4 chunks |
+| Vis of each craft that is charged | 10% |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturgetechcompats:extremely_primordial_pearl', 'thaumaturgetechcompats:infinity_plate', 'thaumaturgetechcompats:infinity_plate', 
+        'avaritia:infinity_ingot', 'thaumaturgetechcompats:neutronium_workbench_charger', 'thaumaturgetechcompats:infinity_plate', 
+        'avaritia:infinity_ingot', 'thaumaturge:vis_resonator', 'thaumaturgetechcompats:infinity_plate'
+    ]}
+    result="thaumaturgetechcompats:infinity_workbench_charger"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:neutronium_workbench_charger) |
+| Pedestal items | 4 × [](@thaumaturgetechcompats:infinity_plate), Vis Resonator, 2 × Infinity Ingot, [](@thaumaturgetechcompats:extremely_primordial_pearl) |
+| Essentia | Auram 64, Potentia 64, Alienis 32, Terminus 24 |
+| Instability | 10 |
+| Center of the altar | [](@thaumaturgetechcompats:infinity_infusion_matrix) (by default) |
+| Research | **Workbench Chargers of Avaritia** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Workbench Chargers of Avaritia.
+2. Infuse it over the charger of the tier before (the ordinary Arcane Workbench Charger for Crystal Matrix).
+3. Place it on top of the Arcane Workbench.
+4. Craft as usual: the vis comes from the chunks in its radius. Jade shows its discount and radius.
+
+> [!NOTE]- Thaumonomicon: Workbench Chargers of Avaritia
+> Each charger is made on an infusion altar, starting from the one before it:
+> - The Crystal Matrix one starts from an ordinary workbench charger.
+> - The Neutronium one starts from the Crystal Matrix one.
+> - The Infinity one starts from the Neutronium one.
+> They sit on top of the workbench like the ordinary one. By default they draw from 2, 3 and 4 chunks around it and charge only 70%, 40% and 10% of the vis of each craft.
+
+**Guides of this chapter:** [Mnemonic Matrices and Workbench Chargers]($devices/brain-boxes-chargers)

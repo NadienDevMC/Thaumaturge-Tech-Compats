@@ -71,7 +71,7 @@ public class OritechAssets implements DataProvider {
     private static JsonObject nodeModel(String name) {
         JsonObject textures = new JsonObject();
         textures.addProperty("all", MOD + ":block/" + name);
-        JsonObject json = parent(ORITECH + ":block/resource_node_iron");
+        JsonObject json = parent(ORITECH + ":block/iron_resource_node");
         json.add("textures", textures);
         return json;
     }

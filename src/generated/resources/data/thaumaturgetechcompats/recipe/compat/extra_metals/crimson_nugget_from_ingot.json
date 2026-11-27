@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:ingots/crimson"
+  ],
+  "result": {
+    "count": 9,
+    "id": "thaumaturgetechcompats:crimson_nugget"
+  }
+}

@@ -1,0 +1,55 @@
+---
+id: thaumaturgetechcompats:void_metal_arcane_terraformer
+type: block
+title: Terraformador arcano de metal del vacío
+---
+
+## Qué es
+
+El Terraformador arcano de metal del vacío repinta el bioma de la zona de alrededor, columna a columna empezando por sus pies, con el bioma de su **cebo** (un objeto que representa un bioma: arena para un desierto, nieve para la tundra, un brote para un bosque).
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio | 64 bloques |
+| Flujo dimensional que guarda | 20.000.000 |
+| DF por columna de 4x4 | 1.000 |
+| Columnas por ciclo | 16 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'minecraft:red_mushroom', 'thaumaturge:plate_void', 'thaumaturge:plate_void', 
+        'thaumaturge:vis_resonator', 'thaumaturgetechcompats:alchemical_brass_arcane_terraformer', 'thaumaturge:plate_void', 
+        'thaumaturge:vis_resonator', 'thaumaturge:mechanism_complex', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_arcane_terraformer"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:alchemical_brass_arcane_terraformer) |
+| Objetos en los pedestales | 4 × Placa de metal del vacío, Mecanismo arcano complejo, 2 × Resonador de Vis, Champiñón rojo |
+| Esencia | Permutatio 80, Terra 60, Potentia 40, Vacuos 30 |
+| Inestabilidad | 4 |
+| Investigación | **Terraformador arcano de metal del vacío** (pestaña Equipo flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del anterior).
+2. Dale DF (un Núcleo de almacenamiento, un Enlace de transmisión o un Extractor de grietas tocándolo).
+3. Haz clic derecho con el objeto cebo. Agáchate y haz clic derecho con la mano vacía para recuperar el cebo.
+4. Haz clic derecho otra vez para ver su progreso, radio y estado. Los biomas y dimensiones bloqueados en la configuración no se tocan.
+
+> [!NOTE]- Thaumonomicon: Terraformador arcano de metal del vacío
+> El Terraformador arcano de metal del vacío se infunde a partir de uno de latón alquímico, con cuatro placas de metal del vacío, un mecanismo complejo, dos resonadores de vis y un champiñón rojo.
+> Repinta el área más amplia, la más rápida y con el menor flujo por columna.
+
+**Guías de este capítulo:** [Generadores de escudo y Terraformadores arcanos]($nodes_flux/flux-field)

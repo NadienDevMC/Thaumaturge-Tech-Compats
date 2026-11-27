@@ -1,0 +1,62 @@
+---
+id: thaumaturgetechcompats:flux_jar
+type: block
+title: Flux Jar
+---
+
+> [!NOTE]
+> The Crystal Matrix, Neutronium and Infinity jars need the **Avaritia** mod.
+
+## What it is
+
+The Flux Jar slowly pulls **flux** out of the aura of its chunk until it is full. Machines that work on magical power use that flux as their power source, so the jar turns a pollution problem into fuel. A crucible next to it sends its leaks and overflow into the jar instead of the aura.
+
+| Property | Value |
+| --- | --- |
+| Flux capacity | 100 |
+| Flux pulled every 20 ticks | 0.25 |
+
+## How to get it
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:plate_void', '', 
+        'thaumaturge:plate_void', 'thaumaturge:jar_normal', 'thaumaturge:plate_void', 
+        '', 'thaumaturge:plate_void', ''
+    ]}
+    result="thaumaturgetechcompats:flux_jar"
+    count={1}
+/>
+
+| Recipe | |
+| --- | --- |
+| Station | Arcane Workbench, in this shape |
+| Ingredients | 4 × Void Metal Plate, Warded Jar |
+| Vis | 40 |
+| Crystals | none |
+| Research | **Flux Jar** (Nodes & Flux tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Flux Jar at the Arcane Workbench; the higher ones infused from the jar before, with the Runic Matrix of their tier at the center).
+2. Place it in the chunk whose flux you want to use and wait: it fills whenever the aura has flux.
+3. Put a machine that uses magical power next to it (Thaummotor, magical miners and panels...).
+4. Right click it to read its flux. An empty bucket takes out 10 flux as a bucket of liquid flux.
+5. Do not break a full jar in your base: everything it held goes back into the aura.
+
+## Used to make
+
+- [](@thaumaturgetechcompats:alchemical_brass_miner)
+- [](@thaumaturgetechcompats:thaumium_miner)
+- [](@thaumaturgetechcompats:void_metal_miner)
+- [](@thaumaturgetechcompats:rift_extractor)
+- [](@thaumaturgetechcompats:matrix_flux_jar)
+
+> [!NOTE]- Thaumonomicon: Flux Jar
+> The Flux Jar is made on an arcane workbench from a warded jar surrounded by four void metal plates.
+> It slowly pulls flux from the aura around it until it is full, and machines that work on magical power can use that flux as their source. A hungry node is never a safe source, and neither is a jar that has been broken: breaking the Flux Jar pours everything it holds back into the aura.
+
+**Guides of this chapter:** [Flux Jars]($jars/flux-jar) · [Magical Power Sources]($jars/power-sources)

@@ -1,0 +1,58 @@
+---
+id: thaumaturgetechcompats:infinity_infusion_pedestal
+type: block
+title: Pedestal (Infinity)
+---
+
+> [!NOTE]
+> Needs the **Avaritia** mod.
+
+## What it is
+
+The Pedestal (Infinity) is where the ingredients of an infusion go. Each pedestal of this tier around the altar lowers the cost of the altar a little.
+
+| Property | Value |
+| --- | --- |
+| Altar cost change | -0.02 |
+| Cycle time change | 0 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'avaritia:infinity_ingot', '', 
+        'thaumaturgetechcompats:extremely_primordial_pearl', 'thaumaturgetechcompats:neutronium_infusion_pedestal', 'avaritia:infinity_ingot', 
+        'avaritia:infinity_ingot', '', 'avaritia:infinity_ingot'
+    ]}
+    result="thaumaturgetechcompats:infinity_infusion_pedestal"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:neutronium_infusion_pedestal) |
+| Pedestal items | 4 × Infinity Ingot, [](@thaumaturgetechcompats:extremely_primordial_pearl) |
+| Essentia | Ordo 48, Terra 40, Terminus 14 |
+| Instability | 6 |
+| Center of the altar | [](@thaumaturgetechcompats:infinity_infusion_matrix) (by default) |
+| Research | **Pillars of Avaritia** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Pillars of Avaritia.
+2. Infuse it from the pedestal of the tier before (the Eldritch Pedestal first), with the Runic Matrix of its **own** tier at the center.
+3. Place it around the altar instead of an ordinary pedestal.
+
+> [!NOTE]- Thaumonomicon: Pillars of Avaritia
+> The infusion pillar stones are made at the arcane workbench, four at a time, from ingots and the stones of the tier before: the Crystal Matrix ones start from Eldritch Stone Tiles, the Neutronium ones from the Crystal Matrix ones and the Infinity ones from the Neutronium ones, with an Extremely Primordial Pearl.
+> The pedestals are infused from the pedestal of the tier before, starting from the Eldritch Pedestal, on an altar whose center is the Runic Matrix of their own tier.
+> The altar is built exactly like the plain one: eight stones, a pedestal and a Runic Matrix of any kind. Salis Mundus turns the stones into pillars of the same tier, and the look of the pillars follows the stone used.
+> Each tier lowers the cost and the cycle time of the altar more than the one before, and the pillars also add stability for the plain Runic Matrix. The exact values are set in the configuration.
+
+**Guides of this chapter:** [Pillars and Pedestals]($matrices/pillars-and-pedestals)

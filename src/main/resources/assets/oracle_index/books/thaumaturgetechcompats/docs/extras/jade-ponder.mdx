@@ -1,0 +1,44 @@
+---
+title: Jade Tooltips and Ponder Scenes
+---
+
+> [!NOTE]
+> Jade tooltips need **Jade**; Ponder scenes need a **Ponder** library. Both can be switched off in their own config files (a master switch for Jade plus one switch per family; a master switch for Ponder plus one per scene).
+
+## Jade integration
+
+Look at a block with Jade to read what the config would otherwise hide. The families you can toggle:
+
+| Block | What Jade shows |
+|---|---|
+| Essentia Smelteries | efficiency, smelting interval |
+| Node Stabilizers | lock level, node feeding (times slower), stabilization (times faster) |
+| Node Transducers | charge per tick, loss interval without redstone |
+| Alchemical Furnaces | speed (times faster), savings of heat, perditio and aqua |
+| Mnemonic Matrices | simultaneous formulas added |
+| Workbench Chargers | vis discount, vis radius in chunks |
+| Flux Storage Core | structure, energy, capacity cells, stabilizer points |
+| Void Miners magical machines | aura source, aura cost, generation, upgrades, and why a machine is stopped (no source, hungry node, exhausted) |
+
+Every Avaritia block also shows its tier ("Show the tier" option).
+
+## Ponder scenes
+
+If a Ponder library is installed, this mod registers these scenes:
+
+- Advanced Alchemical Furnace, Infernal Furnace, Thaumatorium, Golem Press, Research Table.
+- Infusion Altar (arcane, ancient and eldritch stone variants).
+- Stabilizing and Energizing Nodes.
+- Workbench Charger.
+- The Avaritia tiers: Alchemical Furnaces, Mnemonic Matrices, Node Stabilizers, Node Transducers, Workbench Chargers.
+
+They are grouped under the tag *Multiblock Structures*. Use the Ponder key on the item to open its scene.
+
+## Common mistakes
+
+- Looking for the tooltips without Jade installed.
+- Switching a family off in the Jade config and wondering why its info is gone.
+
+## Notes
+
+- Its values are adjusted in the mod's Jade configuration.

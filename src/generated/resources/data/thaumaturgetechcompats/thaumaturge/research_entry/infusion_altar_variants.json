@@ -5,8 +5,8 @@
       "feature": "infusion_altar_variants"
     }
   ],
-  "category": "thaumaturgetechcompats:avaritia",
-  "column": 10,
+  "category": "thaumaturgetechcompats:01_avaritia",
+  "column": 4,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:infinity_infusion_pedestal"
@@ -34,7 +34,7 @@
     "thaumaturgetechcompats:extremely_primordial_pearl",
     "thaumaturge:infusion"
   ],
-  "row": 4,
+  "row": 16,
   "stages": [
     {
       "required_knowledge": [

@@ -13,6 +13,11 @@
       "feature": "oritech_processing_grinder"
     },
     {
+      "type": "neoforge:registered",
+      "registry": "minecraft:recipe_serializer",
+      "value": "oritech:grinder"
+    },
+    {
       "type": "neoforge:not",
       "value": {
         "type": "thaumaturgetechcompats:feature_enabled",
@@ -21,10 +26,10 @@
     }
   ],
   "type": "oritech:grinder",
-  "ingredients": [
+  "itemInputs": [
     "thaumaturge:deepslate_ore_quartz"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "minecraft:quartz"

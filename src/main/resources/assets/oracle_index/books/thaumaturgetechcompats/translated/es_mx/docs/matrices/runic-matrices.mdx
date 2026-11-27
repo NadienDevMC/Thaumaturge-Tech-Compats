@@ -1,0 +1,54 @@
+---
+title: Matrices rúnicas de Avaritia
+icon: thaumaturgetechcompats:neutronium_infusion_matrix
+related_items: [thaumaturgetechcompats:matrix_infusion_matrix, thaumaturgetechcompats:neutronium_infusion_matrix, thaumaturgetechcompats:infinity_infusion_matrix]
+---
+
+> [!NOTE]
+> Necesita el mod **Avaritia**. Las variantes de la matriz se pueden desactivar en la configuración de compatibilidades. Números: las secciones de matrices de la configuración de infusión, una por matriz.
+
+## Qué es
+
+La Matriz rúnica de Thaumaturge mantiene en orden una infusión solo mientras el altar que la rodea está perfectamente equilibrado. Estas tres matrices mantienen su propio orden y responden de él con su propio desorden:
+
+- **nunca piden un altar simétrico**,
+- su **estabilidad no se recupera**,
+- lo que sale mal lo decide la **inestabilidad del crafteo** que se infunde, y nunca es suave.
+
+| Matriz | Inestabilidad | Cuenta de esencia | Multiplicador de pérdida | Radio de efectos |
+| --- | --- | --- | --- | --- |
+| [](@thaumaturgetechcompats:matrix_infusion_matrix) | Solar | 1x | 1,0 | 6 bloques |
+| [](@thaumaturgetechcompats:neutronium_infusion_matrix) | Nuclear | 1x | 1,5 | 8 bloques |
+| [](@thaumaturgetechcompats:infinity_infusion_matrix) | Cósmica | 20x | 3,0 | 12 bloques |
+
+"Multiplicador de pérdida" es el multiplicador de la estabilidad que pierde la matriz cada ciclo: cuanto más rápido la pierde, antes empiezan los eventos. "Cuenta de esencia" significa que cada unidad de esencia que entra en la matriz cuenta como esas unidades de la receta, así que la matriz de Infinito es mucho más barata en esencia. Cada variante tiene un interruptor para sus efectos de inestabilidad.
+
+## Cómo conseguirlas
+
+Cada matriz se infunde en un altar cuyo centro es el **nivel anterior**:
+
+| Matriz | Catalizador | Componentes | Aspectos | Inestabilidad |
+| --- | --- | --- | --- | --- |
+| Matriz de Cristal | Matriz rúnica normal (en un altar normal) | 4 lingotes de Matriz de Cristal | Potentia 24, Lux 16, Ignis 16, Terminus 4 | 3 |
+| Neutronio | Matriz rúnica de Matriz de Cristal (centro) | 4 lingotes de neutrones | Potentia 32, Perditio 32, Metallum 24, Terminus 8 | 6 |
+| Infinito | Matriz rúnica de Neutronio (centro) | 4 lingotes de infinito, [](@thaumaturgetechcompats:extremely_primordial_pearl) | Potentia 48, Alienis 48, Vacuos 32, Terminus 24 | 9 |
+
+Todo lo demás hecho con estos metales (jarras, focos, piezas de varita, fundiciones, pedestales...) necesita la matriz de su **propio nivel** en el centro. Sus tooltips dicen cuál.
+
+## Paso a paso
+
+1. Investiga "Matrices rúnicas de Avaritia".
+2. Construye un altar normal e infunde la matriz de Matriz de Cristal con una Matriz rúnica normal como catalizador.
+3. Cambia el centro del altar por la matriz nueva e infunde la de Neutronio, y luego la de Infinito del mismo modo.
+4. Prepárate para la inestabilidad: mira la página de Efectos de inestabilidad.
+
+## Errores comunes
+
+- Infundir la matriz de Neutronio en un altar normal: necesita la de Matriz de Cristal en el centro.
+- Estar junto al altar cuando trabaja una matriz Nuclear o Cósmica.
+- Desactivar la regla de niveles (en general o por nivel en la configuración de infusión): los objetos por niveles dejan de exigir su propia matriz, así que también te saltas la inestabilidad correspondiente, lo que cambia el equilibrio de la progresión.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de infusión del mod.

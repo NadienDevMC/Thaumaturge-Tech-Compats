@@ -1,0 +1,65 @@
+---
+id: thaumaturgetechcompats:thaumium_miner
+type: block
+title: Thaumium Miner Controller
+---
+
+> [!NOTE]
+> Needs **Void Miners Remastered**.
+
+## What it is
+
+The Thaumium Miner Controller is the controller of a Void Miners miner that takes **no FE at all**: it works only while it can pay a few units of power to a magical source close by, and stops the moment it cannot. It is a multiblock like the Rubetine miner: the controller plus frames, glass panels and modifier slots.
+
+| Property | Value |
+| --- | --- |
+| Mining tier (Void Miners recipes) | 3 |
+| Speed multiplier | 1.5 |
+| Production multiplier | 1.5 |
+| Units paid every 20 ticks | 1 |
+| Power source radius | 8 blocks |
+| Modifier slots of its structure | 2 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturgetechcompats:flux_jar', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 
+        '', 'voidminersremastered:rubetine_miner', '', 
+        'thaumaturgetechcompats:flux_jar', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_miner"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Rubetine Miner Controller |
+| Pedestal items | 3 × Thaumium Plate, Simple Arcane Mechanism, 2 × [](@thaumaturgetechcompats:flux_jar) |
+| Essentia | Machina 12, Terra 8, Metallum 8, Potentia 6 |
+| Instability | 2 |
+| Research | **Thaumium Miner** (Void Miners tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research the Magical Miner entry of its tier (Tech tab) and infuse it over the controller of the tier before (the Rubetine Miner for Thaumium).
+2. Craft the Thaumium miner frames and build the multiblock of the tier around the controller, with Void Miners glass panels and modifier slots.
+3. Place a power source within the radius: a jarred node, a Flux Jar, a Rift Jar, a world node or a flux rift (never a hungry node).
+4. Every 20 ticks it pays its units: while paid it mines, otherwise it waits for the next try.
+5. Take the output as from any Void Miners miner.
+
+## Used to make
+
+- [](@thaumaturgetechcompats:alchemical_brass_miner)
+
+> [!NOTE]- Thaumonomicon: Thaumium Miner
+> The Thaumium Miner Controller is made on an infusion altar from a Rubetine Miner, thaumium plates, mechanisms and Flux Jars.
+> Its frames are made on an arcane workbench from thaumium plates, obsidian and a base frame. The structure is built out of these frames, glass panels and any miner modifier, and it takes no energy at all: it works only while it can pay units to a magical power source close by, and stops the moment it cannot. A hungry node is never a valid source.
+
+**Guides of this chapter:** [Magical Miner Controllers]($void_miners/magical-miner)

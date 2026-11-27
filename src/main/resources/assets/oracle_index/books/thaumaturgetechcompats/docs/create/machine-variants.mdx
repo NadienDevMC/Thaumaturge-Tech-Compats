@@ -1,0 +1,56 @@
+---
+title: Machine Variants and Node Boost
+icon: thaumaturgetechcompats:alchemical_brass_mechanical_press
+related_items: [thaumaturgetechcompats:alchemical_brass_mechanical_press, thaumaturgetechcompats:thaumium_mechanical_mixer, thaumaturgetechcompats:void_metal_mechanical_saw, thaumaturgetechcompats:alchemical_brass_mechanical_drill, thaumaturgetechcompats:thaumium_deployer, thaumaturgetechcompats:void_metal_millstone, thaumaturgetechcompats:alchemical_brass_basin, thaumaturgetechcompats:thaumium_spout, thaumaturgetechcompats:void_metal_item_drain, thaumaturgetechcompats:alchemical_brass_depot]
+---
+
+> [!NOTE]
+> Requires **Create** (through Create: Adapted in 26.1.2). In the Create config you can switch off the whole integration, all the variants, each machine, each casing tier and the node boost. All default to on.
+
+## What it is
+
+Ten Create machines have an Alchemical Brass, a Thaumium and a Void Metal variant, thirty blocks in total:
+
+[](@thaumaturgetechcompats:alchemical_brass_mechanical_press), Mechanical Mixer, Mechanical Saw, Mechanical Drill, Deployer, Millstone, Basin, Spout, Item Drain and Depot.
+
+A variant works **exactly like the original** (same recipes, same kinetic needs, same JEI recipes: the variants show up as catalysts in the JEI categories of the plain machine when the Create JEI option is on). The only difference: while an aura node is within reach, it runs many times faster. Away from every node it behaves as the plain machine.
+
+## How to get it
+
+Each variant is infused at the altar over the machine below it:
+
+| Tier | Catalyst | Components | Aspects |
+| --- | --- | --- | --- |
+| Alchemical Brass | the plain Create machine | Alchemical Brass Casing + 2 brass plates | machina 20, metallum 10, motus 10 (instability 2) |
+| Thaumium | the alchemical brass variant | Thaumium Casing + 2 thaumium plates + simple mechanism | potentia 20, auram 10, motus 10 (instability 3) |
+| Void Metal | the thaumium variant | Void Metal Casing + 2 void metal plates + complex mechanism | vacuos 20, potentia 20, auram 20 (instability 4) |
+
+Unlock the research of the tier first (see [](@thaumaturgetechcompats:alchemical_brass_casing)).
+
+## Step by step
+
+1. Craft the variant of the machine and place it **instead of** the plain one. Wire it into your kinetic network the same way (shafts, cogs, belts).
+2. Make sure an aura node is within reach of the machine. The machine looks for the nearest node by itself every 20 ticks (the probe interval of the Create config).
+3. While a node is near you see enchant particles above the machine and it works at the boosted rate.
+4. Build the rest of the line as usual (belts, funnels, basins).
+
+## Numbers (Create config)
+
+| Setting | Default | Notes |
+| --- | --- | --- |
+| Speed multiplier | 15 for every tier | 1 to 64, per casing tier |
+| Node radius | 6 / 10 / 16 blocks | brass / thaumium / void metal |
+| Probe interval (ticks) | 20 | how often the machine looks for a node |
+| Particles | true | enchant particles while quickened |
+
+The boost is not applied when the world's tick rate is frozen, and some machines pause the boost at the moment of their critical action (the press at the middle of its stroke, the spout when it fills, the deployer on its transition, a depot with a machine above) so the result stays correct.
+
+## Common mistakes
+
+- Putting the variant farther from the node than the tier's reach. Void metal reaches 16 blocks, brass only 6.
+- Expecting a boost with the node boost switched off: the variants then behave as plain machines.
+- Switching a toggle after crafting: disabled variants lose their recipes and research.
+
+## Notes
+
+- It can be turned off in the mod's Create configuration.

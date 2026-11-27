@@ -1,0 +1,58 @@
+---
+id: thaumaturgetechcompats:resource_node_amber
+type: block
+title: Nodo de recurso de ámbar
+---
+
+> [!NOTE]
+> Necesita el mod **Oritech**.
+
+## Qué es
+
+El Nodo de recurso de ámbar es un nodo de recursos como los de Oritech: una veta como de lecho de roca que la Perforadora profunda de Oritech puede explotar para siempre. Nunca se gasta.
+
+| Propiedad | Valor |
+| --- | --- |
+| Da | Ámbar |
+| Rareza en el mundo (por defecto) | 1 de cada 500 chunks |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:amber', 'thaumaturge:ore_amber', 'thaumaturge:amber', 
+        'thaumaturge:ore_amber', 'oritech:gold_resource_node', 'thaumaturge:ore_amber', 
+        'thaumaturge:amber', 'thaumaturge:ore_amber', 'thaumaturge:amber'
+    ]}
+    result="thaumaturgetechcompats:resource_node_amber"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | Nodo de recurso de oro |
+| Objetos en los pedestales | 4 × Mena de ámbar, 4 × Ámbar |
+| Esencia | Permutatio 16, Metallum 12, Terra 12 |
+| Inestabilidad | 4 |
+| Investigación | **Nodos de recurso de Thaumaturge** (pestaña Oritech) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Encuéntralo en el mundo normal (lo marca una roca de pizarra profunda) o infúndelo sobre el nodo de Oritech que corresponde (investigación Nodos de recursos de Thaumaturge).
+2. Colócalo donde la Perforadora profunda de Oritech lo alcance.
+3. Construye la Perforadora profunda encima del nodo y aliméntala como pide Oritech.
+4. La perforadora da el producto del nodo en cada ciclo, para siempre (1 por ciclo por defecto).
+
+> [!NOTE]- Thaumonomicon: Nodos de recurso de Thaumaturge
+> En el altar de infusión, un nodo de recurso de Oritech rodeado de la mena y del producto del material se convierte en un nodo de ese material:
+> - Cinabrio (desde el nodo de redstone), ámbar (nodo de oro) y cuarzo (nodo de lapislázuli), con la mena de Thaumaturge y su drop.
+> Bajo el Taladro Profundo de Oritech cada nodo da su material para siempre: cinabrio en bruto, ámbar o cuarzo. También se generan en el overworld como los nodos de Oritech, con un peñasco de pizarra en la superficie.
+> La cantidad por ciclo y lo raro que es cada nodo se pueden cambiar en la configuración, y cada nodo se puede desactivar allí.
+
+**Guías de este capítulo:** [Nodos de recurso y taladro profundo]($oritech/resource-nodes)

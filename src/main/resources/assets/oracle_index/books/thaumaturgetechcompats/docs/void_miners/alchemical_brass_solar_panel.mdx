@@ -1,0 +1,62 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_solar_panel
+title: Alchemical Brass Solar Panel Controller
+---
+
+> [!NOTE]
+> Needs **Void Miners Remastered**.
+
+## What it is
+
+The Alchemical Brass Solar Panel Controller is the controller of a Void Miners solar panel that makes FE **without sun or open sky**: it generates only while it can pay units of power to a magical source nearby.
+
+| Property | Value |
+| --- | --- |
+| FE per tick | 2,500 |
+| Energy stored (FE) | 100,000,000 |
+| Units paid every 20 ticks | 2 |
+| Power source radius | 12 blocks |
+| Modifier slots of its structure | 4 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:jar_node', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        '', 'thaumaturgetechcompats:thaumium_solar_panel', '', 
+        'thaumaturge:jar_node', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_solar_panel"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($void_miners/thaumium_solar_panel) |
+| Pedestal items | 3 × Alchemical Brass Plate, Simple Arcane Mechanism, 2 × Node in a Jar |
+| Essentia | Lux 18, Potentia 16, Praecantatio 12, Machina 10 |
+| Instability | 4 |
+| Research | **Alchemical Brass Solar Panel** (Void Miners tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research the Magical Solar Panel entry of its tier and infuse it over the controller of the tier before (the Rubetine Solar Panel for Thaumium).
+2. Craft the Alchemical Brass solar frames and build the solar structure of the tier around the controller.
+3. Put a power source within the radius (jarred node, Flux Jar, Rift Jar, world node or flux rift; never a hungry node).
+4. Connect a cable or an FE consumer as with any Void Miners solar panel. Every 20 ticks it pays and generates.
+
+## Used to make
+
+- []($void_miners/void_metal_solar_panel)
+
+> [!NOTE]- Thaumonomicon: Alchemical Brass Solar Panel
+> The Alchemical Brass Solar Panel Controller is made on an infusion altar from the Thaumium Solar Panel Controller, alchemical brass plates, mechanisms and jarred nodes.
+> Its frames are made on an arcane workbench from alchemical brass plates, obsidian and the matching Thaumium frame. It generates energy only while it can pay units to a magical power source close by, with no need for sun or open sky. A hungry node is never a valid source.
+
+**Guides of this chapter:** [Magical Solar Panel Controllers]($void_miners/magical-solar-panel)

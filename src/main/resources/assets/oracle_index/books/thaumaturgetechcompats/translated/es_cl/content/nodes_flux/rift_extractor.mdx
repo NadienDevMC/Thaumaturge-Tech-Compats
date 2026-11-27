@@ -1,0 +1,54 @@
+---
+id: thaumaturgetechcompats:rift_extractor
+type: block
+title: Extractor de grietas
+---
+
+## Qué es
+
+El Extractor de grietas absorbe energía directamente de una grieta de flujo abierta, quitándole un punto de tamaño cada vez y convirtiéndolo en flujo dimensional, que empuja a los almacenes y Enlaces de transmisión que lo tocan.
+
+| Propiedad | Valor |
+| --- | --- |
+| Alcance | 6 bloques |
+| Flujo dimensional que guarda | 50.000 |
+| Mueve por tick | 2.000 DF |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:mechanism_complex', 'thaumaturge:void_seed', 'thaumaturge:plate_void', 
+        '', 'thaumaturgetechcompats:flux_jar', '', 
+        'thaumaturge:plate_void', 'thaumaturge:plate_void', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:rift_extractor"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:flux_jar) |
+| Objetos en los pedestales | Semilla del vacío, 4 × Placa de metal del vacío, Mecanismo arcano complejo |
+| Esencia | Vacuos 24, Potentia 24, Alienis 16, Praemunio 8 |
+| Inestabilidad | 4 |
+| Investigación | **Extractor de grietas** (pestaña Red de flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Infúndelo con una Jarra de flujo como objeto central.
+2. Colócalo a menos de 6 bloques de una grieta de flujo.
+3. Pon un Núcleo de almacenamiento o un Enlace de transmisión contra él.
+4. Cada 40 ticks quita un punto a la grieta (5.000 DF cada uno). Se para cuando la grieta está en su tamaño mínimo o no tiene sitio.
+
+> [!NOTE]- Thaumonomicon: Extractor de grietas
+> El Extractor de grietas se fabrica en un altar de infusión con una Jarra de flux, una semilla del vacío, cuatro placas de metal del vacío y un mecanismo arcano complejo.
+> Absorbe energía directamente de una grieta de flux abierta a su alcance, quitándole un punto de tamaño cada cierto tiempo, y convierte cada punto en Flujo Dimensional. Se detiene cuando la grieta llega a su tamaño mínimo o cuando no le queda sitio para guardar más. El Flujo que guarda se empuja a los almacenes y enlaces de transmisión que lo tocan.
+
+**Guías de este capítulo:** [Enlaces de transmisión y Extractor de grietas]($nodes_flux/flux-links)

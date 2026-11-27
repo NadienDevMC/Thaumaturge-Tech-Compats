@@ -1,0 +1,63 @@
+---
+icon: thaumaturgetechcompats:infinity_node_stabilizer
+title: Estabilizador de nodos de infinito
+---
+
+> [!NOTE]
+> Necesita materiales del mod **Avaritia**.
+
+## Qué es
+
+El Estabilizador de nodos de infinito mantiene estable un nodo de aura con más fuerza que el Estabilizador de nodos avanzado: nada puede extraer del nodo que sujeta, él sí puede extraer de nodos sin proteger cercanos, y una señal de redstone lo apaga.
+
+| Propiedad | Valor |
+| --- | --- |
+| El nodo sujeto se alimenta del aura | 1000 veces más lento |
+| Los nodos inestables o que se apagan se asientan | 5 veces más rápido |
+| Puntos de estabilizador para un Núcleo de almacenamiento de flujo | 6 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:alumentum', 'avaritia:infinity_ingot', 'thaumaturge:nitor_white', 
+        'thaumaturgetechcompats:infinity_plate', 'thaumaturgetechcompats:neutronium_node_stabilizer', 'thaumaturgetechcompats:infinity_plate', 
+        'thaumaturge:nitor_white', 'avaritia:infinity_ingot', 'thaumaturge:alumentum'
+    ]}
+    result="thaumaturgetechcompats:infinity_node_stabilizer"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($devices/neutronium_node_stabilizer) |
+| Objetos en los pedestales | 2 × Infinity Ingot, 2 × Nítor blanco (o similar), 2 × []($avaritia/infinity_plate), 2 × Alumentum |
+| Esencia | Auram 64, Praecantatio 32, Ordo 32, Potentia 32, Terminus 24 |
+| Inestabilidad | 16 |
+| Centro del altar | []($matrices/infinity_infusion_matrix) (por defecto) |
+| Investigación | **Estabilizadores de Nodos de Avaritia** (pestaña Avaritia) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Estabilizadores de nodos de Avaritia.
+2. Infúndelo alrededor del estabilizador del nivel anterior (el Estabilizador de nodos avanzado para Matriz de Cristal).
+3. Colócalo igual que cualquier estabilizador de nodos, junto al nodo que quieres conservar.
+4. También cuenta como puntos de estabilizador para un Núcleo de almacenamiento de flujo a menos de 8 bloques.
+
+> [!NOTE]- Thaumonomicon: Estabilizadores de Nodos de Avaritia
+> Cada estabilizador se infunde alrededor del anterior, usando placas y lingotes de su propio material alternados con nitor y alumentum:
+> - Matriz de Cristal: alrededor de un Estabilizador de nodos avanzado.
+> - Neutronio: alrededor del de Matriz de Cristal.
+> - Infinito: alrededor del de Neutronio.
+> Los tres retienen un nodo como un Estabilizador de nodos avanzado: nada puede absorber de él, él aún puede absorber de nodos cercanos sin proteger, y una señal de redstone los apaga. Lo que cambia es la fuerza del agarre:
+> - Matriz de Cristal: el nodo se alimenta del aura 50 veces más despacio de lo normal, y los nodos inestables o que se apagan se asientan 3 veces más rápido que con el estabilizador básico.
+> - Neutronio: 200 veces más despacio, y 4 veces más rápido.
+> - Infinito: 1000 veces más despacio, y 5 veces más rápido. El nodo prácticamente deja de alimentarse.
+
+**Guías de este capítulo:** [Estabilizadores y transductores de nodos]($devices/node-devices)

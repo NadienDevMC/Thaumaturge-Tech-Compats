@@ -33,7 +33,7 @@ public abstract class CuttingBoardBlockEntityMixin {
         this.thaumaturgetechcompats$tool = null;
     }
 
-    @Redirect(method = "lambda$processStoredItemUsingTool$2",
+    @Redirect(method = {"lambda$processStoredItemUsingTool$0", "lambda$processStoredItemUsingTool$2"},
             at = @At(value = "INVOKE",
                     target = "Lvectorwing/farmersdelight/common/crafting/CuttingBoardRecipe;rollResults(Lnet/minecraft/util/RandomSource;ILnet/neoforged/neoforge/items/wrapper/RecipeWrapper;)Ljava/util/List;"),
             require = 0)

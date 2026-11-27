@@ -51,9 +51,9 @@ public enum TierComponentProvider implements IBlockComponentProvider {
     private static void stats(ITooltip tooltip, JadeFamily family, JadeTier tier, CompoundTag stats) {
         switch (family) {
             case STABILIZER -> {
-                line(tooltip, "stabilizer.lock", tier, stats.getInt(JadeKeys.LOCK));
-                line(tooltip, "stabilizer.feeding", tier, stats.getInt(JadeKeys.FEEDING));
-                line(tooltip, "stabilizer.settling", tier, stats.getInt(JadeKeys.SPEED));
+                line(tooltip, "stabilizer.lock", tier, stats.getIntOr(JadeKeys.LOCK, 0));
+                line(tooltip, "stabilizer.feeding", tier, stats.getIntOr(JadeKeys.FEEDING, 0));
+                line(tooltip, "stabilizer.settling", tier, stats.getIntOr(JadeKeys.SPEED, 0));
             }
             case SMELTER -> {
                 int interval = stats.getIntOr(JadeKeys.INTERVAL, 0);
@@ -61,18 +61,18 @@ public enum TierComponentProvider implements IBlockComponentProvider {
                 line(tooltip, "smelter.efficiency", tier, number(stats.getFloatOr(JadeKeys.EFFICIENCY, 0.0F) * 100.0));
             }
             case TRANSDUCER -> {
-                line(tooltip, "transducer.charge", tier, stats.getInt(JadeKeys.CHARGE));
+                line(tooltip, "transducer.charge", tier, stats.getIntOr(JadeKeys.CHARGE, 0));
                 int decay = stats.getIntOr(JadeKeys.DECAY, 0);
                 line(tooltip, decay <= 1 ? "transducer.decay_every_tick" : "transducer.decay", tier, decay);
             }
             case FURNACE -> {
-                line(tooltip, "furnace.speed", tier, stats.getInt(JadeKeys.SPEED));
-                line(tooltip, "furnace.savings", tier, stats.getInt(JadeKeys.SAVINGS));
+                line(tooltip, "furnace.speed", tier, stats.getIntOr(JadeKeys.SPEED, 0));
+                line(tooltip, "furnace.savings", tier, stats.getIntOr(JadeKeys.SAVINGS, 0));
             }
-            case BRAIN_BOX -> line(tooltip, "mnemonic_matrix.formulas", tier, stats.getInt(JadeKeys.FORMULAS));
+            case BRAIN_BOX -> line(tooltip, "mnemonic_matrix.formulas", tier, stats.getIntOr(JadeKeys.FORMULAS, 0));
             case CHARGER -> {
-                line(tooltip, "workbench_charger.discount", tier, stats.getInt(JadeKeys.DISCOUNT));
-                line(tooltip, "workbench_charger.radius", tier, stats.getInt(JadeKeys.RADIUS));
+                line(tooltip, "workbench_charger.discount", tier, stats.getIntOr(JadeKeys.DISCOUNT, 0));
+                line(tooltip, "workbench_charger.radius", tier, stats.getIntOr(JadeKeys.RADIUS, 0));
             }
             default -> {
             }

@@ -13,8 +13,8 @@
       "feature": "oritech_addons"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 9,
+  "category": "thaumaturgetechcompats:05_oritech",
+  "column": 2,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:oritech_brass_speed_addon"
@@ -43,7 +43,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 4,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

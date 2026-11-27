@@ -1,5 +1,5 @@
 {
-  "category": "thaumaturgetechcompats:avaritia",
+  "category": "thaumaturgetechcompats:01_avaritia",
   "column": 0,
   "complexity": 2,
   "icons": [
@@ -30,7 +30,7 @@
     "thaumaturge:warded_jars",
     "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
-  "row": 2,
+  "row": 14,
   "stages": [
     {
       "required_knowledge": [

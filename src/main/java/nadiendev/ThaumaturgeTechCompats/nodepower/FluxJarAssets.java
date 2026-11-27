@@ -1,7 +1,9 @@
 package nadiendev.ThaumaturgeTechCompats.nodepower;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import nadiendev.ThaumaturgeTechCompats.datagen.RecipeSaver;
 import nadiendev.ThaumaturgeTechCompats.tiercontent.ContentJson;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
@@ -37,7 +39,9 @@ public class FluxJarAssets implements DataProvider {
         for (int fill = 0; fill <= RiftJarBlock.MAX_FILL; fill++) {
             tasks.add(ContentJson.save(output, cache, "assets/" + MOD + "/models/block/" + RIFT_JAR + "_" + fill + ".json", blockModel(RIFT_JAR, fill)));
         }
-        tasks.add(ContentJson.save(output, cache, "assets/" + MOD + "/models/item/" + RIFT_JAR + ".json", itemModel(RIFT_JAR)));
+        // Saved directly: the item definition is not the plain one ContentJson would add, it also draws the rift
+        tasks.add(RecipeSaver.save(cache, itemModel(RIFT_JAR), output.getOutputFolder().resolve("assets/" + MOD + "/models/item/" + RIFT_JAR + ".json")));
+        tasks.add(RecipeSaver.save(cache, riftItemDefinition(), output.getOutputFolder().resolve("assets/" + MOD + "/items/" + RIFT_JAR + ".json")));
         return CompletableFuture.allOf(tasks.toArray(CompletableFuture[]::new));
     }
 
@@ -79,6 +83,28 @@ public class FluxJarAssets implements DataProvider {
         json.addProperty("parent", "thaumaturge:block/jar_normal");
         json.addProperty("render_type", "minecraft:translucent");
         json.add("textures", textures);
+        return json;
+    }
+
+    /** The rift (nodepower/client/RiftJarSpecialRenderer) inside the full jar model. */
+    private static JsonObject riftItemDefinition() {
+        JsonObject rift = new JsonObject();
+        rift.addProperty("type", MOD + ":" + RIFT_JAR);
+        JsonObject special = new JsonObject();
+        special.addProperty("type", "minecraft:special");
+        special.addProperty("base", MOD + ":item/" + RIFT_JAR);
+        special.add("model", rift);
+        JsonObject jar = new JsonObject();
+        jar.addProperty("type", "minecraft:model");
+        jar.addProperty("model", MOD + ":item/" + RIFT_JAR);
+        JsonArray models = new JsonArray();
+        models.add(special);
+        models.add(jar);
+        JsonObject composite = new JsonObject();
+        composite.addProperty("type", "minecraft:composite");
+        composite.add("models", models);
+        JsonObject json = new JsonObject();
+        json.add("model", composite);
         return json;
     }
 

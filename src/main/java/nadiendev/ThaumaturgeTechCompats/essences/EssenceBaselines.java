@@ -10,6 +10,7 @@ import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOAspects;
 import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftAspects;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.processing.OritechAspectTable;
 import nadiendev.ThaumaturgeTechCompats.compats.tags.Asp;
+import nadiendev.ThaumaturgeTechCompats.compats.tags.OwnItemAspectTable;
 import nadiendev.ThaumaturgeTechCompats.compats.tags.AspectPart;
 import nadiendev.ThaumaturgeTechCompats.compats.tags.TagAspectEntry;
 import nadiendev.ThaumaturgeTechCompats.compats.tags.TagAspectTable;
@@ -78,6 +79,7 @@ public final class EssenceBaselines {
     private static void fromTagTable(Map<String, Baseline> baselines) {
         List<TagAspectEntry> entries = new ArrayList<>(TagAspectTable.entries(ThaumaturgeAspects.definedKeys()));
         entries.addAll(OritechAspectTable.entries());
+        entries.addAll(OwnItemAspectTable.entries());
         for (TagAspectEntry entry : entries) {
             JsonArray conditions = new JsonArray();
             for (String mod : entry.mods()) {

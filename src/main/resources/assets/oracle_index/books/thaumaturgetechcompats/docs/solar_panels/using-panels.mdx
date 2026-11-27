@@ -1,0 +1,41 @@
+---
+title: Using the Solar Panels
+icon: thaumaturgetechcompats:brass_solar_panel
+related_items: [thaumaturgetechcompats:brass_solar_panel, thaumaturgetechcompats:void_uranium_solar_panel]
+---
+
+> [!NOTE]
+> Needs the **Solar Generation** mod. The radiation of the Void Uranium panel needs **Mekanism**.
+
+## What it is
+
+These panels are Solar Generation panels with their own numbers. Place them where the sun can reach them, take energy out with cables or machines next to them, and read their state in their menu.
+
+## How they work
+
+- Every tick the panel produces its **generation** multiplied by the sun intensity that Solar Generation computes for that position (so output follows the same day/sky curve as the other panels of that mod).
+- It stores the energy in its own battery (its **capacity**). When the battery is full it stops producing.
+- Every tick it offers energy to **every side except the top** (so the top must face the sky): any block there with an energy capability receives up to its **transfer** rate per tick.
+- Right click the panel to open its menu: it shows the stored energy and the current production.
+- When you break and pick up a panel, its stored energy stays in the item.
+
+## Step by step
+
+1. Place the panel with the top free and open to the sky.
+2. Put a cable, a battery or a machine on any other side.
+3. Check the menu to see production and stored energy.
+4. For big panels, remember the transfer limit: a Void Metal panel can push 155,000,000 FE per tick, so use cables and batteries that can take it.
+
+## The Void Uranium radiation
+
+The [](@thaumaturgetechcompats:void_uranium_solar_panel) is radioactive. With Mekanism installed, every second each panel in your **inventory** adds a dose of 0.0002 Sv for every item of the stack to your radiation. A full Hazmat suit of Mekanism protects you completely; creative and spectator players are exempt. Switching off this panel in the compatibilities config removes the panel and the radiation.
+
+## Common mistakes
+
+- Covering the top of the panel: it needs a clear top, and the top side never outputs energy.
+- Carrying stacks of Void Uranium panels without a Hazmat suit.
+- Expecting the same output at night: the output follows the sun curve of Solar Generation.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).

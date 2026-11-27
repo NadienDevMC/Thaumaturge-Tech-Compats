@@ -13,6 +13,10 @@ public final class NodePowerConfig {
 
     private static final List<String> DEFAULT_ORDER = List.of("jar_node", "flux_jar", "rift_jar", "rift", "world_node");
     private static final int DEFAULT_FLUX_FILL_INTERVAL = 20;
+    private static final double DEFAULT_BUCKET_FLUX = 10.0D;
+    private static final int DEFAULT_CRUCIBLE_WARP_AMOUNT = 4;
+    private static final double DEFAULT_CRUCIBLE_WARP_RADIUS = 4.0D;
+    private static final int DEFAULT_CRUCIBLE_ASPECT_CAPACITY = 1024;
     private static final double DEFAULT_RIFT_SHRINK_CHANCE = 0.33D;
     private static final int DEFAULT_RIFT_MIN_SIZE = 1;
     private static final double DEFAULT_NODE_CONSUME_RATIO = 0.0D;
@@ -26,6 +30,10 @@ public final class NodePowerConfig {
     private static final Map<FluxJarTier, ModConfigSpec.DoubleValue> FLUX_JAR_CAPACITIES = new EnumMap<>(FluxJarTier.class);
     private static final Map<FluxJarTier, ModConfigSpec.DoubleValue> FLUX_JAR_FILL_AMOUNTS = new EnumMap<>(FluxJarTier.class);
     private static final ModConfigSpec.IntValue FLUX_JAR_FILL_INTERVAL;
+    private static final ModConfigSpec.DoubleValue FLUX_JAR_BUCKET_FLUX;
+    private static final ModConfigSpec.IntValue CRUCIBLE_WARP_AMOUNT;
+    private static final ModConfigSpec.DoubleValue CRUCIBLE_WARP_RADIUS;
+    private static final ModConfigSpec.IntValue CRUCIBLE_ASPECT_CAPACITY;
     private static final ModConfigSpec.DoubleValue RIFT_SHRINK_CHANCE;
     private static final ModConfigSpec.IntValue RIFT_MIN_SIZE;
     private static final ModConfigSpec.DoubleValue NODE_CONSUME_RATIO;
@@ -54,6 +62,14 @@ public final class NodePowerConfig {
         }
         FLUX_JAR_FILL_INTERVAL = builder.comment("Ticks between two fills of any Flux Jar.")
                 .defineInRange("fill_interval", DEFAULT_FLUX_FILL_INTERVAL, 1, 72_000);
+        FLUX_JAR_BUCKET_FLUX = builder.comment("Flux a Flux Jar loses when an empty bucket is used on it to fill a bucket of liquid flux.")
+                .defineInRange("bucket_flux", DEFAULT_BUCKET_FLUX, 0.1D, 10_000.0D);
+        CRUCIBLE_WARP_AMOUNT = builder.comment("Temporary warp given to the players next to a crucible whose leaked flux found no Flux Jar with room. The flux vanishes instead of polluting the aura.")
+                .defineInRange("crucible_warp_amount", DEFAULT_CRUCIBLE_WARP_AMOUNT, 0, 1000);
+        CRUCIBLE_WARP_RADIUS = builder.comment("Blocks around the crucible in which players receive that warp.")
+                .defineInRange("crucible_warp_radius", DEFAULT_CRUCIBLE_WARP_RADIUS, 1.0D, 32.0D);
+        CRUCIBLE_ASPECT_CAPACITY = builder.comment("Points of EACH aspect a crucible holds before it counts as overfilled and starts leaking flux (the original crucible overfills at 100 points in total). Can be switched off with crucible_aspect_capacity in the compats file.")
+                .defineInRange("crucible_aspect_capacity", DEFAULT_CRUCIBLE_ASPECT_CAPACITY, 1, 62_500);
         builder.pop();
         builder.push("rift");
         RIFT_SHRINK_CHANCE = builder.comment("Chance that a flux rift shrinks by one point for every unit of power taken from it.")
@@ -97,6 +113,22 @@ public final class NodePowerConfig {
 
     public static float fluxJarFillAmount(FluxJarTier tier) {
         return (float) (SPEC.isLoaded() ? FLUX_JAR_FILL_AMOUNTS.get(tier).get() : tier.defaultFillAmount());
+    }
+
+    public static float fluxJarBucketFlux() {
+        return (float) (SPEC.isLoaded() ? FLUX_JAR_BUCKET_FLUX.get() : DEFAULT_BUCKET_FLUX);
+    }
+
+    public static int crucibleWarpAmount() {
+        return SPEC.isLoaded() ? CRUCIBLE_WARP_AMOUNT.get() : DEFAULT_CRUCIBLE_WARP_AMOUNT;
+    }
+
+    public static int crucibleAspectCapacity() {
+        return SPEC.isLoaded() ? CRUCIBLE_ASPECT_CAPACITY.get() : DEFAULT_CRUCIBLE_ASPECT_CAPACITY;
+    }
+
+    public static double crucibleWarpRadius() {
+        return SPEC.isLoaded() ? CRUCIBLE_WARP_RADIUS.get() : DEFAULT_CRUCIBLE_WARP_RADIUS;
     }
 
     public static int fluxJarFillInterval() {

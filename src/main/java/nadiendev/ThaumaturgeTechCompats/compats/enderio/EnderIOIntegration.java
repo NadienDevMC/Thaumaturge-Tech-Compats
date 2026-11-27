@@ -11,11 +11,13 @@ import nadiendev.ThaumaturgeTechCompats.compats.enderio.capacitor.bank.Capacitor
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.conduit.ConduitConfig;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.conduit.ConduitContent;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.conduit.ConduitPack;
+import nadiendev.ThaumaturgeTechCompats.compats.enderio.conduit.ConduitRegistry;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.wand.EnderIOWandConfig;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.wand.EnderIOWandContent;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.wand.EnderIOWandItemModels;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.wand.EnderIOWandRegistry;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
@@ -67,12 +69,18 @@ public final class EnderIOIntegration {
             container.registerConfig(ModConfig.Type.STARTUP, EnderIOWandConfig.SPEC, EnderIOWandConfig.FILE_NAME);
             EnderIOWandRegistry.register(modBus);
         }
+        if (net.neoforged.fml.loading.FMLEnvironment.getDist().isClient()) {
+            nadiendev.ThaumaturgeTechCompats.compats.enderio.capacitor.bank.client.CtmOverlayBlockStateModel.register(modBus);
+        }
         EnderIORegistry.ITEMS.register(modBus);
     }
 
-    public static void fillCreativeTab(CreativeModeTab.Output output) {
+    public static void fillCreativeTab(HolderLookup.Provider provider, CreativeModeTab.Output output) {
         if (enabled(CompatToggles.ENDERIO_GRINDING_BALLS)) {
             EnderIORegistry.balls().values().forEach(output::accept);
+        }
+        if (enabled(CONDUITS)) {
+            ConduitRegistry.fillCreativeTab(provider, output);
         }
         if (enabled(CAPACITORS)) {
             CapacitorRegistry.fillCreativeTab(output);

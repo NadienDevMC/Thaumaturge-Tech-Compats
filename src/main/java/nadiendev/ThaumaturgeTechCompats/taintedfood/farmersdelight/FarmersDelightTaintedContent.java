@@ -11,6 +11,7 @@ import nadiendev.ThaumaturgeTechCompats.tiercontent.ContentJson;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class FarmersDelightTaintedContent implements DataProvider {
 
     private static final String MOD = ThaumaturgeTechCompats.MOD_ID;
     private static final String CRUCIBLE_DIR = "crucible/tainted_farmersdelight/";
-    private static final String ARCANE_DIR = "arcane/farmersdelight_knives/";
+    private static final String ARCANE_DIR = "arcane_workbench/farmersdelight_knives/";
     private static final String COOKING_DIR = "cooking/tainted_farmersdelight/";
     private static final String CUTTING_DIR = "cutting/tainted_farmersdelight/";
     private static final String INFUSION_DIR = "infusion/";
@@ -47,7 +48,7 @@ public class FarmersDelightTaintedContent implements DataProvider {
         this.output = output;
     }
 
-    private record Cooking(String name, FarmersDelightFood result, List<JsonObject> ingredients) {
+    private record Cooking(String name, FarmersDelightFood result, List<String> ingredients) {
     }
 
     private record Cutting(String name, String input, FarmersDelightFood result, int count) {
@@ -56,13 +57,13 @@ public class FarmersDelightTaintedContent implements DataProvider {
     private static List<Cooking> cookingRecipes() {
         return List.of(
                 new Cooking("beef_stew", FarmersDelightFood.BEEF_STEW,
-                        List.of(ContentJson.item(BEEF), ContentJson.item(CARROT), ContentJson.item(POTATO))),
+                        List.of(BEEF, CARROT, POTATO)),
                 new Cooking("vegetable_soup", FarmersDelightFood.VEGETABLE_SOUP,
-                        List.of(ContentJson.item(CARROT), ContentJson.item(POTATO), tag("c:crops/beetroot"), tag("c:foods/leafy_green"))),
+                        List.of(CARROT, POTATO, "#c:crops/beetroot", "#c:foods/leafy_green")),
                 new Cooking("steak_and_potatoes", FarmersDelightFood.STEAK_AND_POTATOES,
-                        List.of(ContentJson.item(BEEF), ContentJson.item(POTATO), tag("c:crops/onion"))),
+                        List.of(BEEF, POTATO, "#c:crops/onion")),
                 new Cooking("fried_rice", FarmersDelightFood.FRIED_RICE,
-                        List.of(tag("c:crops/rice"), tag("c:eggs"), ContentJson.item(CARROT), tag("c:crops/onion"))));
+                        List.of("#c:crops/rice", "#c:eggs", CARROT, "#c:crops/onion")));
     }
 
     private static List<Cutting> cuttingRecipes() {
@@ -90,6 +91,10 @@ public class FarmersDelightTaintedContent implements DataProvider {
         }
         tasks.add(save(cache, "recipe/" + INFUSION_DIR + FLUX_RECIPE, fluxInfusion()));
         tasks.add(save(cache, "thaumaturge/research_entry/" + FluxKnife.ENTRY_NAME, fluxEntry()));
+        for (FarmersDelightKnife knife : FarmersDelightKnife.values()) {
+            tasks.add(save(cache, "tags/item/knife_repair/" + knife.id(), repairTag(knife.ingot())));
+        }
+        tasks.add(save(cache, "tags/item/knife_repair/" + FluxKnife.ID, repairTag(FluxKnife.ingot())));
         tasks.add(ContentJson.save(output, cache, "data/c/tags/item/tools/knife.json", knifeTag()));
         tasks.add(ContentJson.save(output, cache, "data/" + FarmersDelightTaintedIntegration.MOD_ID + "/tags/item/tools/knives.json", knifeTag()));
         return CompletableFuture.allOf(tasks.toArray(CompletableFuture[]::new));
@@ -113,15 +118,10 @@ public class FarmersDelightTaintedContent implements DataProvider {
 
     private static JsonObject itemExists(String item) {
         JsonObject condition = new JsonObject();
-        condition.addProperty("type", "neoforge:item_exists");
-        condition.addProperty("item", item);
+        condition.addProperty("type", "neoforge:registered");
+        condition.addProperty("registry", "minecraft:item");
+        condition.addProperty("value", item);
         return condition;
-    }
-
-    private static JsonObject tag(String id) {
-        JsonObject json = new JsonObject();
-        json.addProperty("tag", id);
-        return json;
     }
 
     private static JsonObject knowledge(String type, String category, int amount) {
@@ -129,6 +129,18 @@ public class FarmersDelightTaintedContent implements DataProvider {
         json.addProperty("type", type);
         json.addProperty("category", category);
         json.addProperty("amount", amount);
+        return json;
+    }
+
+    private static JsonObject repairTag(Identifier ingot) {
+        JsonObject value = new JsonObject();
+        value.addProperty("id", ingot.toString());
+        value.addProperty("required", false);
+        JsonArray values = new JsonArray();
+        values.add(value);
+        JsonObject json = new JsonObject();
+        json.addProperty("replace", false);
+        json.add("values", values);
         return json;
     }
 
@@ -226,10 +238,10 @@ public class FarmersDelightTaintedContent implements DataProvider {
     private static JsonObject cooking(Cooking cooking) {
         List<String> existing = new ArrayList<>();
         JsonArray ingredients = new JsonArray();
-        for (JsonObject ingredient : cooking.ingredients()) {
+        for (String ingredient : cooking.ingredients()) {
             ingredients.add(ingredient);
-            if (ingredient.has("item")) {
-                existing.add(ingredient.get("item").getAsString());
+            if (!ingredient.startsWith("#")) {
+                existing.add(ingredient);
             }
         }
         JsonObject json = CompatJson.recipe("farmersdelight:cooking", taintedConditions(existing, cooking.result().itemId().toString()));
@@ -246,7 +258,7 @@ public class FarmersDelightTaintedContent implements DataProvider {
         JsonObject json = CompatJson.recipe("farmersdelight:cutting",
                 taintedConditions(List.of(cutting.input()), cutting.result().itemId().toString()));
         JsonArray ingredients = new JsonArray();
-        ingredients.add(ContentJson.item(cutting.input()));
+        ingredients.add(cutting.input());
         json.add("ingredients", ingredients);
         JsonObject stack = new JsonObject();
         stack.add("item", ContentJson.result(cutting.result().itemId().toString(), cutting.count()));
@@ -254,11 +266,14 @@ public class FarmersDelightTaintedContent implements DataProvider {
         results.add(stack);
         json.add("result", results);
         JsonObject ability = new JsonObject();
-        ability.addProperty("type", "farmersdelight:item_ability");
+        ability.addProperty("neoforge:ingredient_type", "farmersdelight:item_ability");
         ability.addProperty("action", "knife_dig");
-        JsonArray tool = new JsonArray();
-        tool.add(ability);
-        tool.add(tag("c:tools/knife"));
+        JsonArray children = new JsonArray();
+        children.add(ability);
+        children.add("#c:tools/knife");
+        JsonObject tool = new JsonObject();
+        tool.addProperty("neoforge:ingredient_type", "neoforge:compound");
+        tool.add("children", children);
         json.add("tool", tool);
         return json;
     }

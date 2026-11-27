@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "hephaestus"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "hephaestus_smeltery"
+    }
+  ],
+  "type": "hephaestus:casting_basin",
+  "cooling_time": 200,
+  "fluid": {
+    "amount": 810,
+    "id": "thaumaturgetechcompats:molten_rifting"
+  },
+  "result": {
+    "id": "thaumaturgetechcompats:rifting_block"
+  }
+}

@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.common.ClusterMaterial;
 import nadiendev.ThaumaturgeTechCompats.compats.common.CompatJson;
+import nadiendev.ThaumaturgeTechCompats.materials.ExtraMaterial;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
@@ -95,6 +96,13 @@ public class MekanismClusterContent implements DataProvider {
         for (ClusterMaterial material : ClusterMaterial.ownMaterials()) {
             JsonObject entry = new JsonObject();
             entry.addProperty("id", material.cluster());
+            entry.addProperty("required", false);
+            values.add(entry);
+        }
+        // The native clusters of the extra metals belong to the same Thaumaturge tag
+        for (ExtraMaterial metal : ExtraMaterial.values()) {
+            JsonObject entry = new JsonObject();
+            entry.addProperty("id", ThaumaturgeTechCompats.MOD_ID + ":" + metal.clusterName());
             entry.addProperty("required", false);
             values.add(entry);
         }

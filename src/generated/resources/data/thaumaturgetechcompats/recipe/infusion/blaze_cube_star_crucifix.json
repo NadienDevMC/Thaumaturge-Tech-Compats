@@ -41,8 +41,9 @@
       "feature": "star_crucifix_blaze_cube"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "thaumaturgetechcompats:blaze_cube_salis_mundus"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "thaumaturgetechcompats:blaze_cube_salis_mundus"
     }
   ],
   "type": "thaumaturge:infusion",

@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.flux.link;
 
+import nadiendev.ThaumaturgeTechCompats.registry.TierOrder;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
 import nadiendev.ThaumaturgeTechCompats.flux.FluxTier;
 import net.minecraft.data.DataGenerator;
@@ -30,7 +31,7 @@ public final class LinkIntegration {
             output.accept(LinkRegistry.EXTRACTOR_ITEM.get());
             output.accept(LinkRegistry.LINKER.get());
         }
-        for (FluxTier tier : FluxTier.values()) {
+        for (FluxTier tier : TierOrder.display(FluxTier.values())) {
             if (CompatToggles.enabled(tier.toggle())) {
                 output.accept(LinkRegistry.linkItem(tier).get());
             }

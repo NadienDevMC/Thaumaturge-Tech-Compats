@@ -25,6 +25,8 @@ import nadiendev.ThaumaturgeTechCompats.focus.FocusIntegration;
 import nadiendev.ThaumaturgeTechCompats.furnace.FurnaceIntegration;
 import nadiendev.ThaumaturgeTechCompats.golem.GolemIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.mekanism.MekanismIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools.MekanismToolIntegration;
 import nadiendev.ThaumaturgeTechCompats.infusion.InfusionIntegration;
 import nadiendev.ThaumaturgeTechCompats.jar.JarIntegration;
 import nadiendev.ThaumaturgeTechCompats.nodepower.NodePowerIntegration;
@@ -38,7 +40,9 @@ import nadiendev.ThaumaturgeTechCompats.smelter.SmelterIntegration;
 import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerIntegration;
 import nadiendev.ThaumaturgeTechCompats.edible.EdibleIntegration;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodIntegration;
+import nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.FarmersDelightTaintedIntegration;
 import nadiendev.ThaumaturgeTechCompats.transducer.TransducerIntegration;
+import nadiendev.ThaumaturgeTechCompats.materials.ExtraMaterialsIntegration;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierIntegration;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -56,7 +60,9 @@ public final class ModCreativeSubTabs {
         List<CreativeSubTab> tabs = new ArrayList<>();
         for (CreativeSection section : CreativeSection.values()) {
             if (section.parent() == parent && present(section)) {
-                tabs.add(new CreativeSubTab.Builder(CreativeModeTab.builder().displayItems((parameters, output) -> fill(section, output)),
+                tabs.add(new CreativeSubTab.Builder(CreativeModeTab.builder()
+                        .title(Component.translatable(section.key()))
+                        .displayItems((parameters, output) -> fill(section, parameters.holders(), output)),
                         parentTab, ThaumaturgeTechCompats.id(section.id()), Component.translatable(section.key()))
                         .hideParentTitle()
                         .build());
@@ -71,43 +77,59 @@ public final class ModCreativeSubTabs {
 
     private static boolean present(CreativeSection section) {
         return switch (section) {
+            case SOLAR -> nadiendev.ThaumaturgeTechCompats.compats.solargeneration.SolarGenerationIntegration.isLoaded();
+            case ENDERIO -> loaded(EnderIOIntegration.MOD_ID);
             case CREATE -> loaded(CreateIntegration.MOD_ID);
             case ORITECH -> loaded(OritechFeatures.MOD_ID);
+            case MEKANISM -> loaded(MekanismToolIntegration.MOD_ID);
             case BOTANIA -> loaded(BotaniaIntegration.MOD_ID);
             case VOID -> loaded(VoidMinersMagicalIntegration.MOD_ID);
+            case FOOD_FARMERS -> loaded(FarmersDelightTaintedIntegration.MOD_ID);
             default -> true;
         };
     }
 
-    private static void fill(CreativeSection section, CreativeModeTab.Output output) {
+    private static void fill(CreativeSection section, net.minecraft.core.HolderLookup.Provider holders, CreativeModeTab.Output output) {
         switch (section) {
-            case CORE -> core(output);
-            case MACHINES -> AvaritiaMachinesIntegration.fillCreativeTab(output);
-            case DEVICES -> devices(output);
-            case JARS -> jars(output);
-            case MATRICES -> matrices(output);
+            case CORE -> avaritia(output);
             case PEARLS -> pearls(output);
+            case SOLAR -> nadiendev.ThaumaturgeTechCompats.compats.solargeneration.SolarGenerationIntegration.fillCreativeTab(output);
             case CREATE -> create(output);
             case ORITECH -> oritech(output);
+            case MEKANISM -> mekanism(output);
             case BOTANIA -> BotaniaIntegration.fillCreativeTab(output);
             case VOID -> VoidMinersMagicalIntegration.fillCreativeTab(output);
-            case NODES -> NodePowerIntegration.fillCreativeTab(new FilteredOutput(output, path -> !fluxJar(path)));
+            case NODES -> NodePowerIntegration.fillCreativeTab(output);
             case FLUX_NETWORK -> fluxNetwork(output);
             case FLUX_GEAR -> fluxGear(output);
             case FOOD_TAINTED -> TaintedFoodIntegration.fillCreativeTab(output);
+            case FOOD_FARMERS -> FarmersDelightTaintedIntegration.fillCreativeTab(output);
             case FOOD_EDIBLE -> EdibleIntegration.fillCreativeTab(output);
             case PURITY -> PurityIntegration.fillCreativeTab(output);
+            case ENDERIO -> EnderIOIntegration.fillCreativeTab(holders, output);
+            case EXTRA_METALS -> ExtraMaterialsIntegration.fillCreativeTab(output);
             case EXTRAS -> extras(output);
         }
+    }
+
+    /** One Avaritia tab: core, machines, devices, jars and matrices, in that order, without repeats. */
+    private static void avaritia(CreativeModeTab.Output output) {
+        CreativeModeTab.Output distinct = new DistinctOutput(output);
+        core(distinct);
+        AvaritiaMachinesIntegration.fillCreativeTab(distinct);
+        devices(distinct);
+        jars(distinct);
+        matrices(distinct);
+    }
+
+    private static void mekanism(CreativeModeTab.Output output) {
+        MekanismIntegration.fillCreativeTab(output);
+        MekanismToolIntegration.fillCreativeTab(output);
     }
 
     private static void create(CreativeModeTab.Output output) {
         CreateIntegration.fillCreativeTab(output);
         ThaummotorIntegration.fillCreativeTab(output);
-    }
-
-    private static boolean fluxJar(String path) {
-        return path.endsWith("flux_jar");
     }
 
     private static void core(CreativeModeTab.Output output) {
@@ -122,7 +144,6 @@ public final class ModCreativeSubTabs {
 
     private static void jars(CreativeModeTab.Output output) {
         JarIntegration.fillCreativeTab(output);
-        NodePowerIntegration.fillCreativeTab(new FilteredOutput(output, ModCreativeSubTabs::fluxJar));
     }
 
     private static void devices(CreativeModeTab.Output output) {
@@ -153,7 +174,6 @@ public final class ModCreativeSubTabs {
     }
 
     private static void extras(CreativeModeTab.Output output) {
-        EnderIOIntegration.fillCreativeTab(output);
         AuraConverterIntegration.fillCreativeTab(output);
     }
 

@@ -5,8 +5,8 @@
       "feature": "infusion_matrix_variants"
     }
   ],
-  "category": "thaumaturgetechcompats:avaritia",
-  "column": 6,
+  "category": "thaumaturgetechcompats:01_avaritia",
+  "column": 0,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:infinity_infusion_matrix"
@@ -34,7 +34,7 @@
     "thaumaturgetechcompats:extremely_primordial_pearl",
     "thaumaturge:infusion"
   ],
-  "row": 4,
+  "row": 16,
   "stages": [
     {
       "required_knowledge": [

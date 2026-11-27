@@ -36,7 +36,6 @@ public class ThaumaturgeContentProvider implements DataProvider {
     public CompletableFuture<?> run(CachedOutput cache) {
         List<CompletableFuture<?>> tasks = new ArrayList<>();
         tasks.add(save(cache, "data/" + MOD + "/thaumaturge/aspect/terminus.json", terminusAspect()));
-        tasks.add(save(cache, "data/" + MOD + "/thaumaturge/research_category/avaritia.json", avaritiaCategory()));
         tasks.add(save(cache, "data/" + MOD + "/thaumaturge/research_entry/extremely_primordial_pearl.json", pearlResearch()));
         tasks.add(save(cache, "data/" + MOD + "/thaumaturge/research_entry/akashic_record.json", akashicResearch()));
         tasks.add(save(cache, "data/" + MOD + "/thaumaturge/research_entry/infinity_wand.json", wandResearch()));
@@ -67,23 +66,6 @@ public class ThaumaturgeContentProvider implements DataProvider {
         return json;
     }
 
-    private static JsonObject avaritiaCategory() {
-        JsonObject json = new JsonObject();
-        json.addProperty("background", "thaumaturge:textures/gui/gui_research_back_6_smooth.png");
-        json.add("formula", aspects(
-                ASPECT_TERMINUS, 20,
-                "thaumaturge:alienis", 10,
-                "thaumaturge:desiderium", 10,
-                "thaumaturge:praecantatio", 5,
-                "thaumaturge:potentia", 5,
-                "thaumaturge:metallum", 5,
-                "thaumaturge:vitreus", 5,
-                "thaumaturge:permutatio", 5));
-        json.addProperty("icon", MOD + ":textures/research/cat_avaritia.png");
-        json.addProperty("index", 7);
-        json.addProperty("overlay_background", "thaumaturge:textures/gui/gui_research_back_over.png");
-        return json;
-    }
 
     private static JsonObject pearlResearch() {
         return research(

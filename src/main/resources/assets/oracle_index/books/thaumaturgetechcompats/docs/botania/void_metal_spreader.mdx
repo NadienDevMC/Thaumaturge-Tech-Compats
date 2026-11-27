@@ -1,0 +1,62 @@
+---
+icon: thaumaturgetechcompats:void_metal_spreader
+title: Void Metal Mana Spreader
+---
+
+> [!NOTE]
+> Needs **Botania** (Botania Revived).
+
+## What it is
+
+The Void Metal Mana Spreader is a Botania mana spreader above the Gaia Spreader. It behaves like any spreader (takes lenses, binds with the Wand of the Forest) but holds far more mana and fires stronger bursts.
+
+| Property | Value |
+| --- | --- |
+| Mana per burst | 10,240 |
+| Mana capacity | 102,400 |
+| Ticks before the burst loses mana | 200 |
+| Mana lost per tick after that | 32 |
+| Speed multiplier | 4.0 |
+| Fire resistant | yes |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:plate_void', '', 
+        'thaumaturge:void_seed', 'thaumaturgetechcompats:alchemical_brass_spreader', 'thaumaturge:plate_void', 
+        'thaumaturge:plate_void', '', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_spreader"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | []($botania/alchemical_brass_spreader) |
+| Pedestal items | 4 × Void Metal Plate, Void Seed |
+| Essentia | Praecantatio 48, Potentia 48, Vacuos 32, Terminus 24 |
+| Instability | 10 |
+| Research | **Higher Mana Spreaders** (Botania tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Higher Mana Spreaders and infuse it over the spreader of the tier before (the catalyst is consumed).
+2. Place it like any Botania spreader and bind it with the Wand of the Forest to a pool or another mana target.
+3. Add a lens if you want one.
+4. Feed it mana: it fires as soon as it holds one full burst.
+
+> [!NOTE]- Thaumonomicon: Higher Mana Spreaders
+> Every spreader is made on an infusion altar, starting from the one before it:
+> - The Thaumium Mana Spreader needs a Gaia Spreader, four thaumium plates and a Simple Arcane Mechanism.
+> - The Alchemical Brass Mana Spreader needs the Thaumium one, four alchemical brass plates and a Simple Arcane Mechanism.
+> - The Void Metal Mana Spreader needs the Alchemical Brass one, four void metal plates and a Void Seed.
+> They work like any other spreader, take lenses and can be bound with the Wand of the Forest. How much mana a burst carries, how much the spreader holds, how far and how fast the burst flies and what colour it has is set in the configuration for each tier.
+
+**Guides of this chapter:** [Tiered Mana Spreaders]($botania/mana-spreaders)

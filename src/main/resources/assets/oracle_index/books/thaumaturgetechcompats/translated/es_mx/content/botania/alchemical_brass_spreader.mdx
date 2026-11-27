@@ -1,0 +1,67 @@
+---
+id: thaumaturgetechcompats:alchemical_brass_spreader
+type: block
+title: Esparcidor de maná de latón alquímico
+---
+
+> [!NOTE]
+> Necesita **Botania** (Botania Revived).
+
+## Qué es
+
+El Esparcidor de maná de latón alquímico es un esparcidor de maná de Botania por encima del Esparcidor de Gaia. Se comporta como cualquier esparcidor (admite lentes, se enlaza con la Varita del Bosque) pero guarda mucho más maná y lanza ráfagas más fuertes.
+
+| Propiedad | Valor |
+| --- | --- |
+| Maná por ráfaga | 2.560 |
+| Capacidad de maná | 25.600 |
+| Ticks antes de que la ráfaga pierda maná | 160 |
+| Maná perdido por tick a partir de ahí | 28 |
+| Multiplicador de velocidad | 3,0 |
+| Resistente al fuego | no |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:plate_brass', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturgetechcompats:thaumium_spreader', 'thaumaturge:plate_brass', 
+        'thaumaturge:plate_brass', '', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_spreader"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:thaumium_spreader) |
+| Objetos en los pedestales | 4 × Placa de latón alquímico, Mecanismo arcano simple |
+| Esencia | Praecantatio 32, Potentia 32, Machina 24, Terminus 8 |
+| Inestabilidad | 7 |
+| Investigación | **Esparcidores de maná superiores** (pestaña Botania) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Esparcidores de maná superiores e infúndelo sobre el esparcidor del nivel anterior (el catalizador se consume).
+2. Colócalo como cualquier esparcidor de Botania y enlázalo con la Varita del Bosque a una piscina u otro destino de maná.
+3. Añade una lente si quieres.
+4. Dale maná: dispara en cuanto guarda una ráfaga completa.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:void_metal_spreader)
+
+> [!NOTE]- Thaumonomicon: Esparcidores de maná superiores
+> Cada esparcidor se fabrica en un altar de infusión, partiendo del anterior:
+> - El Esparcidor de maná de taumio necesita un Esparcidor de Gaia, cuatro placas de taumio y un Mecanismo arcano simple.
+> - El Esparcidor de maná de latón alquímico necesita el de taumio, cuatro placas de latón alquímico y un Mecanismo arcano simple.
+> - El Esparcidor de maná de metal del vacío necesita el de latón alquímico, cuatro placas de metal del vacío y una Semilla del vacío.
+> Funcionan como cualquier otro esparcidor, aceptan lentes y se pueden enlazar con la Varita del bosque. Cuánto maná lleva cada ráfaga, cuánto guarda el esparcidor, hasta dónde y a qué velocidad vuela la ráfaga y de qué color es se ajusta en la configuración de cada nivel.
+
+**Guías de este capítulo:** [Esparcidores de maná por niveles]($botania/mana-spreaders)

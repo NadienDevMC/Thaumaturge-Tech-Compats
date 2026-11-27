@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.singularity;
 
+import nadiendev.ThaumaturgeTechCompats.registry.TierOrder;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -28,7 +29,7 @@ public final class SingularityIntegration {
         if (item == null || component == null || item == Items.AIR) {
             return;
         }
-        for (SingularityKind kind : SingularityKind.values()) {
+        for (SingularityKind kind : TierOrder.display(SingularityKind.values())) {
             ItemStack stack = new ItemStack(item);
             stack.set((DataComponentType<Identifier>) component, ThaumaturgeTechCompats.id(kind.id()));
             output.accept(stack);

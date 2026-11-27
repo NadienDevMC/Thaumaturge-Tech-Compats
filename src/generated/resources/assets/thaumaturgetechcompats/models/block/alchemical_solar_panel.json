@@ -1,0 +1,7 @@
+{
+  "parent": "solargeneration:block/solar_panel",
+  "textures": {
+    "main": "solargeneration:block/redstone",
+    "particle": "solargeneration:block/particle_redstone"
+  }
+}

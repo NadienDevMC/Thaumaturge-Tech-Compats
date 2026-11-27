@@ -1,0 +1,14 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.materials.modifier.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "nadiendev.ThaumaturgeTechCompats.materials.modifier.mixin.ToolUpgradeMixinPlugin",
+  "mixins": [
+    "ToolNameMixin",
+    "ToolUpgradeCostMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

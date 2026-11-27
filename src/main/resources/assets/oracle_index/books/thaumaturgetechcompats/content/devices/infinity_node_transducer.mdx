@@ -1,0 +1,56 @@
+---
+id: thaumaturgetechcompats:infinity_node_transducer
+type: block
+title: Infinity Node Transducer
+---
+
+> [!NOTE]
+> Needs materials of the **Avaritia** mod.
+
+## What it is
+
+The Infinity Node Transducer sits above a stabilized node and, powered by redstone, energizes it. It drains the same single point of aspect each tick as the plain Node Transducer, but charges the node faster and its charge fades slower. A node is energized at 1000 charge points.
+
+| Property | Value |
+| --- | --- |
+| Charge per tick | 10 |
+| Loses 1 charge point every (without redstone) | 10 ticks |
+
+## How to get it
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={[
+        'thaumaturgetechcompats:infinity_plate', 'minecraft:comparator', 'thaumaturgetechcompats:infinity_plate', 
+        'avaritia:infinity_ingot', 'thaumaturgetechcompats:neutronium_node_transducer', 'avaritia:infinity_ingot', 
+        'thaumaturgetechcompats:infinity_plate', 'thaumaturge:nitor_white', 'thaumaturgetechcompats:infinity_plate'
+    ]}
+    result="thaumaturgetechcompats:infinity_node_transducer"
+    count={1}
+/>
+
+| Recipe | |
+| --- | --- |
+| Station | Arcane Workbench, in this shape |
+| Ingredients | 4 × [](@thaumaturgetechcompats:infinity_plate), Redstone Comparator, 2 × Infinity Ingot, [](@thaumaturgetechcompats:neutronium_node_transducer), White Nitor (or similar) |
+| Vis | 1600 |
+| Crystals | Ordo 4 |
+| Research | **Avaritia Node Transducers** (Avaritia tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research Node Transducers of Avaritia and craft it at the Arcane Workbench around the transducer of the tier before.
+2. Stabilize the node first (any node stabilizer).
+3. Place the transducer above the stabilized node.
+4. Give it a redstone signal and keep it powered until the node is energized; without the signal the charge decays.
+
+> [!NOTE]- Thaumonomicon: Avaritia Node Transducers
+> Each transducer is built around the previous one, with four plates and two ingots of its own material, a comparator and a nitor:
+> - Crystal Matrix: charges a node 2 times faster and loses charge half as fast.
+> - Neutronium: 4 times faster, with a charge that fades 4 times slower.
+> - Infinity: 10 times faster, with a charge that fades 10 times slower.
+> They are placed above a stabilized node and powered with redstone exactly like the Node Transducer, and they drain the same single point of aspect each tick, so the node is energized for a fraction of the aspects.
+
+**Guides of this chapter:** [Node Stabilizers and Transducers]($devices/node-devices)

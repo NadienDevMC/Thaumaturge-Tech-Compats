@@ -1,5 +1,5 @@
 {
-  "category": "thaumaturgetechcompats:avaritia",
+  "category": "thaumaturgetechcompats:01_avaritia",
   "column": 4,
   "complexity": 3,
   "icons": [
@@ -27,7 +27,7 @@
   "parents": [
     "thaumaturge:node_transducer"
   ],
-  "row": 4,
+  "row": 6,
   "stages": [
     {
       "required_knowledge": [

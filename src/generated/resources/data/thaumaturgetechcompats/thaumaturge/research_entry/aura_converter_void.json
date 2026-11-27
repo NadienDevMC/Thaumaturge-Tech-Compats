@@ -17,8 +17,8 @@
       "feature": "aura_converter_void"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 27,
+  "category": "thaumaturgetechcompats:17_extras",
+  "column": 2,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:void_metal_aura_converter"
@@ -51,7 +51,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:base_eldritch"
   ],
-  "row": 6,
+  "row": 4,
   "stages": [
     {
       "required_knowledge": [

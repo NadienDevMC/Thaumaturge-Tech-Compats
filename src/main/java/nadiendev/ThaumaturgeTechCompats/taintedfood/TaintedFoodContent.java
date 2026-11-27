@@ -58,8 +58,9 @@ public class TaintedFoodContent implements DataProvider {
 
     private static JsonObject itemExists(String item) {
         JsonObject condition = new JsonObject();
-        condition.addProperty("type", "neoforge:item_exists");
-        condition.addProperty("item", item);
+        condition.addProperty("type", "neoforge:registered");
+        condition.addProperty("registry", "minecraft:item");
+        condition.addProperty("value", item);
         return condition;
     }
 

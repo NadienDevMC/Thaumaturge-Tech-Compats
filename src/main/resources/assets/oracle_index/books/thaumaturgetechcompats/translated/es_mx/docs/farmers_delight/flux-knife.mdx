@@ -1,0 +1,61 @@
+---
+title: El Cuchillo de flujo
+icon: thaumaturgetechcompats:flux_knife
+related_items: [thaumaturgetechcompats:flux_knife, thaumaturgetechcompats:void_metal_knife]
+---
+
+> [!NOTE]
+> Necesita el mod **Farmer's Delight**. El Cuchillo de flujo se puede desactivar en la configuración de compatibilidades (activado por defecto, pide reinicio). Ajustes: la sección del cuchillo de flujo de la configuración de Farmer's Delight contaminado.
+
+## Qué es
+
+El [](@thaumaturgetechcompats:flux_knife) es un cuchillo de Farmer's Delight que muerde el propio mundo. Tiene dos habilidades especiales:
+
+- **Abrir grietas**: agáchate y úsalo sobre un bloque para abrir una **grieta de flujo** a su lado.
+- **Cortar flujo**: la comida que cortes con él en una Tabla de cortar se convierte en flujo que se añade al aire.
+
+Estadísticas: durabilidad 700, daño +3,5, velocidad de ataque -1,8, velocidad de minado 8,0, encantabilidad 22.
+
+## Cómo conseguirlo
+
+Investiga "Cuchillo de flujo". Se infunde en un altar a partir de un **Cuchillo de metal del vacío** (el catalizador), con dos cristales brutos de Vitium, Tainted Goo y una Botella de la Corrupción en los pedestales. Aspectos: Vitium 40, Vacuos 24, Instrumentum 16, Alienis 12; inestabilidad 6.
+
+## Abrir una grieta
+
+| Ajuste de la grieta | Por defecto |
+| --- | --- |
+| Activado | true |
+| Exigir agacharse | true (en otros bloques sigue siendo un cuchillo normal) |
+| Tamaño inicial | 5 (Thaumaturge limita las grietas a 100) |
+| Modo de coste | drenar flujo: toma el flujo de ese chunk; los otros modos son ninguno y drenar vis |
+| Factor de coste | 1,0: una grieta cuesta el tamaño al cuadrado entre 3 |
+| Coste de durabilidad | 10 |
+| Enfriamiento (ticks) | 200 (10 segundos) |
+
+1. Agáchate y usa el cuchillo sobre un bloque.
+2. La grieta se abre a su lado, con el tamaño del flujo sacado del aura de ese chunk.
+3. Si el chunk no tiene bastante, no se abre nada y ves "El aura no tiene suficiente para abrir una grieta aquí."
+4. La hoja se desgasta y el cuchillo necesita una pausa antes de la siguiente grieta.
+
+Una grieta de tamaño 5 cuesta unos 8,3 de flujo (5 al cuadrado entre 3). Úsala para crear una grieta sobre la que trabaje una Jarra de grieta.
+
+## Cortar flujo
+
+En una Tabla de cortar, cada corte añade flujo al aura: una base de 0,5 más 0,25 por punto de nutrición del objeto cortado, como máximo 6 por corte. Por defecto el corte sigue dando su resultado normal (modo flujo y objeto); el modo solo flujo quita los resultados de comida. Por defecto solo la comida hace flujo (ajuste de solo comida).
+
+## Paso a paso
+
+1. Fabrica el Cuchillo de metal del vacío y luego infunde el Cuchillo de flujo.
+2. Elige un chunk con flujo en el aura y usa el cuchillo agachado sobre un bloque.
+3. Opcionalmente pon una Jarra de grieta junto a la grieta para convertirla en poder.
+
+## Errores comunes
+
+- Usarlo en un chunk limpio: necesita flujo suficiente para dar tamaño a la grieta.
+- Abusar de él: cada grieta gasta 10 de durabilidad y el enfriamiento es de 10 segundos.
+- Cortar comida junto a tu base: añade flujo donde cortas.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración de la comida contaminada de Farmer's Delight del mod.

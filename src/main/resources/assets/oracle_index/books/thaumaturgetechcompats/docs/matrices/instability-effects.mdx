@@ -1,0 +1,56 @@
+---
+title: Instability Effects
+icon: thaumaturgetechcompats:infinity_infusion_matrix
+related_items: [thaumaturgetechcompats:matrix_infusion_matrix, thaumaturgetechcompats:neutronium_infusion_matrix, thaumaturgetechcompats:infinity_infusion_matrix]
+---
+
+> [!WARNING]
+> These effects can kill you, explode your base and teleport you away. Every number is a default and can be changed per matrix in the infusion config.
+
+## What it is
+
+While a tiered Runic Matrix runs an infusion, its stability drops. Once it goes below zero, events fire with a chance each cycle. Every 25 points of stability below zero add one more level of **intensity**, and most amounts are multiplied by it. Events reach the radius of the matrix (6, 8 or 12 blocks). Each effect can be switched off in the config.
+
+## Solar (Crystal Matrix)
+
+Every craft is **twice as unstable by day** (day multiplier 2; the config can also require open sky).
+
+| Event | Chance | Detail |
+| --- | --- | --- |
+| Fires around the altar | 0.6 | 4 fire attempts, times intensity |
+| Lightning | 0.25 | strikes near the altar |
+| Burn | 0.7 | 4 seconds on fire and 2 damage, times intensity |
+
+## Nuclear (Neutronium)
+
+| Event | Chance | Detail |
+| --- | --- | --- |
+| Radiation | 0.8 | 2 damage and 10 seconds of weakness, hunger and wither, times intensity |
+| Meltdown | 0.08 | explosion of power 3, times intensity up to three times; breaking blocks can be turned off |
+| Contamination | 0.5 | pours 8 flux into the aura, times intensity |
+
+## Cosmic (Infinity)
+
+| Event | Chance | Detail |
+| --- | --- | --- |
+| Flux tear | 0.7 | pours 15 flux, times intensity |
+| Warp | 0.6 | 2 warp, times intensity; 0.2 of it is the slow-fading kind instead of temporary |
+| Summon | 0.4 | 3 creatures (endermite, vex, silverfish by default; configurable), times intensity up to three times |
+| Teleport | 0.5 | throws creatures up to 16 blocks away |
+
+## How to stay alive
+
+1. Keep the instability of the recipe low: pick recipes with low instability for your first crafts. The stability bonus of the pillars only helps the plain Runic Matrix, so with a tiered matrix the recipe itself decides what happens.
+2. Stay far outside the radius (12 blocks for Infinity) while the altar works.
+3. Bring a way to cure warp and burns, and keep flux jars nearby for nuclear and cosmic altars.
+4. If you do not want the destruction, turn off the block breaking of the meltdown, or all the effects of the matrix, in the infusion config.
+
+## Common mistakes
+
+- Standing next to a Nuclear altar: radiation hurts and weakens everything alive.
+- Not preparing for flux: Nuclear contamination and Cosmic tears both pour flux into the aura.
+- Forgetting that Solar is worst at day, so do Crystal Matrix crafts at night.
+
+## Notes
+
+- Its values are adjusted in the mod's infusion configuration.

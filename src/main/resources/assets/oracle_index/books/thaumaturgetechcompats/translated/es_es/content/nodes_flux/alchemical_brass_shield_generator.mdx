@@ -1,0 +1,58 @@
+---
+id: thaumaturgetechcompats:alchemical_brass_shield_generator
+type: block
+title: Generador de escudo de latón alquímico
+---
+
+## Qué es
+
+El Generador de escudo de latón alquímico levanta una burbuja a su alrededor mientras guarde flujo dimensional. La burbuja destruye los proyectiles de los monstruos, empuja fuera a los monstruos (nunca a los jefes) y quita el daño de las explosiones de dentro (los bloques de dentro no se destruyen).
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio | 16 bloques |
+| Flujo dimensional que guarda | 1.000.000 |
+| DF por tick con la burbuja activa | 40 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:mirrored_glass', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        'thaumaturge:mirrored_glass', 'thaumaturgetechcompats:thaumium_shield_generator', 'thaumaturge:plate_brass', 
+        'thaumaturge:vis_resonator', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_shield_generator"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:thaumium_shield_generator) |
+| Objetos en los pedestales | 4 × Placa de latón alquímico, Mecanismo arcano simple, Resonador de Vis, 2 × Cristal de espejo |
+| Esencia | Praemunio 40, Potentia 30, Machina 20 |
+| Inestabilidad | 3 |
+| Investigación | **Generador de escudo de latón alquímico** (pestaña Equipo flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del anterior).
+2. Dale DF (un Núcleo de almacenamiento, un Enlace de transmisión o un Extractor de grietas tocándolo).
+3. Cada tick de burbuja cuesta DF, igual que cada proyectil o explosión que absorbe. Cuando se acaba el flujo se apaga hasta volver a tener suficiente.
+4. Haz clic derecho para ver su estado.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:void_metal_shield_generator)
+
+> [!NOTE]- Thaumonomicon: Generador de escudo de latón alquímico
+> El Generador de escudo de latón alquímico se infunde a partir de uno de taumio, con cuatro placas de latón, un mecanismo simple, un resonador de vis y dos vidrios espejados.
+> Almacena más flujo y proyecta una burbuja mucho más amplia.
+
+**Guías de este capítulo:** [Generadores de escudo y Terraformadores arcanos]($nodes_flux/flux-field)

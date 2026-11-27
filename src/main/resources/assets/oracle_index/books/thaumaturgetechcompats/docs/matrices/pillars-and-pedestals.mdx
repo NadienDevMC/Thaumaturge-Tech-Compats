@@ -1,0 +1,60 @@
+---
+title: Pillars and Pedestals
+icon: thaumaturgetechcompats:infinity_infusion_pillar
+related_items: [thaumaturgetechcompats:matrix_pillar_stone, thaumaturgetechcompats:neutronium_pillar_stone, thaumaturgetechcompats:infinity_pillar_stone, thaumaturgetechcompats:matrix_infusion_pillar, thaumaturgetechcompats:neutronium_infusion_pillar, thaumaturgetechcompats:infinity_infusion_pillar, thaumaturgetechcompats:matrix_infusion_pedestal, thaumaturgetechcompats:neutronium_infusion_pedestal, thaumaturgetechcompats:infinity_infusion_pedestal]
+---
+
+> [!NOTE]
+> Needs the **Avaritia** mod. The pillar and pedestal variants can be switched off in the compatibilities config. Numbers: the altar sections of the infusion config, one per tier.
+
+## What it is
+
+The pillars and pedestals of the infusion altar are only stone, and stone is what limits it. With the Avaritia metals the altar asks for less and answers faster.
+
+| Part | Cost change | Cycle time change | Stability (plain matrix only) |
+| --- | --- | --- | --- |
+| Ancient pillar (Thaumaturge) | -0.1 | -1 | - |
+| Eldritch pillar (Thaumaturge) | +0.05 | -3 | - |
+| Crystal Matrix pillar (all four) | -0.1 | -1 | +0.25 |
+| Neutronium pillar | -0.15 | -2 | +0.35 |
+| Infinity pillar | -0.2 | -3 | +0.5 |
+| Crystal Matrix pedestal (each one around) | -0.01 | 0 | 0 |
+| Neutronium pedestal | -0.015 | 0 | 0 |
+| Infinity pedestal | -0.02 | 0 | 0 |
+
+The pillar values apply when the **four pillars are of that tier**; pedestal values apply for every pedestal of that tier around the altar. The altar never costs less than half. The stability column only matters with the plain Runic Matrix, since tiered matrices have no stability recovery.
+
+## How to get them
+
+**Pillar Stones** are made at the arcane workbench, four per craft. Top and bottom rows: ingot, stone, ingot; middle row: stone, center, stone.
+
+| Stone | Ingot | Stone used | Center | Vis |
+| --- | --- | --- | --- | --- |
+| [](@thaumaturgetechcompats:matrix_pillar_stone) | Crystal Matrix Ingot | Eldritch Stone Tile | empty | 200 |
+| [](@thaumaturgetechcompats:neutronium_pillar_stone) | Neutron Ingot | Crystal Matrix Pillar Stone | empty | 400 |
+| [](@thaumaturgetechcompats:infinity_pillar_stone) | Infinity Ingot | Neutronium Pillar Stone | [](@thaumaturgetechcompats:extremely_primordial_pearl) | 800 |
+
+**Pedestals** are infused from the pedestal before, starting from the Eldritch Pedestal, with four ingots of the tier on an altar whose center is the Runic Matrix of their **own** tier:
+
+| Pedestal | Catalyst | Aspects | Instability |
+| --- | --- | --- | --- |
+| Crystal Matrix | Eldritch Pedestal | Ordo 20, Terra 16, Terminus 3 | 2 |
+| Neutronium | Crystal Matrix Pedestal | Ordo 32, Terra 24, Terminus 6 | 4 |
+| Infinity | Neutronium Pedestal, plus an Extremely Primordial Pearl | Ordo 48, Terra 40, Terminus 14 | 6 |
+
+## Step by step
+
+1. Research "Pillars of Avaritia".
+2. Craft the Pillar Stones tier by tier (each tier uses the stones of the one before).
+3. Build the eight-stone altar structure with the stones, place a pedestal in the center and sprinkle Salis Mundus to wake the pillars (they become [](@thaumaturgetechcompats:matrix_infusion_pillar), [](@thaumaturgetechcompats:neutronium_infusion_pillar) or [](@thaumaturgetechcompats:infinity_infusion_pillar)).
+4. Infuse the tiered pedestals separately on an altar with the right center, and place them around.
+
+## Common mistakes
+
+- Mixing pillar tiers: the pillar bonus applies when all four pillars are of the same tier.
+- Forgetting the Extremely Primordial Pearl in the center of the Infinity stones' recipe.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's infusion configuration.

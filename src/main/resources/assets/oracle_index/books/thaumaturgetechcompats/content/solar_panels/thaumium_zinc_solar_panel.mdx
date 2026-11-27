@@ -1,0 +1,57 @@
+---
+id: thaumaturgetechcompats:thaumium_zinc_solar_panel
+type: block
+title: Thaumium Zinc Solar Panel
+---
+
+> [!NOTE]
+> Needs the **Solar Generation** mod.
+
+## What it is
+
+The Thaumium Zinc Solar Panel is a Solar Generation panel with much bigger numbers. Every tick it produces its generation multiplied by the sun intensity of its position, stores it in its battery and offers it to every side except the top.
+
+| Property | Value |
+| --- | --- |
+| Generation under full sun (FE per tick) | 19,500 |
+| Transfer (FE per tick) | 50,500 |
+| Capacity (FE) | 1,000,000 |
+
+## How to get it
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={[
+        'solargeneration:photovoltaic_cell', 'thaumaturge:plate_thaumium', 'solargeneration:photovoltaic_cell', 
+        'create:zinc_ingot', 'thaumaturgetechcompats:alchemical_solar_panel', 'create:zinc_ingot', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_zinc_solar_panel"
+    count={1}
+/>
+
+| Recipe | |
+| --- | --- |
+| Station | Arcane Workbench, in this shape |
+| Ingredients | 2 × Photovoltaic Cell, 4 × Thaumium Plate, 2 × Zinc Ingot, [](@thaumaturgetechcompats:alchemical_solar_panel) |
+| Vis | 30 |
+| Crystals | none |
+| Research | **Thaumium Zinc Solar Panel** (Solar Panels tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research its entry in the Solar Panels tab and make it (the Alchemical panel in a crucible; the branch panels at the Arcane Workbench around the Alchemical panel; Thaumium, Void Metal and Void Uranium infused in a chain from the Brass panel).
+2. Place it with the top free and open to the sky.
+3. Put a cable, battery or machine on any other side.
+4. Right click it to see the stored energy and the current production. Broken and picked up, it keeps its energy.
+
+> [!NOTE]- Thaumonomicon: Thaumium Zinc Solar Panel
+> Zinc and thaumium have been drawn into a single, even plating.
+> 
+> **Thaumium Zinc Solar Panel**
+> 
+> It is crafted at the arcane workbench from photovoltaic cells, thaumium plates, zinc ingots and an alchemical solar panel. It needs Create or All The Ores.
+
+**Guides of this chapter:** [Solar Generation Panels]($solar_panels/overview) · [Solar Panel Stats and Recipes]($solar_panels/stats-and-recipes)

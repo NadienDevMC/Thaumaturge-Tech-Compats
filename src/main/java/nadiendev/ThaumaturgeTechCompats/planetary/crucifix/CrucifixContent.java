@@ -102,8 +102,9 @@ public class CrucifixContent implements DataProvider {
         }
         if (salisCount(tier) > 0) {
             JsonObject exists = new JsonObject();
-            exists.addProperty("type", "neoforge:item_exists");
-            exists.addProperty("item", salisItem(tier));
+            exists.addProperty("type", "neoforge:registered");
+            exists.addProperty("registry", "minecraft:item");
+            exists.addProperty("value", salisItem(tier));
             conditions.add(exists);
         }
         return conditions;

@@ -29,8 +29,8 @@
       "feature": "voidminers_magical_solar_upgrades_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 43,
+  "category": "thaumaturgetechcompats:08_void_miners",
+  "column": 6,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:alchemical_brass_solar_generation_upgrade"
@@ -58,7 +58,7 @@
     "thaumaturgetechcompats:voidminers_magical_solar_alchemical_brass",
     "thaumaturgetechcompats:voidminers_magical_solar_upgrades_thaumium"
   ],
-  "row": 4,
+  "row": 2,
   "stages": [
     {
       "required_knowledge": [

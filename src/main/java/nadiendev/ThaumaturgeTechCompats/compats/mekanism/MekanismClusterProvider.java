@@ -111,7 +111,7 @@ public class MekanismClusterProvider implements DataProvider {
         JsonArray conditions = CompatJson.conditions(MEKANISM);
         conditions.add(CompatJson.feature(CompatToggles.MEKANISM_SALIS));
         JsonObject json = CompatJson.recipe("mekanism:chemical_conversion", conditions);
-        json.add("input", CompatJson.itemCount(SALIS, 1));
+        json.add("input", CompatJson.sizedItem(SALIS, 1));
         JsonObject bio = new JsonObject();
         bio.addProperty("amount", BIO_PER_SALIS);
         bio.addProperty("id", "mekanism:bio");
@@ -121,7 +121,7 @@ public class MekanismClusterProvider implements DataProvider {
 
     private static JsonObject enriching(ClusterMaterial material, String tag, int count, int yield) {
         JsonObject json = CompatJson.recipe("mekanism:enriching", conditions(material, CompatToggles.MEKANISM_X2, tag));
-        json.add("input", CompatJson.tagCount(tag, count));
+        json.add("input", CompatJson.sizedTag(tag, count));
         json.add("output", CompatJson.result(material.cluster(), yield));
         return json;
     }
@@ -129,7 +129,7 @@ public class MekanismClusterProvider implements DataProvider {
     private static JsonObject purifying(ClusterMaterial material, String tag, int count, int yield) {
         JsonObject json = CompatJson.recipe("mekanism:purifying", conditions(material, CompatToggles.MEKANISM_X3, tag));
         json.add("chemical_input", chemical("mekanism:oxygen", OXYGEN_AMOUNT));
-        json.add("item_input", CompatJson.tagCount(tag, count));
+        json.add("item_input", CompatJson.sizedTag(tag, count));
         json.add("output", CompatJson.result(material.cluster(), yield));
         json.addProperty("per_tick_usage", true);
         return json;
@@ -138,7 +138,7 @@ public class MekanismClusterProvider implements DataProvider {
     private static JsonObject injecting(ClusterMaterial material, String tag, int count, int yield) {
         JsonObject json = CompatJson.recipe("mekanism:injecting", conditions(material, CompatToggles.MEKANISM_X4, tag));
         json.add("chemical_input", chemical("mekanism:hydrogen_chloride", HYDROGEN_CHLORIDE_AMOUNT));
-        json.add("item_input", CompatJson.tagCount(tag, count));
+        json.add("item_input", CompatJson.sizedTag(tag, count));
         json.add("output", CompatJson.result(material.cluster(), yield));
         json.addProperty("per_tick_usage", true);
         return json;
@@ -147,16 +147,17 @@ public class MekanismClusterProvider implements DataProvider {
     private static JsonObject salisInfusing(ClusterMaterial material, String tag, int count, int yield) {
         JsonObject json = CompatJson.recipe("mekanism:metallurgic_infusing", conditions(material, CompatToggles.MEKANISM_SALIS, tag));
         json.add("chemical_input", chemicalTag("mekanism:bio", BIO_PER_OPERATION));
-        json.add("item_input", CompatJson.tagCount(tag, count));
+        json.add("item_input", CompatJson.sizedTag(tag, count));
         json.add("output", CompatJson.result(material.cluster(), yield));
         json.addProperty("per_tick_usage", false);
         return json;
     }
 
     private static JsonObject crystalEnriching(ClusterMaterial material) {
-        String tag = "c:crystals/" + material.id();
+        // Mekanism 26.1.2 tags its crystals as mekanism:crystals/<metal> (there is no c:crystals tag any more)
+        String tag = "mekanism:crystals/" + material.id();
         JsonObject json = CompatJson.recipe("mekanism:enriching", conditions(material, CompatToggles.MEKANISM_X5, tag));
-        json.add("input", CompatJson.tagCount(tag, 1));
+        json.add("input", CompatJson.sizedTag(tag, 1));
         json.add("output", CompatJson.result(material.cluster(), CRYSTAL_YIELD));
         return json;
     }

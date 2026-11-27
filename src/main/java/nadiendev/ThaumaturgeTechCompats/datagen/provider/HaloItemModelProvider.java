@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class HaloItemModelProvider implements DataProvider {
     private static final int NEUTRONIUM_HALO_COLOR = -1711276033;
-    private static final int INFINITY_HALO_COLOR = -16777216;
+    private static final int INFINITY_HALO_COLOR = -872415232;
     private static final List<String> INFINITY_ITEMS = List.of("infinity_plate", "infinity_scribing_tools", "infinity_focus", "infinity_wand_cap");
     private static final List<String> NEUTRONIUM_ITEMS = List.of("neutronium_plate", "neutronium_scribing_tools", "neutronium_wand_rod", "neutronium_wand_cap");
 
@@ -29,7 +29,7 @@ public class HaloItemModelProvider implements DataProvider {
         tasks.add(save(cache, "extremely_primordial_pearl", "minecraft:item/generated", 0xFFC8A0FF, 4, true));
         tasks.add(save(cache, "akashic_record", "minecraft:item/generated", 0xFFA0E0FF, 3, false));
         for (String infinityItem : INFINITY_ITEMS) {
-            tasks.add(save(cache, infinityItem, "minecraft:item/generated", INFINITY_HALO_COLOR, 10, true));
+            tasks.add(save(cache, infinityItem, "minecraft:item/generated", INFINITY_HALO_COLOR, 6, false));
         }
         for (String neutroniumItem : NEUTRONIUM_ITEMS) {
             tasks.add(save(cache, neutroniumItem, neutroniumItem.endsWith("_rod") ? "minecraft:item/handheld" : "minecraft:item/generated", NEUTRONIUM_HALO_COLOR, 6, false, "avaritia:misc/halo_noise"));

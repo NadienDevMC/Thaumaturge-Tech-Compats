@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.planetary.crucifix;
 
+import nadiendev.ThaumaturgeTechCompats.registry.TierOrder;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
 import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
 import net.minecraft.data.DataGenerator;
@@ -40,7 +41,7 @@ public final class CrucifixIntegration {
     }
 
     public static void fillCreativeTab(CreativeModeTab.Output output) {
-        for (PlanetaryTier tier : PlanetaryTier.values()) {
+        for (PlanetaryTier tier : TierOrder.display(PlanetaryTier.values())) {
             if (CrucifixRegistry.has(tier)) {
                 output.accept(CrucifixRegistry.item(tier));
             }

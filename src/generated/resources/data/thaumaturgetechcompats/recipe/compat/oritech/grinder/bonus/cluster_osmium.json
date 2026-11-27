@@ -13,6 +13,11 @@
       "feature": "oritech_processing_grinder"
     },
     {
+      "type": "neoforge:registered",
+      "registry": "minecraft:recipe_serializer",
+      "value": "oritech:grinder"
+    },
+    {
       "type": "thaumaturgetechcompats:feature_enabled",
       "feature": "oritech_processing_bonus"
     },
@@ -30,10 +35,10 @@
     }
   ],
   "type": "oritech:grinder",
-  "ingredients": [
+  "itemInputs": [
     "thaumaturgetechcompats:osmium_cluster"
   ],
-  "results": [
+  "itemResults": [
     {
       "count": 3,
       "id": "mekanism:raw_osmium"

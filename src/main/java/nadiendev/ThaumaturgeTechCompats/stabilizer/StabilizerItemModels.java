@@ -19,7 +19,7 @@ public class StabilizerItemModels extends ModelAssets {
         for (StabilizerTier tier : StabilizerTier.values()) {
             String name = tier.blockName();
             itemModel(name, EntityItemModels.nodeDeviceModel(mod("block/" + name)));
-            itemDefinition(name, EntityItemModels.nodeDeviceDefinition(mod("item/" + name), false));
+            itemDefinition(name, EntityItemModels.tieredDeviceDefinition(mod("item/" + name), mod(name)));
         }
     }
 }

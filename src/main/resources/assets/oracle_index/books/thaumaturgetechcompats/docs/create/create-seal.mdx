@@ -1,0 +1,50 @@
+---
+title: Create Seal
+icon: thaumaturgetechcompats:seal_create
+related_items: [thaumaturgetechcompats:seal_create]
+---
+
+> [!NOTE]
+> Requires **Create** (through Create: Adapted in 26.1.2). The seal can be switched off in the Create config (on by default).
+
+## What it is
+
+The [](@thaumaturgetechcompats:seal_create) is a golem seal that lets a golem work a block of Create. It has three tasks, each with its own option:
+
+| Option | Default | What the golem does |
+| --- | --- | --- |
+| Insert carried items | on | puts the items it carries (matching the filter) into the block |
+| Extract items | on | takes matching items out of the block |
+| Operate the block (click) | off | clicks the block, turning hand cranks and valve handles |
+| Simulate sneaky click | off | the click is done as if sneaking |
+
+## How to get it
+
+Research **Create Seal** in the Tech category (needs a Use Seal and Golemancy theory). Infuse over a Use Seal catalyst: Create cogwheel, brass sheet, andesite alloy and a simple mechanism. Aspects: 20 machina, 10 fabrico, 10 motus. Instability 2.
+
+## Step by step
+
+1. Place the seal on the face of a block of Create (or one of the casing variants). By default it cannot be placed on other blocks.
+2. Open the seal: set the filter (9 slots, with amounts when it is a whitelist) and the options above.
+3. Give the seal a golem that has the Deft trait. A Clumsy golem cannot use it.
+4. For feeding: the golem carries the items and the seal inserts them. For emptying: with Extract on, the seal looks every 20 ticks for a matching item in the block and sends the golem to fetch it.
+5. For hand cranks: turn on Operate. The golem clicks every 8 ticks. It can hold a tool in hand if the filter names one.
+6. A redstone signal stops the seal.
+
+## Settings (Create config, seal section)
+
+| Setting | Default |
+| --- | --- |
+| Scan interval (ticks) | 20 |
+| Work interval (ticks) | 8 |
+| Can be placed on any block | no |
+
+## Common mistakes
+
+- Placing it on a non-Create block while placing it on any block is off in the config.
+- Leaving the filter empty or mismatched: the golem will carry nothing for the task.
+- Using a Clumsy golem or one without Deft.
+
+## Notes
+
+- It can be turned off in the mod's Create configuration.

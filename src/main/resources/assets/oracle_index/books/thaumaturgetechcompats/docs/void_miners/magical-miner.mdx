@@ -1,0 +1,49 @@
+---
+title: Magical Miner Controllers
+icon: thaumaturgetechcompats:void_metal_miner
+related_items: [thaumaturgetechcompats:thaumium_miner, thaumaturgetechcompats:alchemical_brass_miner, thaumaturgetechcompats:void_metal_miner]
+---
+
+> [!NOTE]
+> Requires **Void Miners Remastered**. The miner, and each tier on its own, can be switched off in the compatibilities config; on by default, game restart needed. Numbers are in the Void Miners magical config.
+
+## What it is
+
+A Void Miners miner that takes **no FE at all**: it works only while it can pay a few units of power to a magical source close by, and stops the moment it cannot. It is a multiblock like the Rubetine miner: the controller plus frames, glass panels and miner modifiers.
+
+| Tier | Controller | Mining tier (Void Miners recipes) | Speed x | Production x | Units per payment | Source radius |
+| --- | --- | --- | --- | --- | --- | --- |
+| Thaumium | [](@thaumaturgetechcompats:thaumium_miner) | 3 | 1.5 | 1.5 | 1 | 8 |
+| Alchemical Brass | [](@thaumaturgetechcompats:alchemical_brass_miner) | 5 | 3.0 | 2.0 | 2 | 12 |
+| Void Metal | [](@thaumaturgetechcompats:void_metal_miner) | 7 | 5.0 | 3.0 | 4 | 16 |
+
+(Mining tiers go from 1 Rubetine to 9 Ultimate and can be changed in the config.)
+
+## How to get it
+
+Research the entry of the tier in the Tech category (Thaumium, Alchemical Brass and Void Metal Magical Miner). Infusion altar, each over the tier before:
+
+| Tier | Catalyst | Components | Aspects (instability) |
+| --- | --- | --- | --- |
+| Thaumium | Void Miners Rubetine Miner | 3 thaumium plates, simple mechanism, 2 Flux Jars | machina 12, terra 8, metallum 8, potentia 6 (2) |
+| Alchemical Brass | Thaumium Miner Controller | 3 brass plates, simple mechanism, 2 Flux Jars | machina 18, terra 12, praecantatio 10, potentia 12 (4) |
+| Void Metal | Alchemical Brass Miner Controller | 3 void metal plates, complex mechanism, 2 Flux Jars, void seed | machina 24, terra 16, vacuos 16, potentia 12 (6) |
+
+## Step by step
+
+1. Craft the miner frames and any modifiers (see the Frames, Upgrades and Power Sources page).
+2. Build the multiblock of the tier around the controller, using its frame, Void Miners glass panels and modifier slots.
+3. Place a power source within the tier radius of the controller: a jarred node, a Flux Jar, a Rift Jar, a world node or a flux rift. A hungry node is never valid.
+4. The miner pays its units every 20 ticks (the interval of the config). While paid it mines; when payment fails it stops until the next try.
+5. Take the output as you would from a Void Miners miner.
+
+## Common mistakes
+
+- No power source in range: the miner does nothing.
+- A hungry node as the source: it is never accepted.
+- Using frames of another tier in the structure.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Void Miners magical configuration.

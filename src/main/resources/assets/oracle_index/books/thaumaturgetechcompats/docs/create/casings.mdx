@@ -1,0 +1,45 @@
+---
+title: Node Casings
+icon: thaumaturgetechcompats:alchemical_brass_casing
+related_items: [thaumaturgetechcompats:alchemical_brass_casing, thaumaturgetechcompats:thaumium_casing, thaumaturgetechcompats:void_metal_casing]
+---
+
+> [!NOTE]
+> This chapter needs **Create** (in this 26.1.2 port it runs through Create: Adapted). Without Create none of these blocks, recipes or research entries exist. The whole Create integration can be switched off in the Create config; every switch there is **on** by default.
+
+## What it is
+
+The three casings are the base of every Create machine variant of this mod. A casing does nothing on its own: you spend one of them, together with the plain Create machine, to infuse a variant that runs many times faster near an aura node (see the Machine Variants page). Each casing tier is a step on the ladder:
+
+| Tier | Block | Node reach (default) |
+| --- | --- | --- |
+| 1 | [](@thaumaturgetechcompats:alchemical_brass_casing) | 6 blocks |
+| 2 | [](@thaumaturgetechcompats:thaumium_casing) | 10 blocks |
+| 3 | [](@thaumaturgetechcompats:void_metal_casing) | 16 blocks |
+
+Reach is the node radius of each casing in the Create config (1 to 128).
+
+## How to get it
+
+Unlock the research entries in the Tech category: **Alchemical Brass Machinery**, then **Thaumium Machinery**, then **Void Metal Machinery**. Each casing needs the entry of its tier, and its switch in the Create config must be on.
+
+1. **Alchemical Brass Casing**: arcane workbench, shaped, 20 vis, no crystals. Pattern is a brass plate above, below and on both sides of a Create Brass Casing (a plus shape with the casing in the middle).
+2. **Thaumium Casing**: infusion altar. Catalyst: Alchemical Brass Casing. Components: 4 thaumium plates and a simple mechanism. Aspects: 20 potentia, 10 auram, 10 motus. Instability 3.
+3. **Void Metal Casing**: infusion altar. Catalyst: Thaumium Casing. Components: 4 void metal plates and a complex mechanism. Aspects: 20 vacuos, 20 potentia, 20 auram. Instability 4.
+
+## Step by step
+
+1. Research Alchemical Brass Machinery (it needs the Create Seal entry and Metallurgy first).
+2. Craft the Alchemical Brass Casing at the arcane workbench from a Create Brass Casing and four brass plates.
+3. Climb the ladder: infuse the Thaumium Casing over the alchemical brass one, then the Void Metal Casing over the thaumium one.
+4. Keep the casing of each tier you want machines for: the machine recipes of that tier consume it as an ingredient.
+
+## Common mistakes
+
+- Using a plain Create casing in the infusion: every tier needs the previous casing as catalyst.
+- Turning off a casing toggle: its machine variants disappear too (the toggle covers the casing **and** its variants).
+- Expecting the casing to speed anything up by itself. Only the machine variants react to nodes.
+
+## Notes
+
+- It can be turned off in the mod's Create configuration.

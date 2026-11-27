@@ -1,0 +1,69 @@
+---
+id: thaumaturgetechcompats:alchemical_brass_basin
+type: block
+title: Alchemical Brass Basin
+---
+
+> [!NOTE]
+> Needs **Create** (through Create: Adapted in 26.1.2).
+
+## What it is
+
+The Alchemical Brass Basin works **exactly like the Create machine it is made from**: same recipes, same kinetic needs, and it appears as a catalyst in the same JEI categories. The only difference: while an aura node is within reach it works many times faster, with enchant particles above it. Away from every node it behaves as the plain machine.
+
+| Property | Value |
+| --- | --- |
+| Speed while a node is in reach (default) | 15 times faster |
+| Node reach (default) | 6 blocks |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturgetechcompats:alchemical_brass_casing', '', 
+        '', 'create:basin', '', 
+        'thaumaturge:plate_brass', '', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_basin"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Basin |
+| Pedestal items | [](@thaumaturgetechcompats:alchemical_brass_casing), 2 × Alchemical Brass Plate |
+| Essentia | Machina 20, Metallum 10, Motus 10 |
+| Instability | 2 |
+| Research | **Alchemical Brass Machinery** (Create tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research the machinery entry of its tier and make the casing of that tier.
+2. Infuse the variant over the machine of the tier before (the plain Create machine for Alchemical Brass).
+3. Place it **instead of** the plain machine and connect it to your kinetic network the same way (shafts, cogs, belts).
+4. Make sure an aura node is within its reach: it looks for the nearest node by itself every 20 ticks.
+5. Build the rest of the line as usual (belts, funnels, basins).
+
+## Used to make
+
+- [](@thaumaturgetechcompats:thaumium_basin)
+
+> [!NOTE]- Thaumonomicon: Alchemical Brass Machinery
+> The casing hums beside a node. Built into a machine of Create it makes a variant of that machine: a mechanical press, mixer, saw or drill, a deployer, millstone, basin, spout, item drain or depot that works exactly like the original.
+> While an aura node is near, the variant works many times faster. Away from every node it behaves as the plain machine.
+> 
+> **Alchemical Brass Casing**
+> 
+> It is made at the arcane workbench from a brass casing of Create and four brass plates.
+> 
+> **Machine variants**
+> 
+> Each variant is infused over the matching machine of Create, with an alchemical brass casing and two brass plates.
+
+**Guides of this chapter:** [Machine Variants and Node Boost]($create/machine-variants)

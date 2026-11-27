@@ -1,0 +1,62 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_solar_panel
+title: Controlador de panel solar de latón alquímico
+---
+
+> [!NOTE]
+> Necesita **Void Miners Remastered**.
+
+## Qué es
+
+El Controlador de panel solar de latón alquímico es el controlador de un panel solar de Void Miners que produce FE **sin sol ni cielo abierto**: solo genera mientras puede pagar unidades de poder a una fuente mágica cercana.
+
+| Propiedad | Valor |
+| --- | --- |
+| FE por tick | 2.500 |
+| Energía almacenada (FE) | 100.000.000 |
+| Unidades que paga cada 20 ticks | 2 |
+| Radio de la fuente de poder | 12 bloques |
+| Huecos de modificador de su estructura | 4 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:jar_node', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        '', 'thaumaturgetechcompats:thaumium_solar_panel', '', 
+        'thaumaturge:jar_node', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_solar_panel"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($void_miners/thaumium_solar_panel) |
+| Objetos en los pedestales | 3 × Placa de latón alquímico, Mecanismo arcano simple, 2 × Nodo en un frasco |
+| Esencia | Lux 18, Potentia 16, Praecantatio 12, Machina 10 |
+| Inestabilidad | 4 |
+| Investigación | **Panel solar de latón alquímico** (pestaña Void Miners) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga la entrada de Panel solar mágico de su nivel e infúndelo sobre el controlador del nivel anterior (el Panel solar de Rubetina para el de taumio).
+2. Fabrica los marcos solares de latón alquímico y construye la estructura solar del nivel alrededor del controlador.
+3. Pon una fuente de poder dentro del radio (nodo en jarra, Jarra de flujo, Jarra de grieta, nodo del mundo o grieta de flujo; nunca un nodo hambriento).
+4. Conecta un cable o un consumidor de FE como en cualquier panel solar de Void Miners. Cada 20 ticks paga y genera.
+
+## Se usa para fabricar
+
+- []($void_miners/void_metal_solar_panel)
+
+> [!NOTE]- Thaumonomicon: Panel solar de latón alquímico
+> El Controlador de panel solar de latón alquímico se fabrica en un altar de infusión con el Controlador de panel solar de taumio, placas de latón alquímico, mecanismos y nodos en tarros.
+> Sus marcos se fabrican en una mesa de trabajo arcana con placas de latón alquímico, obsidiana y el marco equivalente de taumio. Genera energía únicamente mientras puede pagar unidades a una fuente de poder mágico cercana, sin necesitar sol ni cielo abierto. Un nodo hambriento nunca es una fuente válida.
+
+**Guías de este capítulo:** [Controladores de panel solar mágico]($void_miners/magical-solar-panel)

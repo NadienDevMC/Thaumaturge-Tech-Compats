@@ -42,8 +42,17 @@ public class EdibleAssets implements DataProvider {
         return json;
     }
 
+    /** Waxed copper doors have no model of their own in vanilla; they share the unwaxed one. */
+    private static String modelName(EdibleEntry entry) {
+        String path = entry.original().getPath();
+        if (entry.original().getNamespace().equals("minecraft") && path.startsWith("waxed_") && path.endsWith("copper_door")) {
+            return path.substring("waxed_".length());
+        }
+        return path;
+    }
+
     static JsonObject definition(EdibleEntry entry) {
-        String base = entry.original().getNamespace() + ":item/" + entry.original().getPath();
+        String base = entry.original().getNamespace() + ":item/" + modelName(entry);
         JsonObject json = new JsonObject();
         if (!entry.spear()) {
             json.add("model", model(base));

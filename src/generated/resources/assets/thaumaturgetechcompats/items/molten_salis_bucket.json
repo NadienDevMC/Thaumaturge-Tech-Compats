@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "thaumaturgetechcompats:item/molten_salis_bucket",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 15917984
+      }
+    ]
+  }
+}

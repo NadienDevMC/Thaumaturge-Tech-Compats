@@ -19,12 +19,15 @@ import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachin
 import nadiendev.ThaumaturgeTechCompats.compats.hephaestus.HephaestusSmelteryIntegration;
 import nadiendev.ThaumaturgeTechCompats.edible.EdibleIntegration;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodIntegration;
+import nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.FarmersDelightTaintedIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.intelligence.UnholyIntelligenceIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechIntegration;
 import nadiendev.ThaumaturgeTechCompats.purity.PurityIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.tags.TagAspectsIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.create.CreateIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.mekanism.MekanismIntegration;
+import nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools.MekanismToolIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.create.thaummotor.ThaummotorIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterIntegration;
@@ -44,6 +47,7 @@ import nadiendev.ThaumaturgeTechCompats.registry.ModCreativeTabs;
 import nadiendev.ThaumaturgeTechCompats.scribing.ScribingIntegration;
 import nadiendev.ThaumaturgeTechCompats.smelter.SmelterIntegration;
 import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerIntegration;
+import nadiendev.ThaumaturgeTechCompats.materials.ExtraMaterialsIntegration;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierIntegration;
 import nadiendev.ThaumaturgeTechCompats.registry.ModItems;
 import nadiendev.ThaumaturgeTechCompats.registry.ModWandParts;
@@ -92,7 +96,9 @@ public class ThaumaturgeTechCompats {
         VoidMinersMagicalIntegration.register(modBus);
         AvaritiaMachinesIntegration.register(modBus);
         HephaestusSmelteryIntegration.register(modBus);
+        MekanismToolIntegration.register(modBus);
         TaintedFoodIntegration.register(modBus);
+        FarmersDelightTaintedIntegration.register(modBus);
         EdibleIntegration.register(modBus);
         UnholyIntelligenceIntegration.register(modBus);
         ScribingIntegration.register(modBus);
@@ -102,6 +108,7 @@ public class ThaumaturgeTechCompats {
         FurnaceIntegration.register(modBus);
         GolemIntegration.register(modBus);
         WandTierIntegration.register(modBus);
+        ExtraMaterialsIntegration.register(modBus);
         FocusIntegration.register(modBus);
         BrainChargerIntegration.register(modBus);
         OritechIntegration.register(modBus);
@@ -110,7 +117,9 @@ public class ThaumaturgeTechCompats {
         TagAspectsIntegration.register(modBus);
         ThaummotorIntegration.register(modBus);
         CreateIntegration.register(modBus);
+        MekanismIntegration.register(modBus);
         EnderIOIntegration.register(modBus);
+        nadiendev.ThaumaturgeTechCompats.compats.solargeneration.SolarGenerationIntegration.register(modBus);
         AuraConverterIntegration.register(modBus, container);
         JadeIntegration.register();
     }

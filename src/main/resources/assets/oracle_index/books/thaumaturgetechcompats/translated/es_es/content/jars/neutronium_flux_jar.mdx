@@ -1,0 +1,65 @@
+---
+id: thaumaturgetechcompats:neutronium_flux_jar
+type: block
+title: Jarra de flux de Neutronio
+---
+
+> [!NOTE]
+> Las jarras de Matriz de Cristal, Neutronio e Infinito necesitan el mod **Avaritia**.
+
+## Qué es
+
+La Jarra de flux de Neutronio va sacando poco a poco **flujo** del aura de su chunk hasta llenarse. Las máquinas que funcionan con poder mágico usan ese flujo como fuente de poder, así que la jarra convierte un problema de contaminación en combustible. Un crisol a su lado manda sus fugas y desbordes a la jarra en vez de al aura.
+
+| Propiedad | Valor |
+| --- | --- |
+| Capacidad de flujo | 600 |
+| Flujo absorbido cada 20 ticks | 2,0 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'avaritia:neutron_ingot', '', 
+        'avaritia:neutron_ingot', 'thaumaturgetechcompats:matrix_flux_jar', 'avaritia:neutron_ingot', 
+        '', 'avaritia:neutron_ingot', ''
+    ]}
+    result="thaumaturgetechcompats:neutronium_flux_jar"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:matrix_flux_jar) |
+| Objetos en los pedestales | 4 × Neutronium Ingot |
+| Esencia | Vacuos 32, Praemunio 32, Metallum 24, Terminus 8 |
+| Inestabilidad | 6 |
+| Centro del altar | [](@thaumaturgetechcompats:neutronium_infusion_matrix) (por defecto) |
+| Investigación | **Jarras de flux de Avaritia** (pestaña Nodos y flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícala (la Jarra de flujo en la Mesa de trabajo arcana; las superiores infundidas a partir de la anterior, con la Matriz rúnica de su nivel en el centro).
+2. Colócala en el chunk cuyo flujo quieres usar y espera: se llena siempre que el aura tenga flujo.
+3. Pon a su lado una máquina que use poder mágico (Taumomotor, mineros y paneles mágicos...).
+4. Haz clic derecho para ver su flujo. Un cubo vacío saca 10 de flujo como un cubo de flujo líquido.
+5. No rompas una jarra llena en tu base: todo lo que guardaba vuelve al aura.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:infinity_flux_jar)
+
+> [!NOTE]- Thaumonomicon: Jarras de flux de Avaritia
+> Cada Jarra de flux se fabrica en un altar de infusión, partiendo de la anterior:
+> - La Jarra de flux de Matriz de Cristal necesita una Jarra de flux y lingotes de matriz de cristal.
+> - La Jarra de flux de Neutronio necesita una Jarra de flux de Matriz de Cristal y lingotes de neutrones.
+> - La Jarra de flux del Infinito necesita una Jarra de flux de Neutronio, lingotes de infinito y una Perla Extremadamente Primordial.
+> Funcionan como la Jarra de flux normal, solo que más grandes y rápidas, y al romper una el flux que guarda sigue volviendo al aura.
+
+**Guías de este capítulo:** [Jarras de flux]($jars/flux-jar)

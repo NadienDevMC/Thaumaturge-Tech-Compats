@@ -1,6 +1,18 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "thaumaturgetechcompats:item/rift_jar"
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:special",
+        "base": "thaumaturgetechcompats:item/rift_jar",
+        "model": {
+          "type": "thaumaturgetechcompats:rift_jar"
+        }
+      },
+      {
+        "type": "minecraft:model",
+        "model": "thaumaturgetechcompats:item/rift_jar"
+      }
+    ]
   }
 }

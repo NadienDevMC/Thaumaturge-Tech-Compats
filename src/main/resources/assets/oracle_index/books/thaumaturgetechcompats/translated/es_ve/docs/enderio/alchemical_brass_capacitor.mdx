@@ -1,0 +1,58 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_capacitor
+title: Capacitor de latón alquímico
+---
+
+> [!NOTE]
+> Necesita el mod **Ender IO**.
+
+## Qué es
+
+El Capacitor de latón alquímico va en el hueco de condensador de cualquier máquina de Ender IO. Funciona como un condensador octádico de nivel más alto: la máquina guarda más energía, la aprovecha mejor y trabaja más rápido.
+
+| Propiedad | Valor |
+| --- | --- |
+| Nivel del condensador (por defecto) | 5,5 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        'enderio:vibrant_crystal', 'thaumaturgetechcompats:thaumium_capacitor', 'thaumaturge:plate_brass', 
+        'enderio:vibrant_alloy_ingot', 'enderio:vibrant_alloy_ingot', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_capacitor"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($enderio/thaumium_capacitor) |
+| Objetos en los pedestales | 4 × Placa de latón alquímico, 2 × Vibrant Alloy Ingot, Vibrant Crystal, Mecanismo arcano simple |
+| Esencia | Potentia 48, Metallum 24, Machina 24 |
+| Inestabilidad | 6 |
+| Investigación | **Capacitores mágicos** (pestaña Ender IO) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Condensadores mágicos (pestaña Tech).
+2. Infúndelo sobre el condensador del nivel anterior (un Condensador octádico para el de taumio).
+3. Ponlo en el hueco de condensador de una máquina de Ender IO.
+4. Cuatro de ellos, con cuatro placas, también infunden el banco de condensadores del mismo metal (Bancos de condensadores mágicos).
+
+## Se usa para fabricar
+
+- []($enderio/void_metal_capacitor)
+
+> [!NOTE]- Thaumonomicon: Capacitores mágicos
+> Cada capacitor se infunde a partir del inferior, con cuatro placas del nuevo metal, dos Lingotes de aleación vibrante y un Cristal vibrante. El Capacitor de taumio se infunde a partir de un Capacitor octádico, el de latón alquímico a partir del de taumio y el de metal del vacío a partir del de latón alquímico. El latón alquímico añade un mecanismo simple y el metal del vacío una semilla del vacío.
+> Van en la ranura de capacitor de cualquier máquina de Ender IO y funcionan como un capacitor octádico de nivel más alto, así que la máquina almacena más energía y trabaja más rápido. Los niveles exactos se ajustan en la configuración.
+
+**Guías de este capítulo:** [Capacitores mágicos y bancos de capacitores]($enderio/capacitors-and-banks)

@@ -1,0 +1,58 @@
+---
+title: Node Power, Flux Jars and Rift Jars
+icon: thaumaturgetechcompats:flux_jar
+related_items: [thaumaturgetechcompats:flux_jar, thaumaturgetechcompats:matrix_flux_jar, thaumaturgetechcompats:neutronium_flux_jar, thaumaturgetechcompats:infinity_flux_jar, thaumaturgetechcompats:rift_jar]
+---
+
+> [!NOTE]
+> The node power base can be switched off in the compatibilities config (needs a game restart). The Flux Jar tiers need materials of **Avaritia**. Numbers come from the node power config.
+
+## What it is
+
+Several machines of this mod (and of its compat mods: Void Miners miners and solar panels, the Thaummotor, the Magical Laser Drill and so on) work on **magical power** instead of energy. They take that power from a nearby source. A machine uses only the first source it finds, in this default order:
+
+1. a jarred node,
+2. a [](@thaumaturgetechcompats:flux_jar),
+3. a [](@thaumaturgetechcompats:rift_jar),
+4. a flux rift,
+5. a node in the world.
+
+You can change the order in the source order list of the node power config.
+
+> [!IMPORTANT]
+> A **hungry node** is never a valid source. By default (consume ratio 0) the power taken from a node or a jarred node is not removed from its aspects, so nodes are an inexhaustible source; raise the ratio to make them a tank that empties.
+
+## Flux Jar
+
+Slowly pulls flux from the aura of its chunk until it is full; machines burn that flux as power. Breaking it pours everything back into the aura as flux. An empty bucket used on it takes 10 flux out as a bucket of liquid flux. A crucible beside it sends its leaks and overflow into the jar instead of polluting the aura; if the jar is full or missing, that flux vanishes and gives 4 temporary warp to players within 4 blocks of the crucible.
+
+| Jar | Capacity | Flux pulled per fill (every 20 ticks) |
+|---|---|---|
+| [](@thaumaturgetechcompats:flux_jar) | 100 | 0.25 |
+| [](@thaumaturgetechcompats:matrix_flux_jar) | 250 | 0.75 |
+| [](@thaumaturgetechcompats:neutronium_flux_jar) | 600 | 2 |
+| [](@thaumaturgetechcompats:infinity_flux_jar) | 1500 | 6 |
+
+Recipes: the Flux Jar is an arcane workbench craft: a Warded Jar with a void metal plate on each of its four sides. The higher tiers are infused from the jar before it with four ingots of the material (Infinity also an [](@thaumaturgetechcompats:extremely_primordial_pearl)).
+
+## Rift Jar
+
+Set beside a flux rift, it takes the rift apart one point at a time (every 40 ticks, within 4 blocks), keeping 20 units of power for each point. It stops when the rift is at its smallest size. Capacity is 200. A broken Rift Jar spills what it holds as flux (0.05 per unit). Crafted at the arcane workbench: Warded Jar, two Void Seeds and two void metal plates. A Rift Jar that holds a trapped rift is also needed next to the crucible to make the Rifting Ingot.
+
+## Step by step
+
+1. Craft a Flux Jar or Rift Jar and place it within reach of the machine.
+2. For a Rift Jar, stand it within 4 blocks of a flux rift.
+3. Right-click the jar to read its flux or power.
+4. Check the machine with Jade or Create goggles to see which source it uses.
+
+## Common mistakes
+
+- Using a hungry node as a source.
+- Breaking a full Flux Jar: it pollutes the aura with all its flux.
+- Expecting a Rift Jar to work on a rift that is already at its minimum size.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's node power configuration.

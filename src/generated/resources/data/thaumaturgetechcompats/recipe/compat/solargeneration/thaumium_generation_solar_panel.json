@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solargeneration"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_thaumium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 40,
+      "aspect": "thaumaturgetechcompats:sol"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": "thaumaturgetechcompats:brass_solar_panel",
+  "components": [
+    "thaumaturge:plate_thaumium",
+    "solargeneration:photovoltaic_cell",
+    "thaumaturge:plate_thaumium",
+    "solargeneration:photovoltaic_cell",
+    "thaumaturge:plate_thaumium",
+    "solargeneration:photovoltaic_cell",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:mechanism_simple"
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:solargeneration_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_generation_solar_panel"
+  }
+}

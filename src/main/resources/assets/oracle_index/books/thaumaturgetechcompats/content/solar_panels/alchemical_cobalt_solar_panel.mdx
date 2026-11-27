@@ -1,0 +1,57 @@
+---
+id: thaumaturgetechcompats:alchemical_cobalt_solar_panel
+type: block
+title: Alchemical Cobalt Solar Panel
+---
+
+> [!NOTE]
+> Needs the **Solar Generation** mod.
+
+## What it is
+
+The Alchemical Cobalt Solar Panel is a Solar Generation panel with much bigger numbers. Every tick it produces its generation multiplied by the sun intensity of its position, stores it in its battery and offers it to every side except the top.
+
+| Property | Value |
+| --- | --- |
+| Generation under full sun (FE per tick) | 29,500 |
+| Transfer (FE per tick) | 50,500 |
+| Capacity (FE) | 2,000,000 |
+
+## How to get it
+
+### Arcane Workbench
+
+<CraftingRecipe
+    slots={[
+        'solargeneration:photovoltaic_cell', 'solargeneration:photovoltaic_cell', 'solargeneration:photovoltaic_cell', 
+        'hephaestus:cobalt_ingot', 'thaumaturgetechcompats:alchemical_solar_panel', 'hephaestus:cobalt_ingot', 
+        'hephaestus:cobalt_ingot', 'hephaestus:cobalt_ingot', 'hephaestus:cobalt_ingot'
+    ]}
+    result="thaumaturgetechcompats:alchemical_cobalt_solar_panel"
+    count={1}
+/>
+
+| Recipe | |
+| --- | --- |
+| Station | Arcane Workbench, in this shape |
+| Ingredients | 3 × Photovoltaic Cell, 5 × Cobalt Ingot, [](@thaumaturgetechcompats:alchemical_solar_panel) |
+| Vis | 20 |
+| Crystals | none |
+| Research | **Alchemical Cobalt Solar Panel** (Solar Panels tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research its entry in the Solar Panels tab and make it (the Alchemical panel in a crucible; the branch panels at the Arcane Workbench around the Alchemical panel; Thaumium, Void Metal and Void Uranium infused in a chain from the Brass panel).
+2. Place it with the top free and open to the sky.
+3. Put a cable, battery or machine on any other side.
+4. Right click it to see the stored energy and the current production. Broken and picked up, it keeps its energy.
+
+> [!NOTE]- Thaumonomicon: Alchemical Cobalt Solar Panel
+> The cobalt casing has sealed the alchemy inside.
+> 
+> **Alchemical Cobalt Solar Panel**
+> 
+> It is crafted at the arcane workbench from photovoltaic cells, cobalt ingots and an alchemical solar panel. It needs Hephaestus Forge.
+
+**Guides of this chapter:** [Solar Generation Panels]($solar_panels/overview) · [Solar Panel Stats and Recipes]($solar_panels/stats-and-recipes)

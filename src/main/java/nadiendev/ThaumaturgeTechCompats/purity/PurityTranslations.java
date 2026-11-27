@@ -10,8 +10,9 @@ public final class PurityTranslations {
     }
 
     public static void english(LanguageProvider lang) {
-        lang.add("research_category." + MOD + "." + PurityContent.CATEGORY, "Purity");
         lang.add("item." + MOD + "." + PurityRegistry.POTION_NAME, "Purification Splash Potion");
+        lang.add("entity." + MOD + "." + PurityRegistry.POTION_NAME, "Purification Splash Potion");
+        lang.add("entity." + MOD + "." + PurityRegistry.BIOME_POTION_NAME, "Biome Purification Potion");
         lang.add("item." + MOD + "." + PurityRegistry.POTION_NAME + ".tooltip", "Cures infected creatures in the area where it breaks.");
         lang.add("message." + MOD + "." + PurityRegistry.POTION_NAME + ".disabled", "The Purification Splash Potion is disabled.");
         entry(lang, PurityContent.HEADER, "Purity",
@@ -47,8 +48,9 @@ public final class PurityTranslations {
     }
 
     public static void spanish(LanguageProvider lang) {
-        lang.add("research_category." + MOD + "." + PurityContent.CATEGORY, "Pureza");
         lang.add("item." + MOD + "." + PurityRegistry.POTION_NAME, "Poción arrojadiza de purificación");
+        lang.add("entity." + MOD + "." + PurityRegistry.POTION_NAME, "Poción arrojadiza de purificación");
+        lang.add("entity." + MOD + "." + PurityRegistry.BIOME_POTION_NAME, "Poción de purificación de bioma");
         lang.add("item." + MOD + "." + PurityRegistry.POTION_NAME + ".tooltip", "Cura a las criaturas infectadas en la zona donde se rompe.");
         lang.add("message." + MOD + "." + PurityRegistry.POTION_NAME + ".disabled", "La poción arrojadiza de purificación está desactivada.");
         entry(lang, PurityContent.HEADER, "Pureza",

@@ -1,5 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.flux.field;
 
+import nadiendev.ThaumaturgeTechCompats.registry.TierOrder;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
 import nadiendev.ThaumaturgeTechCompats.flux.FluxComponents;
 import nadiendev.ThaumaturgeTechCompats.flux.FluxTier;
@@ -45,7 +46,7 @@ public final class FieldIntegration {
     }
 
     public static void fillCreativeTab(CreativeModeTab.Output output) {
-        for (FluxTier tier : FluxTier.values()) {
+        for (FluxTier tier : TierOrder.display(FluxTier.values())) {
             if (enabled(tier)) {
                 output.accept(FieldRegistry.shieldItem(tier).get());
                 output.accept(FieldRegistry.terraformerItem(tier).get());

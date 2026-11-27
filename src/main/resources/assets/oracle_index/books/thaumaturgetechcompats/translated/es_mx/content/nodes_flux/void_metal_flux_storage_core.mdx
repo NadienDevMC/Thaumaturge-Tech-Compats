@@ -1,0 +1,62 @@
+---
+id: thaumaturgetechcompats:void_metal_flux_storage_core
+type: block
+title: Núcleo de almacenamiento de flujo de Metal del vacío
+---
+
+## Qué es
+
+El Núcleo de almacenamiento de flujo de Metal del vacío es el gran almacén de **flujo dimensional (DF)**, la energía de la red de flujo. Solo funciona con su estructura formada, y necesita estabilizadores de nodos cerca cuando está lleno.
+
+| Propiedad | Valor |
+| --- | --- |
+| Capacidad base | 1.000.000.000 DF |
+| Puntos de estabilizador necesarios cuando está lleno | 12 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:alumentum', 'thaumaturge:metal_void', 'thaumaturge:nitor_white', 
+        'thaumaturge:plate_void', 'thaumaturgetechcompats:alchemical_brass_flux_storage_core', 'thaumaturge:plate_void', 
+        'thaumaturge:nitor_white', 'thaumaturge:metal_void', 'thaumaturge:alumentum'
+    ]}
+    result="thaumaturgetechcompats:void_metal_flux_storage_core"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:alchemical_brass_flux_storage_core) |
+| Objetos en los pedestales | 2 × Bloque de metal vacío, 2 × Nítor blanco (o similar), 2 × Placa de metal del vacío, 2 × Alumentum |
+| Esencia | Auram 48, Potentia 48, Praemunio 32, Ordo 32 |
+| Inestabilidad | 12 |
+| Investigación | **Núcleo de almacenamiento de metal del vacío** (pestaña Red de flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del núcleo del nivel anterior).
+2. Construye un anillo de ocho bloques de su metal alrededor, a su altura, más un bloque encima y otro debajo (los bloques de nivel superior también cuentan). Haz clic derecho: dice Formado o cuántos bloques faltan.
+3. Pon Celdas de capacidad de flujo sobre pedestales a menos de 6 bloques (hasta 16 celdas).
+4. Pon estabilizadores de nodos a menos de 8 bloques: básico 1 punto, avanzado 2, Matriz de Cristal 3, Neutronio 4, Infinito 6.
+5. Conecta fuentes y consumidores: dispositivos que lo toquen, o Enlaces de transmisión.
+6. Por encima de la mitad y sin puntos de estabilizador suficientes se sobrecarga: pierde flujo, echa chispas y daña a quien esté a menos de 5 bloques.
+
+> [!NOTE]- Thaumonomicon: Núcleo de almacenamiento de metal del vacío
+> El Núcleo de almacenamiento de flujo de Metal del vacío y la Celda de capacidad de flujo de Metal del vacío se fabrican por infusión, el primero a partir del Núcleo de Latón alquímico y la segunda a partir de la Celda de Latón alquímico.
+> 
+> **Estructura**
+> 
+> El núcleo solo funciona mientras sea el centro de un anillo de ocho bloques de metal del vacío a su altura, con otro bloque de metal del vacío justo encima y otro justo debajo. Los bloques de un tier superior también valen. Mientras no esté formado ni guarda ni transmite flujo. Haz clic derecho sobre él para ver su estado.
+> 
+> **Celdas y estabilizadores**
+> 
+> Las Celdas de capacidad puestas en pedestales, del tipo que sean, a menos de seis bloques del núcleo aumentan su capacidad. Los estabilizadores de nodo a menos de ocho bloques lo mantienen en calma: cuanto más lleno está, más puntos de estabilizador necesita. Por encima de la mitad y sin puntos suficientes se sobrecarga: suelta flujo al aura, lanza chispas y daña a quien esté cerca. Las distancias, las cifras y los efectos se pueden cambiar en la configuración.
+
+**Guías de este capítulo:** [Núcleos de almacenamiento y celdas de capacidad de flujo]($nodes_flux/flux-storage)

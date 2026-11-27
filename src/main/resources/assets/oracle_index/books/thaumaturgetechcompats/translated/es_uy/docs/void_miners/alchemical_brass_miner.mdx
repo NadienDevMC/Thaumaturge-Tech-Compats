@@ -1,0 +1,64 @@
+---
+icon: thaumaturgetechcompats:alchemical_brass_miner
+title: Controlador de minero de latón alquímico
+---
+
+> [!NOTE]
+> Necesita **Void Miners Remastered**.
+
+## Qué es
+
+El Controlador de minero de latón alquímico es el controlador de un minero de Void Miners que **no usa nada de FE**: solo trabaja mientras puede pagar unas unidades de poder a una fuente mágica cercana, y se para en cuanto no puede. Es una multiestructura como el minero de Rubetina: el controlador más marcos, paneles de cristal y huecos de modificador.
+
+| Propiedad | Valor |
+| --- | --- |
+| Nivel de minado (recetas de Void Miners) | 5 |
+| Multiplicador de velocidad | 3,0 |
+| Multiplicador de producción | 2,0 |
+| Unidades que paga cada 20 ticks | 2 |
+| Radio de la fuente de poder | 12 bloques |
+| Huecos de modificador de su estructura | 4 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturgetechcompats:flux_jar', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        '', 'thaumaturgetechcompats:thaumium_miner', '', 
+        'thaumaturgetechcompats:flux_jar', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_miner"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($void_miners/thaumium_miner) |
+| Objetos en los pedestales | 3 × Placa de latón alquímico, Mecanismo arcano simple, 2 × []($jars/flux_jar) |
+| Esencia | Machina 18, Terra 12, Praecantatio 10, Potentia 12 |
+| Inestabilidad | 4 |
+| Investigación | **Minero de latón alquímico** (pestaña Void Miners) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga la entrada de Minero mágico de su nivel (pestaña Tech) e infúndelo sobre el controlador del nivel anterior (el Minero de Rubetina para el de taumio).
+2. Fabrica los marcos de minero de latón alquímico y construye la multiestructura del nivel alrededor del controlador, con paneles de cristal de Void Miners y huecos de modificador.
+3. Pon una fuente de poder dentro del radio: un nodo en jarra, una Jarra de flujo, una Jarra de grieta, un nodo del mundo o una grieta de flujo (nunca un nodo hambriento).
+4. Cada 20 ticks paga sus unidades: mientras paga, mina; si no, espera al siguiente intento.
+5. Saca lo producido como en cualquier minero de Void Miners.
+
+## Se usa para fabricar
+
+- []($void_miners/void_metal_miner)
+
+> [!NOTE]- Thaumonomicon: Minero de latón alquímico
+> El Controlador de minero de latón alquímico se fabrica en un altar de infusión con el Controlador de minero de taumio, placas de latón alquímico, mecanismos y Jarras de flux.
+> Sus marcos se fabrican en una mesa de trabajo arcana con placas de latón alquímico, obsidiana y el marco equivalente de taumio. La estructura se levanta con esos marcos, paneles de cristal y cualquier modificador de minero, y no usa nada de energía: trabaja únicamente mientras puede pagar unidades a una fuente de poder mágico cercana, y se detiene en cuanto no puede. Un nodo hambriento nunca es una fuente válida.
+
+**Guías de este capítulo:** [Controladores de minero mágico]($void_miners/magical-miner)

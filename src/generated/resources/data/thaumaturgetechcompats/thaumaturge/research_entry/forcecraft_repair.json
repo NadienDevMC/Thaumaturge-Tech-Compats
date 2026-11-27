@@ -13,8 +13,8 @@
       "feature": "forcecraft_repair"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 15,
+  "category": "thaumaturgetechcompats:17_extras",
+  "column": 4,
   "complexity": 2,
   "icons": [
     "forcecraft:infuser"
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:infusion_enchantment"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

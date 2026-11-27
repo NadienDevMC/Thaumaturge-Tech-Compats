@@ -50,6 +50,12 @@ public class CapacitorBankContent implements DataProvider {
     private static JsonArray conditions() {
         JsonArray conditions = EnderIOJson.conditions(EnderIOIntegration.CAPACITORS);
         conditions.add(CompatJson.feature(EnderIOIntegration.CAPACITOR_BANKS));
+        // the banks only exist in Ender IO versions that register them
+        JsonObject bank = new JsonObject();
+        bank.addProperty("type", "neoforge:registered");
+        bank.addProperty("registry", "minecraft:item");
+        bank.addProperty("value", CapacitorBankSupport.VIBRANT_BANK);
+        conditions.add(bank);
         return conditions;
     }
 

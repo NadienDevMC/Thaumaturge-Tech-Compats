@@ -9,8 +9,8 @@
       "feature": "clarity_potion"
     }
   ],
-  "category": "thaumaturgetechcompats:purity",
-  "column": 1,
+  "category": "thaumaturgetechcompats:14_purity",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:clarity_potion"

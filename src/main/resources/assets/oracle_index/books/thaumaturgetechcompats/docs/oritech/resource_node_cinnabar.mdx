@@ -1,0 +1,57 @@
+---
+icon: thaumaturgetechcompats:resource_node_cinnabar
+title: Cinnabar Resource Node
+---
+
+> [!NOTE]
+> Needs the **Oritech** mod.
+
+## What it is
+
+The Cinnabar Resource Node is a resource node like Oritech's own: a bedrock-like vein that Oritech's Deep Drill can bleed forever. It is never used up.
+
+| Property | Value |
+| --- | --- |
+| Gives | Raw Cinnabar |
+| World rarity (default) | 1 chunk in 400 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:raw_cinnabar', 'thaumaturge:ore_cinnabar', 'thaumaturge:raw_cinnabar', 
+        'thaumaturge:ore_cinnabar', 'oritech:redstone_resource_node', 'thaumaturge:ore_cinnabar', 
+        'thaumaturge:raw_cinnabar', 'thaumaturge:ore_cinnabar', 'thaumaturge:raw_cinnabar'
+    ]}
+    result="thaumaturgetechcompats:resource_node_cinnabar"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | Redstone Resource Node |
+| Pedestal items | 4 × Cinnabar Ore, 4 × Raw Cinnabar |
+| Essentia | Permutatio 16, Metallum 12, Terra 12 |
+| Instability | 4 |
+| Research | **Resource Nodes of Thaumaturge** (Oritech tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Find it in the overworld (a deepslate boulder marks it) or infuse it over the matching Oritech node (research Resource Nodes of Thaumaturge).
+2. Place it where the Oritech Deep Drill can reach it.
+3. Build the Deep Drill over the node and power it as Oritech asks.
+4. The drill gives the product of the node every cycle, forever (1 per cycle by default).
+
+> [!NOTE]- Thaumonomicon: Resource Nodes of Thaumaturge
+> On the infusion altar, a resource node of Oritech surrounded by the ore and the product of the material becomes a node of that material:
+> - Cinnabar (from the Redstone node), Amber (Gold node) and Quartz (Lapis node), with the Thaumaturge ore and its drop.
+> Under Oritech's Deep Drill each node gives its material forever: raw cinnabar, amber or quartz. They also generate in the overworld like the nodes of Oritech, with a boulder of deepslate on the surface.
+> The amount per cycle and how rare each node is can be changed in the configuration, and every node can be turned off there.
+
+**Guides of this chapter:** [Resource Nodes and Deep Drill]($oritech/resource-nodes)

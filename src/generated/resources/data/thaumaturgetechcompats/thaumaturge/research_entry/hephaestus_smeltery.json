@@ -13,8 +13,8 @@
       "feature": "hephaestus_smeltery"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 75,
+  "category": "thaumaturgetechcompats:01_avaritia",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "avaritia:infinity_ingot"
@@ -42,7 +42,7 @@
     "thaumaturgetechcompats:tech",
     "thaumaturge:infusion"
   ],
-  "row": 2,
+  "row": 10,
   "stages": [
     {
       "required_knowledge": [

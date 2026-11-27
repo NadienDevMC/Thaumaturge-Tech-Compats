@@ -5,8 +5,8 @@
       "feature": "infusion_stone_variants"
     }
   ],
-  "category": "thaumaturgetechcompats:avaritia",
-  "column": 8,
+  "category": "thaumaturgetechcompats:01_avaritia",
+  "column": 2,
   "complexity": 2,
   "icons": [
     "thaumaturgetechcompats:infinity_infusion_speed_stone"
@@ -34,7 +34,7 @@
     "thaumaturgetechcompats:extremely_primordial_pearl",
     "thaumaturge:infusion_boost"
   ],
-  "row": 4,
+  "row": 16,
   "stages": [
     {
       "required_knowledge": [

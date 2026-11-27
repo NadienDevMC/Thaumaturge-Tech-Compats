@@ -15,6 +15,11 @@
     {
       "type": "thaumaturgetechcompats:feature_enabled",
       "feature": "enderio_capacitor_banks"
+    },
+    {
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "enderio:vibrant_capacitor_bank"
     }
   ],
   "type": "thaumaturge:infusion",

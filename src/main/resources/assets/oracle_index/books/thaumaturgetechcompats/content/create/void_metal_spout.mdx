@@ -1,0 +1,64 @@
+---
+id: thaumaturgetechcompats:void_metal_spout
+type: block
+title: Void Metal Spout
+---
+
+> [!NOTE]
+> Needs **Create** (through Create: Adapted in 26.1.2).
+
+## What it is
+
+The Void Metal Spout works **exactly like the Create machine it is made from**: same recipes, same kinetic needs, and it appears as a catalyst in the same JEI categories. The only difference: while an aura node is within reach it works many times faster, with enchant particles above it. Away from every node it behaves as the plain machine.
+
+| Property | Value |
+| --- | --- |
+| Speed while a node is in reach (default) | 15 times faster |
+| Node reach (default) | 16 blocks |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturgetechcompats:void_metal_casing', '', 
+        'thaumaturge:mechanism_complex', 'thaumaturgetechcompats:thaumium_spout', 'thaumaturge:plate_void', 
+        '', 'thaumaturge:plate_void', ''
+    ]}
+    result="thaumaturgetechcompats:void_metal_spout"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:thaumium_spout) |
+| Pedestal items | [](@thaumaturgetechcompats:void_metal_casing), 2 × Void Metal Plate, Complex Arcane Mechanism |
+| Essentia | Vacuos 20, Potentia 20, Auram 20 |
+| Instability | 4 |
+| Research | **Void Metal Machinery** (Create tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Research the machinery entry of its tier and make the casing of that tier.
+2. Infuse the variant over the machine of the tier before (the plain Create machine for Alchemical Brass).
+3. Place it **instead of** the plain machine and connect it to your kinetic network the same way (shafts, cogs, belts).
+4. Make sure an aura node is within its reach: it looks for the nearest node by itself every 20 ticks.
+5. Build the rest of the line as usual (belts, funnels, basins).
+
+> [!NOTE]- Thaumonomicon: Void Metal Machinery
+> The void metal variants are the finest, and answer a node from the greatest distance.
+> 
+> **Void Metal Casing**
+> 
+> It is infused over a thaumium casing with four void metal plates and a complex mechanism.
+> 
+> **Machine variants**
+> 
+> Each variant is infused over the thaumium variant of the same machine, with a void metal casing, two void metal plates and a complex mechanism.
+
+**Guides of this chapter:** [Node Casings]($create/casings) · [Machine Variants and Node Boost]($create/machine-variants) · [Create Seal]($create/create-seal)

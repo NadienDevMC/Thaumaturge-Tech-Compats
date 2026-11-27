@@ -1,5 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.compats.hephaestus;
 
+import nadiendev.ThaumaturgeTechCompats.materials.ExtraMaterial;
+import nadiendev.ThaumaturgeTechCompats.materials.ExtraMaterialJson;
 import nadiendev.ThaumaturgeTechCompats.tiercontent.Tier;
 
 public enum MoltenMetal {
@@ -8,7 +10,12 @@ public enum MoltenMetal {
     NEUTRONIUM("neutronium", "Neutronium", "Neutronio", 0xFF5A6070, 1500,
             "avaritia:neutron_ingot", "avaritia:neutron_nugget", "avaritia:neutron", Tier.NEUTRONIUM),
     INFINITY("infinity", "Infinity", "Infinito", 0xFFFF5FA8, 2000,
-            "avaritia:infinity_ingot", "avaritia:infinity_nugget", "avaritia:infinity", Tier.INFINITY);
+            "avaritia:infinity_ingot", "avaritia:infinity_nugget", "avaritia:infinity", Tier.INFINITY),
+    // Extra metals of this mod (materials package): their smeltery data is written by ExtraMaterialJson
+    RIFTING(ExtraMaterial.RIFTING),
+    CRIMSON(ExtraMaterial.CRIMSON),
+    FIBRIC(ExtraMaterial.FIBRIC),
+    SALIS(ExtraMaterial.SALIS);
 
     private final String id;
     private final String english;
@@ -19,6 +26,7 @@ public enum MoltenMetal {
     private final String nugget;
     private final String block;
     private final Tier tier;
+    private final boolean extra;
 
     MoltenMetal(String id, String english, String spanish, int color, int temperature,
                 String ingot, String nugget, String block, Tier tier) {
@@ -31,6 +39,25 @@ public enum MoltenMetal {
         this.nugget = nugget;
         this.block = block;
         this.tier = tier;
+        this.extra = false;
+    }
+
+    MoltenMetal(ExtraMaterial material) {
+        this.id = material.id();
+        this.english = material.english();
+        this.spanish = material.spanish();
+        this.color = material.argb();
+        this.temperature = material.temperature();
+        this.ingot = ExtraMaterialJson.item(material.ingotName());
+        this.nugget = ExtraMaterialJson.item(material.nuggetName());
+        this.block = ExtraMaterialJson.item(material.blockName());
+        this.tier = null;
+        this.extra = true;
+    }
+
+    /** True for the metals of this mod, whose smeltery data comes from ExtraMaterialJson. */
+    public boolean extra() {
+        return extra;
     }
 
     public String id() {

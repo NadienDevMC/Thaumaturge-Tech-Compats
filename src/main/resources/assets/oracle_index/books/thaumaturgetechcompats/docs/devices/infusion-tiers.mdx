@@ -1,0 +1,49 @@
+---
+title: Infusion Altar Tiers
+icon: thaumaturgetechcompats:matrix_infusion_matrix
+related_items: [thaumaturgetechcompats:matrix_infusion_matrix, thaumaturgetechcompats:neutronium_infusion_matrix, thaumaturgetechcompats:infinity_infusion_matrix, thaumaturgetechcompats:matrix_infusion_cost_stone, thaumaturgetechcompats:matrix_infusion_speed_stone, thaumaturgetechcompats:matrix_pillar_stone, thaumaturgetechcompats:matrix_infusion_pedestal, thaumaturgetechcompats:matrix_salis_mundus]
+---
+
+> [!NOTE]
+> Needs materials of **Avaritia**. Three switches in the compatibilities config: Runic Matrix variants, Infusion Cost/Speed Stone variants and Infusion Altar pillar/pedestal variants. The exact values are in the infusion config.
+
+## What it is
+
+Most things in this mod are infused on an infusion altar. The altar itself has Avaritia tiers: Crystal Matrix, Neutronium and Infinity. Every tier is built on the one before it.
+
+## Runic Matrices (the heart of the altar)
+
+The Runic Matrix keeps an infusion in order. The Avaritia matrices never ask for a symmetric altar and their stability does not recover; what goes wrong is decided by the instability of the craft, and it is never gentle.
+
+| Matrix | Instability |
+|---|---|
+| [](@thaumaturgetechcompats:matrix_infusion_matrix) | Solar: burns, sets fires, calls lightning; every craft is more unstable by day |
+| [](@thaumaturgetechcompats:neutronium_infusion_matrix) | Nuclear: radiation, flux poured into the aura, a meltdown that can explode |
+| [](@thaumaturgetechcompats:infinity_infusion_matrix) | Cosmic: counts every essentia as twenty; tears open flux, gives warp, summons creatures, throws everything nearby elsewhere |
+
+Each one is infused with ingots of its material (the Infinity one also with an [](@thaumaturgetechcompats:extremely_primordial_pearl)), **on an altar whose centre is the tier before it**.
+
+## Stones, pillars and pedestals
+
+| Part | Effect | Made from |
+|---|---|---|
+| Infusion Cost Stone / Speed Stone (Crystal Matrix, Neutronium, Infinity) | Go under the four pillars; lower the cost or the cycle time of the altar. It never costs less than half | Infusion from the plain stone, four ingots; Infinity also a Pearl; needs the Runic Matrix of the tier before |
+| [](@thaumaturgetechcompats:matrix_pillar_stone) and its tiers | Eight stones make the pillars; also lower cost and cycle time | Arcane workbench, four per craft, ingots + Eldritch Stone Tiles (or the tier before); the Crystal Matrix recipe needs 200 vis |
+| [](@thaumaturgetechcompats:matrix_infusion_pedestal) and its tiers | Where the ingredients go; lower cost and cycle time | Infusion from the previous pedestal (Eldritch Pedestal first) on an altar with the Runic Matrix of its own tier |
+
+Build the altar like the plain one: eight stones, a pedestal and a Runic Matrix of any kind. Sprinkle **Salis Mundus** over the stones to raise the pillars; their look follows the stone used.
+
+## Salis Mundus variants
+
+Dusts infused on an altar from the previous dust, four units of the material each, giving four dusts: Blaze Cube, then [](@thaumaturgetechcompats:matrix_salis_mundus), then Neutronium, then Infinity. They work exactly like Salis Mundus; the Crystal Matrix, Neutronium and Infinity ones need the Runic Matrix of their own tier on the altar. Planetary pearls and star crucifixes of those levels ask for them.
+
+## Common mistakes
+
+- Infusing a tier part on an altar without the previous tier's matrix at the centre.
+- Forgetting the instability: a Neutronium or Infinity matrix is dangerous. Prepare for fire, radiation or cosmic effects.
+- Expecting a lower altar cost than half: it is capped.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's infusion configuration.

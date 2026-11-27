@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOTier;
+import net.minecraft.SharedConstants;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.AbstractPackResources;
@@ -26,7 +27,6 @@ public class ConduitPack extends AbstractPackResources {
     private static final String MOD = ThaumaturgeTechCompats.MOD_ID;
     private static final String PACK_ID = MOD + "_enderio_conduits";
     private static final String DIRECTORY = "enderio/conduit/";
-    private static final int PACK_FORMAT = 48;
 
     public ConduitPack(PackLocationInfo location) {
         super(location);
@@ -63,7 +63,8 @@ public class ConduitPack extends AbstractPackResources {
     }
 
     private static String metadata() {
-        return "{\"pack\":{\"description\":\"Thaumaturge Tech Compats Ender IO conduits\",\"pack_format\":" + PACK_FORMAT + "}}";
+        String format = "[" + SharedConstants.DATA_PACK_FORMAT_MAJOR + "," + SharedConstants.DATA_PACK_FORMAT_MINOR + "]";
+        return "{\"pack\":{\"description\":\"Thaumaturge Tech Compats Ender IO conduits\",\"min_format\":" + format + ",\"max_format\":" + format + "}}";
     }
 
     private static String conduit(ConduitKind kind, EnderIOTier tier) {

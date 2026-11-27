@@ -1,0 +1,48 @@
+---
+title: Controladores de panel solar mágico
+icon: thaumaturgetechcompats:void_metal_solar_panel
+related_items: [thaumaturgetechcompats:thaumium_solar_panel, thaumaturgetechcompats:alchemical_brass_solar_panel, thaumaturgetechcompats:void_metal_solar_panel]
+---
+
+> [!NOTE]
+> Requiere **Void Miners Remastered**. El panel solar, y cada nivel por separado, se pueden desactivar en la configuración de compatibilidades; activados por defecto, hay que reiniciar el juego. Los números están en la configuración mágica de Void Miners.
+
+## Qué es
+
+Un panel solar de Void Miners que produce FE sin sol ni cielo abierto: solo genera mientras puede pagar unidades de poder a una fuente mágica cercana. Si el pago falla, se detiene hasta el siguiente intento.
+
+| Nivel | Controlador | FE por tick | Energía almacenada | Unidades por pago | Radio de la fuente |
+| --- | --- | --- | --- | --- | --- |
+| Taumio | [](@thaumaturgetechcompats:thaumium_solar_panel) | 1.000 | 25.000.000 | 1 | 8 |
+| Latón alquímico | [](@thaumaturgetechcompats:alchemical_brass_solar_panel) | 2.500 | 100.000.000 | 2 | 12 |
+| Metal del vacío | [](@thaumaturgetechcompats:void_metal_solar_panel) | 6.000 | 500.000.000 | 4 | 16 |
+
+La generación es antes de los modificadores de eficiencia de la estructura y no depende del sol ni del clima.
+
+## Cómo conseguirlo
+
+Investiga la entrada de panel solar mágico del nivel. Altar de infusión, cada uno sobre el nivel anterior:
+
+| Nivel | Catalizador | Componentes | Aspectos (inestabilidad) |
+| --- | --- | --- | --- |
+| Taumio | Panel solar Rubetine de Void Miners | 3 placas de taumio, mecanismo simple, 2 nodos en jarra | lux 12, potentia 10, metallum 8, alkimia 6 (2) |
+| Latón alquímico | Controlador de panel solar de taumio | 3 placas de latón, mecanismo simple, 2 nodos en jarra | lux 18, potentia 16, praecantatio 12, machina 10 (4) |
+| Metal del vacío | Controlador de panel solar de latón alquímico | 3 placas de metal del vacío, mecanismo complejo, 2 nodos en jarra, semilla del vacío | lux 24, potentia 24, vacuos 16, praecantatio 16 (6) |
+
+## Paso a paso
+
+1. Fabrica los marcos solares y los modificadores.
+2. Construye la estructura solar del nivel alrededor del controlador.
+3. Pon una fuente de poder (nodo en jarra, Jarra de flux, Jarra de grieta, nodo del mundo o grieta de flujo, nunca un nodo hambriento) dentro del radio del nivel.
+4. Conecta un consumidor de FE o un cable al panel como con cualquier panel solar de Void Miners. Cada 20 ticks paga sus unidades y genera.
+
+## Errores comunes
+
+- Esperar que necesite luz del sol: no la necesita.
+- Olvidar la fuente de poder: sin ella, no hay energía.
+- Mezclar marcos de distintos niveles.
+
+## Notas
+
+- Se puede desactivar en la configuración del mod (archivo de compatibilidades).
+- Sus valores se ajustan en la configuración mágica de Void Miners del mod.

@@ -1,0 +1,56 @@
+---
+id: thaumaturgetechcompats:thaummotor
+type: block
+title: Taummotor
+---
+
+> [!NOTE]
+> Necesita **Create** (a través de Create: Adapted en 26.1.2).
+
+## Qué es
+
+El Taummotor es un motor de Create sin cables ni combustible. Toma un poco de poder de una fuente mágica cercana y gira a una velocidad fija, dando capacidad de estrés a toda la red cinética. Sin fuente se para.
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio de la fuente de poder | 8 bloques |
+| Velocidad (por defecto / máxima) | 64 / 256 RPM |
+| Capacidad de estrés base | 1.024 su |
+| Poder que consume | 1 unidad cada 20 ticks |
+
+## Cómo se consigue
+
+### Mesa de trabajo arcana
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium', 
+        'create:shaft', 'create:brass_casing', 'create:shaft', 
+        'thaumaturge:plate_thaumium', 'thaumaturge:mechanism_simple', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaummotor"
+    count={1}
+/>
+
+| Receta | |
+| --- | --- |
+| Estación | Mesa de trabajo arcana, con esta forma |
+| Ingredientes | 4 × Placa de taumio, 2 × Mecanismo arcano simple, 2 × Eje, Revestimiento de Latón |
+| Vis | 60 |
+| Cristales | ninguno |
+| Investigación | **Taummotor** (pestaña Create) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga Taumomotor (pestaña Tech) y fabrícalo en la Mesa de trabajo arcana.
+2. Colócalo y conéctale un eje como a cualquier motor de Create.
+3. Pon una fuente de poder a menos de 8 bloques: un nodo en jarra, una Jarra de flujo, una Jarra de grieta, un nodo del mundo o una grieta de flujo (nunca un nodo hambriento).
+4. Usa la rueda sobre su selector de velocidad para elegir la velocidad, en cualquier sentido.
+5. Míralo con las gafas de Create para ver qué fuente usa. El estrés se multiplica según la fuente: nodo en jarra ×1, Jarra de flujo ×1,5, nodo del mundo ×2, Jarra de grieta ×2,5, grieta de flujo ×3.
+
+> [!NOTE]- Thaumonomicon: Taummotor
+> El Taummotor se fabrica en una mesa de trabajo arcana con una carcasa de latón, dos ejes, dos mecanismos simples y cuatro placas de taumio.
+> Mientras haya un nodo en frasco, un nodo, una Jarra de flux o una grieta de flux a su alcance, toma de ella un poco de poder cada cierto tiempo y gira a una velocidad fija, dando estrés a toda la red cinética. Cuanto más rica es la fuente, más estrés da, y sin fuente, o sin poder en ella, se detiene. Un nodo hambriento nunca es una fuente válida. Las gafas de Create indican qué fuente está usando.
+
+**Guías de este capítulo:** [Carcasas de nodo]($create/casings) · [Variantes de máquina e impulso de nodo]($create/machine-variants) · [Sello de Create]($create/create-seal)

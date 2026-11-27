@@ -1,0 +1,39 @@
+---
+title: Hephaestus Tool Modifiers
+---
+
+> [!NOTE]
+> Needs **Hephaestus Tools**. The modifiers show up in the Arsenal Table. Maximum level of each: 12.
+
+## What they are
+
+Four extra upgrades for Hephaestus tools. You apply one in the **Arsenal Table** (Modify tab): each level consumes **one ingot** of its material and needs a free upgrade slot on the tool. You can add up to level 12. At level 12 the tool **never loses durability**.
+
+| Modifier | Ingot consumed per level | Effect |
+|---|---|---|
+| Unbreakable | Thaumium Ingot | Chance to avoid durability loss that grows with every level (it acts like Unbreaking of level 2 x level squared) |
+| Vis Repair | Brass Ingot | The tool mends itself over time, much faster while the aura of the chunk has vis to give |
+| Void Teleport | Void Metal Ingot | Mined blocks and the drops of slain mobs go straight into your inventory: chance level / 8 per drop, always from level 8 |
+| Ender Teleport | Thaumaturge Fabric | Use the tool (right click) to teleport forward like an enderman; hitting a mob may also blink you away |
+
+### Vis Repair details
+
+Every 2 seconds, for each tool in your inventory that is damaged, it repairs up to 5 durability points per level, paying 0.02 vis per point from the aura of the chunk where you stand. If the aura cannot pay, it repairs only a slow amount (level / 6 points, at least 1) instead.
+
+### Ender Teleport details
+
+- Range: 6 + 2 per level blocks (it stops short of walls).
+- Cooldown: 60 - 4 per level ticks, never less than 10.
+- When you hit a mob, each hit has 3% chance per level to blink you away to a random nearby spot (radius 3 + half the level).
+
+## Step by step
+
+1. Build the tool (for instance from the metals of the previous pages).
+2. Open the Arsenal Table and go to the Modify tab.
+3. Pick the modifier and insert its ingots. One ingot gives one level; repeat until you reach the level you want (maximum 12).
+
+## Common mistakes
+
+- No free upgrade slot on the tool: the modifier will not apply.
+- Expecting Void Teleport to collect everything below level 8: before that, only part of the drops go to the inventory.
+- Using Vis Repair in a chunk with no vis: it repairs slowly.

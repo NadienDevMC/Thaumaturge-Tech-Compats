@@ -1,0 +1,58 @@
+---
+id: thaumaturgetechcompats:alchemical_brass_environmental_charger
+type: block
+title: Alchemical Brass Environmental Charger
+---
+
+## What it is
+
+The Alchemical Brass Environmental Charger releases energy into the area around it to recharge, automatically, the charged items, wands and vis items in the inventory of every player in reach. It keeps its own store of Dimensional Flux.
+
+| Property | Value |
+| --- | --- |
+| Radius | 12 blocks |
+| DF per item per tick | 2,000 |
+| Dimensional Flux stored | 10,000,000 |
+
+## How to get it
+
+### Infusion altar
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:vis_resonator', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass', 
+        '', 'thaumaturgetechcompats:thaumium_environmental_charger', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturge:plate_brass', 'thaumaturge:plate_brass'
+    ]}
+    result="thaumaturgetechcompats:alchemical_brass_environmental_charger"
+    count={1}
+/>
+
+*Altar layout: the middle item goes on the central pedestal, the items around it on the pedestals of the altar.*
+
+| Recipe | |
+| --- | --- |
+| Station | Infusion altar |
+| Central item (catalyst) | [](@thaumaturgetechcompats:thaumium_environmental_charger) |
+| Pedestal items | 4 × Alchemical Brass Plate, Simple Arcane Mechanism, Vis Resonator |
+| Essentia | Potentia 40, Auram 30, Machina 20 |
+| Instability | 3 |
+| Research | **Alchemical Brass Environmental Charger** (Flux Network tab) |
+| Makes | 1 |
+
+## How to use it
+
+1. Make it (the Thaumium charger at the Arcane Workbench, the others infused around the charger of the tier before).
+2. Feed it DF: put a Transmission Link, Storage Core or Rift Extractor against it.
+3. Stay within its radius with the items in your pack. Wands are refilled by turning DF into vis (20 DF per hundredth of vis).
+4. Right click it to read its DF, radius, rate and status.
+
+## Used to make
+
+- [](@thaumaturgetechcompats:void_metal_environmental_charger)
+
+> [!NOTE]- Thaumonomicon: Alchemical Brass Environmental Charger
+> The Alchemical Brass Environmental Charger is made on an infusion altar from a Thaumium Environmental Charger, four brass plates, a simple mechanism and a vis resonator.
+> It works like the thaumium one, only with a wider radius, a higher rate and a bigger store.
+
+**Guides of this chapter:** [Environmental Chargers]($nodes_flux/flux-chargers)

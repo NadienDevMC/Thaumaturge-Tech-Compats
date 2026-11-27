@@ -9,8 +9,8 @@
       "feature": "flux_network_alchemical_brass"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 59,
+  "category": "thaumaturgetechcompats:11_flux_gear",
+  "column": 4,
   "complexity": 3,
   "icons": [
     "thaumaturgetechcompats:flight_thruster"
@@ -43,7 +43,7 @@
     "thaumaturge:infusion",
     "thaumaturge:base_eldritch"
   ],
-  "row": 8,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

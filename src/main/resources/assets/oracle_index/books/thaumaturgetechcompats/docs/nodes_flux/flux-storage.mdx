@@ -1,0 +1,49 @@
+---
+title: Flux Storage Cores and Capacity Cells
+icon: thaumaturgetechcompats:thaumium_flux_storage_core
+related_items: [thaumaturgetechcompats:thaumium_flux_storage_core, thaumaturgetechcompats:alchemical_brass_flux_storage_core, thaumaturgetechcompats:void_metal_flux_storage_core, thaumaturgetechcompats:thaumium_flux_capacity_cell, thaumaturgetechcompats:alchemical_brass_flux_capacity_cell, thaumaturgetechcompats:void_metal_flux_capacity_cell]
+---
+
+> [!NOTE]
+> The Dimensional Flux (DF) network can be switched off per tier in the compatibilities config (game restart). Numbers come from the flux config (base capacity of the core) and the core config.
+
+## What it is
+
+**Dimensional Flux (DF)** is the energy of the flux network: storage cores, links, extractors, chargers, shield generators and gear all use it. The Flux Storage Core is the big reserve. A core only works when its structure is formed.
+
+| Core | Base capacity | Capacity Cell adds | Stabilizer points needed when full |
+|---|---|---|---|
+| [](@thaumaturgetechcompats:thaumium_flux_storage_core) | 1,000,000 DF | 500,000 DF | 4 |
+| [](@thaumaturgetechcompats:alchemical_brass_flux_storage_core) | 25,000,000 DF | 12,500,000 DF | 8 |
+| [](@thaumaturgetechcompats:void_metal_flux_storage_core) | 1,000,000,000 DF | 500,000,000 DF | 12 |
+
+The cells are [](@thaumaturgetechcompats:thaumium_flux_capacity_cell), [](@thaumaturgetechcompats:alchemical_brass_flux_capacity_cell) and [](@thaumaturgetechcompats:void_metal_flux_capacity_cell).
+
+## How to get it
+
+- **Thaumium core**: arcane workbench, top and bottom rows Thaumium Plate, Alumentum and Thaumium Plate; middle row Simple Arcane Mechanism, Block of Thaumium and Simple Arcane Mechanism (crystals ordo 20, terra 10, aer 10; 150 vis).
+- **Thaumium cell**: arcane workbench, top and bottom rows Thaumium Plate, Alumentum and Thaumium Plate; middle row Alumentum, Warded Jar and Alumentum (crystals ordo 10, aqua 5; 80 vis).
+- **Alchemical Brass and Void Metal core/cell**: infusion, built around the previous tier. Components: alternating metal block (or ingot), nitor, plate and alumentum for the cores, and ingots, alumentum and plates for the cells.
+
+## Step by step
+
+1. Place the core.
+2. Build a **ring of eight blocks of its metal** around it on its own level, plus one block above and one below (blocks of a higher tier also count). Right-click the core: it reports *Formed* or how many blocks are missing.
+3. Place **Capacity Cells on pedestals** within 6 blocks of the core (the core counts up to 16 cells).
+4. Place **node stabilizers** within 8 blocks. They give stabilizer points: basic 1, advanced 2, Crystal Matrix 3, Neutronium 4, Infinity 6.
+5. Connect the core to sources and consumers: devices that touch it, or Transmission Links.
+
+## Overload
+
+The fuller a core is, the more stabilizer points it needs. Above half full and short of points, it **overloads**: every 40 ticks it releases flux into the aura, throws sparks, warns and hurts whoever is within 5 blocks, and leaks a share of its capacity. An explosion is possible only if enabled (off by default). When the capacity drops under what it holds, the excess is released as flux into the aura (100,000 DF per flux point).
+
+## Common mistakes
+
+- Not completing the ring and the blocks above and below: the core stores nothing until it is formed.
+- Too few stabilizers near a full core.
+- Placing cells too far away (more than 6 blocks) or not on pedestals.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's flux core configuration.

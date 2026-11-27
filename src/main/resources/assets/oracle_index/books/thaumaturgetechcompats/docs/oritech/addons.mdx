@@ -1,0 +1,58 @@
+---
+title: Tiered Machine Addons
+icon: thaumaturgetechcompats:oritech_void_speed_addon
+related_items: [thaumaturgetechcompats:oritech_brass_speed_addon, thaumaturgetechcompats:oritech_thaumium_speed_addon, thaumaturgetechcompats:oritech_void_speed_addon, thaumaturgetechcompats:oritech_brass_efficiency_addon, thaumaturgetechcompats:oritech_thaumium_efficiency_addon, thaumaturgetechcompats:oritech_void_efficiency_addon, thaumaturgetechcompats:oritech_brass_capacitor_addon, thaumaturgetechcompats:oritech_thaumium_capacitor_addon, thaumaturgetechcompats:oritech_void_capacitor_addon]
+---
+
+> [!NOTE]
+> Requires **Oritech**. In the compatibilities config you can switch off the whole Oritech integration, all the addons, or each addon tier on its own; all default to on. Values live in the Oritech config and need a game restart. A higher tier is only available if the lower tiers of the same addon are enabled.
+
+## What it is
+
+Nine addon blocks for Oritech machines: Speed, Efficiency and Capacitor, each in Brass, Thaumium and Void Metal. They work like Oritech's own addons (placed against the machine) but are stronger, and every tier beats the one before.
+
+## How to get it
+
+Research **Brass Addons**, then **Thaumium Addons**, then **Void Metal Addons** (Tech category). All are crafted at the arcane workbench in the same shape: top and bottom rows a plate of the tier, a mechanism and a plate; middle row the side item of the addon kind, the center addon and the side item again. Each addon page shows its grid.
+
+| Tier | Plate | Mechanism | Center (C) | Vis | Crystals |
+| --- | --- | --- | --- | --- | --- |
+| Brass | brass plate | simple | Oritech addon of the same kind | 100 | 2 |
+| Thaumium | thaumium plate | complex | the Brass addon of the same kind | 250 | 4 |
+| Void Metal | void metal plate | complex | the Thaumium addon of the same kind | 500 | 6 |
+
+| Addon | Center for Brass | Side item S (Brass / Thaumium / Void) | Crystal |
+| --- | --- | --- | --- |
+| Speed | Oritech machine speed addon | magnetic coil / overcharged crystal / Heisenberg compensator | aer |
+| Efficiency | Oritech machine efficiency addon | electrum ingot (all tiers) | ordo (brass) |
+| Capacitor | Oritech machine capacitor addon | energite ingot (all tiers) | ignis |
+
+(For the speed addon the side item changes with the tier; the Thaumium and Void recipes of efficiency and capacitor keep the same side item.)
+
+## Step by step
+
+1. Craft the Oritech addon you want to upgrade and the Brass version around it.
+2. Place the addon against the machine like any other Oritech addon.
+3. Climb tiers by crafting the next one around the previous.
+
+## Numbers (Oritech config)
+
+| Setting | Brass | Thaumium | Void Metal | Oritech own |
+| --- | --- | --- | --- | --- |
+| Speed addon: processing time multiplier (lower is faster) | 0.4 | 0.2 | 0.1 | 0.5 |
+| Speed addon: energy multiplier | 1.1 | 1.0 | 0.9 | 1.2 |
+| Efficiency addon: energy multiplier (lower is cheaper) | 0.6 | 0.4 | 0.2 | 0.8 |
+| Capacitor addon: energy capacity added | 10,000,000 | 100,000,000 | 1,000,000,000 | 2,000,000 |
+| Capacitor addon: insert rate added | 10,000 | 100,000 | 1,000,000 | 2,000 |
+
+## Common mistakes
+
+- Trying to craft a Thaumium addon without the Brass one of the same kind: it is the center ingredient.
+- Disabling the Brass toggle: that also disables Thaumium and Void Metal of that addon.
+- Editing the numbers and not restarting: they are read at startup.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Each addon tier can also be turned off on its own.
+- Its values are adjusted in the mod's Oritech configuration.

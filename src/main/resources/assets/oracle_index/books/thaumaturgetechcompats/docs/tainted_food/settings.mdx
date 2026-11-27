@@ -1,0 +1,40 @@
+---
+title: Tainted Food Settings
+icon: thaumaturgetechcompats:tainted_apple
+related_items: [thaumaturgetechcompats:tainted_apple]
+---
+
+> [!NOTE]
+> File: the tainted food config. Most values need a game restart. The master switch is in the compatibilities config.
+
+## What it is
+
+Everything about the tainted food can be tuned. The same settings exist for the Farmer's Delight foods in the Farmer's Delight tainted food configuration (see that chapter).
+
+| Setting | Default | Meaning |
+| --- | --- | --- |
+| Enabled | true | turns all tainted foods off: no items and no recipes |
+| Foods | all ten | the tainted foods that exist, by item id; remove an entry to remove that food and its recipe |
+| Hunger multiplier | 1.5 | multiplies the hunger the original gives (0.1 to 20) |
+| Saturation multiplier | 1.5 | multiplies the saturation the original gives (0 to 20) |
+| Effect | Flux Taint | effect applied by every tainted food |
+| Effect duration (ticks) | 200 | base duration of the effect |
+| Duration multiplier | 1.0 | multiplies the duration; 0 removes the effect |
+| Effect level | 0 | level of the effect, 0 is level one |
+| Effect chance | 1.0 | chance that eating applies the effect |
+
+## Step by step
+
+1. Edit the file with the game closed.
+2. Restart: the item list, multipliers and effect chance are read at startup.
+3. To remove a single food, delete its id from the foods list.
+
+## Common mistakes
+
+- Setting the duration multiplier to 0 and expecting the Flux Taint to stay: it removes the effect completely.
+- Editing while the game is open: most values need a restart.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's tainted food configuration.

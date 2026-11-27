@@ -17,8 +17,8 @@
       "feature": "voidminers_magical_miner_thaumium"
     }
   ],
-  "category": "thaumaturgetechcompats:tech",
-  "column": 39,
+  "category": "thaumaturgetechcompats:08_void_miners",
+  "column": 0,
   "complexity": 1,
   "icons": [
     "thaumaturgetechcompats:thaumium_miner"
@@ -48,7 +48,7 @@
     "thaumaturge:base_artifice",
     "thaumaturge:metallurgy@1"
   ],
-  "row": 2,
+  "row": 0,
   "stages": [
     {
       "required_knowledge": [

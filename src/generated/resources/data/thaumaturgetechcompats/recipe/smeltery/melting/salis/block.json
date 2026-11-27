@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "hephaestus"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "hephaestus_smeltery"
+    }
+  ],
+  "type": "hephaestus:melting",
+  "fuel": {
+    "amount": 50,
+    "id": "minecraft:lava"
+  },
+  "ingredient": "#c:storage_blocks/salis",
+  "result": {
+    "amount": 810,
+    "id": "thaumaturgetechcompats:molten_salis"
+  },
+  "temperature": 2000,
+  "time": 200
+}

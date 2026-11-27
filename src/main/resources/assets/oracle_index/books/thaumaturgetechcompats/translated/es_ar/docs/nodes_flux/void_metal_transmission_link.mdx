@@ -1,0 +1,53 @@
+---
+icon: thaumaturgetechcompats:void_metal_transmission_link
+title: Enlace de transmisión de metal del vacío
+---
+
+## Qué es
+
+El Enlace de transmisión de metal del vacío mueve flujo dimensional entre dispositivos que no se tocan. Dos enlaces sintonizados forman un rayo visible; el flujo va en los dos sentidos hasta que ambos están igual de llenos, y cada enlace también toma flujo de los almacenes de al lado y lo da a los que pueden recibirlo. Los enlaces juntos se pasan el flujo, así que se pueden hacer cadenas.
+
+| Propiedad | Valor |
+| --- | --- |
+| Alcance | 128 bloques |
+| Mueve por tick | 200.000 DF |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:void_seed', 'thaumaturge:plate_void', 'thaumaturge:plate_void', 
+        '', 'thaumaturgetechcompats:alchemical_brass_transmission_link', '', 
+        'thaumaturge:mechanism_complex', 'thaumaturge:plate_void', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_transmission_link"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($nodes_flux/alchemical_brass_transmission_link) |
+| Objetos en los pedestales | 4 × Placa de metal del vacío, Mecanismo arcano complejo, Semilla del vacío |
+| Esencia | Permutatio 48, Motus 48, Vacuos 32, Alienis 24 |
+| Inestabilidad | 4 |
+| Investigación | **Enlace de transmisión de metal del vacío** (pestaña Red de flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrica dos enlaces del mismo nivel (el de taumio en la Mesa de trabajo arcana, dos por crafteo).
+2. Usa el Vinculador de transmisión en el primer enlace y luego en el segundo: quedan emparejados.
+3. Mantén la pareja dentro del alcance (el menor de los dos) y ambos extremos cargados.
+4. Haz clic derecho en un enlace para ver su flujo, pareja, distancia, ritmo y estado.
+5. Para romper una pareja, agáchate y usa el vinculador en un enlace.
+
+> [!NOTE]- Thaumonomicon: Enlace de transmisión de metal del vacío
+> El Enlace de transmisión de metal del vacío se fabrica en un altar de infusión a partir de un Enlace de transmisión de latón alquímico, placas de metal del vacío, un mecanismo arcano complejo y una semilla del vacío.
+> Tiene el mayor alcance y el mayor ritmo de todos los enlaces. Se puede emparejar con un enlace de otro nivel, pero la pareja solo llega y mueve lo que permita el más débil de los dos.
+
+**Guías de este capítulo:** [Enlaces de transmisión y Extractor de grietas]($nodes_flux/flux-links)

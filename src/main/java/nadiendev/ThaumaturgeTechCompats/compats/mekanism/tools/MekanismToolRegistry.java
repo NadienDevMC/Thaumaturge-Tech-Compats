@@ -1,18 +1,22 @@
 package nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools;
 
 import com.mojang.serialization.Codec;
-import mekanism.common.integration.energy.EnergyCompatUtils;
+
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.util.Unit;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.core.registries.Registries;
+import net.neoforged.neoforge.capabilities.Capabilities;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
@@ -23,10 +27,10 @@ public final class MekanismToolRegistry {
     public static final String ENERGY_NAME = "mekanism_tool_energy";
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ThaumaturgeTechCompats.MOD_ID);
-    public static final DeferredRegister.DataComponents COMPONENTS = DeferredRegister.createDataComponents(ThaumaturgeTechCompats.MOD_ID);
+    public static final DeferredRegister<DataComponentType<?>> COMPONENTS = DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, ThaumaturgeTechCompats.MOD_ID);
 
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Long>> ENERGY = COMPONENTS.registerComponentType(ENERGY_NAME,
-            builder -> builder.persistent(Codec.LONG).networkSynchronized(ByteBufCodecs.VAR_LONG));
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> ENERGY = COMPONENTS.register(ENERGY_NAME,
+            () -> DataComponentType.<Integer>builder().persistent(Codec.INT).networkSynchronized(ByteBufCodecs.VAR_INT).build());
 
     private static final Map<MekanismToolTier, Map<MekanismToolKind, DeferredItem<Item>>> TOOLS = new EnumMap<>(MekanismToolTier.class);
 
@@ -44,7 +48,7 @@ public final class MekanismToolRegistry {
             }
             Map<MekanismToolKind, DeferredItem<Item>> kinds = new EnumMap<>(MekanismToolKind.class);
             for (MekanismToolKind kind : MekanismToolKind.values()) {
-                kinds.put(kind, ITEMS.register(itemId(tier, kind), () -> create(tier, kind)));
+                kinds.put(kind, ITEMS.registerItem(itemId(tier, kind), properties -> create(tier, kind, properties), () -> new Item.Properties().rarity(tier.rarity())));
             }
             TOOLS.put(tier, kinds);
         }
@@ -64,8 +68,7 @@ public final class MekanismToolRegistry {
         return items;
     }
 
-    private static Item create(MekanismToolTier tier, MekanismToolKind kind) {
-        Item.Properties properties = new Item.Properties().rarity(tier.rarity()).attributes(kind.attributes(tier));
+    private static Item create(MekanismToolTier tier, MekanismToolKind kind, Item.Properties properties) {
         return switch (kind) {
             case PICKAXE -> new MekanismPickaxeItem(tier, properties);
             case AXE -> new MekanismAxeItem(tier, properties);
@@ -76,22 +79,18 @@ public final class MekanismToolRegistry {
     }
 
     private static void onModifyDefaults(ModifyDefaultComponentsEvent event) {
-        for (Map.Entry<MekanismToolTier, Map<MekanismToolKind, DeferredItem<Item>>> tierEntry : TOOLS.entrySet()) {
-            MekanismToolTier tier = tierEntry.getKey();
-            for (Map.Entry<MekanismToolKind, DeferredItem<Item>> kindEntry : tierEntry.getValue().entrySet()) {
-                MekanismToolKind kind = kindEntry.getKey();
-                event.modify(kindEntry.getValue().get(), builder -> builder
-                        .remove(DataComponents.MAX_DAMAGE)
-                        .remove(DataComponents.DAMAGE)
-                        .set(DataComponents.TOOL, kind.tool(tier))
-                        .set(DataComponents.ATTRIBUTE_MODIFIERS, kind.attributes(tier)));
+        for (Map<MekanismToolKind, DeferredItem<Item>> kinds : TOOLS.values()) {
+            for (DeferredItem<Item> holder : kinds.values()) {
+                event.modify(holder.get(), (builder, context, item) -> builder
+                        .set(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+                        .set(DataComponents.TOOLTIP_DISPLAY, TooltipDisplay.DEFAULT.withHidden(DataComponents.UNBREAKABLE, true)));
             }
         }
     }
 
     private static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
         for (Item item : items()) {
-            EnergyCompatUtils.registerItemCapabilities(event, item, (stack, context) -> new MekanismToolHandler(stack));
+            event.registerItem(Capabilities.Energy.ITEM, (stack, access) -> new MekanismToolHandler(stack, access), item);
         }
     }
 }

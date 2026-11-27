@@ -1,20 +1,16 @@
 package nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.ToolMaterial;
 
-import java.util.Optional;
 
-public final class FluxKnife implements Tier {
-    public static final FluxKnife INSTANCE = new FluxKnife();
+public final class FluxKnife {
     public static final String ID = "flux_knife";
     public static final String ENTRY_NAME = "farmersdelight_" + ID;
     public static final String RIFT_TOOLTIP_KEY = "item." + ThaumaturgeTechCompats.MOD_ID + "." + ID + ".tooltip.rift";
@@ -41,34 +37,17 @@ public final class FluxKnife implements Tier {
         return "item." + ThaumaturgeTechCompats.MOD_ID + "." + ID;
     }
 
-    @Override
-    public int getUses() {
-        return FarmersDelightTaintedConfig.fluxKnifeDurability();
+    public static Identifier ingot() {
+        return INGOT;
     }
 
-    @Override
-    public float getSpeed() {
-        return FarmersDelightTaintedConfig.fluxKnifeMiningSpeed();
+    public static TagKey<Item> repairTag() {
+        return TagKey.create(Registries.ITEM, ThaumaturgeTechCompats.id("knife_repair/" + ID));
     }
 
-    @Override
-    public float getAttackDamageBonus() {
-        return FarmersDelightTaintedConfig.fluxKnifeDamageBonus();
-    }
-
-    @Override
-    public TagKey<Block> getIncorrectBlocksForDrops() {
-        return BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return FarmersDelightTaintedConfig.fluxKnifeEnchantability();
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        Optional<Item> item = BuiltInRegistries.ITEM.getOptional(INGOT);
-        return item.map(value -> Ingredient.of(value)).orElse(Ingredient.EMPTY);
+    public static ToolMaterial material() {
+        return new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, FarmersDelightTaintedConfig.fluxKnifeDurability(),
+                FarmersDelightTaintedConfig.fluxKnifeMiningSpeed(), FarmersDelightTaintedConfig.fluxKnifeDamageBonus(),
+                FarmersDelightTaintedConfig.fluxKnifeEnchantability(), repairTag());
     }
 }

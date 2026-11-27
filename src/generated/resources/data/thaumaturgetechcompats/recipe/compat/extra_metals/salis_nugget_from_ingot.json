@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:ingots/salis"
+  ],
+  "result": {
+    "count": 9,
+    "id": "thaumaturgetechcompats:salis_nugget"
+  }
+}

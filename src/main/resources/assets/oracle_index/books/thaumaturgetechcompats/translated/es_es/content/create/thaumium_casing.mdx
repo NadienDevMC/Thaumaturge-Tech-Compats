@@ -1,0 +1,75 @@
+---
+id: thaumaturgetechcompats:thaumium_casing
+type: block
+title: Carcasa de taumio
+---
+
+> [!NOTE]
+> Necesita **Create** (a través de Create: Adapted en 26.1.2).
+
+## Qué es
+
+La Carcasa de taumio es la base de las variantes de taumio de las máquinas de Create de este mod. No hace nada por sí sola: gastas una, junto con la máquina del nivel anterior, para infundir una variante que va mucho más rápido cerca de un nodo de aura.
+
+| Propiedad | Valor |
+| --- | --- |
+| Alcance hasta el nodo (por defecto) | 10 bloques |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        '', 'thaumaturge:plate_thaumium', '', 
+        'thaumaturge:mechanism_simple', 'thaumaturgetechcompats:alchemical_brass_casing', 'thaumaturge:plate_thaumium', 
+        'thaumaturge:plate_thaumium', '', 'thaumaturge:plate_thaumium'
+    ]}
+    result="thaumaturgetechcompats:thaumium_casing"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | [](@thaumaturgetechcompats:alchemical_brass_casing) |
+| Objetos en los pedestales | 4 × Placa de taumio, Mecanismo arcano simple |
+| Esencia | Potentia 20, Auram 10, Motus 10 |
+| Inestabilidad | 3 |
+| Investigación | **Maquinaria de taumio** (pestaña Create) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Investiga la entrada de maquinaria de su nivel (pestaña Tech): Maquinaria de latón alquímico, luego de taumio y luego de metal del vacío.
+2. Fabrica la carcasa (la de latón alquímico en la Mesa de trabajo arcana, las demás infundidas sobre la carcasa del nivel anterior).
+3. Guarda una carcasa por cada variante de máquina de ese nivel que quieras: cada variante consume una.
+
+## Se usa para fabricar
+
+- [](@thaumaturgetechcompats:void_metal_casing)
+- [](@thaumaturgetechcompats:thaumium_basin)
+- [](@thaumaturgetechcompats:thaumium_deployer)
+- [](@thaumaturgetechcompats:thaumium_depot)
+- [](@thaumaturgetechcompats:thaumium_item_drain)
+- [](@thaumaturgetechcompats:thaumium_mechanical_drill)
+- [](@thaumaturgetechcompats:thaumium_mechanical_mixer)
+- [](@thaumaturgetechcompats:thaumium_mechanical_press)
+- [](@thaumaturgetechcompats:thaumium_mechanical_saw)
+- [](@thaumaturgetechcompats:thaumium_millstone)
+- [](@thaumaturgetechcompats:thaumium_spout)
+
+> [!NOTE]- Thaumonomicon: Maquinaria de taumio
+> Las variantes de taumio alcanzan nodos desde más lejos que las de latón alquímico.
+> 
+> **Carcasa de taumio**
+> 
+> Se infunde sobre una carcasa de latón alquímico con cuatro placas de taumio y un mecanismo simple.
+> 
+> **Variantes de máquina**
+> 
+> Cada variante se infunde sobre la variante de latón alquímico de la misma máquina, con una carcasa de taumio, dos placas de taumio y un mecanismo simple.
+
+**Guías de este capítulo:** [Carcasas de nodo]($create/casings)

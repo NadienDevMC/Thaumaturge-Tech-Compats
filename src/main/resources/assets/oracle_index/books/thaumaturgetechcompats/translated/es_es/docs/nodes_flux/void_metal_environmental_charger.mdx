@@ -1,0 +1,53 @@
+---
+icon: thaumaturgetechcompats:void_metal_environmental_charger
+title: Cargador ambiental de metal del vacío
+---
+
+## Qué es
+
+El Cargador ambiental de metal del vacío libera energía en la zona de alrededor para recargar solo los objetos con carga, varitas y objetos de vis del inventario de cada jugador al alcance. Guarda su propia reserva de flujo dimensional.
+
+| Propiedad | Valor |
+| --- | --- |
+| Radio | 16 bloques |
+| DF por objeto por tick | 20.000 |
+| Flujo dimensional que guarda | 100.000.000 |
+
+## Cómo se consigue
+
+### Altar de infusión
+
+<CraftingRecipe
+    slots={[
+        'thaumaturge:vis_resonator', 'thaumaturge:plate_void', 'thaumaturge:plate_void', 
+        'thaumaturge:vis_resonator', 'thaumaturgetechcompats:alchemical_brass_environmental_charger', 'thaumaturge:plate_void', 
+        'thaumaturge:mechanism_complex', '', 'thaumaturge:plate_void'
+    ]}
+    result="thaumaturgetechcompats:void_metal_environmental_charger"
+    count={1}
+/>
+
+*Disposición del altar: el objeto del medio va en el pedestal central y los de alrededor en los pedestales del altar.*
+
+| Receta | |
+| --- | --- |
+| Estación | Altar de infusión |
+| Objeto central (catalizador) | []($nodes_flux/alchemical_brass_environmental_charger) |
+| Objetos en los pedestales | 4 × Placa de metal del vacío, Mecanismo arcano complejo, 2 × Resonador de Vis |
+| Esencia | Potentia 80, Auram 60, Machina 40, Vacuos 40 |
+| Inestabilidad | 5 |
+| Investigación | **Cargador ambiental de metal del vacío** (pestaña Red de flujo) |
+| Da | 1 |
+
+## Cómo se usa
+
+1. Fabrícalo (el de taumio en la Mesa de trabajo arcana, los demás infundidos alrededor del cargador del nivel anterior).
+2. Dale DF: pon un Enlace de transmisión, un Núcleo de almacenamiento o un Extractor de grietas contra él.
+3. Quédate dentro de su radio con los objetos en la mochila. Las varitas se recargan convirtiendo DF en vis (20 DF por centésima de vis).
+4. Haz clic derecho para ver su DF, radio, ritmo y estado.
+
+> [!NOTE]- Thaumonomicon: Cargador ambiental de metal del vacío
+> El Cargador ambiental de metal del vacío se fabrica en un altar de infusión con un Cargador ambiental de latón alquímico, cuatro placas de metal del vacío, un mecanismo complejo y dos resonadores de vis.
+> Funciona como los demás, con el mayor radio, el mayor ritmo y el mayor almacén.
+
+**Guías de este capítulo:** [Cargadores ambientales]($nodes_flux/flux-chargers)

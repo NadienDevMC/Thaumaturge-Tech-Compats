@@ -45,7 +45,7 @@ public final class TaintedFoodItems {
             FOODS.put(type, ITEMS.registerItem(type.id(), properties -> new TaintedFoodItem(type, properties.food(placeholder))));
         }
         ITEMS.register(modBus);
-        modBus.addListener(EventPriority.LOWEST, TaintedFoodItems::onModifyDefaults);
+        modBus.addListener(TaintedFoodItems::onModifyDefaults);
     }
 
     public static List<Item> items() {
@@ -58,27 +58,25 @@ public final class TaintedFoodItems {
 
     private static void onModifyDefaults(ModifyDefaultComponentsEvent event) {
         for (Map.Entry<TaintedFoodType, DeferredItem<Item>> entry : FOODS.entrySet()) {
-            Optional<Item> original = BuiltInRegistries.ITEM.getOptional(entry.getKey().original());
-            if (original.isEmpty()) {
-                continue;
-            }
-            DataComponentMap components = original.get().components();
-            FoodProperties food = components.get(DataComponents.FOOD);
-            if (food == null) {
-                continue;
-            }
-            FoodProperties tainted = taint(food);
-            Consumable consumable = taint(components.getOrDefault(DataComponents.CONSUMABLE, Consumables.DEFAULT_FOOD));
-            UseRemainder remainder = components.get(DataComponents.USE_REMAINDER);
-            int stackSize = components.getOrDefault(DataComponents.MAX_STACK_SIZE, 64);
-            Rarity rarity = components.get(DataComponents.RARITY);
-            event.modify(entry.getValue().get(), builder -> {
-                builder.set(DataComponents.FOOD, tainted);
-                builder.set(DataComponents.CONSUMABLE, consumable);
+            Identifier originalId = entry.getKey().original();
+            // Original components are resolved while this item's defaults are built (holders are not bound yet)
+            event.modify(entry.getValue().get(), (builder, context, item) -> {
+                DataComponentMap components = OriginalItemComponents.get(context, originalId);
+                if (components == null) {
+                    return;
+                }
+                FoodProperties food = components.get(DataComponents.FOOD);
+                if (food == null) {
+                    return;
+                }
+                builder.set(DataComponents.FOOD, taint(food));
+                builder.set(DataComponents.CONSUMABLE, taint(components.getOrDefault(DataComponents.CONSUMABLE, Consumables.DEFAULT_FOOD)));
+                UseRemainder remainder = components.get(DataComponents.USE_REMAINDER);
                 if (remainder != null) {
                     builder.set(DataComponents.USE_REMAINDER, remainder);
                 }
-                builder.set(DataComponents.MAX_STACK_SIZE, stackSize);
+                builder.set(DataComponents.MAX_STACK_SIZE, components.getOrDefault(DataComponents.MAX_STACK_SIZE, 64));
+                Rarity rarity = components.get(DataComponents.RARITY);
                 if (rarity != null) {
                     builder.set(DataComponents.RARITY, rarity);
                 }

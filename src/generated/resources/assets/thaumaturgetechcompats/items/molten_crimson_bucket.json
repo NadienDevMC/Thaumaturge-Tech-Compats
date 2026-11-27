@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "thaumaturgetechcompats:item/molten_crimson_bucket",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 11739182
+      }
+    ]
+  }
+}

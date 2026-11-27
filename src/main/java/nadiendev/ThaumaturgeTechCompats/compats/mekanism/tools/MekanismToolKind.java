@@ -2,11 +2,6 @@ package nadiendev.ThaumaturgeTechCompats.compats.mekanism.tools;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.DiggerItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.component.ItemAttributeModifiers;
-import net.minecraft.world.item.component.Tool;
 import net.minecraft.world.level.block.Block;
 
 public enum MekanismToolKind {
@@ -67,18 +62,11 @@ public enum MekanismToolKind {
         return mineable != null;
     }
 
-    public ItemAttributeModifiers attributes(Tier tier) {
-        if (this == SWORD) {
-            return SwordItem.createAttributes(tier, attackDamage, attackSpeed);
-        }
-        float damage = this == HOE ? -tier.getAttackDamageBonus() : attackDamage;
-        return DiggerItem.createAttributes(tier, damage, attackSpeed);
+    public float attackDamage(MekanismToolTier tier) {
+        return this == HOE ? -tier.attackDamageBonus() : attackDamage;
     }
 
-    public Tool tool(Tier tier) {
-        if (this == SWORD) {
-            return SwordItem.createToolProperties();
-        }
-        return tier.createToolProperties(mineable);
+    public float attackSpeed() {
+        return attackSpeed;
     }
 }

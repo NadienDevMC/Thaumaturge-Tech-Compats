@@ -3,6 +3,7 @@ package nadiendev.ThaumaturgeTechCompats.furnace;
 import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
 import nadiendev.ThaumaturgeTechCompats.device.DeviceTier;
+import nadiendev.ThaumaturgeTechCompats.device.EntityItemModels;
 import net.minecraft.data.PackOutput;
 
 public class FurnaceItemModels extends ModelAssets {
@@ -25,13 +26,7 @@ public class FurnaceItemModels extends ModelAssets {
                     "gui", v(30, 225, 0), v(0, -2.75F, 0), v(0.625F, 0.625F, 0.625F)));
             itemModel(name, model);
 
-            JsonObject renderer = new JsonObject();
-            renderer.addProperty("type", "thaumaturge:advanced_alchemical_furnace");
-            JsonObject special = new JsonObject();
-            special.addProperty("type", "minecraft:special");
-            special.addProperty("base", mod("item/" + name));
-            special.add("model", renderer);
-            itemDefinition(name, definition(special));
+            itemDefinition(name, EntityItemModels.tieredDeviceDefinition(mod("item/" + name), mod(name)));
         }
     }
 }

@@ -1,19 +1,18 @@
 package nadiendev.ThaumaturgeTechCompats.compats.mekanism;
 
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.common.ClusterMaterial;
+import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 
-public class MekanismClusterItemModels extends ItemModelProvider {
-    public MekanismClusterItemModels(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+public class MekanismClusterItemModels extends ModelAssets {
+    public MekanismClusterItemModels(PackOutput output) {
+        super(output);
     }
 
     @Override
-    protected void registerModels() {
+    protected void register() {
         for (ClusterMaterial material : ClusterMaterial.ownMaterials()) {
-            basicItem(ThaumaturgeTechCompats.id(material.itemName()));
+            basicItem(material.itemName());
         }
     }
 

@@ -1,0 +1,54 @@
+---
+title: Energized Tools
+icon: thaumaturgetechcompats:energized_thaumium_pickaxe
+related_items: [thaumaturgetechcompats:energized_thaumium_pickaxe, thaumaturgetechcompats:energized_thaumium_axe, thaumaturgetechcompats:energized_thaumium_shovel, thaumaturgetechcompats:energized_thaumium_hoe, thaumaturgetechcompats:energized_thaumium_sword, thaumaturgetechcompats:energized_alchemical_brass_pickaxe, thaumaturgetechcompats:energized_void_pickaxe]
+---
+
+> [!NOTE]
+> Requires **Mekanism**. The energized tools, and each tier on its own, can be switched off in the compatibilities config; all on by default, game restart needed. Numbers are in the Mekanism tools config.
+
+## What it is
+
+Pickaxe, axe, shovel, hoe and sword in three tiers, 15 tools: **Energized Thaumium**, **Energized Alchemical Brass** and **Energized Void Metal**. They run on Mekanism energy instead of durability: they never lose durability, and every action spends energy. A charge bar below the item shows what is left.
+
+With no energy the tool mines like bare hands (speed 1, no drops that need a tool), and its attack damage is removed. A tooltip says "Out of energy: it does nothing until it is charged".
+
+## How to get it
+
+Research **Energized Thaumium Tools**, then **Energized Alchemical Brass Tools**, then **Energized Void Metal Tools**. Each tool is infused at the altar one by one:
+
+| Tier | Catalyst | Components | Aspects | Instability |
+| --- | --- | --- | --- | --- |
+| Thaumium | the normal thaumium tool | 2 energy tablets, reinforced alloy, advanced control circuit, 2 thaumium plates | machina 15, potentia 15, metallum 10, instrumentum 10 | 1 |
+| Alchemical Brass | a normal iron tool | 2 energy tablets, infused alloy, basic control circuit, 2 brass plates, **the energized thaumium tool of the same kind** | machina 30, potentia 30, metallum 20, instrumentum 20 | 3 |
+| Void Metal | the normal void metal tool | 2 energy tablets, atomic alloy, ultimate control circuit, 2 void metal plates, **the energized brass tool of the same kind** | machina 50, potentia 50, vacuos 30, instrumentum 30, praecantatio 20 | 5 |
+
+The previous energized tool is consumed.
+
+## Step by step
+
+1. Infuse the tool.
+2. Charge it in a Mekanism energy cube, a charge pad, the charging slot of a Mekanism machine, or with any other energy source.
+3. Use it as a normal tool. Each block mined, each hit, and each strip/flatten/till spends energy.
+4. Recharge when the bar empties.
+
+## Numbers (Mekanism tools config, in Mekanism joules)
+
+| Tier | Capacity | Per block | Per hit | Per use (strip/flatten/till) | Mining speed | Attack damage bonus | Enchantability |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Thaumium | 250,000 | 600 | 1,000 | 500 | 6.0 | 2.0 | 14 |
+| Alchemical Brass | 1,000,000 | 500 | 800 | 400 | 8.0 | 3.0 | 18 |
+| Void Metal | 4,000,000 | 400 | 600 | 300 | 10.0 | 3.5 | 22 |
+
+All values can be edited. The capacity needs a restart for the charge bar. Creative mode players spend no energy.
+
+## Common mistakes
+
+- Using the tool with an empty charge bar: it does nothing.
+- Trying to craft Brass without the energized Thaumium tool of the same kind in the components.
+- Looking for durability: these tools never lose any, only energy matters.
+
+## Notes
+
+- It can be turned off in the mod's configuration (compatibilities file).
+- Its values are adjusted in the mod's Mekanism tools configuration.

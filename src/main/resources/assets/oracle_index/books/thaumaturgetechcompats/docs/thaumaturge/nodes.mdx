@@ -1,0 +1,36 @@
+---
+title: Nodes
+icon: thaumaturge:jar_node
+---
+
+> [!NOTE]
+> **Base mod:** this page explains Thaumaturge itself, the mod this addon is built on. The last section shows what this addon adds on top of it.
+
+## What it is
+
+**Aura nodes** are knots of concentrated magical energy. Each node holds a base amount of energy aligned to one or more aspects, usually primal ones and rarely compound ones. Nodes are hard to see with the naked eye (faint glimmers give them away); looking through the Thaumometer shows them clearly.
+
+Nodes refill by slowly condensing the raw vis of their own chunk. A node mirrors its home: if the aura starves, the node grows pale and desperate; if flux festers in its chunk, the node can turn **tainted** and spread Taint. Bigger nodes also drain smaller nodes nearby.
+
+## Step by step
+
+1. **Tap it.** Hold right-click on a node with a wand. Only primal aspects answer the wand; compound aspects stay out of reach. Advanced Node Tapping doubles the draw.
+2. **Do not kill it.** A node drained to nothing in one aspect starts to wither, and a node with no aspects left fades away. After the Node Preserver research your wand leaves the last point of each aspect (crouch to drain it fully anyway). A starter wand of iron and plain wood is too crude for this.
+3. **Move it.** Surround a node with glass, put a roof of wooden slabs on top and strike the glass with your wand: the node goes into a jar (**Node in a Jar**). The ritual costs a lot of vis and may damage the node. A jarred node is dormant and refills at half speed. Click the jar with a wand to free it (the jar breaks).
+4. **Hold it.** A **Node Stabilizer** directly under a node makes it feed at half speed, stops it from pulling from or feeding nearby nodes, and can slowly calm an unstable or fading node. A redstone signal switches it off. The **Advanced Node Stabilizer** is the stronger version.
+5. **Energize it.** With a stabilizer under the node, put a **Node Transducer** above it and power only the transducer with redstone. The node becomes an **energized node**: it streams energy constantly, its compound aspects split into primals, and its wild behaviours stop while the power flows.
+6. **Carry the stream.** **Vis Relays** within 8 blocks of an energized node (or of another relay) carry its stream onward to devices, Recharge Pedestals and the Arcane Workbench.
+
+## Good to know
+
+- Never remove or switch off the stabilizer under an energized node: it explodes, fouling the aura and spraying flux goo and gas.
+- If the transducer loses its signal too long, the node reverts and its energy is lost.
+- An energized node refills by gulping raw vis from the aura, which can drain the land if you draw too fast. A tainted energized node eats flux instead.
+- Primordial nodes are part of the Eldritch research.
+
+## In Thaumaturge Tech Compats
+
+- Stronger stabilizers and transducers: [](@thaumaturgetechcompats:matrix_node_stabilizer), [](@thaumaturgetechcompats:matrix_node_transducer) and their higher tiers (see Node Stabilizers and Transducers).
+- Nodes as a power source for machines of this mod, including jarred nodes (see Node Power, Flux Jars and Rift Jars, and Magical Power Sources).
+- Create machines that run faster near a node ([](@thaumaturgetechcompats:thaumium_casing); see Node Casings and Machine Variants and Node Boost).
+- A hungry node is never a valid power source.
