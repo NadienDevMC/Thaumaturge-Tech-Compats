@@ -14,6 +14,10 @@ on:
         description: "Send the Discord notification even if the version tag already exists (test)"
         type: boolean
         default: false
+      curseforge:
+        description: "Publish the current version to CurseForge (skipped if it was already uploaded)"
+        type: boolean
+        default: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -91,7 +95,7 @@ jobs:
       # release type: [curseforge], [curseforge beta] or [curseforge alpha]. Needs the CURSEFORGE_TOKEN secret and the
       # CURSEFORGE_PROJECT_ID variable of the repository.
       - name: Publish to CurseForge
-        if: ${{ contains(github.event.head_commit.message, '[curseforge') }}
+        if: ${{ contains(github.event.head_commit.message, '[curseforge') || github.event.inputs.curseforge == 'true' }}
         env:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ vars.CURSEFORGE_PROJECT_ID }}
