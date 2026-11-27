@@ -1,5 +1,19 @@
 # ⚡ Thaumaturge Tech Compats — Changelog
 
+## 🚀 [1.0.6-1.21.1] 27/11/2026 17:32
+
+### Additions
+-
+
+### Fixes
+-
+
+### Changes
+- The config options tainted_knives, tainted_flux_knife and tainted_food_farmersdelight now explain what each one turns off. Setting tainted_knives or tainted_flux_knife to false removes those knives completely.
+
+### Lineas de codigo cambiadas
++5 −5
+
 ## 🚀 [1.0.5-1.21.1] 26/11/2026 23:40
 
 ### Additions

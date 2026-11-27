@@ -151,11 +151,11 @@ public final class CompatToggles {
             define(builder, tier.toggle(), "The energized tools of this tier for Mekanism. Needs a game restart.");
         }
         define(builder, AvaritiaMachinesIntegration.TOGGLE, "Higher tiers of the Avaritia Neutron Collector and Neutronium Compressor, with their infusion recipes and research. Needs a game restart.");
-        define(builder, TAINTED_FOOD, "Tainted versions of vanilla and Avaritia foods, brewed in the crucible, with their research. Needs a game restart.");
+        define(builder, TAINTED_FOOD, "Tainted versions of vanilla and Avaritia foods, brewed in the crucible, with their research. The Farmer's Delight foods and knives have their own options. Needs a game restart.");
         define(builder, EDIBLE_ITEMS, "Edible copies of tools, weapons, ingots, gems, doors and the Goggles of Revealing, crafted with sugar; eating them gives status effects by item class and tier. Needs a game restart.");
-        for (String id : FarmersDelightTaintedIntegration.toggleIds()) {
-            define(builder, id, "Tainted Farmers Delight foods or knives, with their crucible and infusion recipes and research. Needs a game restart.");
-        }
+        define(builder, FarmersDelightTaintedIntegration.TOGGLE_FOOD, "Farmer's Delight: tainted versions of its foods, with their crucible recipes and research. Does not touch the knives. Needs a game restart.");
+        define(builder, FarmersDelightTaintedIntegration.TOGGLE_KNIVES, "Farmer's Delight: the Thaumium, Alchemical Brass and Void Metal knives, with their recipes and research. Set to false to remove them completely. Needs a game restart.");
+        define(builder, FarmersDelightTaintedIntegration.TOGGLE_FLUX_KNIFE, "Farmer's Delight: the Flux Knife, with its infusion recipe and research. Set to false to remove it completely. Needs a game restart.");
         define(builder, MEKANISM, "Recipes for the Thaumaturge clusters in Mekanism.");
         define(builder, INDUSTRIAL_FOREGOING, "Laser Drill ores for the Thaumaturge clusters and ores in Industrial Foregoing.");
         defineOff(builder, MEKANISM_X2, "Mekanism x2 route: Enrichment Chamber, ore to 2 clusters. Off by default: it shares machine and input with Mekanism own ore recipes.");
