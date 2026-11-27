@@ -141,11 +141,11 @@ public final class CompatToggles {
             define(builder, id, "A tier of the Thaumic Miner or Thaumic Solar Panel for Void Miners Remastered, with its recipe, frame and research. Needs a game restart.");
         }
         define(builder, AvaritiaMachinesIntegration.TOGGLE, "Higher tiers of the Avaritia Neutron Collector and Neutronium Compressor, with their infusion recipes and research. Needs a game restart.");
-        define(builder, TAINTED_FOOD, "Tainted versions of vanilla and Avaritia foods, brewed in the crucible, with their research. Needs a game restart.");
+        define(builder, TAINTED_FOOD, "Tainted versions of vanilla and Avaritia foods, brewed in the crucible, with their research. The Farmer's Delight foods and knives have their own options. Needs a game restart.");
         define(builder, EDIBLE_ITEMS, "Edible copies of tools, weapons, ingots, gems, doors and the Goggles of Revealing, crafted with sugar; eating them gives status effects by item class and tier. Needs a game restart.");
-        for (String id : FarmersDelightTaintedIntegration.toggleIds()) {
-            define(builder, id, "Tainted Farmers Delight foods or knives, with their crucible and infusion recipes and research. Needs a game restart.");
-        }
+        define(builder, FarmersDelightTaintedIntegration.TOGGLE_FOOD, "Farmer's Delight: tainted versions of its foods, with their crucible recipes and research. Does not touch the knives. Needs a game restart.");
+        define(builder, FarmersDelightTaintedIntegration.TOGGLE_KNIVES, "Farmer's Delight: the Thaumium, Alchemical Brass and Void Metal knives, with their recipes and research. Set to false to remove them completely. Needs a game restart.");
+        define(builder, FarmersDelightTaintedIntegration.TOGGLE_FLUX_KNIFE, "Farmer's Delight: the Flux Knife, with its infusion recipe and research. Set to false to remove it completely. Needs a game restart.");
         define(builder, FORCECRAFT, "Everything the addon adds for ForceCraft: the Repair infusion, the aspects of its items and mobs and the Force Flask rules. Needs a game restart.");
         define(builder, TAG_ASPECTS, "Aspects for every item of a common c: tag (ingots, ores, gems, dusts and so on), so any mod gets them by material. Applies when data packs reload.");
         define(builder, TAG_ASPECTS_INGOTS, "Tag aspects for c:ingots/*.");

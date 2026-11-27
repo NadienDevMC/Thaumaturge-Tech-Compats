@@ -13,7 +13,7 @@ import vectorwing.farmersdelight.common.item.KnifeItem;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class FluxKnifeItem extends KnifeItem {
+public class FluxKnifeItem extends KnifeItem implements FluxKnifeTool {
     public FluxKnifeItem(Properties properties) {
         super(FluxKnife.material(), properties);
     }

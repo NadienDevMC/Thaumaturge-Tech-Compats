@@ -1,5 +1,19 @@
 # ⚡ Thaumaturge Tech Compats — Changelog
 
+## 🚀 [1.0.6-26.1.2] 27/11/2026 17:32
+
+### Additions
+- Support for the Farmer's Delight Neoforged port (jexxme), next to the Farmer's Delight 26 Neo.ver port.
+
+### Fixes
+- Fixed a startup crash with Farmer's Delight Neoforged 1.3.4 while registering the Thaumium, Alchemical Brass, Void Metal and Flux knives.
+
+### Changes
+- The config options tainted_knives, tainted_flux_knife and tainted_food_farmersdelight now explain what each one turns off. Setting tainted_knives or tainted_flux_knife to false removes those knives completely.
+
+### Lineas de codigo cambiadas
++155 −12
+
 ## 🚀 [1.0.5-26.1.2] 26/11/2026 23:41
 
 ### Additions

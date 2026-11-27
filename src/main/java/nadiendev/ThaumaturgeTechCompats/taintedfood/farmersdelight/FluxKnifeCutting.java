@@ -15,7 +15,7 @@ public final class FluxKnifeCutting {
     }
 
     public static boolean active(ItemStack tool) {
-        return tool != null && tool.getItem() instanceof FluxKnifeItem && FarmersDelightTaintedConfig.cutEnabled();
+        return tool != null && tool.getItem() instanceof FluxKnifeTool && FarmersDelightTaintedConfig.cutEnabled();
     }
 
     public static List<ItemStack> apply(ServerLevel level, BlockPos pos, ItemStack stored, List<ItemStack> results) {

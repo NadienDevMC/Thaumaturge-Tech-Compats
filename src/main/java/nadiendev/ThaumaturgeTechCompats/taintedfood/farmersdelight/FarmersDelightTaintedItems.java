@@ -19,7 +19,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import vectorwing.farmersdelight.common.tag.ModTags;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
@@ -34,6 +36,8 @@ public final class FarmersDelightTaintedItems {
     private static DeferredItem<Item> fluxKnife;
 
     private static final float KNIFE_BASE_DAMAGE = 0.5F;
+    // Same tag as Farmer's Delight ModTags.Blocks.MINEABLE_WITH_KNIFE, built here so other ports without that field still load
+    private static final TagKey<Block> MINEABLE_WITH_KNIFE = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("farmersdelight", "mineable/knife"));
 
     private FarmersDelightTaintedItems() {
     }
@@ -50,12 +54,12 @@ public final class FarmersDelightTaintedItems {
         if (knives) {
             for (FarmersDelightKnife knife : FarmersDelightKnife.values()) {
                 if (FarmersDelightTaintedConfig.knifeEnabled(knife)) {
-                    KNIVES.put(knife, ITEMS.register(knife.id(), () -> new ThaumaturgeKnifeItem(knife, knifeProperties(knife))));
+                    KNIVES.put(knife, ITEMS.register(knife.id(), () -> KnifeSupport.extendKnifeItem() ? new ThaumaturgeKnifeItem(knife, knifeProperties(knife)) : new ThaumaturgeKnifePlainItem(knife, knifeProperties(knife))));
                 }
             }
         }
         if (fluxKnifeEnabled) {
-            fluxKnife = ITEMS.register(FluxKnife.ID, () -> new FluxKnifeItem(fluxKnifeProperties()));
+            fluxKnife = ITEMS.register(FluxKnife.ID, () -> KnifeSupport.extendKnifeItem() ? new FluxKnifeItem(fluxKnifeProperties()) : new FluxKnifePlainItem(fluxKnifeProperties()));
         }
         ITEMS.register(modBus);
         modBus.addListener(FarmersDelightTaintedItems::onModifyDefaults);
@@ -83,7 +87,7 @@ public final class FarmersDelightTaintedItems {
 
     private static Item.Properties fluxKnifeProperties() {
         return new Item.Properties().rarity(FluxKnife.RARITY)
-                .tool(FluxKnife.material(), ModTags.Blocks.MINEABLE_WITH_KNIFE, KNIFE_BASE_DAMAGE, FarmersDelightTaintedConfig.fluxKnifeAttackSpeed(), 0.0F);
+                .tool(FluxKnife.material(), MINEABLE_WITH_KNIFE, KNIFE_BASE_DAMAGE, FarmersDelightTaintedConfig.fluxKnifeAttackSpeed(), 0.0F);
     }
 
     private static Item.Properties foodProperties(FarmersDelightFood food, FoodProperties placeholder) {
@@ -96,7 +100,7 @@ public final class FarmersDelightTaintedItems {
 
     private static Item.Properties knifeProperties(FarmersDelightKnife knife) {
         return new Item.Properties().rarity(knife.rarity())
-                .tool(knife.material(), ModTags.Blocks.MINEABLE_WITH_KNIFE, KNIFE_BASE_DAMAGE, FarmersDelightTaintedConfig.attackSpeed(knife), 0.0F);
+                .tool(knife.material(), MINEABLE_WITH_KNIFE, KNIFE_BASE_DAMAGE, FarmersDelightTaintedConfig.attackSpeed(knife), 0.0F);
     }
 
     private static void onModifyDefaults(ModifyDefaultComponentsEvent event) {
