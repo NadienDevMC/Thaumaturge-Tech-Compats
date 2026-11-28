@@ -43,9 +43,10 @@ public final class CreateVariants {
             Map<CasingTier, DeferredItem<BlockItem>> items = new EnumMap<>(CasingTier.class);
             for (CasingTier tier : CasingTier.values()) {
                 String name = name(kind, tier);
-                DeferredBlock<Block> block = BLOCKS.register(name, () -> create(kind, tier));
+                // registerBlock/registerItem set the registry id on the properties; 26.1 crashes with "Block id not set" without it
+                DeferredBlock<Block> block = BLOCKS.registerBlock(name, properties -> create(kind, tier, properties), () -> properties(kind, tier));
                 blocks.put(tier, block);
-                items.put(tier, ITEMS.register(name, () -> createItem(kind, block.get())));
+                items.put(tier, ITEMS.registerItem(name, properties -> createItem(kind, block.get(), properties)));
             }
             VARIANT_BLOCKS.put(kind, blocks);
             VARIANT_ITEMS.put(kind, items);
@@ -105,8 +106,7 @@ public final class CreateVariants {
         };
     }
 
-    private static Block create(VariantKind kind, CasingTier tier) {
-        BlockBehaviour.Properties properties = properties(kind, tier);
+    private static Block create(VariantKind kind, CasingTier tier, BlockBehaviour.Properties properties) {
         return switch (kind) {
             case PRESS -> new PressVariantBlock(properties, tier);
             case MIXER -> new MixerVariantBlock(properties, tier);
@@ -121,8 +121,7 @@ public final class CreateVariants {
         };
     }
 
-    private static BlockItem createItem(VariantKind kind, Block block) {
-        Item.Properties properties = new Item.Properties();
+    private static BlockItem createItem(VariantKind kind, Block block, Item.Properties properties) {
         return switch (kind) {
             case PRESS, DEPLOYER, SPOUT -> new AssemblyOperatorBlockItem(block, properties);
             default -> new BlockItem(block, properties);

@@ -1,5 +1,19 @@
 # ⚡ Thaumaturge Tech Compats — Changelog
 
+## 🚀 [1.0.7-26.1.2] 27/11/2026 22:46
+
+### Additions
+-
+
+### Fixes
+- Fixed a startup crash ("Block id not set") with Create: Adapted installed: the Thaumium, Alchemical Brass and Void Metal variants of the Create machines now register correctly. On dedicated servers this crash also broke the loading of many other mods.
+
+### Changes
+-
+
+### Lineas de codigo cambiadas
++6 −7
+
 ## 🚀 [1.0.6-26.1.2] 27/11/2026 17:32
 
 ### Additions
