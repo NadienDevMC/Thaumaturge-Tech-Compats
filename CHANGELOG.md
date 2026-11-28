@@ -1,5 +1,19 @@
 # ⚡ Thaumaturge Tech Compats — Changelog
 
+## 🚀 [1.0.7-1.21.1] 27/11/2026 22:46
+
+### Additions
+-
+
+### Fixes
+-
+
+### Changes
+- Version aligned with 26.1.2, no gameplay changes.
+
+### Lineas de codigo cambiadas
++1 −1
+
 ## 🚀 [1.0.6-1.21.1] 27/11/2026 17:32
 
 ### Additions
